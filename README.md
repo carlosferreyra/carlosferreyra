@@ -9,9 +9,9 @@
 
 <p align="left"> <a href="https://twitter.com/eduferreyraok" target="blank"><img src="https://img.shields.io/twitter/follow/eduferreyraok?logo=twitter&style=for-the-badge" alt="eduferreyraok" /></a> </p>
 
-- 🔭 I’m currently working on **Freelance**
+- 🔭 I’m currently working on **Getting my College Degree**
 
-- 🌱 I’m currently learning **Django, Python, Js, Ts, React, Vite**
+- 🌱 I’m currently learning **Django, Python, Js, React, Vite**
 
 - 🤝 I’m looking for help with **Getting a Job in IT**
 
