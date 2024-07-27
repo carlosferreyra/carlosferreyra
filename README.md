@@ -1,142 +1,277 @@
-<!-- markdownlint-disable MD033 -->
-
 <!-- <img align="center" src="https://avatars.githubusercontent.com/carlosferreyra" longdesc="https://avatars.githubusercontent.com/<username=carlosferreyra>" height="50%" width="10%" > -->
-
-<h1 align="center">Hi There <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px"></h1>
-<p align="center">
-  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=I'm+Carlos+E+Ferreyra+..&hearts;++;Self-taught+Developer,;Computer+Science+Student,;CTF+Newbie,;Active+Learner,;Love+to+learn+new+stuffs..<3">
-  </a>
-  <picture> <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width = 250px></picture>
-  <!-- <img align="right" alt="Coding" width="300em" src="https://i.pinimg.com/originals/81/17/8b/81178b47a8598f0c81c4799f2cdd4057.gif"> -->
 
 <!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
 
+<h1 align="center">Hi There <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></h1>
+<p align="center">
+  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=I'm+Carlos+E+Ferreyra+..&hearts;++;Self-taught+Developer,;Computer+Science+Student,;CTF+Newbie,;Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
+  </a>
 </p>
-<br><br><br><br><br><br><br><br><br>
+
 <br>
-<p align="left">
-  <!-- profile views-->
+
+<!--
+<p align="center">
+	<a href = "https://committers.top/egypt#ORGNAME" target="_blank">
+		<img src="https://enfsgag3ayy6w9q.m.pipedream.net" alt="7oSkaaa" target="_blank", width=46%/>
+	</a>
+	<img src="https://komarev.com/ghpvc/?username=7oSkaaa&label=Profile%20views&color=555555&labelColor=000000&style=for-the-badge" alt="7oSkaaa" width=19.40%/>
+</p>
+ -->
+
+## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = 6.5%> About me
+
+<!-- profile views -->
 <img src="https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat" alt="carlosferreyra" />
   <!-- github followers badge -->
 <img alt="GitHub followers" src="https://img.shields.io/github/followers/carlosferreyra?label=Follow&amp;style=social">
   <!-- dependabot -->
 <img alt="dependabot" src="https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra">
+<img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width=30%>
 
-<h2><picture><img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/about_me.gif?raw=true" width = 50px></picture> About me</h2>
+<br><br>
 
+- 👨‍💻 I'm Software Development Engineer @[UTN](https://frre.utn.edu.ar/)
 - :school: I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
-- :technologist: I love using Software as a solution for every `Problem`.
-- :computer: I am a competitive programmer at `Leetcode`.
-- :student: I’m currently learning `Computer Science` and `Software Engineering`.
-- :nerd_face: Always `learning new things`.
+- :computer: I am a competitive programmer at `Leetcode`, `Google Contests`.
+- ✍🏻 I love using Software as a solution for every Problem
+- 🤓 Always learning new things
 - :thinking: I’m currently open for a new `job opportunity`, this is [MY RESUME](Carlos_Ferreyra_Resume.pdf)<!-- (https://drive.google.com/file/d/1hp8I6_M0pTQLCPBErB0ObVnyAyOBylYW/view). -->
-- :boom: You can visit [MY WEBSITE](https://cutt.ly/Ahmed_Hossam_Website).
+- :boom: You can visit [MY WEBSITE](https://carlosferreyra.github.io/me).
   <br>
 
-<h2>
-<img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"><b> Skills</b>
-</h2>
+## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width=10%> My Competitive Programming Profiles
+
+<div align="center" width=100%>
+	<a href="https://leetcode.com/coolwinter18/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-shadow-tal-revivo.png" alt="LeetCode" width=%6/></a>
+	  &emsp; 
+</div>
+
+## <img src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Connect-with-me.gif?raw=true" width="10%"> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="5%px">
+
+<p align="center">
+	<a href="mailto:eduferreyraok@gmail.com"><img img src="https://img.shields.io/badge/gmail-%23EA4335.svg?style=plastic&logo=gmail&logoColor=white" alt="Gmail"/></a>
+	<a href="https://github.com/carlosferreyra"><img src="https://img.shields.io/badge/github-%23181717.svg?style=plastic&logo=github&logoColor=white" alt="GitHub"/></a>
+	<a href="https://wa.me/05493794391381"><img src="https://img.shields.io/badge/whatsapp-%2325D366.svg?style=plastic&logo=whatsapp&logoColor=white" alt="Whatsapp"/></a>
+	<a href="https://www.linkedin.com/in/eduferreyraok/"><img src="https://img.shields.io/badge/linkedin-%230A66C2.svg?style=plastic&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+	<a href="https://www.instagram.com/eduferreyraok/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?style=plastic&logo=instagram&logoColor=white" alt="Instagram"/></a>
+</p>
+
+## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="3%"> My Skills
+
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Programming_Languages.gif?raw=true" width=5%> Programming languages
+
+<p align="center"> 
+  &emsp; 
+  <a href="https://www.cprogramming.com/" target="_blank"> 
+    <img alt="C" src="https://img.shields.io/badge/C%20-%232370ED.svg?style=plastic&logo=c&logoColor=white">
+  </a> 
+  &emsp;
+  <a href="https://www.w3schools.com/cpp/" target="_blank"> 
+    <img alt="C++" src="https://img.shields.io/badge/C++%20-%2300599C.svg?style=plastic&logo=c%2B%2B&logoColor=white">
+  </a> 
+  &emsp;
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> 
+     <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=plastic&logo=javascript&logoColor=black">
+   </a>
+  &emsp;
+  <a href="https://www.java.com" target="_blank"> 
+    <img alt="Java" src="https://img.shields.io/badge/Java-%23007396.svg?style=plastic&logo=java&logoColor=white">
+  </a>
+  &emsp;
+   <a href="https://www.python.org" target="_blank">
+    <img alt="Python" src="https://img.shields.io/badge/Python%20-%2314354C.svg?style=plastic&logo=python&logoColor=white">
+  </a>
+</p>
+
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Front_End.gif?raw=true" width=5%> Frontend Development
+
+<p align="center"> 
+  &emsp; 
+  <a href="https://www.w3.org/html/" target="_blank"> 
+   <img alt="HTML" src="https://img.shields.io/badge/HTML5%20-%23E34F26.svg?style=plastic&logo=html5&logoColor=white">
+  </a>   
+  &emsp;
+  <a href="https://www.w3schools.com/css/" target="_blank">
+    <img alt="CSS" src="https://img.shields.io/badge/CSS%20-%231572B6.svg?style=plastic&logo=css3&logoColor=white">
+  </a> 
+  &emsp;
+  <a href="https://www.python.org" target="_blank">
+    <img alt="Python" src="https://img.shields.io/badge/react-%2361DAFB.svg?style=plastic&logo=React&logoColor=black">
+  </a>
+  &emsp;
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> 
+     <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=plastic&logo=javascript&logoColor=black">
+   </a>
+</p>
+
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width=5%> Software & Tools
+
+<p align="center">
+  &emsp;
+    <a href="#"><img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=plastic&logo=docker&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="Git" src="https://img.shields.io/badge/Git%20-%23F05033.svg?style=plastic&logo=git&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="GitHub" src="https://img.shields.io/badge/github-%23181717.svg?style=plastic&logo=github&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="Google Sheets" src="https://img.shields.io/badge/Google%20Sheets%20-%2334A853.svg?style=plastic&logo=google%20sheets&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="Mark Down" src="https://img.shields.io/badge/Markdown-000000?style=plastic&logo=markdown&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=plastic&logo=stack-overflow&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="JSON" img src="https://img.shields.io/badge/json-%23000000.svg?style=plastic&logo=json&logoColor=white"></a>
+  <!-- &emsp;
+    <a href="#"><img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?&style=plastic&logo=selenium&logoColor=white"></a> -->
+    &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/django-%23092E20.svg?&style=plastic&logo=django&logoColor=white" /></a>
+    &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/DjangoRestFramework-%23092E20.svg?&style=plastic&logo=django&logoColor=white" /></a>
+    &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/mysql-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
+</p>
+
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width=5%> IDEs
+
+<p align="center">
+  &emsp;
+    <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=plastic&logo=visual-studio-code&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="JetBrain" src="https://img.shields.io/badge/jetbrains-%23000000.svg?style=plastic&logo=jetbrains&logoColor=white" /></a>
+</p>
+
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/CP_PS.gif?raw=true" width=5%> Competitive Programming & Problem Solving
+
+<p align="center">
+  &emsp;
+    <a href="#"><img alt = "Leetcode" src="https://img.shields.io/badge/leetcode%20-%23FFA116.svg?style=plastic&logo=leetcode&logoColor=black" /></a>
+  &emsp;
+    <a href="#"><img alt = "Google" src="https://img.shields.io/badge/google-%234285F4.svg?style=plastic&logo=google&logoColor=white" /></a>
+</p>
+
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/OS.gif?raw=true" width=5%> Operating Systems
+
+<p align="center">
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/Ubuntu-E95420?style=plastic&logo=ubuntu&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/Windows-0078D6?style=plastic&logo=windows&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/Kali_Linux-557C94?style=plastic&logo=kali-linux&logoColor=white"></a>
+    &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/MacOS-000000?style=plastic&logo=macos&logoColor=white"></a>
 <br>
-
-<p>
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img alt="Django" src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
-  <!-- Add more as per your skills -->
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
+---
 
-<h3 align="left">Connect with me:</h3>
-
-<p align="left">
-
-<a href="https://codepen.io/coolwinter18" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="coolwinter18" height="30" width="40" /></a>
-<a href="https://twitter.com/eduferreyraok" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="eduferreyraok" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/eduferreyraok" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="eduferreyraok" height="30" width="40" /></a>
-<a href="https://stackoverflow.com/users/24372718" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="24372718" height="30" width="40" /></a>
-<a href="https://instagram.com/eduferreyraok" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="eduferreyraok" height="30" width="40" /></a>
-<a href="https://www.youtube.com/@eduferreyraok" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="@eduferreyraok" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/coolwinter18" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="coolwinter18" height="30" width="40" /></a>
-
+<p align = "center">
+	<a href="https://github.com/piyushsuthar/github-readme-quotes"> <img alt = "Quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&animation=grow_out_in&quoteCategory=programming"> </a>
 </p>
 
-<h4 align="left">Frontend</h4>
-<p align="left">
-<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
-<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
-<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
-<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a>
-</p>
-
-<h3 align="left">Languages and Tools:</h3>
-
-<h4 align="left">Backend</h4>
-
-<p align="left">
-
-<a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
-<a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a>
-<a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a>
-
-</p>
-
-<h4 align="left">Database</h4>
-
-<p align="left">
-
-<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
-<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a>
-<a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a>
-<a href="https://www.sqlite.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40" height="40"/> </a>
-
-</p>
-
-<h4 align="left">Tools</h4>
-
-<p align="left">
-
-<a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a>
-<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
-<a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a>
-
-<h2><img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="35"><b> My Stats </b></h2>
+<br>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-<p align="center">
-<a href="https://github.com/carlosferreyra">
-<img align="left" alt="KittiesCoding" width="35%" src="https://cdn.dribbble.com/users/1277312/screenshots/14733298/media/39b1045e593737587dd60e42c8422d1f.gif" >
-<!-- contributions stats -->
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=carlosferreyra&theme=algolia" width="60%" alt="carlosferreyra" />
-</a>
-</p>
 <br>
+
+## <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFhYzJkMmQ2MWQ3ZGY3MDhjZTE3MDI2Mzk3NzE1OWQyZTRlMmYwMCZjdD1z/iY8CRBdQXODJSCERIr/giphy.gif" width=5% valign="bottom"> Github Stats
+
+<details><summary><h3> 🔥 Streak Stats</h3></summary>
+
+---
+
+<p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=carlosferreyra&theme=tokyonight_duo" alt="carlos" /></p>
+
+</details>
+
+<details><summary><h3> 💻 GitHub Profile Stats</h3></summary>
+
+---
+
 <p align="center">
-<a href="https://github.com/carlosferreyra">
-  <img align="left" src="https://github-readme-stats-eight-theta.vercel.app/api?username=carlosferreyra&show_icons=true&theme=algolia&include_all_commits=true&count_private=true" width="55%"/>
-  <img  src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&langs_count=8&theme=algolia" width="40%"/>
-</a>
-</p>
+    <!-- contributions stats -->
+    <img align="center" alt="KittiesCoding" src="https://cdn.dribbble.com/users/1277312/screenshots/14733298/media/39b1045e593737587dd60e42c8422d1f.gif" height="100em" />
+    <img align="center" src="https://github-readme-stats-eight-theta.vercel.app/api?username=carlosferreyra&show_icons=true&theme=algolia&include_all_commits=true&count_private=true" alt="Github Stats"/>
+	  <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs?username=carlosferreyra&langs_count=10&show_icons=true&locale=en&theme=tokyonight" alt="lang stats" /> -->
+    <img  src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&langs_count=8&theme=algolia"/>
+<br/>
+
+<b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
+
+  </p>
+</details>
+
+<details><summary><h3>⚡ Recent GitHub Activity</h3></summary>
+
+---
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=carlosferreyra&bg_color=1a1b27&color=aa82d9&line=628edb&point=64bfaf&area=true&hide_border=true)(https://github.com/ashutosh00710/github-readme-activity-graph)">
+ 
+</details>
+
+<details><summary> <h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="50em" /> Git profile Trophies </h3></summary>
+
+---
+
+<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img align="center" src="https://github-profile-trophy.vercel.app/?username=carlosferreyra&theme=juicyfresh&no-bg=true&column=3"  alt="Trophies" /></a> </p>
+
+</details>
+<!-- gif image of a line multicolor/rainbow -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-<p align="center"><img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="50em" />&nbsp;Git profile Trophies</p><br>
 
-<img align="center" src="https://github-profile-trophy.vercel.app/?username=carlosferreyra&theme=juicyfresh&no-bg=true&column=-1" />
-<br>
-<br>
-<p align="center"  >
-<img src="https://raw.githubusercontent.com/AhmedFathyDev/AhmedFathyDev/main/GitHub.gif" alt="GitHub Octocat Logo" height="100">
+<details><summary><h3> 📋 My Repositories</h3></summary>
+
+---
+
+<div >
+  <p align="center">
+	<a href="https://github.com/carlosferreyra/carlosferreyra">
+      		<img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=carlosferreyra&theme=tokyonight" alt="GitHub Stats" />
+    	</a>
+	<a href="https://github.com/carlosferreyra/alura-challenge">
+      		<img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=alura-challenge&theme=tokyonight" alt="GitHub Stats" />
+    	</a>
+  <a href="https://github.com/carlosferreyra/secret-game">
+      		<img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=secret-game&theme=tokyonight" alt="GitHub Stats" />
+    	</a>
+  <a href="https://github.com/carlosferreyra/me">
+      		<img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=me&theme=tokyonight" alt="GitHub Stats" />
+    	</a>
+  <a href="https://github.com/carlosferreyra/room">
+      		<img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=shopzone&theme=tokyonight" alt="GitHub Stats" />
+    	</a>
+  <a href="https://github.com/carlosferreyra/merliontechapp">
+      		<img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=merliontechapp&theme=tokyonight" alt="GitHub Stats" />
+    	</a>
+  
+  </p>
+</div>
+</details>
+
+</br></br>
+
+## 🐍 A Snake Eating My Contributions Graph
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AhmedFathyDev/AhmedFathyDev/main/GitHub.gif" alt="GitHub Octocat Logo" height="5%">
+  <p align="center">Eating the Graph...</p>
+	<picture>
+		  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/7oSkaaa/7oSkaaa/output/github-contribution-grid-snake-dark.svg">
+		  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/7oSkaaa/7oSkaaa/output/github-contribution-grid-snake.svg">
+		  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/7oSkaaa/7oSkaaa/output/github-contribution-grid-snake.svg">
+	</picture>
 </p>
-<p align="center"  >
-Loading...
-</p>
-<!-- support me -->
-<h2> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="100px"> </h2>
 
-![Jokes Card](https://readme-jokes.vercel.app/api?theme=tokyonight)
+<details><summary><h3> ❤️ Support Me </h3></summary>
 
-<h3 align="center">Support Me:</h3>
+---
 
 <p>
+  &emsp;
+  <img src="https://readme-jokes.vercel.app/api?theme=tokyonight">
+  &emsp;
   <a href="https://www.buymeacoffee.com/coolwinter18"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="coolwinter18" /></a>
+
 </p>
