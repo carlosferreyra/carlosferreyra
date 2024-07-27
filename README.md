@@ -36,7 +36,8 @@
 - :computer: I am a competitive programmer at `Leetcode`, `Google Contests`.
 - ✍🏻 I love using Software as a solution for every Problem
 - 🤓 Always learning new things
-- :thinking: I’m currently open for a new `job opportunity`, this is [MY RESUME](Carlos_Ferreyra_Resume.pdf)<!-- (https://drive.google.com/file/d/1hp8I6_M0pTQLCPBErB0ObVnyAyOBylYW/view). -->
+- :thinking: I’m currently open for a new `job opportunity`, this is [MY RESUME](https://drive.google.com/file/d/1hp8I6_M0pTQLCPBErB0ObVnyAyOBylYW/view).
+<!-- (Carlos_Ferreyra_Resume.pdf)  -->
 - :boom: You can visit [MY WEBSITE](https://carlosferreyra.github.io/me).
   <br>
 
@@ -47,7 +48,7 @@
 	  &emsp; 
 </div>
 
-## <img src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Connect-with-me.gif?raw=true" width="10%"> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="5%px">
+## <img src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Connect-with-me.gif?raw=true" width="10%"> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="5%">
 
 <p align="center">
 	<a href="mailto:eduferreyraok@gmail.com"><img img src="https://img.shields.io/badge/gmail-%23EA4335.svg?style=plastic&logo=gmail&logoColor=white" alt="Gmail"/></a>
@@ -211,7 +212,7 @@
  
 </details>
 
-<details><summary> <h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="50em" /> Git profile Trophies </h3></summary>
+<details><summary> <h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="5%" /> Git profile Trophies </h3></summary>
 
 ---
 
