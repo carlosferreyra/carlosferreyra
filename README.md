@@ -1,5 +1,8 @@
 <!-- <img align="center" src="https://avatars.githubusercontent.com/carlosferreyra" longdesc="https://avatars.githubusercontent.com/<username=carlosferreyra>" height="50%" width="10%" > -->
 
+[ResumeURL]: https://drive.google.com/file/d/1hp8I6_M0pTQLCPBErB0ObVnyAyOBylYW/view?usp=sharing
+[WebsiteURL]: https://about.me/carlosferreyra
+
 <!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
 
 <h1 align="center">Hi There <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></h1>
@@ -36,9 +39,9 @@
 - :computer: I am a competitive programmer at `Leetcode`, `Google Contests`.
 - ✍🏻 I love using Software as a solution for every Problem
 - 🤓 Always learning new things
-- :thinking: I’m currently open for a new `job opportunity`, this is [MY RESUME](https://drive.google.com/file/d/1hp8I6_M0pTQLCPBErB0ObVnyAyOBylYW/view).
+- :thinking: I’m currently open for a new `job opportunity`, this is [MY RESUME][ResumeURL].
 <!-- (Carlos_Ferreyra_Resume.pdf)  -->
-- :boom: You can visit [MY WEBSITE](https://carlosferreyra.github.io/me).
+- :boom: You can check my links [HERE][WebsiteURL].
   <br>
 
 ## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width=10%> My Competitive Programming Profiles
