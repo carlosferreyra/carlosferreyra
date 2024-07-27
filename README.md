@@ -7,7 +7,6 @@
   <a href="https://github.com/DenverCoder1/readme-typing-svg"><img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=I'm+Carlos+E+Ferreyra+..&hearts;++;Self-taught+Developer,;Computer+Science+Student,;CTF+Newbie,;Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
   </a>
 </p>
-
 <br>
 
 <!--
@@ -60,7 +59,7 @@
 
 ## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="3%"> My Skills
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Programming_Languages.gif?raw=true" width=5%> Programming languages
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Programming_Languages.gif?raw=true" width=5%> Languages / Backend Development
 
 <p align="center"> 
   &emsp; 
@@ -116,6 +115,15 @@
   &emsp;
     <a href="#"><img alt="GitHub" src="https://img.shields.io/badge/github-%23181717.svg?style=plastic&logo=github&logoColor=white"></a>
   &emsp;
+    <!-- google suit badge-->
+    <a href="#"><img alt="Google Drive" src="https://img.shields.io/badge/Google%20Drive-0078D4?style=plastic&logo=googledrive&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="Google Docs" src="https://img.shields.io/badge/Google%20Docs-4285F4?style=plastic&logo=googledocs&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="Google Slides" src="https://img.shields.io/badge/Google%20Slides-4285F4?style=plastic&logo=googleslides&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="Google Forms" src="https://img.shields.io/badge/Google%20Forms-4285F4?style=plastic&logo=googleforms&logoColor=white"></a>
+  &emsp;
     <a href="#"><img alt="Google Sheets" src="https://img.shields.io/badge/Google%20Sheets%20-%2334A853.svg?style=plastic&logo=google%20sheets&logoColor=white"></a>
   &emsp;
     <a href="#"><img alt="Mark Down" src="https://img.shields.io/badge/Markdown-000000?style=plastic&logo=markdown&logoColor=white"></a>
@@ -130,7 +138,11 @@
     &emsp;
     <a href="#"><img src="https://img.shields.io/badge/DjangoRestFramework-%23092E20.svg?&style=plastic&logo=django&logoColor=white" /></a>
     &emsp;
+    <!-- mysql-->
     <a href="#"><img src="https://img.shields.io/badge/mysql-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
+    &emsp;
+    <!-- mysql workbench-->
+    <a href="#"><img src="https://img.shields.io/badge/mysql%20workbench-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
 </p>
 
 ### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width=5%> IDEs
