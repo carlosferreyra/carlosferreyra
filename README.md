@@ -4,7 +4,7 @@
 
 <h1 align="center">Hi There <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></h1>
 <p align="center">
-  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=I'm+Carlos+E+Ferreyra+..&hearts;++;Self-taught+Developer,;Computer+Science+Student,;CTF+Newbie,;Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
+  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm a Self-taught+Developer,...; and Computer+Science+Student+from+Argentina.;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
   </a>
 </p>
 <br>
@@ -24,7 +24,7 @@
 ## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = 6.5%> About me
 
 <!-- profile views -->
-<img src="https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat" alt="carlosferreyra" />
+<img src="https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat" alt="profile count" />
   <!-- github followers badge -->
 <img alt="GitHub followers" src="https://img.shields.io/github/followers/carlosferreyra?label=Follow&amp;style=social">
   <!-- dependabot -->
