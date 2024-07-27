@@ -29,6 +29,8 @@
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width=30%>
 
 <br><br>
+<br><br>
+<br><br>
 
 - 👨‍💻 I'm Software Development Engineer @[UTN](https://frre.utn.edu.ar/)
 - :school: I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
