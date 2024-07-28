@@ -5,7 +5,7 @@
 
 <!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
 
-<h1 align="center">Hi There <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></h1>
+<h1 align="center">Hi There <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width=5%></h1>
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg"><img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
   </a>
@@ -24,7 +24,7 @@
 <br><br>
 <br><br>
 
-## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = 6.5%/> About me
+## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = 5% /> About me
 
 <!-- profile views -->
 <img src="https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat" alt="profile count" />
@@ -48,11 +48,11 @@
 ## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width=10%/> My Competitive Programming Profiles
 
 <div align="center" width=100%>
-	<a href="https://leetcode.com/coolwinter18/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-shadow-tal-revivo.png" alt="LeetCode" width="5%"/> </a>
+	<a href="https://leetcode.com/coolwinter18/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-shadow-tal-revivo.png" alt="LeetCode" width=5%/> </a>
 	  &emsp; 
 </div>
 
-## <img src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Connect-with-me.gif?raw=true" width="10%"> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="5%">
+## <img src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Connect-with-me.gif?raw=true" width=5%> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width=5%>
 
 <p align="center">
 	<a href="mailto:eduferreyraok@gmail.com"><img img src="https://img.shields.io/badge/gmail-%23EA4335.svg?style=plastic&logo=gmail&logoColor=white" alt="Gmail"/></a>
@@ -62,9 +62,9 @@
 	<a href="https://www.instagram.com/eduferreyraok/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?style=plastic&logo=instagram&logoColor=white" alt="Instagram"/></a>
 </p>
 
-## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="3%"> My Skills
+## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width =5%> My Skills
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Programming_Languages.gif?raw=true" width="5%" /> Languages / Backend Development
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Programming_Languages.gif?raw=true" width=5% /> Languages / Backend Development
 
 <p align="center"> 
   &emsp; 
@@ -89,7 +89,7 @@
   </a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Front_End.gif?raw=true" width="5%" /> Frontend Development
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Front_End.gif?raw=true" width=5% /> Frontend Development
 
 <p align="center"> 
   &emsp; 
@@ -150,7 +150,7 @@
     <a href="#"><img src="https://img.shields.io/badge/mysql%20workbench-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width="5%" /> IDEs
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width=5% /> IDEs
 
 <p align="center">
   &emsp;
@@ -159,7 +159,7 @@
     <a href="#"><img alt="JetBrain" src="https://img.shields.io/badge/jetbrains-%23000000.svg?style=plastic&logo=jetbrains&logoColor=white" /></a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/CP_PS.gif?raw=true" width="5%" /> Competitive Programming & Problem Solving
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/CP_PS.gif?raw=true" width=5% /> Competitive Programming & Problem Solving
 
 <p align="center">
   &emsp;
@@ -168,7 +168,7 @@
     <a href="#"><img alt = "Google" src="https://img.shields.io/badge/google-%234285F4.svg?style=plastic&logo=google&logoColor=white" /></a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/OS.gif?raw=true" width="5%" /> Operating Systems
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/OS.gif?raw=true" width=5% /> Operating Systems
 
 <p align="center">
   &emsp;
@@ -200,7 +200,7 @@
 
 ---
 
-<p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=carlosferreyra&theme=tokyonight_duo" alt="carlos" /></p>
+<p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=carlosferreyra&theme=tokyonight_duo" alt="stats" /></p>
 
 </details>
 
