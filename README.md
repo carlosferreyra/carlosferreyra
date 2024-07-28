@@ -24,7 +24,7 @@
 <br><br>
 <br><br>
 
-## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = 6.5%> About me
+## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = 6.5%/> About me
 
 <!-- profile views -->
 <img src="https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat" alt="profile count" />
@@ -32,22 +32,23 @@
 <img alt="GitHub followers" src="https://img.shields.io/github/followers/carlosferreyra?label=Follow&amp;style=social">
   <!-- dependabot -->
 <img alt="dependabot" src="https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra">
-<img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width=30%>
+  <!-- laptop animation -->
+<img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width=30%/>
 
 - 👨‍💻 I'm Software Development Engineer @[UTN](https://frre.utn.edu.ar/)
-- :school: I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
-- :computer: I am a competitive programmer at `Leetcode`, `Google Contests`.
+- 🏫 I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
+- 💻 I am a competitive programmer at `Leetcode`, `Google Contests`.
 - ✍🏻 I love using Software as a solution for every Problem
 - 🤓 Always learning new things
-- :thinking: I’m currently open for a new `job opportunity`, this is [MY RESUME][ResumeURL].
+- 👔 📝 I’m currently open for a new `job opportunity`, this is [MY RESUME][ResumeURL].
 <!-- (Carlos_Ferreyra_Resume.pdf)  -->
-- :boom: You can check my links [HERE][WebsiteURL].
+- 📌 You can check my links [HERE][WebsiteURL].
   <br>
 
-## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width=10%> My Competitive Programming Profiles
+## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width=10%/> My Competitive Programming Profiles
 
 <div align="center" width=100%>
-	<a href="https://leetcode.com/coolwinter18/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-shadow-tal-revivo.png" alt="LeetCode" width=%6/></a>
+	<a href="https://leetcode.com/coolwinter18/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-shadow-tal-revivo.png" alt="LeetCode" width="5%"/> </a>
 	  &emsp; 
 </div>
 
@@ -63,7 +64,7 @@
 
 ## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="3%"> My Skills
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Programming_Languages.gif?raw=true" width=5%> Languages / Backend Development
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Programming_Languages.gif?raw=true" width="5%" /> Languages / Backend Development
 
 <p align="center"> 
   &emsp; 
@@ -88,7 +89,7 @@
   </a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Front_End.gif?raw=true" width=5%> Frontend Development
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Front_End.gif?raw=true" width="5%" /> Frontend Development
 
 <p align="center"> 
   &emsp; 
@@ -109,7 +110,7 @@
    </a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width=5%> Software & Tools
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width=5% /> Software & Tools
 
 <p align="center">
   &emsp;
@@ -149,7 +150,7 @@
     <a href="#"><img src="https://img.shields.io/badge/mysql%20workbench-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width=5%> IDEs
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width="5%" /> IDEs
 
 <p align="center">
   &emsp;
@@ -158,7 +159,7 @@
     <a href="#"><img alt="JetBrain" src="https://img.shields.io/badge/jetbrains-%23000000.svg?style=plastic&logo=jetbrains&logoColor=white" /></a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/CP_PS.gif?raw=true" width=5%> Competitive Programming & Problem Solving
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/CP_PS.gif?raw=true" width="5%" /> Competitive Programming & Problem Solving
 
 <p align="center">
   &emsp;
@@ -167,7 +168,7 @@
     <a href="#"><img alt = "Google" src="https://img.shields.io/badge/google-%234285F4.svg?style=plastic&logo=google&logoColor=white" /></a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/OS.gif?raw=true" width=5%> Operating Systems
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/OS.gif?raw=true" width="5%" /> Operating Systems
 
 <p align="center">
   &emsp;
@@ -193,7 +194,7 @@
 
 <br>
 
-## <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFhYzJkMmQ2MWQ3ZGY3MDhjZTE3MDI2Mzk3NzE1OWQyZTRlMmYwMCZjdD1z/iY8CRBdQXODJSCERIr/giphy.gif" width=5% valign="bottom"> Github Stats
+## <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFhYzJkMmQ2MWQ3ZGY3MDhjZTE3MDI2Mzk3NzE1OWQyZTRlMmYwMCZjdD1z/iY8CRBdQXODJSCERIr/giphy.gif" width=5% valign="bottom" /> Github Stats
 
 <details><summary><h3> 🔥 Streak Stats</h3></summary>
 
@@ -267,7 +268,8 @@
 </div>
 </details>
 
-</br></br>
+<br>
+<br>
 
 ## 🐍 A Snake Eating My Contributions Graph
 
