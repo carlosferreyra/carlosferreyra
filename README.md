@@ -24,7 +24,7 @@
 <br><br>
 <br><br>
 
-## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = 5% /> About me
+## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = "5%" /> About me
 
 <!-- profile views -->
 <img src="https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat" alt="profile count" />
@@ -33,7 +33,7 @@
   <!-- dependabot -->
 <img alt="dependabot" src="https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra">
   <!-- laptop animation -->
-<img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="5%"/>
+<img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
 
 - 👨‍💻 I'm Software Development Engineer @[UTN](https://frre.utn.edu.ar/)
 - 🏫 I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
