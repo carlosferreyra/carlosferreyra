@@ -1,6 +1,8 @@
 <!-- <img align="center" src="https://avatars.githubusercontent.com/carlosferreyra" longdesc="https://avatars.githubusercontent.com/<username=carlosferreyra>" height="50%" width="10%" > -->
 
-[ResumeURL]: https://drive.google.com/file/d/1hp8I6_M0pTQLCPBErB0ObVnyAyOBylYW/view?usp=sharing
+<!-- [ResumeURL]: https://drive.google.com/file/d/1hp8I6_M0pTQLCPBErB0ObVnyAyOBylYW/view?usp=sharing -->
+
+[ResumeURL]: https://rxresu.me/carlosferreyra/resume
 [WebsiteURL]: https://about.me/carlosferreyra
 
 <!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
