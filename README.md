@@ -18,15 +18,12 @@
 [ResumeURL]: https://rxresu.me/carlosferreyra/resume
 [WebsiteURL]: https://about.me/carlosferreyra
 
-![](https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3)
 
-
-<a href="https://github.com/DenverCoder1/readme-typing-svg"></a>
-
+<a href="https://github.com/DenverCoder1/readme-typing-svg">
 <p align="center">
   <img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
 </p>
-
+</a>
 <br>
 
 <!--
