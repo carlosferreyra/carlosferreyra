@@ -5,11 +5,7 @@
 
 <!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
 
-
- <!--link to sytles.css -->
-<link rel="stylesheet" type="text/css" href="styles.css">
-
-# Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> 
+# <h1 align="center" > Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> </h1>
  
 
 [ResumeURL]: https://rxresu.me/carlosferreyra/resume
@@ -172,7 +168,7 @@
 
 <p align="center">
   &emsp;
-    <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=plastic&logo=visual-studio-code&logoColor=white"></a>
+    <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=plastic&logo=visual-studio-code&logoColor=white"></a>
   &emsp;
     <a href="#"><img alt="JetBrain" src="https://img.shields.io/badge/jetbrains-%23000000.svg?style=plastic&logo=jetbrains&logoColor=white" /></a>
 </p>
@@ -193,17 +189,17 @@
     <a href="#"><img src="https://img.shields.io/badge/Ubuntu-E95420?style=plastic&logo=ubuntu&logoColor=white"></a>
   &emsp;
     <a href="#"><img src="https://img.shields.io/badge/Windows-0078D6?style=plastic&logo=windows&logoColor=white"></a>
-  &emsp;
+  &emsp>
     <a href="#"><img src="https://img.shields.io/badge/Kali_Linux-557C94?style=plastic&logo=kali-linux&logoColor=white"></a>
     &emsp;
     <a href="#"><img src="https://img.shields.io/badge/MacOS-000000?style=plastic&logo=macos&logoColor=white"></a>
 <br>
 </p>
 
- ---
+<hr/>
 
 <p align = "center">
- <a href="https://github.com/piyushsuthar/github-readme-quotes"> <img alt = "Quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&animation=grow_out_in&quoteCategory=programming"> </a>
+ <a href="https://github.com/piyushsuthar/github-readme-quotes"> <img alt = "Quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&animation=grow_out_in&quoteCategory=programming" max-width="100%" /> </a>
 </p>
 
 <br>
@@ -216,7 +212,7 @@
 
 <details><summary><h3> 🔥 Streak Stats</h3></summary>
 
- ---
+<hr/>
 
 <p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=carlosferreyra&theme=tokyonight_duo" alt="stats" /></p>
 
@@ -224,7 +220,7 @@
 
 <details><summary><h3> 💻 GitHub Profile Stats</h3></summary>
 
- ---
+<hr/>
 
 <p align="center">
     <!-- contributions stats -->
@@ -241,7 +237,7 @@
 
 <details><summary><h3>⚡ Recent GitHub Activity</h3></summary>
 
- ---
+<hr/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=carlosferreyra&bg_color=1a1b27&color=aa82d9&line=628edb&point=64bfaf&area=true&hide_border=true)(https://github.com/ashutosh00710/github-readme-activity-graph)">
 
@@ -249,7 +245,7 @@
 
 <details><summary> <h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="5%" /> Git profile Trophies </h3></summary>
 
- --- 
+<hr/> 
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img align="center" src="https://github-profile-trophy.vercel.app/?username=carlosferreyra&theme=juicyfresh&no-bg=true&column=3"  alt="Trophies" /></a> </p>
 
@@ -259,7 +255,7 @@
 
 <details><summary><h3> 📋 My Repositories</h3></summary>
 
- --- 
+<hr/> 
 
 <div >
   <p align="center">
@@ -303,7 +299,7 @@
 
 <details><summary><h3> ❤️ Support Me </h3></summary>
 
- ---
+<hr/>
 
 <p>
   &emsp;
