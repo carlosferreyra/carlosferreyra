@@ -6,16 +6,8 @@
 <!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
 
 
- <!-- change page color from white to github themed color & match all img background color to page color-->
-<style>
-  body {
-    background-color: #0d1117;
-    color: #c9d1d9;
-  }
-  img {
-    background-color: #0d1117;
-  }
-</style>  
+ <!--link to sytles.css -->
+<link rel="stylesheet" type="text/css" href="styles.css">
 
 # Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> 
  
