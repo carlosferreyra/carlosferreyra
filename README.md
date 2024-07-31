@@ -7,16 +7,15 @@
 
 
  <!-- change page color from white to github themed color & match all img background color to page color-->
-<style >
-  img {
-    background-color: #0d1117;
-  }
+<style>
   body {
     background-color: #0d1117;
     color: #c9d1d9;
   }
-</style>
-  
+  img {
+    background-color: #0d1117;
+  }
+</style>  
 
 # Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> 
  
