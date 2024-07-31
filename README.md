@@ -199,7 +199,7 @@
 <hr/>
 
 <p align = "center">
- <a href="https://github.com/piyushsuthar/github-readme-quotes"> <img alt = "Quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&animation=grow_out_in&quoteCategory=programming" max-width="100%" /> </a>
+ <a href="https://github.com/piyushsuthar/github-readme-quotes"> <img alt = "Quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&animation=grow_out_in&quoteCategory=programming" height="auto" max-width="100%" width="100vw" /> </a>
 </p>
 
 <br>
