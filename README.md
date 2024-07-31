@@ -5,7 +5,7 @@
 
 <!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
 
-# <h1 align="center" > Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="50vw" /> </h1>
+# <h1 align="center" > Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5vw" /> </h1>
  
 
 [ResumeURL]: https://rxresu.me/carlosferreyra/resume
@@ -37,7 +37,7 @@
 
 <br>
 
-## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = "50vw" /> About me
+## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = "5vw" /> About me
 
 <!-- profile views -->
 <img src="https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat" alt="profile count" />
@@ -46,7 +46,7 @@
   <!-- dependabot -->
 <img alt="dependabot" src="https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra">
   <!-- laptop animation -->
-<img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="250vw"/>
+<img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25vw"/>
 
 - 👨‍💻 I'm Software Development Engineer @[UTN](https://frre.utn.edu.ar/)
 - 🏫 I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
@@ -63,10 +63,10 @@
 
 <p align="center" width="100%">
   &emsp;
- <a href="https://leetcode.com/coolwinter18/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-shadow-tal-revivo.png" alt="LeetCode" width="50vw"/> </a>
+ <a href="https://leetcode.com/coolwinter18/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-shadow-tal-revivo.png" alt="LeetCode" width="5vw"/> </a>
 </p>
 
-## <img src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Connect-with-me.gif?raw=true" width="50vw"/> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="50vw"/>
+## <img src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Connect-with-me.gif?raw=true" width="5vw"/> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="5vw"/>
 
 <p align="center">
  <a href="mailto:eduferreyraok@gmail.com"><img img src="https://img.shields.io/badge/gmail-%23EA4335.svg?style=plastic&logo=gmail&logoColor=white" alt="Gmail"/></a>
@@ -76,9 +76,9 @@
  <a href="https://www.instagram.com/eduferreyraok/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?style=plastic&logo=instagram&logoColor=white" alt="Instagram"/></a>
 </p>
 
-## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="50vw"/> My Skills
+## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="5vw"/> My Skills
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Programming_Languages.gif?raw=true" width="50vw" /> Languages / Backend Development
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Programming_Languages.gif?raw=true" width="5vw" /> Languages / Backend Development
 
 <p align="center">
   &emsp;
@@ -103,12 +103,12 @@
   </a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Front_End.gif?raw=true" width="50vw" /> Frontend Development
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Front_End.gif?raw=true" width="5vw" /> Frontend Development
 
 <p align="center">
   &emsp;
   <a href="https://www.w3.org/html/" target="_blank">
-   <img alt="HTML" src="https://img.shields.io/badge/HTML50vw20-%23E34F26.svg?style=plastic&logo=html5&logoColor=white">
+   <img alt="HTML" src="https://img.shields.io/badge/HTML5vw20-%23E34F26.svg?style=plastic&logo=html5&logoColor=white">
   </a>
   &emsp;
   <a href="https://www.w3schools.com/css/" target="_blank">
@@ -124,7 +124,7 @@
    </a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width="50vw" /> Software & Tools
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width="5vw" /> Software & Tools
 
 <p align="center">
   &emsp;
@@ -164,7 +164,7 @@
     <a href="#"><img src="https://img.shields.io/badge/mysql%20workbench-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width="50vw" /> IDEs
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width="5vw" /> IDEs
 
 <p align="center">
   &emsp;
@@ -173,7 +173,7 @@
     <a href="#"><img alt="JetBrain" src="https://img.shields.io/badge/jetbrains-%23000000.svg?style=plastic&logo=jetbrains&logoColor=white" /></a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/CP_PS.gif?raw=true" width="50vw" /> Competitive Programming & Problem Solving
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/CP_PS.gif?raw=true" width="5vw" /> Competitive Programming & Problem Solving
 
 <p align="center">
   &emsp;
@@ -182,7 +182,7 @@
     <a href="#"><img alt = "Google" src="https://img.shields.io/badge/google-%234285F4.svg?style=plastic&logo=google&logoColor=white" /></a>
 </p>
 
-### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/OS.gif?raw=true" width="50vw" /> Operating Systems
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/OS.gif?raw=true" width="5vw" /> Operating Systems
 
 <p align="center">
   &emsp;
@@ -208,7 +208,7 @@
 
 <br>
 
-## <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFhYzJkMmQ2MWQ3ZGY3MDhjZTE3MDI2Mzk3NzE1OWQyZTRlMmYwMCZjdD1z/iY8CRBdQXODJSCERIr/giphy.gif" width="50vw" valign="bottom" /> Github Stats
+## <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFhYzJkMmQ2MWQ3ZGY3MDhjZTE3MDI2Mzk3NzE1OWQyZTRlMmYwMCZjdD1z/iY8CRBdQXODJSCERIr/giphy.gif" width="5vw" valign="bottom" /> Github Stats
 
 <details><summary><h3> 🔥 Streak Stats</h3></summary>
 
@@ -243,7 +243,7 @@
 
 </details>
 
-<details><summary> <h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="50vw" /> Git profile Trophies </h3></summary>
+<details><summary> <h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="5vw" /> Git profile Trophies </h3></summary>
 
 <hr/> 
 
