@@ -5,7 +5,21 @@
 
 version: 2
 updates:
-  - package-ecosystem: "github-actions" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "weekly"  # Check for updates weekly
+    versioning-strategy: "increase"  # Always try to increase the version
+    open-pull-requests-limit: 3  # Limit open pull requests to 3
+    ignore:
+      - dependency-name: "core"  # Ignore updates for the "core" action
+      - dependency-name: "setup-node"
+        versions: ["<16"]  # Ignore versions below 16 for "setup-node"
+    reviewers:
+      - users:
+          - "carlosferreyra"
+      - teams:
+          - "security-team"
+    labels:
+      - "dependabot"
+      - "dependencies"
