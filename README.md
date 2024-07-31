@@ -1,5 +1,5 @@
-<!-- allow html -->
-<!-- markdownlint-disable MD033 -->
+<!-- allow html in gh-pages markdown -->
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
 
 <!-- <img align="center" src="https://avatars.githubusercontent.com/carlosferreyra" longdesc="https://avatars.githubusercontent.com/<username=carlosferreyra>" height="50%" width="10%" > -->
 
@@ -8,15 +8,25 @@
 
 <!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
 
-# <h1 align="center">Hi There <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width=5% /></h1>
+
+<!-- <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width=5% /> -->
+
+
+# Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width=5% />
+ 
 
 [ResumeURL]: https://rxresu.me/carlosferreyra/resume
 [WebsiteURL]: https://about.me/carlosferreyra
 
+![](https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3)
+
+
+<a href="https://github.com/DenverCoder1/readme-typing-svg"></a>
+
 <p align="center">
-  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
-  </a>
+  <img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
 </p>
+
 <br>
 
 <!--
@@ -55,15 +65,15 @@
 - 👔 📝 I’m currently open for a new `job opportunity`, this is [MY RESUME][ResumeURL].
 <!-- (Carlos_Ferreyra_Resume.pdf)  -->
 - 📌 You can check my links [HERE][WebsiteURL].
-  <br>
 
-## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width="25%"/> My Competitive Programming Profiles
+<br>
 
-<div align="center" width=100%>
+## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width="20%"/> My Competitive Programming Profiles 
 
+<p align="center" width=100%>
+  &emsp;
  <a href="https://leetcode.com/coolwinter18/"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-shadow-tal-revivo.png" alt="LeetCode" width=5%/> </a>
-   &emsp;
-</div>
+</p>
 
 ## <img src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Connect-with-me.gif?raw=true" width=5%> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width=5%>
 
