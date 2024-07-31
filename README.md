@@ -1,17 +1,18 @@
-<!-- -->
+<!-- allow html -->
+<!-- markdownlint-disable MD033 -->
 
 <!-- <img align="center" src="https://avatars.githubusercontent.com/carlosferreyra" longdesc="https://avatars.githubusercontent.com/<username=carlosferreyra>" height="50%" width="10%" > -->
 
+<!-- my google drive resume link: [Resume][ResumeURL] -->
 <!-- [ResumeURL]: https://drive.google.com/file/d/1hp8I6_M0pTQLCPBErB0ObVnyAyOBylYW/view?usp=sharing -->
 
-# Carlos E. Ferreyra
+<!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
+
+# <h1 align="center">Hi There <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width=5% /></h1>
 
 [ResumeURL]: https://rxresu.me/carlosferreyra/resume
 [WebsiteURL]: https://about.me/carlosferreyra
 
-<!-- <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y"> -->
-
-<h1 align="center">Hi There <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width=5% /></h1>
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg"><img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
   </a>
