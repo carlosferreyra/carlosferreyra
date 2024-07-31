@@ -205,7 +205,7 @@
 <br>
 </p>
 
----
+ ---
 
 <p align = "center">
  <a href="https://github.com/piyushsuthar/github-readme-quotes"> <img alt = "Quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&animation=grow_out_in&quoteCategory=programming"> </a>
@@ -221,7 +221,7 @@
 
 <details><summary><h3> 🔥 Streak Stats</h3></summary>
 
----
+ ---
 
 <p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=carlosferreyra&theme=tokyonight_duo" alt="stats" /></p>
 
@@ -229,7 +229,7 @@
 
 <details><summary><h3> 💻 GitHub Profile Stats</h3></summary>
 
----
+ ---
 
 <p align="center">
     <!-- contributions stats -->
@@ -246,7 +246,7 @@
 
 <details><summary><h3>⚡ Recent GitHub Activity</h3></summary>
 
----
+ ---
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=carlosferreyra&bg_color=1a1b27&color=aa82d9&line=628edb&point=64bfaf&area=true&hide_border=true)(https://github.com/ashutosh00710/github-readme-activity-graph)">
 
@@ -254,7 +254,7 @@
 
 <details><summary> <h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="5%" /> Git profile Trophies </h3></summary>
 
----
+ --- 
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img align="center" src="https://github-profile-trophy.vercel.app/?username=carlosferreyra&theme=juicyfresh&no-bg=true&column=3"  alt="Trophies" /></a> </p>
 
@@ -264,6 +264,7 @@
 
 <details><summary><h3> 📋 My Repositories</h3></summary>
 
+ --- 
 
 <div >
   <p align="center">
@@ -307,7 +308,7 @@
 
 <details><summary><h3> ❤️ Support Me </h3></summary>
 
----
+ ---
 
 <p>
   &emsp;
