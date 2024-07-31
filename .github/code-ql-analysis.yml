@@ -1,0 +1,18 @@
+# github action template for code analysis
+name: CodeQL Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
