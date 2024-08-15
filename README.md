@@ -48,7 +48,7 @@
   <!-- laptop animation -->
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
 
-- 👨‍💻 I'm Software Development Engineer @[UTN](https://frre.utn.edu.ar/)
+- 👨‍💻 I'm Software Developmer/Engineer @[UTN](https://frre.utn.edu.ar/)
 - 🏫 I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
 - 💻 I am a competitive programmer at `Leetcode`, `Google Contests`.
 - ✍🏻 I love using Software as a solution for every Problem
