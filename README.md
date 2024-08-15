@@ -259,6 +259,10 @@
 
 <div >
   <p align="center">
+     <!-- add my collaboration at org repo on https://github.com/Seminario-Integrador-2024/GestionTUP -->
+  <a href="https://github.com/Seminario-Integrador-2024/GestionTUP">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Seminario-Integrador-2024&repo=GestionTUP&theme=tokyonight" alt="GitHub Stats" />
+     </a>
  <a href="https://github.com/carlosferreyra/carlosferreyra">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=carlosferreyra&theme=tokyonight" alt="GitHub Stats" />
      </a>
@@ -277,10 +281,6 @@
   <a href="https://github.com/carlosferreyra/merliontechapp">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=merliontechapp&theme=tokyonight" alt="GitHub Stats" />
      </a>
-  <a href="https://github.com/Seminario-Integrador-2024/GestionTUP">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=GestionTUP&theme=tokyonight" alt="GitHub Stats" />
-     </a>
-  
   </p>
 </div>
 </details>
