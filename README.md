@@ -263,6 +263,9 @@
   <a href="https://github.com/Seminario-Integrador-2024/GestionTUP">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=Seminario-Integrador-2024&repo=GestionTUP&theme=tokyonight" alt="GitHub Stats" />
      </a>
+  <a href="https://github.com/Seminario-Integrador-2024/GestionTUP-backend">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Seminario-Integrador-2024&repo=GestionTUP-backend&theme=tokyonight" alt="GitHub Stats" />
+     </a>
  <a href="https://github.com/carlosferreyra/carlosferreyra">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=carlosferreyra&theme=tokyonight" alt="GitHub Stats" />
      </a>
