@@ -82,14 +82,6 @@
 
 <p align="center">
   &emsp;
-  <a href="https://www.cprogramming.com/" target="_blank">
-    <img alt="C" src="https://img.shields.io/badge/C%20-%232370ED.svg?style=plastic&logo=c&logoColor=white">
-  </a>
-  &emsp;
-  <a href="https://www.w3schools.com/cpp/" target="_blank">
-    <img alt="C++" src="https://img.shields.io/badge/C++%20-%2300599C.svg?style=plastic&logo=c%2B%2B&logoColor=white">
-  </a>
-  &emsp;
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
      <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=plastic&logo=javascript&logoColor=black">
    </a>
@@ -107,21 +99,21 @@
 
 <p align="center">
   &emsp;
-  <a href="https://www.w3.org/html/" target="_blank">
-   <img alt="HTML" src="https://img.shields.io/badge/HTML5%20-%23E34F26.svg?style=plastic&logo=html5&logoColor=white">
-  </a>
-  &emsp;
-  <a href="https://www.w3schools.com/css/" target="_blank">
-    <img alt="CSS" src="https://img.shields.io/badge/CSS%20-%231572B6.svg?style=plastic&logo=css3&logoColor=white">
-  </a>
-  &emsp;
-  <a href="https://www.python.org" target="_blank">
-    <img alt="Python" src="https://img.shields.io/badge/react-%2361DAFB.svg?style=plastic&logo=React&logoColor=black">
-  </a>
-  &emsp;
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
      <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=plastic&logo=javascript&logoColor=black">
    </a>
+  &emsp;
+  <a href="https://www.typescriptlang.org/" target="_blank">
+    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript%20-%23007ACC.svg?style=plastic&logo=typescript&logoColor=white">
+  </a>
+  &emsp;
+  <a href="https://reactjs.org/" target="_blank">
+    <img alt="React" src="https://img.shields.io/badge/react-%2361DAFB.svg?style=plastic&logo=React&logoColor=black">
+  </a>
+  &emsp;
+  <a href="https://angular.io/" target="_blank">
+    <img alt="Angular" src="https://img.shields.io/badge/Angular%20-%23DD0031.svg?style=plastic&logo=angular&logoColor=white">
+  </a>
 </p>
 
 ### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width="5%" /> Software & Tools
@@ -134,35 +126,48 @@
   &emsp;
     <a href="#"><img alt="GitHub" src="https://img.shields.io/badge/github-%23181717.svg?style=plastic&logo=github&logoColor=white"></a>
   &emsp;
-    <!-- google suit badge-->
-    <a href="#"><img alt="Google Drive" src="https://img.shields.io/badge/Google%20Drive-0078D4?style=plastic&logo=googledrive&logoColor=white"></a>
-  &emsp;
-    <a href="#"><img alt="Google Docs" src="https://img.shields.io/badge/Google%20Docs-4285F4?style=plastic&logo=googledocs&logoColor=white"></a>
-  &emsp;
-    <a href="#"><img alt="Google Slides" src="https://img.shields.io/badge/Google%20Slides-4285F4?style=plastic&logo=googleslides&logoColor=white"></a>
-  &emsp;
-    <a href="#"><img alt="Google Forms" src="https://img.shields.io/badge/Google%20Forms-4285F4?style=plastic&logo=googleforms&logoColor=white"></a>
-  &emsp;
-    <a href="#"><img alt="Google Sheets" src="https://img.shields.io/badge/Google%20Sheets%20-%2334A853.svg?style=plastic&logo=google%20sheets&logoColor=white"></a>
-  &emsp;
     <a href="#"><img alt="Mark Down" src="https://img.shields.io/badge/Markdown-000000?style=plastic&logo=markdown&logoColor=white"></a>
   &emsp;
     <a href="#"><img alt="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=plastic&logo=stack-overflow&logoColor=white"></a>
   &emsp;
-    <a href="#"><img alt="JSON" img src="https://img.shields.io/badge/json-%23000000.svg?style=plastic&logo=json&logoColor=white"></a>
-  <!-- &emsp;
-    <a href="#"><img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?&style=plastic&logo=selenium&logoColor=white"></a> -->
-    &emsp;
     <a href="#"><img src="https://img.shields.io/badge/django-%23092E20.svg?&style=plastic&logo=django&logoColor=white" /></a>
-    &emsp;
+  &emsp;
     <a href="#"><img src="https://img.shields.io/badge/DjangoRestFramework-%23092E20.svg?&style=plastic&logo=django&logoColor=white" /></a>
-    &emsp;
-    <!-- mysql-->
-    <a href="#"><img src="https://img.shields.io/badge/mysql-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
-    &emsp;
-    <!-- mysql workbench-->
-    <a href="#"><img src="https://img.shields.io/badge/mysql%20workbench-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
 </p>
+
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width="5%" /> Databases
+
+#### SQL
+<p align="center">
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/mysql-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/PostgreSQL-316192?style=plastic&logo=postgresql&logoColor=white"/></a>
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white"/></a>
+</p>
+
+#### NoSQL
+<p align="center">
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/Firestore-FFCA28?style=plastic&logo=firebase&logoColor=black"/></a>
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/MongoDB-4EA94B?style=plastic&logo=mongodb&logoColor=white"/></a>
+</p>
+
+<!-- a cloud platform section -->
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width="5%" /> Cloud Platforms & Infrastructure as Code
+
+<p align="center">
+  &emsp;
+    <a href="#"><img alt="Google Cloud Platform" src="https://img.shields.io/badge/Google_Cloud-4285F4?style=plastic&logo=google-cloud&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="Terraform" src="https://img.shields.io/badge/Terraform-7B42BC?style=plastic&logo=terraform&logoColor=white"></a>
+  &emsp;
+    <a href="#"><img alt="Amazon Web Services" src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=plastic&logo=amazon-aws&logoColor=white"></a>
+</p>
+
+
 
 ### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width="5%" /> IDEs
 
@@ -171,6 +176,8 @@
     <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=plastic&logo=visual-studio-code&logoColor=white"></a>
   &emsp;
     <a href="#"><img alt="JetBrain" src="https://img.shields.io/badge/jetbrains-%23000000.svg?style=plastic&logo=jetbrains&logoColor=white" /></a>
+  &emsp;
+    <a href="#"><img alt="Cursor" src="https://img.shields.io/badge/Cursor-00A98F?style=plastic&logo=cursor&logoColor=white"></a>
 </p>
 
 ### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/CP_PS.gif?raw=true" width="5%" /> Competitive Programming & Problem Solving
@@ -314,3 +321,6 @@
   <a href="https://www.buymeacoffee.com/coolwinter18"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="coolwinter18" /></a>
 
 </p>
+
+
+
