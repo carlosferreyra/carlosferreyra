@@ -297,6 +297,21 @@
 
 <br>
 <br>
+<details><summary><h3> 🏛️ My Organizations</h3></summary>
+
+<hr/>
+
+<div >
+  <p align="center">
+     <!-- my organizartions -->
+  <div class="github-card" data-user="lepture" data-repo="github-cards"></div>
+  <script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
+  
+</div>
+</details>
+
+<br>
+<br>
 
 ## 🐍 A Snake Eating My Contributions Graph
 
