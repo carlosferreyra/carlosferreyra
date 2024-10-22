@@ -6,11 +6,9 @@
 <img src="https://media.licdn.com/dms/image/D4D16AQHiKioB6hAs9w/profile-displaybackgroundimage-shrink_350_1400/0/1721193136026?e=1727308800&v=beta&t=oMtdpeEpr3UQzB_zCfX2v5057sLh6g4Gb9x4WPl6D6Y">
 
 <h1 align="center" > Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> </h1>
- 
 
 [ResumeURL]: https://rxresu.me/carlosferreyra/resume
 [WebsiteURL]: https://about.me/carlosferreyra
-
 
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
@@ -59,7 +57,7 @@
 
 <br>
 
-## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width="10%"/> My Competitive Programming Profiles 
+## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width="10%"/> My Competitive Programming Profiles
 
 <p align="center" width="100%">
   &emsp;
@@ -82,8 +80,8 @@
 
 <p align="center">
   &emsp;
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-     <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=plastic&logo=javascript&logoColor=black">
+  <a href="https://nodejs.org/" target="_blank">
+     <img alt="Node.js" src="https://img.shields.io/badge/Node.js%20-%234B8BBE.svg?style=plastic&logo=node.js&logoColor=white">
    </a>
   &emsp;
   <a href="https://www.java.com" target="_blank">
@@ -116,6 +114,21 @@
   </a>
 </p>
 
+### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width="5%" /> Frameworks
+
+<p align="center">
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/django-%23092E20.svg?&style=plastic&logo=django&logoColor=white" alt="Django Badge" /></a>
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/DjangoRestFramework-%23092E20.svg?&style=plastic&logo=django&logoColor=white" alt="Django Rest Framework Badge" /></a>
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/Pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white" alt="Pandas Badge" /></a>
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/Spring-%236DB33F.svg?style=plastic&logo=spring&logoColor=white" alt="Spring Badge" /></a>
+  &emsp;
+    <a href="#"><img src="https://img.shields.io/badge/Spring%20Boot-%236DB33F.svg?style=plastic&logo=spring-boot&logoColor=white" alt="Spring Boot Badge" /></a>
+</p>
+
 ### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width="5%" /> Software & Tools
 
 <p align="center">
@@ -129,25 +142,23 @@
     <a href="#"><img alt="Mark Down" src="https://img.shields.io/badge/Markdown-000000?style=plastic&logo=markdown&logoColor=white"></a>
   &emsp;
     <a href="#"><img alt="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=plastic&logo=stack-overflow&logoColor=white"></a>
-  &emsp;
-    <a href="#"><img src="https://img.shields.io/badge/django-%23092E20.svg?&style=plastic&logo=django&logoColor=white" /></a>
-  &emsp;
-    <a href="#"><img src="https://img.shields.io/badge/DjangoRestFramework-%23092E20.svg?&style=plastic&logo=django&logoColor=white" /></a>
 </p>
 
 ### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Software_Tools.gif?raw=true" width="5%" /> Databases
 
 #### SQL
+
 <p align="center">
   &emsp;
     <a href="#"><img src="https://img.shields.io/badge/mysql-%234479A1.svg?&style=plastic&logo=mysql&logoColor=white"/></a>
   &emsp;
     <a href="#"><img src="https://img.shields.io/badge/PostgreSQL-316192?style=plastic&logo=postgresql&logoColor=white"/></a>
   &emsp;
-    <a href="#"><img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white"/></a>
+    <a href="#"><img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white" alt="Microsoft SQL Server Badge"/></a>
 </p>
 
 #### NoSQL
+
 <p align="center">
   &emsp;
     <a href="#"><img src="https://img.shields.io/badge/Firestore-FFCA28?style=plastic&logo=firebase&logoColor=black"/></a>
@@ -166,8 +177,6 @@
   &emsp;
     <a href="#"><img alt="Amazon Web Services" src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=plastic&logo=amazon-aws&logoColor=white"></a>
 </p>
-
-
 
 ### <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/IDEs.gif?raw=true" width="5%" /> IDEs
 
@@ -252,7 +261,7 @@
 
 <details><summary> <h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="5%" /> Git profile Trophies </h3></summary>
 
-<hr/> 
+<hr/>
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img align="center" src="https://github-profile-trophy.vercel.app/?username=carlosferreyra&theme=juicyfresh&no-bg=true&column=3"  alt="Trophies" /></a> </p>
 
@@ -262,7 +271,7 @@
 
 <details><summary><h3> 📋 My Repositories</h3></summary>
 
-<hr/> 
+<hr/>
 
 <div >
   <p align="center">
@@ -321,6 +330,8 @@
   <a href="https://www.buymeacoffee.com/coolwinter18"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="coolwinter18" /></a>
 
 </p>
+
+
 
 
 
