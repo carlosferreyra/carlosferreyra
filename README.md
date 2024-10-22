@@ -1,7 +1,7 @@
 <!-- allow html in gh-pages markdown -->
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
 
-<img align="center" src="https://avatars.githubusercontent.com/carlosferreyra" longdesc="https://avatars.githubusercontent.com/<username=carlosferreyra>" height="50%" width="10%" >
+<!-- <img align="center" src="https://avatars.githubusercontent.com/carlosferreyra" longdesc="https://avatars.githubusercontent.com/<username=carlosferreyra>" height="50%" width="10%" > -->
 
 
 <h1 align="center" > Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> </h1>
