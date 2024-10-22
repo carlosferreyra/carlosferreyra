@@ -48,13 +48,6 @@
 
 <br>
 
- >[!WARNING] 
- >
- > Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
- 
-<br>
-
-
 ## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width="10%"/> My Competitive Programming Profiles
 
 <p align="center" width="100%">
@@ -243,13 +236,11 @@
    <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs?username=carlosferreyra&langs_count=10&show_icons=true&locale=en&theme=tokyonight" alt="lang stats" /> -->
     <img  src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&langs_count=8&theme=algolia"/>
 <br/>
+  </p>
 
  >[!WARNING] 
  >
  > Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
-
-
-  </p>
 </details>
 
 <details><summary><h3>⚡ Recent GitHub Activity</h3></summary>
