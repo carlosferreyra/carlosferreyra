@@ -304,8 +304,8 @@
 <div >
   <p align="center">
      <!-- my organizartions -->
-  <div class="github-card" data-user="Seminario-Integrador-2024" data-repo="github-cards"></div>
-  <script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
+  <div class="github-card" data-github="Seminario-Integrador-2024" data-width="400" data-height="" data-theme="medium"></div>
+  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
   </p>
 </div>
 </details>
