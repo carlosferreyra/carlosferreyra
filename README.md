@@ -237,7 +237,9 @@
     <img  src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&langs_count=8&theme=algolia"/>
 <br/>
 
-<b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
+ > [!IMPORTANT] 
+ 
+ > Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
 
   </p>
 </details>
@@ -297,21 +299,6 @@
 
 <br>
 <br>
-<details><summary><h3> 🏛️ My Organizations</h3></summary>
-
-<hr/>
-
-<div >
-  <p align="center">
-     <!-- my organizartions -->
-  <div class="github-card" data-github="Seminario-Integrador-2024" data-width="400" data-height="" data-theme="medium"></div>
-  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-  </p>
-</div>
-</details>
-
-<br>
-<br>
 
 ## 🐍 A Snake Eating My Contributions Graph
 
@@ -335,7 +322,8 @@
   &emsp;
   <a href="https://www.buymeacoffee.com/coolwinter18"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="coolwinter18" /></a>
   &emsp;
-  <iframe src="https://github.com/sponsors/carlosferreyra/card" title="Sponsor carlosferreyra" height="225" width="600" style="border: 0;"></iframe>
+  <div class="github-card" data-github="Seminario-Integrador-2024" data-width="400" data-height="" data-theme="default"></div>
+  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 </p>
 
 
