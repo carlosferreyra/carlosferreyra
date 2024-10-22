@@ -306,7 +306,7 @@
      <!-- my organizartions -->
   <div class="github-card" data-user="lepture" data-repo="github-cards"></div>
   <script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
-  
+  </p>
 </div>
 </details>
 
