@@ -237,9 +237,9 @@
     <img  src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&langs_count=8&theme=algolia"/>
 <br/>
 
- >[!WARNING]
- > 
+ >[!WARNING] 
  > Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
+ 
 
   </p>
 </details>
@@ -321,9 +321,6 @@
   <img src="https://readme-jokes.vercel.app/api?theme=tokyonight">
   &emsp;
   <a href="https://www.buymeacoffee.com/coolwinter18"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="coolwinter18" /></a>
-  &emsp;
-  <div class="github-card" data-github="Seminario-Integrador-2024" data-width="400" data-height="" data-theme="default"></div>
-  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 </p>
 
 
