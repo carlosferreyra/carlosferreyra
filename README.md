@@ -48,6 +48,13 @@
 
 <br>
 
+ >[!WARNING] 
+ >
+ > Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
+ 
+<br>
+
+
 ## <img src="https://media4.giphy.com/media/dMLmQfCO7lCA2gX3tw/giphy.gif?cid=ecf05e47ak6mwfu812269zzr8ydv529109qzpb8rszwnja9e&rid=giphy.gif&ct=s" width="10%"/> My Competitive Programming Profiles
 
 <p align="center" width="100%">
