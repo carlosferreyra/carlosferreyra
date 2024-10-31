@@ -40,7 +40,7 @@
 - 👨‍💻 I'm Software Developmer/Engineer @[UTN](https://frre.utn.edu.ar/)
 - 🏫 I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
 - 💻 I am a competitive programmer at `Leetcode`, `Google Contests`.
-- ✍🏻 I love using Software as a solution for every Problem. See my current project: [GestionTUP](https://github.com/Seminario-Integrador-2024/)
+- ✍🏻 I love using Software as a solution for every Problem. See my current project: [GestionTUP](https://github.com/Seminario-Integrador-2024/GestionTUP)
 - 🤓 Always learning new things
 - 👔 📝 I’m currently open for a new `job opportunity`, this is [MY RESUME][ResumeURL].
 <!-- (Carlos_Ferreyra_Resume.pdf)  -->
