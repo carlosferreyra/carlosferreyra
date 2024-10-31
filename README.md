@@ -285,7 +285,7 @@
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=secret-game&theme=tokyonight" alt="GitHub Stats" />
      </a>
   <a href="https://github.com/carlosferreyra/room">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=shopzone&theme=tokyonight" alt="GitHub Stats" />
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=room&theme=tokyonight" alt="GitHub Stats" />
      </a>
   <a href="https://github.com/carlosferreyra/merliontechapp">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=carlosferreyra&repo=merliontechapp&theme=tokyonight" alt="GitHub Stats" />
