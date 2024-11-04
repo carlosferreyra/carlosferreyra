@@ -8,6 +8,7 @@
 
 [ResumeURL]: https://rxresu.me/carlosferreyra/resume
 [WebsiteURL]: https://about.me/carlosferreyra
+[WebsiteURL2]: https://carlosferreyra.me/
 
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
@@ -44,7 +45,7 @@
 - 🤓 Always learning new things
 - 👔 📝 I’m currently open for a new `job opportunity`, this is [MY RESUME][ResumeURL].
 <!-- (Carlos_Ferreyra_Resume.pdf)  -->
-- 📌 You can check my links [HERE][WebsiteURL].
+- 📌 You can check my website [HERE][WebsiteURL2].
 
 <br>
 
