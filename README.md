@@ -35,6 +35,10 @@
 <img alt="GitHub followers" src="https://img.shields.io/github/followers/carlosferreyra?label=Follow&amp;style=social">
   <!-- dependabot -->
 <img alt="dependabot" src="https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra">
+<!-- deply status -->
+
+[![pages-build-deployment](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment)
+
   <!-- laptop animation -->
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
 
