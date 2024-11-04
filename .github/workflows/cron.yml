@@ -18,6 +18,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Create PDFs directory
+        run: mkdir -p ./pdfs
+        
       - name: Download PDF
         run: |
           curl -L -o ./pdfs/me.pdf https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me.pdf
