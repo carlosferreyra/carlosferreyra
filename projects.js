@@ -9,7 +9,7 @@ const projects = [
     },
   
     {
-      name: "Nextbnb",
+      name: "NextBnb",
       img: "https://cdn.sanity.io/images/boc3ustf/production/f0b92e2037b06a0caf4b4dd921cb9780e8acec14-1650x1108.png?w=400",
       repo: "https://github.com/lucasmmaidana/nextbnb",
       demo: "https://nextbnb-pi.vercel.app/",
