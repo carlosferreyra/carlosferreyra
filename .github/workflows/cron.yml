@@ -1,0 +1,29 @@
+# make a cron job for updating the pdfs every day
+name: Daily PDF Upload
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight UTC
+
+jobs:
+  upload-pdfs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download PDF
+        run: |
+          curl -L -o ./pdfs/me.pdf https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me.pdf
+          curl -L -o ./pdfs/me_spanish.pdf https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me_spanish.pdf
+
+      - name: Upload PDFs
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add pdfs/me.pdf pdfs/me_spanish.pdf
+          git commit -m 'Daily PDF upload'
+          git push
+
+
