@@ -23,13 +23,17 @@ jobs:
         
       - name: Download PDF
         run: |
+          set -e
           curl -L -o ./pdfs/me.pdf https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me.pdf
           curl -L -o ./pdfs/me_spanish.pdf https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me_spanish.pdf
 
-      - name: Upload PDFs
+      - name: Set up repository
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Upload PDFs
+        run: |
           git add pdfs/me.pdf pdfs/me_spanish.pdf
           git commit -m 'Daily PDF upload'
           git push
