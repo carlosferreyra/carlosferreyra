@@ -73,20 +73,19 @@ jobs:
             fi
           done
           
-
       - name: Save repositories and social previews to projects.js
         run: |
           echo "const projects = [" > projects.js
           jq -r --slurpfile previews social_previews.json \
           --slurpfile org_previews social_previews_orgs.json \
-          '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
+          '[inputs] | add | .[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
           "name": .name,
           "img": (if .owner.type == "Organization" then $org_previews[0][.name] else $previews[0][.name] end),
           "repo": .html_url,
           "demo": .homepage,
           "stack": (.topics // []),
-          "description": (.description // "" | gsub("\""; "\\\""))
-          }' org_repos.json user_repos.json | \
+          "description": (.description // "")
+          }' | \
           jq -r 'to_entries | .[] | "  {\n    name: \"\(.value.name)\",\n    img: \"\(.value.img)\",\n    repo: \"\(.value.repo)\",\n    demo: \"\(.value.demo)\",\n    stack: [\"\(.value.stack | join("\", \""))\"],\n    description: \"\(.value.description)\"\n  },"' >> projects.js
           
           echo "];
@@ -104,4 +103,3 @@ jobs:
             git add projects.js
             git commit -m "Update projects.js with latest repositories"
             git push
-          fi
