@@ -41,7 +41,7 @@
   <!-- laptop animation -->
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
 
-- 👨‍💻 I'm Software Developer/Engineer @[UTN](https://frre.utn.edu.ar/). Related projects: [GestionTUP](https://github.com/Seminario-Integrador-2024/)
+- 👨‍💻 I'm Software Developer/Engineer @[UTN](https://frre.utn.edu.ar/). Related projects: [Seminario Integrador](https://github.com/Seminario-Integrador-2024/)
 - 🏫 I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
 - 💻 I am a competitive programmer at `Leetcode`.
 - ✍🏻 I love using Software as a solution for every Problem. See my projects: [Here](https://carlosferreyra.me/)
