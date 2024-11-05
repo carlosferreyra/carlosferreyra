@@ -50,7 +50,8 @@ jobs:
             "stack": (.topics // []),
             "description": (.description // "")
           } | "  {\n    name: \"\(.name)\",\n    img: \"\(.img)\",\n    repo: \"\(.repo)\",\n    demo: \(.demo),\n    stack: [\"\(.stack | join("\", \""))\"],\n    description: \"\(.description)\"\n  },"' user_repos.json org_repos.json >> projects.js
-          echo "];\n\nexport default projects;" >> projects.js
+          echo "];
+          echo export default projects;" >> projects.js
           rm user_repos.json org_repos.json
 
       - name: Commit and push changes
