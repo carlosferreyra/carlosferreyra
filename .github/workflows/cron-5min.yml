@@ -1,6 +1,9 @@
 name: Repository Update
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '*/2 * * * *' # Runs every 2 minutes
 
