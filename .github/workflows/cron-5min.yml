@@ -39,14 +39,20 @@ jobs:
             "name": .name,
             "img": .owner.avatar_url,
             "repo": .html_url,
-            "demo": (.homepage // null),
+            "demo": .homepage,
             "stack": (.topics // []),
             "description": (.description // "")
           } | "  {\n    name: \"\(.name)\",\n    img: \"\(.img)\",\n    repo: \"\(.repo)\",\n    demo: \(.demo),\n    stack: [\"\(.stack | join("\", \""))\"],\n    description: \"\(.description)\"\n  },"' user_repos.json org_repos.json >> projects.js
           echo "];\n\nexport default projects;" >> projects.js
+          rm user_repos.json org_repos.json
 
       - name: Commit and push changes
         run: |
-          git add projects.js
-          git commit -m "Update projects.js with latest repositories"
-          git push
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit"
+            exit 0
+          else
+            git add projects.js
+            git commit -m "Update projects.js with latest repositories"
+            git push
+          fi
