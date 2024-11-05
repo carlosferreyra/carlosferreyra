@@ -34,6 +34,7 @@ jobs:
 
       - name: Save repositories to projects.js
         run: |
+          rm -f projects.js
           echo "const projects = [" > projects.js
           jq -r '.[] | select(.name | startswith(".") | not) | {
             "name": .name,
