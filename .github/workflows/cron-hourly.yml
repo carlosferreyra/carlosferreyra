@@ -35,20 +35,20 @@ jobs:
       - name: Save repositories to projects.js
         run: |
           if [ ! -f user_repos.json ] || [ ! -f org_repos.json ]; then
-            echo "Failed to fetch repositories"
-            exit 1
+          echo "Failed to fetch repositories"
+          exit 1
           fi
           if [ -f projects.js ]; then
-            rm projects.js
+          rm projects.js
           fi
           echo "const projects = [" > projects.js
-          jq -r '.[] | select(.name | startswith(".") | not) | {
-            "name": .name,
-            "img": .owner.avatar_url,
-            "repo": .html_url,
-            "demo": "\"\(.homepage)\"",
-            "stack": (.topics // []),
-            "description": (.description // "" | gsub("\""; "\\\""))
+          jq -r '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
+          "name": .name,
+          "img": .owner.avatar_url,
+          "repo": .html_url,
+          "demo": "\"\(.homepage)\"",
+          "stack": (.topics // []),
+          "description": (.description // "" | gsub("\""; "\\\""))
           } | "  {\n    name: \"\(.name)\",\n    img: \"\(.img)\",\n    repo: \"\(.repo)\",\n    demo: \(.demo),\n    stack: [\"\(.stack | join("\", \""))\"],\n    description: \"\(.description)\"\n  },"' user_repos.json org_repos.json >> projects.js
           echo "];
           
