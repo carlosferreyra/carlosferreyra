@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '*/2 * * * *' # Runs every 2 minutes
+    - cron: '*/5 * * * *' # Runs every 5 minutes
 
 jobs:
   update-repo-list:
@@ -38,10 +38,10 @@ jobs:
           jq -r '.[] | select(.name | startswith(".") | not) | {
             name: .name,
             img: .owner.avatar_url,
-            repo: .html_url,
-            demo: .homepage,
-            stack: .topics,
-            description: .description
+            repo: (.html_url // "null"),
+            demo: (.homepage // "null"),
+            stack: (.topics // [])
+            description: .description,
           } | "  {\n    name: \"\(.name)\",\n    img: \"\(.img)\",\n    repo: \(.repo // "null"),\n    demo: \(.demo // "null"),\n    stack: \(.stack | join(", ")),\n    description: \"\(.description // "")\"\n  },"' user_repos.json org_repos.json >> projects.js
           echo "]\n\nexport default projects" >> projects.js
 
