@@ -11,6 +11,11 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GITHUB_API_URL: https://api.github.com
 
+permissions:
+  contents: read
+  packages: read
+  repository-projects: write
+
 jobs:
   update-repo-list:
     runs-on: ubuntu-latest
@@ -42,7 +47,11 @@ jobs:
               repo=$(echo $repo | cut -d'/' -f2)
             fi
             query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl } }\"}"
-            img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" $GITHUB_API_URL/graphql | jq -r ".data.repository.openGraphImageUrl")
+            img_url=$(curl -s -H "Authorization: bearer $GITHUB_TOKEN" \
+                      -H "Content-Type: application/json" \
+                      -X POST \
+                      -d "$query" \
+                      $GITHUB_API_URL/graphql | tee /dev/stderr | jq -r ".data.repository.openGraphImageUrl")
             jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews.json > tmp.json && mv tmp.json social_previews.json
           done
 
@@ -50,31 +59,36 @@ jobs:
         run: |
           echo "{}" > social_previews_orgs.json
           jq -r '.[] | select(.name | startswith(".") | not) | .name' org_repos.json | while read repo; do
-          owner="Seminario-Integrador-2024"
-          query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl } }\"}"
-          img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" $GITHUB_API_URL/graphql | jq -r ".data.repository.openGraphImageUrl")
-          jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews_orgs.json > tmp.json && mv tmp.json social_previews_orgs.json
+            owner="Seminario-Integrador-2024"
+            query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl }}\"}"
+            
+            img_url=$(curl -s -H "Authorization: bearer $GITHUB_TOKEN" \
+                          -H "Content-Type: application/json" \
+                          -X POST \
+                          -d "$query" \
+                          $GITHUB_API_URL/graphql | tee /dev/stderr | jq -r ".data.repository.openGraphImageUrl")
+            
+            if [ "$img_url" != "null" ] && [ -n "$img_url" ]; then
+              jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews_orgs.json > tmp.json && mv tmp.json social_previews_orgs.json
+            fi
           done
           
 
       - name: Save repositories and social previews to projects.js
         run: |
-          if [ ! -f user_repos.json ] || [ ! -f org_repos.json ]; then
-            echo "Failed to fetch repositories"
-            exit 1
-          fi
-          if [ -f projects.js ]; then
-            rm projects.js
-          fi
           echo "const projects = [" > projects.js
-            jq -r --slurpfile previews social_previews.json --slurpfile org_previews social_previews_orgs.json '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
-            "name": .name,
-            "img": $previews[0][.name],
-            "repo": .html_url,
-            "demo": "\"\(.homepage)\"",
-            "stack": (.topics // []),
-            "description": (.description // "" | gsub("\""; "\\\""))
-          } | "  {\n    name: \"\(.name)\",\n    img: \"\(.img)\",\n    repo: \"\(.repo)\",\n    demo: \(.demo),\n    stack: [\"\(.stack | join("\", \""))\"],\n    description: \"\(.description)\"\n  },"' user_repos.json org_repos.json >> projects.js
+          jq -r --slurpfile previews social_previews.json \
+               --slurpfile org_previews social_previews_orgs.json \
+               '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
+                 "name": .name,
+                 "img": (if .owner.type == "Organization" then $org_previews[0][.name] else $previews[0][.name] end),
+                 "repo": .html_url,
+                 "demo": .homepage,
+                 "stack": (.topics // []),
+                 "description": (.description // "" | gsub("\""; "\\\""))
+               }' org_repos.json user_repos.json | \
+          jq -r 'to_entries | .[] | "  {\n    name: \"\(.value.name)\",\n    img: \"\(.value.img)\",\n    repo: \"\(.value.repo)\",\n    demo: \"\(.value.demo)\",\n    stack: [\"\(.value.stack | join("\", \""))\"],\n    description: \"\(.value.description)\"\n  },"' >> projects.js
+          
           echo "];
           
           export default projects;" >> projects.js
@@ -90,4 +104,3 @@ jobs:
             git add projects.js
             git commit -m "Update projects.js with latest repositories"
             git push
-          fi
