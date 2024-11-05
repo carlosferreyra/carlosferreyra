@@ -47,6 +47,7 @@ jobs:
             img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" https://api.github.com/graphql | jq -r ".data.repository.openGraphImageUrl")
             jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews.json > tmp.json && mv tmp.json social_previews.json
           done
+
       - name: Fetch social preview images from orgs repositories
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -59,8 +60,6 @@ jobs:
             jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews_orgs.json > tmp.json && mv tmp.json social_previews_orgs.json
           done
 
-          
-            
       - name: Save repositories and social previews to projects.js
         run: |
           if [ ! -f user_repos.json ] || [ ! -f org_repos.json ]; then
@@ -94,4 +93,3 @@ jobs:
             git add projects.js
             git commit -m "Update projects.js with latest repositories"
             git push
-          fi
