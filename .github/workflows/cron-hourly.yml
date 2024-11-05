@@ -32,7 +32,7 @@ jobs:
         run: |
           curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/orgs/Seminario-Integrador-2024/repos?per_page=100 > org_repos.json
 
-      - name: Fetch social preview images
+      - name: Fetch social preview images from carlosferreyra repositories
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -47,8 +47,21 @@ jobs:
             img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" https://api.github.com/graphql | jq -r ".data.repository.openGraphImageUrl")
             jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews.json > tmp.json && mv tmp.json social_previews.json
           done
+      - name: Fetch social preview images from orgs repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "{}" > social_previews_orgs.json
+          jq -r '.[] | select(.name | startswith(".") | not) | .name' org_repos.json | while read repo; do
+            owner="Seminario-Integrador-2024"
+            query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl } }\"}"
+            img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" https://api.github.com/graphql | jq -r ".data.repository.openGraphImageUrl")
+            jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews_orgs.json > tmp.json && mv tmp.json social_previews_orgs.json
+          done
 
-      - name: Save repositories to projects.js
+          
+            
+      - name: Save repositories and social previews to projects.js
         run: |
           if [ ! -f user_repos.json ] || [ ! -f org_repos.json ]; then
             echo "Failed to fetch repositories"
@@ -58,7 +71,7 @@ jobs:
             rm projects.js
           fi
           echo "const projects = [" > projects.js
-          jq -r --slurpfile previews social_previews.json '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
+            jq -r --slurpfile previews social_previews.json --slurpfile org_previews social_previews_orgs.json '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
             "name": .name,
             "img": $previews[0][.name],
             "repo": .html_url,
@@ -70,7 +83,7 @@ jobs:
           
           export default projects;" >> projects.js
           
-          rm user_repos.json org_repos.json social_previews.json
+          rm user_repos.json org_repos.json social_previews.json social_previews_orgs.json
 
       - name: Commit and push changes
         run: |
