@@ -80,4 +80,5 @@ const projects = [
     description: "backend service for GestionTUP as API Restful"
   },
 ];
-echo export default projects;
+
+export default projects;
