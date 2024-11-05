@@ -32,29 +32,43 @@ jobs:
         run: |
           curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/orgs/Seminario-Integrador-2024/repos?per_page=100 > org_repos.json
 
+      - name: Fetch social preview images
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          jq -r '.[] | select(.name | startswith(".") | not) | .name' user_repos.json org_repos.json | while read repo; do
+            owner="carlosferreyra"
+            if [[ $repo == *"/"* ]]; then
+              owner=$(echo $repo | cut -d'/' -f1)
+              repo=$(echo $repo | cut -d'/' -f2)
+            fi
+            query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl } }\"}"
+            curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" https://api.github.com/graphql | jq -r ".data.repository.openGraphImageUrl" >> social_previews.txt
+          done
+
       - name: Save repositories to projects.js
         run: |
           if [ ! -f user_repos.json ] || [ ! -f org_repos.json ]; then
-          echo "Failed to fetch repositories"
-          exit 1
+            echo "Failed to fetch repositories"
+            exit 1
           fi
           if [ -f projects.js ]; then
-          rm projects.js
+            rm projects.js
           fi
           echo "const projects = [" > projects.js
-          jq -r '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
-          "name": .name,
-          "img": .owner.avatar_url,
-          "repo": .html_url,
-          "demo": "\"\(.homepage)\"",
-          "stack": (.topics // []),
-          "description": (.description // "" | gsub("\""; "\\\""))
+          jq -r --slurpfile previews social_previews.txt '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
+            "name": .name,
+            "img": $previews[0][.name],
+            "repo": .html_url,
+            "demo": "\"\(.homepage)\"",
+            "stack": (.topics // []),
+            "description": (.description // "" | gsub("\""; "\\\""))
           } | "  {\n    name: \"\(.name)\",\n    img: \"\(.img)\",\n    repo: \"\(.repo)\",\n    demo: \(.demo),\n    stack: [\"\(.stack | join("\", \""))\"],\n    description: \"\(.description)\"\n  },"' user_repos.json org_repos.json >> projects.js
           echo "];
           
           export default projects;" >> projects.js
           
-          rm user_repos.json org_repos.json
+          rm user_repos.json org_repos.json social_previews.txt
 
       - name: Commit and push changes
         run: |
@@ -65,4 +79,3 @@ jobs:
             git add projects.js
             git commit -m "Update projects.js with latest repositories"
             git push
-          fi
