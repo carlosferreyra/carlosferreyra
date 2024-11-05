@@ -5,7 +5,7 @@ const projects = [
     repo: "https://github.com/carlosferreyra/alura-challenge",
     demo: "https://carlosferreyra.github.io/alura-challenge/",
     stack: ["challengeonelogicalatam"],
-    description: "Challenge de la etapa "Principiante en Programacion" en ONE G7."
+    description: "Challenge de la etapa \"Principiante en Programacion\" en ONE G7."
   },
   {
     name: "alura-literatura",
