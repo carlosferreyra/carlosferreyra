@@ -1,6 +1,6 @@
 # make a cron job for updating the pdfs every day
 
-name: Daily PDF Upload
+name: Daily Cron
 
 on:
   schedule:
