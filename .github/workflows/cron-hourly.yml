@@ -81,3 +81,4 @@ jobs:
             git add projects.js
             git commit -m "Update projects.js with latest repositories"
             git push
+          fi
