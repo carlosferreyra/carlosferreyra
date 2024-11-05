@@ -34,6 +34,13 @@ jobs:
 
       - name: Save repositories to projects.js
         run: |
+          if [ ! -f user_repos.json ] || [ ! -f org_repos.json ]; then
+            echo "Failed to fetch repositories"
+            exit 1
+          fi
+          if [ -f projects.js ]; then
+            rm projects.js
+          fi
           echo "const projects = [" > projects.js
           jq -r '.[] | select(.name | startswith(".") | not) | {
             "name": .name,
