@@ -1,4 +1,4 @@
-name: Repository Update
+name: Hourly Cron
 
 on:
   push:
@@ -6,6 +6,9 @@ on:
       - main
   schedule:
     - cron: '0 * * * *' # Runs every hour
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   update-repo-list:
@@ -20,21 +23,15 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Fetch GitHub repositories from user
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Fetch GitHub repositories from carlosferreyra
         run: |
           curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/users/carlosferreyra/repos?per_page=100 > user_repos.json
 
-      - name: Fetch GitHub repositories from organization
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Fetch GitHub repositories from organizations (Seminario-Integrador-2024)
         run: |
           curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/orgs/Seminario-Integrador-2024/repos?per_page=100 > org_repos.json
 
       - name: Fetch social preview images from carlosferreyra repositories
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "{}" > social_previews.json
           jq -r '.[] | select(.name | startswith(".") | not) | .name' user_repos.json org_repos.json | while read repo; do
@@ -48,9 +45,7 @@ jobs:
             jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews.json > tmp.json && mv tmp.json social_previews.json
           done
 
-      - name: Fetch social preview images from orgs repositories
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Fetch social preview images from orgs repositories (Seminario-Integrador-2024)
         run: |
           echo "{}" > social_previews_orgs.json
           jq -r '.[] | select(.name | startswith(".") | not) | .name' org_repos.json | while read repo; do
