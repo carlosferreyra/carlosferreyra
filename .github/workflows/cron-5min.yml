@@ -46,7 +46,7 @@ jobs:
             "name": .name,
             "img": .owner.avatar_url,
             "repo": .html_url,
-            "demo": .homepage,
+            "demo": "\"\(.homepage)\"",
             "stack": (.topics // []),
             "description": (.description // "")
           } | "  {\n    name: \"\(.name)\",\n    img: \"\(.img)\",\n    repo: \"\(.repo)\",\n    demo: \(.demo),\n    stack: [\"\(.stack | join("\", \""))\"],\n    description: \"\(.description)\"\n  },"' user_repos.json org_repos.json >> projects.js
