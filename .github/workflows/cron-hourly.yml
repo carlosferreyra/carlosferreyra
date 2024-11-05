@@ -9,6 +9,7 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_API_URL: https://api.github.com
 
 jobs:
   update-repo-list:
@@ -25,11 +26,11 @@ jobs:
 
       - name: Fetch GitHub repositories from carlosferreyra
         run: |
-          curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/users/carlosferreyra/repos?per_page=100 > user_repos.json
+          curl -H "Authorization: token $GITHUB_TOKEN" $GITHUB_API_URL/users/carlosferreyra/repos?per_page=100 > user_repos.json
 
       - name: Fetch GitHub repositories from organizations (Seminario-Integrador-2024)
         run: |
-          curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/orgs/Seminario-Integrador-2024/repos?per_page=100 > org_repos.json
+          curl -H "Authorization: token $GITHUB_TOKEN" $GITHUB_API_URL/orgs/Seminario-Integrador-2024/repos?per_page=100 > org_repos.json
 
       - name: Fetch social preview images from carlosferreyra repositories
         run: |
@@ -41,7 +42,7 @@ jobs:
               repo=$(echo $repo | cut -d'/' -f2)
             fi
             query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl } }\"}"
-            img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" https://api.github.com/graphql | jq -r ".data.repository.openGraphImageUrl")
+            img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" $GITHUB_API_URL/graphql | jq -r ".data.repository.openGraphImageUrl")
             jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews.json > tmp.json && mv tmp.json social_previews.json
           done
 
@@ -49,11 +50,12 @@ jobs:
         run: |
           echo "{}" > social_previews_orgs.json
           jq -r '.[] | select(.name | startswith(".") | not) | .name' org_repos.json | while read repo; do
-            owner="Seminario-Integrador-2024"
-            query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl } }\"}"
-            img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" https://api.github.com/graphql | jq -r ".data.repository.openGraphImageUrl")
-            jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews_orgs.json > tmp.json && mv tmp.json social_previews_orgs.json
+          owner="Seminario-Integrador-2024"
+          query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl } }\"}"
+          img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" $GITHUB_API_URL/graphql | jq -r ".data.repository.openGraphImageUrl")
+          jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews_orgs.json > tmp.json && mv tmp.json social_previews_orgs.json
           done
+          
 
       - name: Save repositories and social previews to projects.js
         run: |
@@ -88,4 +90,3 @@ jobs:
             git add projects.js
             git commit -m "Update projects.js with latest repositories"
             git push
-          fi
