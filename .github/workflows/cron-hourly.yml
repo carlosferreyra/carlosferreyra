@@ -36,6 +36,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          echo "{}" > social_previews.json
           jq -r '.[] | select(.name | startswith(".") | not) | .name' user_repos.json org_repos.json | while read repo; do
             owner="carlosferreyra"
             if [[ $repo == *"/"* ]]; then
@@ -43,7 +44,8 @@ jobs:
               repo=$(echo $repo | cut -d'/' -f2)
             fi
             query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl } }\"}"
-            curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" https://api.github.com/graphql | jq -r ".data.repository.openGraphImageUrl" >> social_previews.txt
+            img_url=$(curl -H "Authorization: bearer $GITHUB_TOKEN" -X POST -d "$query" https://api.github.com/graphql | jq -r ".data.repository.openGraphImageUrl")
+            jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews.json > tmp.json && mv tmp.json social_previews.json
           done
 
       - name: Save repositories to projects.js
@@ -56,7 +58,7 @@ jobs:
             rm projects.js
           fi
           echo "const projects = [" > projects.js
-          jq -r --slurpfile previews social_previews.txt '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
+          jq -r --slurpfile previews social_previews.json '.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
             "name": .name,
             "img": $previews[0][.name],
             "repo": .html_url,
@@ -68,7 +70,7 @@ jobs:
           
           export default projects;" >> projects.js
           
-          rm user_repos.json org_repos.json social_previews.txt
+          rm user_repos.json org_repos.json social_previews.json
 
       - name: Commit and push changes
         run: |
