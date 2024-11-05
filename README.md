@@ -6,7 +6,7 @@
 
 <h1 align="center" > Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> </h1>
 
-[ResumeURL]: ./pdfs/me.pdf
+[ResumeURL]: https://rxresu.me/carlosferreyra/resume
 [WebsiteURL]: https://about.me/carlosferreyra
 
 <p align="center">
@@ -41,10 +41,10 @@
   <!-- laptop animation -->
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
 
-- 👨‍💻 I'm Software Developer/Engineer @[UTN](https://frre.utn.edu.ar/). Related projects: [Seminario Integrador](https://github.com/Seminario-Integrador-2024/)
+- 👨‍💻 I'm Software Developer/Engineer @[UTN](https://frre.utn.edu.ar/). Current project: [Seminario Integrador](https://github.com/Seminario-Integrador-2024/)
 - 🏫 I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
 - 💻 I am a competitive programmer at `Leetcode`.
-- ✍🏻 I love using Software as a solution for every Problem. See my projects: [Here](https://carlosferreyra.me/)
+- ✍🏻 I love using Software as a solution for every Problem. Check my portfolio: [Here](https://carlosferreyra.me/)
 - 🤓 Always learning new things
 - 👔 📝 I’m currently open for a new `job opportunity`, this is [MY RESUME][ResumeURL].
 - 📌 You can check my other links [HERE][WebsiteURL].
