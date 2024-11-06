@@ -63,7 +63,7 @@
     <!-- <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&langs_count=8&theme=algolia" alt="Top Languages" style="width: 30%; display: inline-block;"/> -->
   <p align="center">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=carlosferreyra&theme=tokyonight_duo" alt="stats" style="width:50%"/>
-    <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=carlosferreyra&show_icons=true&theme=algolia&include_all_commits=true&count_private=true" alt="Github Stats" style="width: 40%; display: inline-block;"/>
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=carlosferreyra&show_icons=true&theme=algolia&include_all_commits=true&count_private=true" alt="Github Stats" style="width: 49%; display: inline-block;"/>
   </p>
 
  >[!NOTE] 
