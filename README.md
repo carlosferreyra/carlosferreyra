@@ -28,8 +28,10 @@
 
 ## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = "5%" /> About me
 
-  <!-- github followers badge -->
-<img alt="GitHub followers" src="https://img.shields.io/github/followers/carlosferreyra?label=Follow&amp;style=social">
+<!-- github followers badge -->
+<a href="https://github.com/carlosferreyra" onclick="window.open(this.href); return false;">
+  <img alt="GitHub followers" src="https://img.shields.io/github/followers/carlosferreyra?label=Follow&amp;style=social">
+</a>
 
 <!-- profile views -->
 ![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat) ![dependabot](https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra) [![pages-build-deployment](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment) [![Daily Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml) [![Hourly Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml)
