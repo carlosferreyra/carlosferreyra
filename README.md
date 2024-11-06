@@ -56,25 +56,17 @@
 
 ## <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFhYzJkMmQ2MWQ3ZGY3MDhjZTE3MDI2Mzk3NzE1OWQyZTRlMmYwMCZjdD1z/iY8CRBdQXODJSCERIr/giphy.gif" width="5%" valign="bottom" /> Github Stats
 
-<h3> 🔥 Streak Stats</h3>
-
-<hr/>
-
-<p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=carlosferreyra&theme=tokyonight_duo" alt="stats" /></p>
-<h3> 💻 GitHub Profile Stats</h3>
-
-<hr/>
-
 <p align="center">
   <!-- contributions stats -->
   <!-- <img align="center" alt="KittiesCoding" src="https://cdn.dribbble.com/users/1277312/screenshots/14733298/media/39b1045e593737587dd60e42c8422d1f.gif" height="100em" /> -->
    <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs?username=carlosferreyra&langs_count=10&show_icons=true&locale=en&theme=tokyonight" alt="lang stats" /> -->
   <p align="center">
-    <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=carlosferreyra&show_icons=true&theme=algolia&include_all_commits=true&count_private=true" alt="Github Stats" style="width: 49%; display: inline-block;"/>
-    <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&langs_count=8&theme=algolia" alt="Top Languages" style="width: 35%; display: inline-block;"/>
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=carlosferreyra&theme=tokyonight_duo" alt="stats" style="width:33%"/>
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=carlosferreyra&show_icons=true&theme=algolia&include_all_commits=true&count_private=true" alt="Github Stats" style="width: 33%; display: inline-block;"/>
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&langs_count=8&theme=algolia" alt="Top Languages" style="width: 30%; display: inline-block;"/>
   </p>
 
- >[!WARNING] 
+ >[!NOTE] 
  >
  > This stats are only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
 
