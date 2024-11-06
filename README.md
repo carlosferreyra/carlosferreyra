@@ -50,9 +50,7 @@
 
 <hr/>
 
-<p align = "center">
- <a href="https://github.com/piyushsuthar/github-readme-quotes"> <img alt = "Quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&animation=grow_out_in&quoteCategory=programming" height="auto" width="auto" /> </a>
-</p>
+
 
 <br>
 
@@ -103,9 +101,6 @@
 <p>
   &emsp;
   <img src="https://readme-jokes.vercel.app/api?theme=tokyonight">
+  &emsp;
+  <img alt = "Quote" src="https://quotes-github-readme.vercel.app/api?type=vertical&theme=tokyonight&animation=grow_out_in&quoteCategory=programming?" height="auto" width="auto" />
 </p>
-
-
-
-
-
