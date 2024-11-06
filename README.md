@@ -30,17 +30,13 @@
 
 <!-- profile views -->
 <img src="https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat" alt="profile count" />
-  <!-- github followers badge -->
-<img alt="GitHub followers" src="https://img.shields.io/github/followers/carlosferreyra?label=Follow&amp;style=social">
   <!-- dependabot -->
 <img alt="dependabot" src="https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra">
+  <!-- github followers badge -->
+<img alt="GitHub followers" src="https://img.shields.io/github/followers/carlosferreyra?label=Follow&amp;style=social">
 <!-- deply status -->
 
-[![pages-build-deployment](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment)
-
-[![Daily Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml)
-
-[![Hourly Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml)
+[![pages-build-deployment](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment) [![Daily Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml) [![Hourly Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml)
 
   <!-- laptop animation -->
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
