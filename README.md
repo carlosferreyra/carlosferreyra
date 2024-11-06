@@ -28,15 +28,11 @@
 
 ## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = "5%" /> About me
 
-<!-- profile views -->
-<img src="https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat" alt="profile count" />
-  <!-- dependabot -->
-<img alt="dependabot" src="https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra">
   <!-- github followers badge -->
 <img alt="GitHub followers" src="https://img.shields.io/github/followers/carlosferreyra?label=Follow&amp;style=social">
-<!-- deply status -->
 
-[![pages-build-deployment](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment) [![Daily Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml) [![Hourly Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml)
+<!-- profile views -->
+![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat) ![dependabot](https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra) [![pages-build-deployment](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment) [![Daily Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml) [![Hourly Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml)
 
   <!-- laptop animation -->
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
