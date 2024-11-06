@@ -1,102 +1,92 @@
-name: Daily Cron - Repos
+name: Hourly Repository Update
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '0 0 * * *' # Runs every day at 00:00 UTC
+    - cron: '*/1 * * * *' # Runs every minute
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GITHUB_API_URL: https://api.github.com
+  USER_NAME: carlosferreyra
+  ORG_NAME: Seminario-Integrador-2024
+  GRAPHQL_ENDPOINT: https://api.github.com/graphql
+  PER_PAGE: 100
 
 jobs:
-  update-repo-list:
+  update-repo-data:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set up repository
+      - name: Configure Git
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Fetch GitHub repositories from carlosferreyra
+      - name: Fetch user repositories
         run: |
-          curl -H "Authorization: token $GITHUB_TOKEN" $GITHUB_API_URL/users/carlosferreyra/repos?per_page=100 > user_repos.json
+          # Fetch repos and process them directly to carlos.json
+          curl -H "Authorization: token $GITHUB_TOKEN" \
+               "$GITHUB_API_URL/users/$USER_NAME/repos?per_page=$PER_PAGE" | \
+          jq '[.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
+            name: .name,
+            repo: .html_url,
+            demo: .homepage,
+            stack: (.topics // []),
+            description: (.description // "")
+          }]' > carlos.json
 
-      - name: Fetch GitHub repositories from organizations (Seminario-Integrador-2024)
-        run: |
-          curl -H "Authorization: token $GITHUB_TOKEN" $GITHUB_API_URL/orgs/Seminario-Integrador-2024/repos?per_page=100 > org_repos.json
-
-      - name: Fetch social preview images from carlosferreyra repositories
-        run: |
-          echo "{}" > social_previews.json
-          jq -r '.[] | select(.name | startswith(".") | not) | .name' user_repos.json org_repos.json | while read repo; do
-            owner="carlosferreyra"
-            if [[ $repo == *"/"* ]]; then
-              owner=$(echo $repo | cut -d'/' -f1)
-              repo=$(echo $repo | cut -d'/' -f2)
-            fi
-            query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl } }\"}"
+          # Fetch social previews and merge with carlos.json
+          jq -r '.[] | .name' carlos.json | while read repo; do
+            query="{\"query\":\"query { repository(owner: \\\"$USER_NAME\\\", name: \\\"$repo\\\") { openGraphImageUrl }}\"}"
             img_url=$(curl -s -H "Authorization: bearer $GITHUB_TOKEN" \
-                      -H "Content-Type: application/json" \
-                      -X POST \
-                      -d "$query" \
-                      $GITHUB_API_URL/graphql | tee /dev/stderr | jq -r ".data.repository.openGraphImageUrl")
-            jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews.json > tmp.json && mv tmp.json social_previews.json
+                         -H "Content-Type: application/json" \
+                         -X POST -d "$query" \
+                         $GRAPHQL_ENDPOINT | jq -r ".data.repository.openGraphImageUrl")
+            jq --arg repo "$repo" --arg img "$img_url" \
+               'map(if .name == $repo then . + {img: $img} else . end)' carlos.json > tmp.json && mv tmp.json carlos.json
           done
 
-      - name: Fetch social preview images from orgs repositories (Seminario-Integrador-2024)
+      - name: Fetch organization repositories
         run: |
-          echo "{}" > social_previews_orgs.json
-          jq -r '.[] | select(.name | startswith(".") | not) | .name' org_repos.json | while read repo; do
-            owner="Seminario-Integrador-2024"
-            query="{\"query\":\"query { repository(owner: \\\"$owner\\\", name: \\\"$repo\\\") { openGraphImageUrl }}\"}"
-            
+          # Fetch repos and process them directly to org.json
+          curl -H "Authorization: token $GITHUB_TOKEN" \
+               "$GITHUB_API_URL/orgs/$ORG_NAME/repos?per_page=$PER_PAGE" | \
+          jq '[.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
+            name: .name,
+            repo: .html_url,
+            demo: .homepage,
+            stack: (.topics // []),
+            description: (.description // "")
+          }]' > org.json
+
+          # Fetch social previews and merge with org.json
+          jq -r '.[] | .name' org.json | while read repo; do
+            query="{\"query\":\"query { repository(owner: \\\"$ORG_NAME\\\", name: \\\"$repo\\\") { openGraphImageUrl }}\"}"
             img_url=$(curl -s -H "Authorization: bearer $GITHUB_TOKEN" \
-                          -H "Content-Type: application/json" \
-                          -X POST \
-                          -d "$query" \
-                          $GITHUB_API_URL/graphql | jq -r ".data.repository.openGraphImageUrl")
-            
-            # Ensure img_url is valid before appending
-            if [ "$img_url" != "null" ] && [ -n "$img_url" ]; then
-              jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews_orgs.json > tmp.json && mv tmp.json social_previews_orgs.json
-            fi
+                         -H "Content-Type: application/json" \
+                         -X POST -d "$query" \
+                         $GRAPHQL_ENDPOINT | jq -r ".data.repository.openGraphImageUrl")
+            jq --arg repo "$repo" --arg img "$img_url" \
+               'map(if .name == $repo then . + {img: $img} else . end)' org.json > tmp.json && mv tmp.json org.json
           done
-          
-      - name: Save repositories and social previews to projects.js
+
+      - name: Merge JSON files
         run: |
-          echo "const projects = [" > projects.js
-          jq -r --slurpfile previews social_previews.json \
-          --slurpfile org_previews social_previews_orgs.json \
-          '[inputs] | add | .[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
-          "name": .name,
-          "img": (if .owner.type == "Organization" then $org_previews[0][.name] else $previews[0][.name] end),
-          "repo": .html_url,
-          "demo": .homepage,
-          "stack": (.topics // []),
-          "description": (.description // "")
-          }' | \
-          jq -r 'to_entries | .[] | "  {\n    name: \"\(.value.name)\",\n    img: \"\(.value.img)\",\n    repo: \"\(.value.repo)\",\n    demo: \"\(.value.demo)\",\n    stack: [\"\(.value.stack | join("\", \""))\"],\n    description: \"\(.value.description)\"\n  },"' >> projects.js
-          
-          echo "];
-          
-          export default projects;" >> projects.js
-          
-          rm user_repos.json org_repos.json social_previews.json social_previews_orgs.json
+          jq -s 'add' carlos.json org.json > projects.json
+
+      - name: Generate projects.js
+        run: |
+          echo "const projects = " > projects.js
+          cat projects.json >> projects.js
+          echo ";" >> projects.js
+          echo "" >> projects.js
+          echo "export default projects;" >> projects.js
 
       - name: Commit and push changes
         run: |
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "No changes to commit"
-            exit 0
-          else
-            git add projects.js
-            git commit -m "Update projects.js with latest repositories - $(date -u) by GitHub bot"
-            git push
-          fi
+          git add carlos.json org.json projects.json projects.js
+          git commit -m "Update repository data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git push
