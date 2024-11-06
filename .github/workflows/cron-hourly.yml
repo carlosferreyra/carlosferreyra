@@ -1,11 +1,11 @@
-name: Hourly Cron
+name: Daily Cron - Repos
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '0 * * * *' # Runs every hour
+    - cron: '0 0 * * *' # Runs every hour
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
