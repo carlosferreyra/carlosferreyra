@@ -94,8 +94,6 @@
 
 <hr/>
 
-<p align="center"> <img align="center" src="https://github-profile-trophy.vercel.app/?username=carlosferreyra&theme=juicyfresh&no-bg=true&column=-1"  alt="Trophies" /></p>
-
 </details>
 <!-- gif image of a line multicolor/rainbow -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
