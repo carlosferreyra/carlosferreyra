@@ -74,5 +74,4 @@ jobs:
             git -C $repo_name add CNAME
             git -C $repo_name commit -m "Update CNAME to ${{ env.CNAME_URL }}"
             git -C $repo_name push
-          done
           rm -rf repos.json
