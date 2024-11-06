@@ -66,8 +66,9 @@ jobs:
                           -H "Content-Type: application/json" \
                           -X POST \
                           -d "$query" \
-                          $GITHUB_API_URL/graphql | tee /dev/stderr | jq -r ".data.repository.openGraphImageUrl")
+                          $GITHUB_API_URL/graphql | jq -r ".data.repository.openGraphImageUrl")
             
+            # Ensure img_url is valid before appending
             if [ "$img_url" != "null" ] && [ -n "$img_url" ]; then
               jq --arg repo "$repo" --arg img_url "$img_url" '.[$repo] = $img_url' social_previews_orgs.json > tmp.json && mv tmp.json social_previews_orgs.json
             fi
@@ -103,3 +104,4 @@ jobs:
             git add projects.js
             git commit -m "Update projects.js with latest repositories"
             git push
+          fi
