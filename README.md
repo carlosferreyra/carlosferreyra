@@ -95,8 +95,8 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <p>
-  &emsp;
-  <img src="https://readme-jokes.vercel.app/api?theme=tokyonight">
+  <!-- &emsp;
+  <img src="https://readme-jokes.vercel.app/api?theme=tokyonight"> -->
   &emsp;
   <img alt = "Quote" src="https://quotes-github-readme.vercel.app/api?type=vertical&theme=tokyonight&animation=grow_out_in&quoteCategory=programming?" height="auto" width="auto" />
 </p>
