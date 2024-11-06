@@ -85,8 +85,18 @@ jobs:
           echo "" >> projects.js
           echo "export default projects;" >> projects.js
 
-      - name: Commit and push changes
-        run: |
-          git add carlos.json org.json projects.json projects.js
-          git commit -m "Update repository data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-          git push
+          - name: Commit and push changes
+          run: |
+            if git diff --quiet carlos.json org.json projects.json projects.js; then
+              echo "No changes detected in repository data files"
+            else
+              git add carlos.json org.json projects.json projects.js
+              git commit -m "Update repository data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')" || {
+                echo "Failed to create commit: $?"
+                exit 0
+              }
+              git push || {
+                echo "Failed to push changes: $?"
+                exit 0
+              }
+            fi
