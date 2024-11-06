@@ -45,11 +45,7 @@
 - 👔 📝 I’m currently open for a new **`job opportunity`**, this is [*`MY RESUME`*][ResumeURL].
 - 📌 You can check my other links [HERE][WebsiteURL].
 
-<br>
-
-
-<hr/>
-
+<br/>
 
 
 <br>
