@@ -39,6 +39,9 @@
 [![pages-build-deployment](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/pages/pages-build-deployment)
 
 [![Daily Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-daily.yml)
+
+[![Hourly Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml)
+
   <!-- laptop animation -->
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
 
