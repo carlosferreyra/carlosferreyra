@@ -1,4 +1,3 @@
-const projects = 
 [
   {
     "name": "alura-encriptador",
@@ -23,21 +22,5 @@ const projects =
     ],
     "description": "My GitHub Profile",
     "img": "https://repository-images.githubusercontent.com/802189668/b592375d-e8be-4271-874f-6dbf40cbe433"
-  },
-  {
-    "name": "GestionTUP",
-    "repo": "https://github.com/Seminario-Integrador-2024/GestionTUP",
-    "demo": "https://gestiontup-1.onrender.com",
-    "stack": [
-      "frontend",
-      "habilitacion-profesional",
-      "seminario",
-      "utn-frre"
-    ],
-    "description": "Repositorio Frontend del Proyecto",
-    "img": "https://repository-images.githubusercontent.com/839530563/77ec1cfb-4a65-4e34-8641-2fa6d5ea3f18"
   }
 ]
-;
-
-export default projects;
