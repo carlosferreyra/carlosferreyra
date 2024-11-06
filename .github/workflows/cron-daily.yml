@@ -1,45 +1,57 @@
-# make a cron job for daily tasks
-
 name: Daily Cron
 
 env:
   CNAME_URL: carlosferreyra.me
+  GITHUB_API_URL: https://api.github.com
+  PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me.pdf
+  PDF_RESUME_ES_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me_spanish.pdf
+  PDF_DIR: ./pdfs
+  USER_NAME: 'github-actions[bot]'
+  USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
+  PER_PAGE: 100
 
 on:
   schedule:
     - cron: '0 0 * * *' # Runs every day at 00:00 UTC
-    
 
 jobs:
   upload-pdfs:
     runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.update-pdfs.outputs.status }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Create PDFs directory
-        run: mkdir -p ./pdfs
+        run: mkdir -p ${{ env.PDF_DIR }}
         
-      - name: Download PDF
+      - name: Download and Update PDFs
+        id: update-pdfs
         run: |
           set -e
-          curl -L -o ./pdfs/me.pdf https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me.pdf
-          curl -L -o ./pdfs/me_spanish.pdf https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me_spanish.pdf
+          SUCCESS=false
+          curl -L -o ${{ env.PDF_DIR }}/me.pdf ${{ env.PDF_RESUME_URL }}
+          curl -L -o ${{ env.PDF_DIR }}/me_spanish.pdf ${{ env.PDF_RESUME_ES_URL }}
+          
+          git config --global user.name '${{ env.USER_NAME }}'
+          git config --global user.email '${{ env.USER_EMAIL }}'
+          
+          if git diff --quiet ${{ env.PDF_DIR }}; then
+            echo "No changes in PDFs"
+            echo "status=unchanged" >> $GITHUB_OUTPUT
+          else
+            git add ${{ env.PDF_DIR }}/*.pdf
+            git commit -m "📄 PDF Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Successfully updated resume files"
+            git push
+            echo "status=updated" >> $GITHUB_OUTPUT
+          fi
 
-      - name: Set up repository
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-      - name: Upload PDFs
-        run: |
-          git add pdfs/me.pdf pdfs/me_spanish.pdf
-          git commit -m "Daily PDF upload [$(date '+%b %dth, %Y')]"
-          git push
-  
   update-cnames:
     runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.update-cnames.outputs.status }}
 
     steps:
       - name: Checkout repository
@@ -47,31 +59,34 @@ jobs:
 
       - name: Set up GitHub bot permissions
         run: |
-          set -e
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name '${{ env.USER_NAME }}'
+          git config --global user.email '${{ env.USER_EMAIL }}'
           git config --global credential.helper 'store --file ~/.git-credentials'
           echo "https://github.com" > ~/.git-credentials
 
-      - name: Fetch list of repositories
-        id: repo-list
-        run: |
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-               -H "Accept: application/vnd.github.v3+json" \
-               https://api.github.com/user/repos?per_page=100 \
-               > repos.json
-          cat repos.json
-
-      - name: Update CNAME for all repositories
+      - name: Update CNAME files
+        id: update-cnames
         run: |
           set -e
+          UPDATED_COUNT=0
+          
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               -H "Accept: application/vnd.github.v3+json" \
+               "${{ env.GITHUB_API_URL }}/user/repos?per_page=${{ env.PER_PAGE }}" > repos.json
+
           for repo in $(jq -r '.[].clone_url' repos.json); do
-            echo "Cloning $repo"
+            echo "Processing $repo"
             git clone $repo
             repo_name=$(basename $repo .git)
-            echo "Updating CNAME for $repo_name"
-            echo "${{ env.CNAME_URL }}" > $repo_name/CNAME
-            git -C $repo_name add CNAME
-            git -C $repo_name commit -m "Update CNAME to ${{ env.CNAME_URL }}"
-            git -C $repo_name push
+            
+            if [ ! -f "$repo_name/CNAME" ] || [ "$(cat $repo_name/CNAME)" != "${{ env.CNAME_URL }}" ]; then
+              echo "${{ env.CNAME_URL }}" > $repo_name/CNAME
+              git -C $repo_name add CNAME
+              git -C $repo_name commit -m "🌐 CNAME Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Set to ${{ env.CNAME_URL }}"
+              git -C $repo_name push
+              ((UPDATED_COUNT++))
+            fi
+          done
+          
           rm -rf repos.json
+          echo "status=updated_$UPDATED_COUNT" >> $GITHUB_OUTPUT
