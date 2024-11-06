@@ -90,11 +90,13 @@
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=carlosferreyra&bg_color=1a1b27&color=aa82d9&line=628edb&point=64bfaf&area=true&hide_border=true">
 
-<details><summary> <h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="5%" /> Git profile Trophies </h3></summary>
+<h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="5%" /> Git profile Trophies </h3>
 
 <hr/>
 
-</details>
+<p align="center"> <img align="center" src="https://github-profile-trophy.vercel.app/?username=carlosferreyra&theme=juicyfresh&no-bg=true&column=-1"  alt="Trophies" /></a> </p>
+
+
 <!-- gif image of a line multicolor/rainbow -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
