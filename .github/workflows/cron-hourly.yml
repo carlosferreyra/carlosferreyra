@@ -102,6 +102,6 @@ jobs:
             exit 0
           else
             git add projects.js
-            git commit -m "Update projects.js with latest repositories"
+            git commit -m "Update projects.js with latest repositories - $(date -u) by GitHub bot"
             git push
           fi
