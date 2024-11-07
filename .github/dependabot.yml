@@ -8,18 +8,11 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"  # Check for updates weekly
-    versioning-strategy: "increase"  # Always try to increase the version
-    open-pull-requests-limit: 3  # Limit open pull requests to 3
-    ignore:
-      - dependency-name: "core"  # Ignore updates for the "core" action
-      - dependency-name: "setup-node"
-        versions: ["<16"]  # Ignore versions below 16 for "setup-node"
+      interval: "monthly"  # Profile repos need less frequent updates
+    versioning-strategy: "auto"  # Let Dependabot decide the best strategy
+    open-pull-requests-limit: 2  # Keep updates manageable
     reviewers:
-      - users:
-          - "carlosferreyra"
-      - teams:
-          - "security-team"
+      - "carlosferreyra"  # Single reviewer for personal repo
     labels:
-      - "dependabot"
       - "dependencies"
+      - "automated"
