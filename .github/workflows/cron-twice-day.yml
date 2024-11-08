@@ -11,6 +11,7 @@ env:
   PER_PAGE: 100
 
 on:
+  workflow_dispatch:  # Allows manual triggering
   schedule:
     - cron: '0 0 * * *'  # Runs every day at 00:00 UTC
     - cron: '0 12 * * *' # Runs every day at 12:00 UTC
@@ -71,7 +72,7 @@ jobs:
           set -e
           UPDATED_COUNT=0
           
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          curl -H "Authorization: token ${{ secrets.ACTIONS_TOKEN }}" \
                -H "Accept: application/vnd.github.v3+json" \
                "${{ env.GITHUB_API_URL }}/user/repos?per_page=${{ env.PER_PAGE }}" > repos.json
 
