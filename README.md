@@ -32,7 +32,7 @@
 [![GitHub followers](https://img.shields.io/github/followers/carlosferreyra?label=Follow&style=social)](https://github.com/carlosferreyra)
 
 <!-- profile views, dependabot, pages-build-deployment, daily cron, hourly cron -->
-![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat) ![dependabot](https://badgen.net/github/dependabot/carlosferreyra/carlosferreyra) [![Daily Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-twice-day.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-twice-day.yml) [![GitHub Pages](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/gh-pages-deployment.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/gh-pages-deployment.yml) [![Hourly Cron](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml/badge.svg)](https://github.com/carlosferreyra/carlosferreyra/actions/workflows/cron-hourly.yml)
+![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat)
 
   <!-- desktop office animation -->
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
