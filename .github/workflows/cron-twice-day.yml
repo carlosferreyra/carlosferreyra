@@ -4,7 +4,7 @@ env:
   CNAME_URL: $(cat CNAME)
   GITHUB_API_URL: https://api.github.com
   PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me.pdf
-  PDF_RESUME_ES_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me_spanish.pdf
+  PDF_RESUME_ES_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/me%20(Spanish).pdf
   PDF_DIR: ./pdfs
   USER_NAME: 'github-actions[bot]'
   USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
