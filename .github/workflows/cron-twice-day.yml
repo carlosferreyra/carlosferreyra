@@ -6,8 +6,8 @@ env:
   PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
   PDF_RESUME_ES_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf
   PDF_DIR: ./pdfs
-  PDF_EN_FILENAME: resume_en.pdf
-  PDF_ES_FILENAME: resume_es.pdf
+  PDF_EN_FILENAME: carlos-ferreyra-resume.pdf
+  PDF_ES_FILENAME: carlos-ferreyra-CV.pdf
   USER_NAME: 'github-actions[bot]'
   USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
   PER_PAGE: 100
