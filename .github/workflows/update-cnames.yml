@@ -9,9 +9,6 @@ env:
 
 on:
   workflow_dispatch:  # Allows manual triggering
-  schedule:
-    - cron: '0 0 * * *'  # Runs every day at 00:00 UTC
-    - cron: '0 12 * * *' # Runs every day at 12:00 UTC
 
 jobs:
 
