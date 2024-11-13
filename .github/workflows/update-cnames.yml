@@ -33,6 +33,8 @@ jobs:
         run: |
           set -e
           UPDATED_COUNT=0
+          FAILED_COUNT=0
+          FAILED_REPOS=""
           
           curl -H "Authorization: token ${{ secrets.ACTIONS_TOKEN }}" \
                -H "Accept: application/vnd.github.v3+json" \
@@ -47,10 +49,24 @@ jobs:
               echo "${{ env.CNAME_URL }}" > $repo_name/CNAME
               git -C $repo_name add CNAME
               git -C $repo_name commit -m "🌐 CNAME Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Set to ${{ env.CNAME_URL }}"
-              git -C $repo_name push
-              ((UPDATED_COUNT++))
+              
+              if git -C $repo_name push 2>/dev/null; then
+                ((UPDATED_COUNT++))
+                echo "✅ Successfully updated $repo_name"
+              else
+                ((FAILED_COUNT++))
+                FAILED_REPOS="$FAILED_REPOS\n- $repo_name (protected branch or insufficient permissions)"
+                echo "❌ Failed to update $repo_name - likely protected"
+              fi
             fi
           done
           
           rm -rf repos.json
-          echo "status=updated_$UPDATED_COUNT" >> $GITHUB_OUTPUT
+          echo "status=updated_${UPDATED_COUNT}_failed_${FAILED_COUNT}" >> $GITHUB_OUTPUT
+          
+          echo "📊 Summary:"
+          echo "- Successfully updated: $UPDATED_COUNT repos"
+          echo "- Failed to update: $FAILED_COUNT repos"
+          if [ ! -z "$FAILED_REPOS" ]; then
+            echo -e "Failed repositories:$FAILED_REPOS"
+          fi
