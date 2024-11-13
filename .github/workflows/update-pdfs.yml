@@ -28,40 +28,31 @@ jobs:
 
       - name: Create PDFs directory
         run: |
-          if [ ! -d "${{ env.PDF_DIR }}" ]; then
-            mkdir -p ${{ env.PDF_DIR }}
-          fi
+          mkdir -p ${{ env.PDF_DIR }}
         
       - name: Download and Update PDFs
         id: update-pdfs
         run: |
           set -e
-          SUCCESS=false
           
-            # Add authentication headers and error handling
-            URLS=("${{ env.PDF_RESUME_URL }}" "${{ env.PDF_RESUME_ES_URL }}")
-            FILENAMES=("${{ env.PDF_EN_FILENAME }}" "${{ env.PDF_ES_FILENAME }}")
-            
-            for i in "${!URLS[@]}"; do
+          # Add authentication headers and error handling
+          URLS=("${{ env.PDF_RESUME_URL }}" "${{ env.PDF_RESUME_ES_URL }}")
+          FILENAMES=("${{ env.PDF_EN_FILENAME }}" "${{ env.PDF_ES_FILENAME }}")
+          
+          for i in "${!URLS[@]}"; do
             URL="${URLS[$i]}"
             FILENAME="${FILENAMES[$i]}"
-            HTTP_CODE=$(curl -L -w "%{http_code}" -o "temp.pdf" "$URL")
+            HTTP_CODE=$(curl -L -w "%{http_code}" -o "${{ env.PDF_DIR }}/$FILENAME" "$URL")
             if [ "$HTTP_CODE" != "200" ]; then
               echo "Failed to download PDF from $URL (HTTP $HTTP_CODE)"
               exit 1
             fi
-            mv "temp.pdf" "${{ env.PDF_DIR }}/$FILENAME"
-            done
+          done
           
           git config --global user.name '${{ env.USER_NAME }}'
           git config --global user.email '${{ env.USER_EMAIL }}'
           
-          if git diff --quiet ${{ env.PDF_DIR }}; then
-            echo "No changes in PDFs"
-            echo "status=unchanged" >> $GITHUB_OUTPUT
-          else
-            git add ${{ env.PDF_DIR }}/*.pdf
-            git commit -m "📄 PDF Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Successfully updated resume files"
-            git push
-            echo "status=updated" >> $GITHUB_OUTPUT
-          fi
+          git add ${{ env.PDF_DIR }}/*.pdf
+          git commit -m "📄 PDF Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Successfully updated resume files"
+          git push
+          echo "status=updated" >> $GITHUB_OUTPUT
