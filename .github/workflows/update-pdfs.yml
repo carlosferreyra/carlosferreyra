@@ -30,7 +30,10 @@ jobs:
           token: ${{ secrets.ACTIONS_TOKEN }} # Use a PAT token for authentication
 
       - name: Create PDFs directory
-        run: mkdir -p ${{ env.PDF_DIR }}
+        run: |
+          if [ ! -d "${{ env.PDF_DIR }}" ]; then
+            mkdir -p ${{ env.PDF_DIR }}
+          fi
         
       - name: Download and Update PDFs
         id: update-pdfs
