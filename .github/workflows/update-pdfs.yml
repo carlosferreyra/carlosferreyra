@@ -1,0 +1,50 @@
+name: Twice a day Cron
+
+env:
+  PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
+  PDF_RESUME_ES_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf
+  PDF_DIR: ./pdfs
+  PDF_EN_FILENAME: carlos-ferreyra-resume.pdf
+  PDF_ES_FILENAME: carlos-ferreyra-CV.pdf
+  USER_NAME: 'github-actions[bot]'
+  USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at 00:00 UTC
+    - cron: '0 12 * * *' # Runs every day at 12:00 UTC
+
+jobs:
+  upload-pdfs:
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.update-pdfs.outputs.status }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create PDFs directory
+        run: mkdir -p ${{ env.PDF_DIR }}
+        
+      - name: Download and Update PDFs
+        id: update-pdfs
+        run: |
+          set -e
+          SUCCESS=false
+          curl -L -o ${{ env.PDF_DIR }}/${{ env.PDF_EN_FILENAME }} ${{ env.PDF_RESUME_URL }}
+          curl -L -o ${{ env.PDF_DIR }}/${{ env.PDF_ES_FILENAME }} ${{ env.PDF_RESUME_ES_URL }}
+          
+          git config --global user.name '${{ env.USER_NAME }}'
+          git config --global user.email '${{ env.USER_EMAIL }}'
+          
+          if git diff --quiet ${{ env.PDF_DIR }}; then
+            echo "No changes in PDFs"
+            echo "status=unchanged" >> $GITHUB_OUTPUT
+          else
+            git add ${{ env.PDF_DIR }}/*.pdf
+            git commit -m "📄 PDF Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Successfully updated resume files"
+            git push
+            echo "status=updated" >> $GITHUB_OUTPUT
+          fi
