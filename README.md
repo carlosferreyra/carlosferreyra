@@ -6,7 +6,7 @@
 
 <h1 align="center" > Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> </h1>
 
-[ResumeURL]: https://rxresu.me/carlosferreyra/resume
+[ResumeURL]: https://rxresu.me/carlosferreyra/carlos-ferreyra
 [WebsiteURL]: https://about.me/carlosferreyra
 
 <p align="center">
