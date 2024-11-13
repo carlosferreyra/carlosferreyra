@@ -6,6 +6,8 @@ env:
   PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
   PDF_RESUME_ES_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf
   PDF_DIR: ./pdfs
+  PDF_EN_FILENAME: resume_en.pdf
+  PDF_ES_FILENAME: resume_es.pdf
   USER_NAME: 'github-actions[bot]'
   USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
   PER_PAGE: 100
@@ -34,8 +36,8 @@ jobs:
         run: |
           set -e
           SUCCESS=false
-          curl -L -o ${{ env.PDF_DIR }}/me.pdf ${{ env.PDF_RESUME_URL }}
-          curl -L -o ${{ env.PDF_DIR }}/me_spanish.pdf ${{ env.PDF_RESUME_ES_URL }}
+          curl -L -o ${{ env.PDF_DIR }}/${{ env.PDF_EN_FILENAME }} ${{ env.PDF_RESUME_URL }}
+          curl -L -o ${{ env.PDF_DIR }}/${{ env.PDF_ES_FILENAME }} ${{ env.PDF_RESUME_ES_URL }}
           
           git config --global user.name '${{ env.USER_NAME }}'
           git config --global user.email '${{ env.USER_EMAIL }}'
