@@ -1,4 +1,4 @@
-name: Twice a day Cron
+name: Update CNAME Files
 
 env:
   CNAME_URL: $(cat CNAME)

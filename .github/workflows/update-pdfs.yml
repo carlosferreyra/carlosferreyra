@@ -1,4 +1,4 @@
-name: Twice a day Cron
+name: Update PDFs
 
 env:
   PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
