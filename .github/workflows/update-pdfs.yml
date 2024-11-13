@@ -41,15 +41,20 @@ jobs:
           set -e
           SUCCESS=false
           
-          # Add authentication headers and error handling
-          for URL in "${{ env.PDF_RESUME_URL }}" "${{ env.PDF_RESUME_ES_URL }}"; do
+            # Add authentication headers and error handling
+            URLS=("${{ env.PDF_RESUME_URL }}" "${{ env.PDF_RESUME_ES_URL }}")
+            FILENAMES=("${{ env.PDF_EN_FILENAME }}" "${{ env.PDF_ES_FILENAME }}")
+            
+            for i in "${!URLS[@]}"; do
+            URL="${URLS[$i]}"
+            FILENAME="${FILENAMES[$i]}"
             HTTP_CODE=$(curl -L -w "%{http_code}" -o "temp.pdf" "$URL")
             if [ "$HTTP_CODE" != "200" ]; then
               echo "Failed to download PDF from $URL (HTTP $HTTP_CODE)"
               exit 1
             fi
-            mv "temp.pdf" "${{ env.PDF_DIR }}/${{ env.PDF_EN_FILENAME }}"
-          done
+            mv "temp.pdf" "${{ env.PDF_DIR }}/$FILENAME"
+            done
           
           git config --global user.name '${{ env.USER_NAME }}'
           git config --global user.email '${{ env.USER_EMAIL }}'
