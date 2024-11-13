@@ -6,6 +6,7 @@ env:
   USER_NAME: 'github-actions[bot]'
   USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
   PER_PAGE: 100
+  REPO_OWNER: 'carlosferreyra'  # Define the REPO_OWNER environment variable
 
 on:
   workflow_dispatch:  # Allows manual triggering
@@ -45,7 +46,7 @@ jobs:
             git clone $repo
             repo_name=$(basename $repo .git)
             
-            if [ ! -f "$repo_name/CNAME" ] || [ "$(cat $repo_name/CNAME)" != "${{ env.CNAME_URL }}" ]; then
+            if [ "$(jq -r '.[].owner.login' repos.json)" == "${{ env.REPO_OWNER }}" ] && ([ ! -f "$repo_name/CNAME" ] || [ "$(cat $repo_name/CNAME)" != "${{ env.CNAME_URL }}" ]); then
               echo "${{ env.CNAME_URL }}" > $repo_name/CNAME
               git -C $repo_name add CNAME
               git -C $repo_name commit -m "🌐 CNAME Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Set to ${{ env.CNAME_URL }}"
