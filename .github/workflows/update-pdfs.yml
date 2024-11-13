@@ -14,9 +14,6 @@ on:
   schedule:
     - cron: '0 0 * * *'  # Runs every day at 00:00 UTC
 
-permissions:
-  contents: write # Add explicit permission to write to repo
-
 jobs:
   upload-pdfs:
     runs-on: ubuntu-latest
