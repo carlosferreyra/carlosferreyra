@@ -1,4 +1,4 @@
-name: Daily Cron
+name: Twice a day Cron
 
 env:
   CNAME_URL: $(cat CNAME)
