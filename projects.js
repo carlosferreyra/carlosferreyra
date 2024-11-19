@@ -25,14 +25,6 @@ const projects =
     "img": "https://repository-images.githubusercontent.com/802189668/b592375d-e8be-4271-874f-6dbf40cbe433"
   },
   {
-    "name": "carlosferreyra.github.io",
-    "repo": "https://github.com/carlosferreyra/carlosferreyra.github.io",
-    "demo": "https://carlosferreyra.github.io/",
-    "stack": [],
-    "description": "",
-    "img": "https://opengraph.githubassets.com/520672221d59c556e7b2a2924b89daa85e1ab14850834a6993045221d7421399/carlosferreyra/carlosferreyra.github.io"
-  },
-  {
     "name": "GestionTUP",
     "repo": "https://github.com/Seminario-Integrador-2024/GestionTUP",
     "demo": "https://gestiontup-1.onrender.com",
