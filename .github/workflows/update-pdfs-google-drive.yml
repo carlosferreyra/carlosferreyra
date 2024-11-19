@@ -1,3 +1,4 @@
+name: "Upload PDF's to Drive"
 on:
   workflow_run:
       workflows: ["Update PDFs"]
