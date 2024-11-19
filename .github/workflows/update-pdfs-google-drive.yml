@@ -1,5 +1,7 @@
 name: "Upload PDF's to Drive"
+
 on:
+  workflow_dispatch:
   workflow_run:
       workflows: ["Update PDFs"]
       types:
