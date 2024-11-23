@@ -28,7 +28,9 @@ jobs:
 
       - name: Create PDFs directory
         run: |
-          mkdir -p ${{ env.PDF_DIR }}
+            if [ ! -d "${{ env.PDF_DIR }}" ]; then
+            mkdir -p ${{ env.PDF_DIR }}
+            fi
         
       - name: Download and Update PDFs
         id: update-pdfs
@@ -38,6 +40,7 @@ jobs:
           # Add authentication headers and error handling
           URLS=("${{ env.PDF_RESUME_URL }}" "${{ env.PDF_RESUME_ES_URL }}")
           FILENAMES=("${{ env.PDF_EN_FILENAME }}" "${{ env.PDF_ES_FILENAME }}")
+          CHANGED=false
           
           for i in "${!URLS[@]}"; do
             URL="${URLS[$i]}"
@@ -47,12 +50,21 @@ jobs:
               echo "Failed to download PDF from $URL (HTTP $HTTP_CODE)"
               exit 1
             fi
+            
+            if ! cmp -s "${{ env.PDF_DIR }}/$FILENAME" "$FILENAME"; then
+              CHANGED=true
+            fi
           done
           
-          git config --global user.name '${{ env.USER_NAME }}'
-          git config --global user.email '${{ env.USER_EMAIL }}'
-          
-          git add ${{ env.PDF_DIR }}/*.pdf
-          git commit -m "📄 PDF Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Successfully updated resume files"
-          git push
-          echo "status=updated" >> $GITHUB_OUTPUT
+          if [ "$CHANGED" = true ]; then
+            git config --global user.name '${{ env.USER_NAME }}'
+            git config --global user.email '${{ env.USER_EMAIL }}'
+            
+            git add ${{ env.PDF_DIR }}/*.pdf
+            git commit -m "📄 PDF Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Successfully updated resume files"
+            git push
+            echo "status=updated" >> $GITHUB_OUTPUT
+          else
+            echo "No changes detected in PDF files."
+            echo "status=unchanged" >> $GITHUB_OUTPUT
+          fi
