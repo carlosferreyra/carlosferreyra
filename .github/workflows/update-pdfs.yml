@@ -3,9 +3,11 @@ name: Update PDFs
 env:
   PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
   PDF_RESUME_ES_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf
+  PDF_RESUME_ATS: https://drive.google.com/file/d/1RIWwwlWRkmczWm215rZ-kzZo9ViFpGVo/view
   PDF_DIR: ./pdfs
-  PDF_EN_FILENAME: carlos-ferreyra-resume.pdf
-  PDF_ES_FILENAME: carlos-ferreyra-CV.pdf
+  PDF_EN_FILENAME: carlos-ferreyra-EN.pdf
+  PDF_ES_FILENAME: carlos-ferreyra-ES.pdf
+  PDF_ATS_FILENAME: carlos-ferreyra.pdf
   USER_NAME: 'github-actions[bot]'
   USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
 
@@ -38,8 +40,8 @@ jobs:
           set -e
           
           # Add authentication headers and error handling
-          URLS=("${{ env.PDF_RESUME_URL }}" "${{ env.PDF_RESUME_ES_URL }}")
-          FILENAMES=("${{ env.PDF_EN_FILENAME }}" "${{ env.PDF_ES_FILENAME }}")
+          URLS=("${{ env.PDF_RESUME_URL }}" "${{ env.PDF_RESUME_ES_URL }}" "${{ env.PDF_RESUME_ATS }}")
+          FILENAMES=("${{ env.PDF_EN_FILENAME }}" "${{ env.PDF_ES_FILENAME }}" "${{ env.PDF_ATS_FILENAME }}")
           CHANGED=false
           
           for i in "${!URLS[@]}"; do
