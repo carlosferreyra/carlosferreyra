@@ -3,7 +3,7 @@ name: Update PDFs
 env:
   PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
   PDF_RESUME_ES_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf
-  PDF_RESUME_ATS: https://drive.usercontent.google.com/download?id=1bvN8VLYpbucmpwVBu5etV9q5xIIMAWF_&export=download&authuser=0&confirm=t&uuid=36fa503c-701e-4bb3-b222-f80e56e888d2&at=AENtkXYxdMCso-NQl92vaY446HLM:1732626298833
+  PDF_RESUME_ATS: https://typst.app/project/rT3d3iUFna4DBPxWN3Wm7u
   PDF_DIR: ./pdfs
   PDF_EN_FILENAME: carlos-ferreyra-EN.pdf
   PDF_ES_FILENAME: carlos-ferreyra-ES.pdf
