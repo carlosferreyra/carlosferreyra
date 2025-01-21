@@ -125,7 +125,7 @@ await fs.writeFile('./src/projects.js', outputContent, 'utf-8');
 
 // codigo de Lucas
 
-import projects from "./projects.js";
+
 
 const projectsDiv = document.getElementById("projects-list")
 
