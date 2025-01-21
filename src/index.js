@@ -79,6 +79,7 @@ for (const repo of public_repositories) {
   // skip all repos without a demo
   if (repo.homepage !== null && repo.name !== 'carlosferreyra') {
     projects.push({
+    repo: repo.html_url,
     name: repo.name,
     img: await getSocialPreview(repo,PLACEHOLDERS.USER),
     description: repo.description,
@@ -101,6 +102,7 @@ for (const org of orgs_login) {
         
         if (repo.homepage !== null) {
     projects.push({
+    repo: repo.html_url,
     name: repo.name,
     img: await getSocialPreview(repo,org),
     description: repo.description,
