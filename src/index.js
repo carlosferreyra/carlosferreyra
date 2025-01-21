@@ -125,13 +125,13 @@ await fs.writeFile('./src/projects.js', outputContent, 'utf-8');
 
 // codigo de Lucas
 
-
+import { projects as proyectList } from "./projects.js";
 
 const projectsDiv = document.getElementById("projects-list")
 
 const loadMoreButton = document.getElementById("loadMoreProjects")
 
-let projectsToShow = projects.slice(0, 4)
+let projectsToShow = proyectList.slice(0, 4)
 
 function loadProjects() {
   let html = ""
