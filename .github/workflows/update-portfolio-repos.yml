@@ -1,46 +1,28 @@
 name: Hourly Repository Update
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   schedule:
-    - cron: "0 */12 * * *" # Runs every 12 hours
+    - cron: "0 */4 * * *" # Runs every 4 hours
 
 env:
   GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
-  GITHUB_API_URL: https://api.github.com
-  USER_NAME: carlosferreyra
-  ORG_NAME: Seminario-Integrador-2024
-  GRAPHQL_ENDPOINT: https://api.github.com/graphql
-  PER_PAGE: 100
 
 jobs:
-  update-repo-data:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Configure NodeJS
-        uses: actions/node@v2
-      - name: Configure Git
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-      - name: Run index.js
-        run: npm i
-      - name: Commit and push changes
-        run: |
-          if git diff --quiet carlos.json org.json projects.json projects.js; then
-            echo "No changes detected in repository data files"
-          else
-            git add carlos.json org.json projects.json projects.js
-            git commit -m "Update repository data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')" || {
-              echo "Failed to create commit: $?"
-              exit 0
-            }
-            git push || {
-              echo "Failed to push changes: $?"
-              exit 0
-            }
-          fi
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm run app
+      - run: |
+          git config user.name carlosferreyra
+          git config user.email eduferreyraok@gmail.com
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "[bot] Update repo with latest info"
+          git push origin main
