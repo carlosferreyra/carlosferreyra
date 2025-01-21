@@ -1,0 +1,61 @@
+const projects = 
+
+[
+  {
+    "name": "alura-encriptador",
+    "img": "https://repository-images.githubusercontent.com/819610263/df6a6b16-c04a-4bfd-a983-43723c86ae05",
+    "description": "Challenge de la etapa \"Principiante en Programacion\" en ONE G7.",
+    "stack": [
+      "alura-latam",
+      "one-g7",
+      "oracle"
+    ],
+    "demo": "https://carlosferreyra.github.io/alura-encriptador/"
+  },
+  {
+    "name": "alura-monedas",
+    "img": "https://opengraph.githubassets.com/aafe8c8f4cb477d95215dca79e47f3453a11eacdce523cb8c68a8428bab8f3e4/carlosferreyra/alura-monedas",
+    "description": "Primer Challenge de la etapa 3 \"Especializacion Backend\" en ONE G7.",
+    "stack": [
+      "alura-latam",
+      "one-g7",
+      "oracle"
+    ],
+    "demo": ""
+  },
+  {
+    "name": "GestionTUP",
+    "img": "https://repository-images.githubusercontent.com/839530563/77ec1cfb-4a65-4e34-8641-2fa6d5ea3f18",
+    "description": "Repositorio Frontend del Proyecto",
+    "stack": [
+      "frontend",
+      "habilitacion-profesional",
+      "seminario",
+      "utn-frre"
+    ],
+    "demo": "https://gestiontup-1.onrender.com"
+  },
+  {
+    "name": ".github",
+    "img": "https://opengraph.githubassets.com/45ec1c92c1ab6792053b184089568416b20c58f497cafee32038eec7be2dbd03/Seminario-Integrador-2024/.github",
+    "description": "Repositorio de la Organizacion, cambios sobre la misma se veran reflejados en la pag principal",
+    "stack": [],
+    "demo": ""
+  },
+  {
+    "name": "WA-Bot-Template",
+    "img": "https://opengraph.githubassets.com/662a1a72bb44827e9c4fe5aa362fa482150e3a3b12eaede7ddd955667cf262e1/Kitsune-Studios/WA-Bot-Template",
+    "description": "Standard WhatsApp template for chatbots",
+    "stack": [],
+    "demo": ""
+  },
+  {
+    "name": ".github",
+    "img": "https://opengraph.githubassets.com/9728c35b0aaf92d105c4a03edb2eb34a99393717ce9b4d86cf9b48fc8a54d3aa/Kitsune-Studios/.github",
+    "description": "Main repository for the organization",
+    "stack": [],
+    "demo": "https://kitsune-studios.github.io/.github/"
+  }
+]
+
+export default projects;

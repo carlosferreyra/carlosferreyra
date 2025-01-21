@@ -75,14 +75,17 @@ const projects = [];
 const user_repositories = await githubApi(PLACEHOLDERS.USER_API_URL.replace('<user>', PLACEHOLDERS.USER));
 const public_repositories = user_repositories.filter(repo => !repo.private);
 for (const repo of public_repositories) {
-  projects.push({
+  
+  // skip all repos without a demo
+  if (repo.homepage !== null && repo.name !== 'carlosferreyra') {
+    projects.push({
     name: repo.name,
     img: await getSocialPreview(repo,PLACEHOLDERS.USER),
     description: repo.description,
     stack: repo.topics,
     demo: repo.homepage,
-  })
-  
+  })  
+  }
 }
 const orgs = await githubApi(PLACEHOLDERS.USER_ORGS);
 const orgs_login = orgs.map(org => org.login)
@@ -96,14 +99,15 @@ for (const org of orgs_login) {
     const contributors = await githubApi(repo.contributors_url);
     if (contributors.some(contributor => contributor.login === PLACEHOLDERS.USER)) {
         
-        projects.push({
-            name: repo.name,
-            img: await getSocialPreview(repo,org), 
-            description: repo.description,
-            stack: repo.topics,
-            demo: repo.homepage,
-            repo: repo.html_url
-        });   
+        if (repo.homepage !== null) {
+    projects.push({
+    name: repo.name,
+    img: await getSocialPreview(repo,org),
+    description: repo.description,
+    stack: repo.topics,
+    demo: repo.homepage,
+  })  
+  }
     }
   }
 }
@@ -123,59 +127,3 @@ await fs.writeFile('./src/projects.js', outputContent, 'utf-8');
 //     loadProjects()})
 
 
-// codigo de Lucas
-
-import { projects as proyectList } from "./projects.js";
-
-const projectsDiv = document.getElementById("projects-list")
-
-const loadMoreButton = document.getElementById("loadMoreProjects")
-
-let projectsToShow = proyectList.slice(0, 4)
-
-function loadProjects() {
-  let html = ""
-
-  projectsToShow.forEach((project) => {
-    let stack = ""
-    project.stack.forEach((tech) => {
-      stack += `<span>${tech}</span> `
-    })
-
-    html += `
-        <article class="project">        
-          <div>
-            <div class="project__img">
-             <a href="${project.demo && project.demo}">
-              <img loading="lazy" src="${project.img}" alt="${project.name}">
-             </a>
-            </div>
-            <div class="project__info">
-                  <h3>${project.name}</h3>
-                  <div class="project__stack">
-                  ${stack}
-                  </div>
-                  <p class="project__description">${project.description.replace(
-                    /(?:\r\n|\r|\n)/g,
-                    "<br>"
-                  )}</p>
-              </div>
-          </div>
-          <div class="project__links">
-              ${project.demo ? `<a href="${project.demo}">Demo</a>` : ""}
-              ${project.repo ? `<a href="${project.repo}">Code</a>` : ""}
-          </div>
-        </article>
-    `
-  })
-
-  projectsDiv.innerHTML = html
-}
-
-loadProjects()
-
-loadMoreButton.addEventListener("click", () => {
-  projectsToShow = projects
-  loadProjects()
-  loadMoreButton.style = "display:none"
-})
