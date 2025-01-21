@@ -44,14 +44,14 @@ const projects =
   },
   {
     "name": "WA-Bot-Template",
-    "img": "https://opengraph.githubassets.com/662a1a72bb44827e9c4fe5aa362fa482150e3a3b12eaede7ddd955667cf262e1/Kitsune-Studios/WA-Bot-Template",
+    "img": "https://opengraph.githubassets.com/9729a35fbfa3f48bcd05b0094b01171977603e3b6ed5350143eff52db99062eb/Kitsune-Studios/WA-Bot-Template",
     "description": "Standard WhatsApp template for chatbots",
     "stack": [],
     "demo": ""
   },
   {
     "name": ".github",
-    "img": "https://opengraph.githubassets.com/9728c35b0aaf92d105c4a03edb2eb34a99393717ce9b4d86cf9b48fc8a54d3aa/Kitsune-Studios/.github",
+    "img": "https://opengraph.githubassets.com/97f3c1f0346e80b9ab959aa2b62702df6f0e3588904b25da66112e863e8c91b6/Kitsune-Studios/.github",
     "description": "Main repository for the organization",
     "stack": [],
     "demo": "https://kitsune-studios.github.io/.github/"
