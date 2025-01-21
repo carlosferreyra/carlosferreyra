@@ -3,7 +3,7 @@ name: Hourly Repository Update
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */12 * * *' # Runs every 12 hours
+    - cron: "0 */12 * * *" # Runs every 12 hours
 
 env:
   GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
@@ -20,72 +20,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+      - name: Configure NodeJS
+        uses: actions/node@v2
       - name: Configure Git
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Fetch user repositories
-        run: |
-          # Fetch repos and process them directly to carlos.json
-          curl -H "Authorization: token $GITHUB_TOKEN" \
-               "$GITHUB_API_URL/users/$USER_NAME/repos?per_page=$PER_PAGE" | \
-          jq '[.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
-            name: .name,
-            repo: .html_url,
-            demo: .homepage,
-            stack: (.topics // []),
-            description: (.description // "")
-          }]' > carlos.json
-
-          # Fetch social previews and merge with carlos.json
-          jq -r '.[] | .name' carlos.json | while read repo; do
-            query="{\"query\":\"query { repository(owner: \\\"$USER_NAME\\\", name: \\\"$repo\\\") { openGraphImageUrl }}\"}"
-            img_url=$(curl -s -H "Authorization: bearer $GITHUB_TOKEN" \
-                         -H "Content-Type: application/json" \
-                         -X POST -d "$query" \
-                         $GRAPHQL_ENDPOINT | jq -r ".data.repository.openGraphImageUrl")
-            jq --arg repo "$repo" --arg img "$img_url" \
-               'map(if .name == $repo then . + {img: $img} else . end)' carlos.json > tmp.json && mv tmp.json carlos.json
-          done
-
-      - name: Fetch organization repositories
-        run: |
-          # Fetch repos and process them directly to org.json
-          curl -H "Authorization: token $GITHUB_TOKEN" \
-               "$GITHUB_API_URL/orgs/$ORG_NAME/repos?per_page=$PER_PAGE" | \
-          jq '[.[] | select(.name | startswith(".") | not) | select(.homepage != null and .homepage != "") | {
-            name: .name,
-            repo: .html_url,
-            demo: .homepage,
-            stack: (.topics // []),
-            description: (.description // "")
-          }]' > org.json
-
-          # Fetch social previews and merge with org.json
-          jq -r '.[] | .name' org.json | while read repo; do
-            query="{\"query\":\"query { repository(owner: \\\"$ORG_NAME\\\", name: \\\"$repo\\\") { openGraphImageUrl }}\"}"
-            img_url=$(curl -s -H "Authorization: bearer $GITHUB_TOKEN" \
-                         -H "Content-Type: application/json" \
-                         -X POST -d "$query" \
-                         $GRAPHQL_ENDPOINT | jq -r ".data.repository.openGraphImageUrl")
-            jq --arg repo "$repo" --arg img "$img_url" \
-               'map(if .name == $repo then . + {img: $img} else . end)' org.json > tmp.json && mv tmp.json org.json
-          done
-
-      - name: Merge JSON files
-        run: |
-          jq -s 'add' carlos.json org.json > projects.json
-
-      - name: Generate projects.js
-        run: |
-          echo "const projects = " > projects.js
-          cat projects.json >> projects.js
-          echo ";" >> projects.js
-          echo "" >> projects.js
-          echo "export default projects;" >> projects.js
-
+      - name: Run index.js
+        run: npm i
       - name: Commit and push changes
         run: |
           if git diff --quiet carlos.json org.json projects.json projects.js; then

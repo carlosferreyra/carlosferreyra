@@ -1,0 +1,30 @@
+{
+  "name": "carlosferreyra",
+  "version": "1.0.0",
+  "description": "My GitHub Profile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosferreyra/carlosferreyra.git"
+  },
+  "keywords": [
+    "github",
+    "readme",
+    "github",
+    "readme",
+    "profile",
+    "github",
+    "profile"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosferreyra/carlosferreyra/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/carlosferreyra/carlosferreyra#readme"
+}
