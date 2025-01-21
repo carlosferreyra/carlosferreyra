@@ -9,7 +9,8 @@ on:
     - cron: "0 */4 * * *" # Runs every 4 hours
 
 env:
-  GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+  GH_ACCESS_TOKEN: ${{ secrets.GH_ACTIONS }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
