@@ -121,8 +121,8 @@ for (const org of orgs_login) {
 const projectsJson = JSON.stringify(projects, null, 2);
 
 // Write to projects.js
-head = 'const projects = '
-foot = 'export default projects;'
+const head = 'const projects = '
+const foot = 'export default projects;'
 await fs.writeFile('./src/projects.js', head + projectsJson+ foot);
 
 
