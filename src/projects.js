@@ -26,6 +26,18 @@ const projects =
     "demo": ""
   },
   {
+    "repo": "https://github.com/carlosferreyra/carlosferreyra",
+    "name": "carlosferreyra",
+    "img": "https://repository-images.githubusercontent.com/802189668/b592375d-e8be-4271-874f-6dbf40cbe433",
+    "description": "My GitHub Profile",
+    "stack": [
+      "profile",
+      "profile-readme",
+      "resume"
+    ],
+    "demo": "https://carlosferreyra.me/"
+  },
+  {
     "repo": "https://github.com/Seminario-Integrador-2024/GestionTUP",
     "name": "GestionTUP",
     "img": "https://repository-images.githubusercontent.com/839530563/77ec1cfb-4a65-4e34-8641-2fa6d5ea3f18",
@@ -39,11 +51,24 @@ const projects =
     "demo": "https://gestiontup-1.onrender.com"
   },
   {
-    "repo": "https://github.com/Seminario-Integrador-2024/.github",
-    "name": ".github",
-    "img": "https://opengraph.githubassets.com/45ec1c92c1ab6792053b184089568416b20c58f497cafee32038eec7be2dbd03/Seminario-Integrador-2024/.github",
-    "description": "Repositorio de la Organizacion, cambios sobre la misma se veran reflejados en la pag principal",
+    "repo": "https://github.com/Seminario-Integrador-2024/demo-repository",
+    "name": "demo-repository",
+    "img": "https://avatars.githubusercontent.com/u/177783167?s=400&v=4",
+    "description": "A code repository designed to show the best GitHub has to offer.",
     "stack": [],
+    "demo": null
+  },
+  {
+    "repo": "https://github.com/Seminario-Integrador-2024/GestionTUP-backend",
+    "name": "GestionTUP-backend",
+    "img": "https://avatars.githubusercontent.com/u/177783167?s=400&v=4",
+    "description": "backend service for GestionTUP as API Restful",
+    "stack": [
+      "backend",
+      "backend-api",
+      "backend-service",
+      "django-rest-framework"
+    ],
     "demo": ""
   },
   {
@@ -55,12 +80,12 @@ const projects =
     "demo": ""
   },
   {
-    "repo": "https://github.com/Kitsune-Studios/.github",
-    "name": ".github",
-    "img": "https://opengraph.githubassets.com/97f3c1f0346e80b9ab959aa2b62702df6f0e3588904b25da66112e863e8c91b6/Kitsune-Studios/.github",
-    "description": "Main repository for the organization",
+    "repo": "https://github.com/Kitsune-Studios/demo-repository",
+    "name": "demo-repository",
+    "img": "https://avatars.githubusercontent.com/u/193794189?s=400&v=4",
+    "description": "A code repository designed to show the best GitHub has to offer.",
     "stack": [],
-    "demo": "https://kitsune-studios.github.io/.github/"
+    "demo": null
   }
 ]
 
