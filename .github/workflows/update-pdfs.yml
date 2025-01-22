@@ -1,4 +1,4 @@
-name: Update PDFs
+name: Update Resume PDFs
 
 env:
   PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
@@ -7,13 +7,13 @@ env:
   PDF_EN_FILENAME: carlos-ferreyra-EN.pdf
   PDF_ES_FILENAME: carlos-ferreyra-ES.pdf
   PDF_ATS_FILENAME: carlos-ferreyra.pdf
-  USER_NAME: 'github-actions[bot]'
-  USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
+  USER_NAME: "github-actions[bot]"
+  USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
 
 on:
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at 00:00 UTC
+    - cron: "0 0 * * *" # Runs every day at 00:00 UTC
 jobs:
   upload-pdfs:
     runs-on: ubuntu-latest
@@ -24,24 +24,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ACTIONS_TOKEN }} # Use a PAT token for authentication
+          token: ${{ secrets.GH_ACTIONS }} # Use a PAT token for authentication
 
       - name: Create PDFs directory
         run: |
-            if [ ! -d "${{ env.PDF_DIR }}" ]; then
-            mkdir -p ${{ env.PDF_DIR }}
-            fi
-        
+          if [ ! -d "${{ env.PDF_DIR }}" ]; then
+          mkdir -p ${{ env.PDF_DIR }}
+          fi
+
       - name: Download and Update PDFs
         id: update-pdfs
         run: |
           set -e
-          
+
           # Add authentication headers and error handling
           URLS=("${{ env.PDF_RESUME_URL }}" "${{ env.PDF_RESUME_ES_URL }}")
           FILENAMES=("${{ env.PDF_EN_FILENAME }}" "${{ env.PDF_ES_FILENAME }}")
           CHANGED=false
-          
+
           for i in "${!URLS[@]}"; do
             URL="${URLS[$i]}"
             FILENAME="${FILENAMES[$i]}"
@@ -55,7 +55,7 @@ jobs:
               CHANGED=true
             fi
           done
-          
+
           if [ "$CHANGED" = true ]; then
             git config --global user.name '${{ env.USER_NAME }}'
             git config --global user.email '${{ env.USER_EMAIL }}'
