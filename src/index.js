@@ -75,8 +75,9 @@ const projects = [];
 const user_repositories = await githubApi(PLACEHOLDERS.USER_API_URL.replace('<user>', PLACEHOLDERS.USER));
 const public_repositories = user_repositories.filter(repo => !repo.private);
 const filtered_repos = public_repositories
-    .filter(repo => repo.homepage !== null && repo.homepage !== '')
-    .filter(repo => !repo.name.startsWith(".") && !repo.name === PLACEHOLDERS.USER)
+    .filter(repo => repo.homepage !== null && repo.homepage !== '') // skip repos without a demo
+    .filter(repo => !repo.name.startsWith(".")) // skip dotfiles
+    .filter(repo => !repo.name === PLACEHOLDERS.USER) // skip user's repo
 
 for (const repo of filtered_repos) {
   
