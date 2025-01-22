@@ -76,7 +76,7 @@ const user_repositories = await githubApi(PLACEHOLDERS.USER_API_URL.replace('<us
 const public_repositories = user_repositories.filter(repo => !repo.private);
 const filtered_repos = public_repositories
     .filter(repo => repo.homepage !== null && repo.homepage !== '')
-    .filter(repo => !repo.name.startsWith(".") || !repo.name === PLACEHOLDERS.USER)
+    .filter(repo => !repo.name.startsWith(".") && !repo.name === PLACEHOLDERS.USER)
 
 for (const repo of filtered_repos) {
   
