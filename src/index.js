@@ -122,7 +122,7 @@ const projectsJson = JSON.stringify(projects, null, 2);
 
 // Write to projects.js
 const head = 'const projects = '
-const foot = 'export default projects;'
+const foot = '\nexport default projects;'
 await fs.writeFile('./src/projects.js', head + projectsJson+ foot);
 
 

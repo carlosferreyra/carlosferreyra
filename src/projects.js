@@ -85,4 +85,5 @@ const projects = [
     "stack": [],
     "demo": null
   }
-]export default projects;
+]
+export default projects;
