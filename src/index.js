@@ -70,7 +70,7 @@ const getSocialPreview = async (repo, owner) => {
 
 
 
-const projectsTemplate = await fs.readFile('./src/projects.js.tpl', { encoding: 'utf-8' })
+// Main
 const projects = [];
 const user_repositories = await githubApi(PLACEHOLDERS.USER_API_URL.replace('<user>', PLACEHOLDERS.USER));
 const public_repositories = user_repositories.filter(repo => !repo.private);
@@ -120,11 +120,10 @@ for (const org of orgs_login) {
 // Format projects array as pretty JSON string
 const projectsJson = JSON.stringify(projects, null, 2);
 
-// Replace template placeholder and format output
-const outputContent = projectsTemplate.replace('%{{PROJECTS}}', projectsJson);
-
 // Write to projects.js
-await fs.writeFile('./src/projects.js', outputContent, 'utf-8');
+head = 'const projects = '
+foot = 'export default projects;'
+await fs.writeFile('./src/projects.js', head + projectsJson+ foot);
 
 
 
