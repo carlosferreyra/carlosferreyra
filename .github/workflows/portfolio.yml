@@ -1,4 +1,4 @@
-name: Hourly Repository Update
+name: Update Portfolio
 
 on:
   workflow_dispatch:
