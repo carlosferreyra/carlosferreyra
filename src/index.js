@@ -74,10 +74,14 @@ const projectsTemplate = await fs.readFile('./src/projects.js.tpl', { encoding: 
 const projects = [];
 const user_repositories = await githubApi(PLACEHOLDERS.USER_API_URL.replace('<user>', PLACEHOLDERS.USER));
 const public_repositories = user_repositories.filter(repo => !repo.private);
-for (const repo of public_repositories) {
+const filtered_repos = public_repositories
+    .filter(repo => repo.homepage !== null || repo.homepage !== '')
+    .filter(repo => !repo.name.startswith(".") || !repo.name.includes(PLACEHOLDERS.USER))
+
+for (const repo of filtered_repos) {
   
   // skip all repos without a demo
-  if (repo.homepage !== null && repo.name !== 'carlosferreyra') {
+  if (repo.homepage !== null) {
     projects.push({
     repo: repo.html_url,
     name: repo.name,
@@ -94,13 +98,13 @@ for (const org of orgs_login) {
   
   const url = PLACEHOLDERS.ORGS_API_URL.replace('<org>', org);
   const org_repositories = await githubApi(url);
-  const publicRepos = org_repositories.filter(repo => !repo.private);
+  const filtered_repos = org_repositories
+  .filter(repo => repo.homepage !== null || repo.homepage !== '')
+  .filter(repo => !repo.name.startswith("."))
   
-  for (const repo of publicRepos) {
+  for (const repo of filtered_repos) {
     const contributors = await githubApi(repo.contributors_url);
     if (contributors.some(contributor => contributor.login === PLACEHOLDERS.USER)) {
-        
-        if (repo.homepage !== null) {
     projects.push({
     repo: repo.html_url,
     name: repo.name,
@@ -108,8 +112,7 @@ for (const org of orgs_login) {
     description: repo.description,
     stack: repo.topics,
     demo: repo.homepage,
-  })  
-  }
+      })  
     }
   }
 }

@@ -1,4 +1,4 @@
-import projects from "./projects.js"
+import projects from "./src/projects.js"
 
 const projectsDiv = document.getElementById("projects-list")
 

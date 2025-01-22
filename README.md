@@ -4,6 +4,7 @@
 <h1 align="center" > Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> </h1>
 
 [ResumeURL]: https://rxresu.me/carlosferreyra/carlos-ferreyra
+[RSpanish]: https://rxresu.me/carlosferreyra/carlos-ferreyra-espanol
 [WebsiteURL]: https://about.me/carlosferreyra
 
 <p align="center">
@@ -40,7 +41,7 @@
 - 💻 I am a competitive programmer at [`Leetcode`](https://leetcode.com/u/Coolwinter18/).
 - ✍🏻 I love using Software as a solution for every Problem. Check my portfolio: [_`Here`_](https://carlosferreyra.me/)
 - 🤓 Always learning new things
-- 👔 📝 I’m currently open for a new **`job opportunity`**, this is [_`MY RESUME`_][ResumeURL].
+- 👔 📝 I’m currently open for a new **`job opportunities`**, you can checkmy resume: [English][ResumeURL]|[Español][RSpanish].
 - 📌 You can check my other links [HERE][WebsiteURL].
 
 <br/>
