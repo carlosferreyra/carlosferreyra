@@ -1,8 +1,5 @@
 <!-- allow html in gh-pages markdown -->
-<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
-
-<!-- <img align="center" src="https://avatars.githubusercontent.com/carlosferreyra" longdesc="https://avatars.githubusercontent.com/<username=carlosferreyra>" height="50%" width="10%" > -->
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <h1 align="center" > Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> </h1>
 
@@ -17,7 +14,6 @@
 
 <br>
 
-
 <br>
 
 <br>
@@ -29,9 +25,11 @@
 ## <img src = "https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width = "5%" /> About me
 
 <!-- github followers badge -->
+
 [![GitHub followers](https://img.shields.io/github/followers/carlosferreyra?label=Follow&style=social)](https://github.com/carlosferreyra)
 
 <!-- profile views, dependabot, pages-build-deployment, daily cron, hourly cron -->
+
 ![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat)
 
   <!-- desktop office animation -->
@@ -40,13 +38,12 @@
 - 👨‍💻 I'm Software Developer/Engineer @[UTN](https://frre.utn.edu.ar/). Current project: [Kitsune Studios](https://github.com/Kitsune-Studios)
 - 🏫 I'm a `Senior` at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi) at [National Technological University](https://www.utn.edu.ar/).
 - 💻 I am a competitive programmer at [`Leetcode`](https://leetcode.com/u/Coolwinter18/).
-- ✍🏻 I love using Software as a solution for every Problem. Check my portfolio: [*`Here`*](https://carlosferreyra.me/)
+- ✍🏻 I love using Software as a solution for every Problem. Check my portfolio: [_`Here`_](https://carlosferreyra.me/)
 - 🤓 Always learning new things
-- 👔 📝 I’m currently open for a new **`job opportunity`**, this is [*`MY RESUME`*][ResumeURL].
+- 👔 📝 I’m currently open for a new **`job opportunity`**, this is [_`MY RESUME`_][ResumeURL].
 - 📌 You can check my other links [HERE][WebsiteURL].
 
 <br/>
-
 
 <br>
 
@@ -65,9 +62,9 @@
     <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=carlosferreyra&show_icons=true&theme=algolia&include_all_commits=true&count_private=true" alt="Github Stats" style="width: 55%; display: inline-block;"/>
   </p>
 
- >[!NOTE] 
- >
- > This stats are only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
+> [!NOTE]
+>
+> This stats are only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
 
 <h3>⚡ Recent GitHub Activity</h3>
 
@@ -80,7 +77,6 @@
 <hr/>
 
 <p align="center"> <img align="center" src="https://github-profile-trophy.vercel.app/?username=carlosferreyra&theme=juicyfresh&no-bg=true&column=-1"  alt="Trophies" /></a> </p>
-
 
 <!-- gif image of a line multicolor/rainbow -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
