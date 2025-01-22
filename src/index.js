@@ -76,7 +76,7 @@ const user_repositories = await githubApi(PLACEHOLDERS.USER_API_URL.replace('<us
 const public_repositories = user_repositories.filter(repo => !repo.private);
 const filtered_repos = public_repositories
     .filter(repo => repo.homepage !== null || repo.homepage !== '')
-    .filter(repo => !repo.name.startswith(".") || !repo.name.includes(PLACEHOLDERS.USER))
+    .filter(repo => !repo.name.startsWith(".") || !repo.name.includes(PLACEHOLDERS.USER))
 
 for (const repo of filtered_repos) {
   
@@ -100,7 +100,7 @@ for (const org of orgs_login) {
   const org_repositories = await githubApi(url);
   const filtered_repos = org_repositories
   .filter(repo => repo.homepage !== null || repo.homepage !== '')
-  .filter(repo => !repo.name.startswith("."))
+  .filter(repo => !repo.name.startsWith("."))
   
   for (const repo of filtered_repos) {
     const contributors = await githubApi(repo.contributors_url);
