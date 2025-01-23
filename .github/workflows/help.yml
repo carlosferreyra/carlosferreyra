@@ -1,6 +1,6 @@
 # This is a workflow file that will be used to show what can you do with the GitHub Actions.
 # name: Test
-
+name: Test workflow
 on:
   workflow_dispatch:
 
