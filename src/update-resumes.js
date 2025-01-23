@@ -1,6 +1,5 @@
 import { execSync } from 'child_process';
 import { promises as fs } from 'fs';
-import fetch from 'node-fetch'; // Add this import
 
 const {
   PDF_RESUME_URL,
