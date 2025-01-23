@@ -1,12 +1,8 @@
 name: Update Resume PDFs
 
 env:
-  PDF_RESUME_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
-  PDF_RESUME_ES_URL: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf
-  PDF_DIR: ./pdfs
-  PDF_EN_FILENAME: carlos-ferreyra-EN.pdf
-  PDF_ES_FILENAME: carlos-ferreyra-ES.pdf
-  PDF_ATS_FILENAME: carlos-ferreyra.pdf
+  PDF_URL_EN: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
+  PDF_URL_ES: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf
   USER_NAME: "github-actions[bot]"
   USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
 

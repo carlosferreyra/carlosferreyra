@@ -2,56 +2,51 @@ import { execSync } from 'child_process';
 import { promises as fs } from 'fs';
 
 const {
-  PDF_RESUME_URL,
-  PDF_RESUME_ES_URL,
-  PDF_DIR,
-  PDF_EN_FILENAME,
-  PDF_ES_FILENAME,
+  PDF_URL_EN,
+  PDF_URL_ES,
   USER_NAME,
   USER_EMAIL
 } = process.env;
 
-const URLS = [PDF_RESUME_URL, PDF_RESUME_ES_URL];
-const FILENAMES = [PDF_EN_FILENAME, PDF_ES_FILENAME];
+const URLS = [PDF_URL_EN, PDF_URL_ES];
 
 const downloadAndUpdatePDFs = async () => {
   let changed = false;
-
+  let PDF_DIR = './pdfs';
   // Ensure the PDF_DIR exists
-  await fs.mkdir(PDF_DIR, { recursive: true });
+  try {
+    await fs.access(PDF_DIR);
+  } catch {
+    await fs.mkdir(PDF_DIR, { recursive: true });
+  }
 
   for (let i = 0; i < URLS.length; i++) {
     const url = URLS[i];
-    const filename = FILENAMES[i];
+    const name = await fs.readFile('./package.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        process.exit(1);
+      }
+      return JSON.parse(data).name;
+    })
+    const filename = `${name.replace(" ","-")}-${i === 0 ? 'en' : 'es'}.pdf`;
     const filePath = `${PDF_DIR}/${filename}`;
 
     try {
+      // Download the PDF
       const response = await fetch(url);
       if (response.status !== 200) {
         console.error(`Failed to download PDF from ${url} (HTTP ${response.status})`);
         process.exit(1);
       }
-
-      // Convert ArrayBuffer to Buffer
-      const arrayBuffer = await response.arrayBuffer();
-      const buffer = Buffer.from(arrayBuffer);
-      await fs.writeFile(filePath, buffer);
-
-      // Compare with existing file using full path
-      const fileExists = await fs.access(filePath).then(() => true).catch(() => false);
-      if (!fileExists) {
-        changed = true;
-      } else {
-        const existingFile = await fs.readFile(filePath);
-        const newFile = buffer;
-        changed = !existingFile.equals(newFile);
-      }
+      // save the PDF to the file system, overwriting the old file
+      await fs.writeFile(filePath, await response.buffer());
     } catch (error) {
-      console.error(`Error downloading or comparing PDF: ${error}`);
+      console.error(`Error downloading PDF: ${error}`);
       process.exit(1);
     }
   }
-
+  changed = true;
   if (changed) {
     console.log("Changes detected in PDFs. Proceeding with git operations...");
     execSync(`git config --global user.name '${USER_NAME}'`);
