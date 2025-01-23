@@ -1,5 +1,3 @@
-name: Update Resume PDFs
-
 env:
   PDF_URL_EN: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
   PDF_URL_ES: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf
