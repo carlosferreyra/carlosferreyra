@@ -51,6 +51,10 @@ const downloadAndUpdatePDFs = async () => {
     const filePath = `${PDF_DIR}/${filename}`;
 
     try {
+      // Remove the existing PDF if it exists
+      if (fs.existsSync(filePath)) {
+        fs.unlinkSync(filePath);
+      }
       // Download the PDF
       await downloadPDF(url, filePath);
     }
