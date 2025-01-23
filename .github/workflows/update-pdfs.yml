@@ -11,6 +11,7 @@ env:
   USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
 
 on:
+  workflow_call: # Allows calling this workflow from another workflow
   workflow_dispatch: # Allows manual triggering
   schedule:
     - cron: "0 0 * * *" # Runs every day at 00:00 UTC
@@ -24,57 +25,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_ACTIONS }} # Use a PAT token for authentication
+          token: ${{ secrets.GH_TOKEN }} # Use a PAT token for authentication
 
-      - name: Create PDFs directory
-        run: |
-          if [ ! -d "${{ env.PDF_DIR }}" ]; then
-          mkdir -p ${{ env.PDF_DIR }}
-          fi
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22.x"
 
-      - name: Download and Update PDFs
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update Resumes
         id: update-pdfs
-        run: |
-          set -e
-
-          # Add authentication headers and error handling
-          URLS=("${{ env.PDF_RESUME_URL }}" "${{ env.PDF_RESUME_ES_URL }}")
-          FILENAMES=("${{ env.PDF_EN_FILENAME }}" "${{ env.PDF_ES_FILENAME }}")
-          CHANGED=false
-
-          for i in "${!URLS[@]}"; do
-            URL="${URLS[$i]}"
-            FILENAME="${FILENAMES[$i]}"
-            HTTP_CODE=$(curl -L -w "%{http_code}" -o "${{ env.PDF_DIR }}/$FILENAME" "$URL")
-            if [ "$HTTP_CODE" != "200" ]; then
-              echo "Failed to download PDF from $URL (HTTP $HTTP_CODE)"
-              exit 1
-            fi
-            
-            if ! cmp -s "${{ env.PDF_DIR }}/$FILENAME" "$FILENAME"; then
-              CHANGED=true
-            fi
-          done
-
-          if [ "$CHANGED" = true ]; then
-            echo "Changes detected in PDFs. Proceeding with git operations..."
-            git config --global user.name '${{ env.USER_NAME }}'
-            git config --global user.email '${{ env.USER_EMAIL }}'
-            git add ${{ env.PDF_DIR }}/*.pdf
-          else
-            echo "No changes detected in PDFs. Workflow completed successfully."
-            exit 0
-          fi
-
-          if [ "$CHANGED" = true ]; then
-            git config --global user.name '${{ env.USER_NAME }}'
-            git config --global user.email '${{ env.USER_EMAIL }}'
-            
-            git add ${{ env.PDF_DIR }}/*.pdf
-            git commit -m "📄 PDF Update [$(date '+%Y-%m-%d %H:%M:%S UTC')] - Successfully updated resume files"
-            git push
-            echo "status=updated" >> $GITHUB_OUTPUT
-          else
-            echo "No changes detected in PDF files."
-            echo "status=unchanged" >> $GITHUB_OUTPUT
-          fi
+        run: npm run update-resumes
+        env:
+          PDF_RESUME_URL: ${{ env.PDF_RESUME_URL }}
+          PDF_RESUME_ES_URL: ${{ env.PDF_RESUME_ES_URL }}
+          PDF_DIR: ${{ env.PDF_DIR }}
+          PDF_EN_FILENAME: ${{ env.PDF_EN_FILENAME }}
+          PDF_ES_FILENAME: ${{ env.PDF_ES_FILENAME }}
+          USER_NAME: ${{ env.USER_NAME }}
+          USER_EMAIL: ${{ env.USER_EMAIL }}
