@@ -47,19 +47,16 @@ const downloadAndUpdatePDFs = async () => {
 
   for (let i = 0; i < URLS.length; i++) {
     const url = URLS[i];
-    const filename = `${name.replace(" ","-")}-${i === 0 ? 'en' : 'es'}.pdf`;
+    const filename = `${name}-${i === 0 ? 'en' : 'es'}.pdf`;
     const filePath = `${PDF_DIR}/${filename}`;
 
     try {
-      // Remove the existing PDF if it exists
-      if (fs.existsSync(filePath)) {
-        fs.unlinkSync(filePath);
-      }
-      // Download the PDF
-      await downloadPDF(url, filePath);
+      
+      await downloadPDF(url, filePath)
+      // Download the PD
     }
     catch (err) {
-      console.error('Error downloading PDF:', err);
+      console.error('Error processing PDF:', err);
       process.exit(1);
     }
   }
