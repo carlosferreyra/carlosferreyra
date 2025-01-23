@@ -1,3 +1,5 @@
+name: Update PDFs
+
 env:
   PDF_URL_EN: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf
   PDF_URL_ES: https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf
@@ -8,13 +10,8 @@ env:
   contents: write
 
 on:
-  push:
-    branches:
-      - main
   workflow_call: # Allows calling this workflow from another workflow
   workflow_dispatch: # Allows manual triggering
-  schedule:
-    - cron: "0 0 * * *" # Runs every day at 00:00 UTC
 jobs:
   upload-pdfs:
     runs-on: ubuntu-latest
