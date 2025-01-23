@@ -10,6 +10,9 @@ env:
   USER_NAME: "github-actions[bot]"
   USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
 
+  permissions:
+  contents: write
+
 on:
   workflow_call: # Allows calling this workflow from another workflow
   workflow_dispatch: # Allows manual triggering
@@ -24,9 +27,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: get files
+        uses: actions/download-artifact@v4
         with:
-          token: ${{ secrets.GH_TOKEN }} # Use a PAT token for authentication
-
+          name: pdfs
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -38,11 +42,3 @@ jobs:
       - name: Update Resumes
         id: update-pdfs
         run: npm run update-resumes
-        env:
-          PDF_RESUME_URL: ${{ env.PDF_RESUME_URL }}
-          PDF_RESUME_ES_URL: ${{ env.PDF_RESUME_ES_URL }}
-          PDF_DIR: ${{ env.PDF_DIR }}
-          PDF_EN_FILENAME: ${{ env.PDF_EN_FILENAME }}
-          PDF_ES_FILENAME: ${{ env.PDF_ES_FILENAME }}
-          USER_NAME: ${{ env.USER_NAME }}
-          USER_EMAIL: ${{ env.USER_EMAIL }}
