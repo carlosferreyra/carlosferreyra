@@ -13,7 +13,7 @@ const URLS = [PDF_URL_EN, PDF_URL_ES];
 async function downloadPDF(pdfURL, outputFilename) {
     let pdfBuffer = await http.get({uri: pdfURL, encoding: null});
     console.log("Writing downloaded PDF file to " + outputFilename + "...");
-    fs.writeFileSync(outputFilename, pdfBuffer);
+    pdfBuffer.pipe(fs.createWriteStream(outputFilename));
 }
 
 const downloadAndUpdatePDFs = async () => {
