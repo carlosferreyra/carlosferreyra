@@ -1,5 +1,6 @@
 import { execSync } from 'child_process';
 import { promises as fs } from 'fs';
+import fetch from 'node-fetch'; // Add this import
 
 const {
   PDF_RESUME_URL,
@@ -16,6 +17,9 @@ const FILENAMES = [PDF_EN_FILENAME, PDF_ES_FILENAME];
 
 const downloadAndUpdatePDFs = async () => {
   let changed = false;
+
+  // Ensure the PDF_DIR exists
+  await fs.mkdir(PDF_DIR, { recursive: true });
 
   for (let i = 0; i < URLS.length; i++) {
     const url = URLS[i];
