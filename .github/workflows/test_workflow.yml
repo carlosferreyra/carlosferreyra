@@ -1,0 +1,22 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "repository: $GITHUB_REPOSITORY"
+          echo "event: $GITHUB_EVENT_NAME"
+          echo "actor: $GITHUB_ACTOR"
+            echo "sha: $GITHUB_SHA"
+            echo "ref: $GITHUB_REF"
+            echo "workflow: $GITHUB_WORKFLOW"
+            echo "action: $GITHUB_ACTION"
+            echo "job: $GITHUB_JOB"
+            echo "run: $GITHUB_RUN_ID"
+            echo "run number: $GITHUB_RUN_NUMBER"
+            echo "workspace: $GITHUB_WORKSPACE"
+            echo "action: $GITHUB_ACTION"
