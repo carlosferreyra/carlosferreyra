@@ -1,5 +1,6 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
+import http from 'http';
 const {
   PDF_URL_EN,
   PDF_URL_ES,
@@ -10,7 +11,7 @@ const {
 const URLS = [PDF_URL_EN, PDF_URL_ES];
 
 async function downloadPDF(pdfURL, outputFilename) {
-    let pdfBuffer = await request.get({uri: pdfURL, encoding: null});
+    let pdfBuffer = await http.get({uri: pdfURL, encoding: null});
     console.log("Writing downloaded PDF file to " + outputFilename + "...");
     fs.writeFileSync(outputFilename, pdfBuffer);
 }
