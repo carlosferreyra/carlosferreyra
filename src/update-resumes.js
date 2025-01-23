@@ -16,14 +16,8 @@ async function downloadPDF(pdfURL, outputFilename) {
 }
 
 const downloadAndUpdatePDFs = async () => {
-  let changed = false;
   let PDF_DIR = './pdfs';
   // Ensure the PDF_DIR exists
-  try {
-    await fs.promises.access(PDF_DIR);
-  } catch {
-    await fs.promises.mkdir(PDF_DIR, { recursive: true });
-  }
 
   let name;
   try {
