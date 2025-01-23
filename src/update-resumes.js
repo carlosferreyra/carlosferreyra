@@ -1,6 +1,5 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
-import http from 'http';
 const {
   PDF_URL_EN,
   PDF_URL_ES,
@@ -10,10 +9,26 @@ const {
 
 const URLS = [PDF_URL_EN, PDF_URL_ES];
 
+import https from 'https';
+
 async function downloadPDF(pdfURL, outputFilename) {
-    let pdfBuffer = await http.get({uri: pdfURL, encoding: null});
-    console.log("Writing downloaded PDF file to " + outputFilename + "...");
-    pdfBuffer.pipe(fs.createWriteStream(outputFilename));
+    return new Promise((resolve, reject) => {
+        https.get(pdfURL, (response) => {
+            if (response.statusCode !== 200) {
+                reject(new Error(`Failed to get '${pdfURL}' (${response.statusCode})`));
+                return;
+            }
+            const file = fs.createWriteStream(outputFilename);
+            response.pipe(file);
+            file.on('finish', () => {
+                file.close(resolve);
+                console.log("Writing downloaded PDF file to " + outputFilename + "...");
+            });
+        }).on('error', (err) => {
+            fs.unlink(outputFilename);
+            reject(err);
+        });
+    });
 }
 
 const downloadAndUpdatePDFs = async () => {
