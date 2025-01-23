@@ -36,13 +36,12 @@ const downloadAndUpdatePDFs = async () => {
 
     try {
       // Download the PDF
-      downloadPDF(url, filePath);
+      await downloadPDF(url, filePath);
     }
     catch (err) {
       console.error('Error downloading PDF:', err);
       process.exit(1);
     }
-    fs.writeFile(filePath, file);
   }
   
     execSync(`git config --global user.name '${USER_NAME}'`);
