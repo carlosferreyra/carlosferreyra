@@ -29,12 +29,19 @@ const downloadAndUpdatePDFs = async () => {
         process.exit(1);
       }
 
-      const buffer = await response.buffer();
+      // Convert ArrayBuffer to Buffer
+      const arrayBuffer = await response.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
       await fs.writeFile(filePath, buffer);
 
-      const fileExists = await fs.access(filename).then(() => true).catch(() => false);
-      if (!fileExists || !await fs.readFile(filePath).equals(await fs.readFile(filename))) {
+      // Compare with existing file using full path
+      const fileExists = await fs.access(filePath).then(() => true).catch(() => false);
+      if (!fileExists) {
         changed = true;
+      } else {
+        const existingFile = await fs.readFile(filePath);
+        const newFile = buffer;
+        changed = !existingFile.equals(newFile);
       }
     } catch (error) {
       console.error(`Error downloading or comparing PDF: ${error}`);
