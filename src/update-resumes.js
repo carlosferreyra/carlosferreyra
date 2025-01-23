@@ -1,6 +1,6 @@
 import { execSync } from 'child_process';
-import { promises as fs } from 'fs';
-
+import fs from 'fs';
+import http from 'http';
 const {
   PDF_URL_EN,
   PDF_URL_ES,
@@ -36,18 +36,23 @@ const downloadAndUpdatePDFs = async () => {
 
     try {
       // Download the PDF
-      const response = await fetch(url);
-      if (response.status !== 200) {
-        console.error(`Failed to download PDF from ${url} (HTTP ${response.status})`);
-        process.exit(1);
-      }
-      const pdf = await response.buffer();
-      // save the PDF to the file system, overwriting the old file
-      await fs.writeFile(filePath, pdf);
-    } catch (error) {
-      console.error(`Error downloading PDF: ${error}`);
+      const file = fs.createWriteStream(filePath);
+      http.get(url, 
+        function(response) {
+        response.pipe(file);
+
+      // after download completed close filestream
+      file.on("finish", () => {
+          file.close();
+          console.log("Download Completed");
+          });
+      });
+    }
+    catch (err) {
+      console.error('Error downloading PDF:', err);
       process.exit(1);
     }
+    fs.writeFile(filePath, file);
   }
   changed = true;
   if (changed) {
