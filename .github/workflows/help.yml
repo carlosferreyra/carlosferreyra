@@ -22,4 +22,3 @@ jobs:
             echo "workspace: $GITHUB_WORKSPACE"
             echo "::set-output name=repository::$GITHUB_REPOSITORY"
             echo "::set-output name=event::$GITHUB_EVENT_NAME"
-            echo "::"
