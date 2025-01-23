@@ -57,6 +57,16 @@ jobs:
           done
 
           if [ "$CHANGED" = true ]; then
+            echo "Changes detected in PDFs. Proceeding with git operations..."
+            git config --global user.name '${{ env.USER_NAME }}'
+            git config --global user.email '${{ env.USER_EMAIL }}'
+            git add ${{ env.PDF_DIR }}/*.pdf
+          else
+            echo "No changes detected in PDFs. Workflow completed successfully."
+            exit 0
+          fi
+
+          if [ "$CHANGED" = true ]; then
             git config --global user.name '${{ env.USER_NAME }}'
             git config --global user.email '${{ env.USER_EMAIL }}'
             
