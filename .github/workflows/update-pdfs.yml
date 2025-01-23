@@ -29,6 +29,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+      - name: Delete old PDFs
+        run: rm -rf pdfs/*.pdf
 
       - name: Update Resumes
         id: update-pdfs
