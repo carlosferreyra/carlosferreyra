@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Prepare repo
+      - name: Update Resumes
         uses: carlosferreyra/carlosferreyra/.github/workflows/update-pdfs.yml@main
 
   deploy:
