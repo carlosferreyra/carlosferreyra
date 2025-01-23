@@ -25,6 +25,7 @@ async function downloadPDF(pdfURL, outputFilename) {
                 console.log("Writing downloaded PDF file to " + outputFilename + "...");
             });
         }).on('error', (err) => {
+          console.error('Error on PDF:', err);
             fs.unlink(outputFilename);
             reject(err);
         });
