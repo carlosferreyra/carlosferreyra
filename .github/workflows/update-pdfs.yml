@@ -33,6 +33,3 @@ jobs:
       - name: Update Resumes
         id: update-pdfs
         run: npm run update-resumes
-  deploy:
-    needs: upload-pdfs
-    uses: carlosferreyra/carlosferreyra/.github/workflows/gh-pages-deployment.yml@main

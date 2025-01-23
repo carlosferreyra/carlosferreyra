@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *" # Runs every 5 minutes
+    - cron: "*/30 * * * *" # Runs every half hour
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
