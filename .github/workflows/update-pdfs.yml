@@ -10,8 +10,9 @@ env:
   contents: write
 
 on:
-  workflow_call: # Allows calling this workflow from another workflow
   workflow_dispatch: # Allows manual triggering
+  schedule:
+    - cron: "0 */1 * * *" # Runs every hour
 jobs:
   upload-pdfs:
     runs-on: ubuntu-latest
@@ -32,3 +33,5 @@ jobs:
       - name: Update Resumes
         id: update-pdfs
         run: npm run update-resumes
+  deploy:
+    uses: carlosferreyra/carlosferreyra/.github/workflows/gh-pages-deployment.yml@main
