@@ -20,4 +20,6 @@ jobs:
             echo "run: $GITHUB_RUN_ID"
             echo "run number: $GITHUB_RUN_NUMBER"
             echo "workspace: $GITHUB_WORKSPACE"
-            echo "action: $GITHUB_ACTION"
+            echo "::set-output name=repository::$GITHUB_REPOSITORY"
+            echo "::set-output name=event::$GITHUB_EVENT_NAME"
+            echo "::"
