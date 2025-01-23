@@ -21,7 +21,7 @@ const downloadAndUpdatePDFs = async () => {
 
   let name;
   try {
-    const data = await fs.readFile('./package.json', 'utf8');
+    const data = await fs.promises.readFile('./package.json', 'utf8');
     name = JSON.parse(data).name;
   } catch (err) {
     console.error('Error reading package.json:', err);
