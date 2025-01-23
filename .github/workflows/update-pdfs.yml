@@ -30,7 +30,7 @@ jobs:
       - name: get files
         uses: actions/download-artifact@v4
         with:
-          name: pdfs
+          url:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
