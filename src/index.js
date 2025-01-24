@@ -4,7 +4,7 @@ const projectsDiv = document.getElementById("projects-list")
 
 const loadMoreButton = document.getElementById("loadMoreProjects")
 
-let projectsToShow = projects.slice(0, 6)
+let projectsToShow = projects.slice(0, 4)
 if (projectsToShow.length === projects.length) {
   loadMoreButton.style = "display:none"
 }
