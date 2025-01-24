@@ -1,35 +1,37 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 const {
-  PDF_URL_EN,
-  PDF_URL_ES,
   USER_NAME,
   USER_EMAIL
 } = process.env;
 
-const URLS = [PDF_URL_EN, PDF_URL_ES];
+const BASE_URL = "https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/";
+const pdf = "carlos-ferreyra.pdf"
+const pdf_es = "carlos-ferreyra-es.pdf"
+
+const URLS = [BASE_URL + pdf, BASE_URL + pdf_es];
 
 import https from 'https';
 
 async function downloadPDF(pdfURL, outputFilename) {
-    return new Promise((resolve, reject) => {
-        https.get(pdfURL, (response) => {
-            if (response.statusCode !== 200) {
-                reject(new Error(`Failed to get '${pdfURL}' (${response.statusCode})`));
-                return;
-            }
-            const file = fs.createWriteStream(outputFilename);
-            response.pipe(file);
-            file.on('finish', () => {
-                file.close(resolve);
-                console.log("Writing downloaded PDF file to " + outputFilename + "...");
-            });
-        }).on('error', (err) => {
-          console.error('Error on PDF:', err);
-            fs.unlink(outputFilename);
-            reject(err);
-        });
+  return new Promise((resolve, reject) => {
+    https.get(pdfURL, (response) => {
+      if (response.statusCode !== 200) {
+        reject(new Error(`Failed to get '${pdfURL}' (${response.statusCode})`));
+        return;
+      }
+      const file = fs.createWriteStream(outputFilename);
+      response.pipe(file);
+      file.on('finish', () => {
+        file.close(resolve);
+        console.log("Writing downloaded PDF file to " + outputFilename + "...");
+      });
+    }).on('error', (err) => {
+      console.error('Error on PDF:', err);
+      fs.unlink(outputFilename);
+      reject(err);
     });
+  });
 }
 
 const downloadAndUpdatePDFs = async () => {
@@ -51,7 +53,7 @@ const downloadAndUpdatePDFs = async () => {
     const filePath = `${PDF_DIR}/${filename}`;
 
     try {
-      
+
       await downloadPDF(url, filePath)
       // Download the PD
     }
@@ -60,13 +62,13 @@ const downloadAndUpdatePDFs = async () => {
       process.exit(1);
     }
   }
-  
-    execSync(`git config --global user.name '${USER_NAME}'`);
-    execSync(`git config --global user.email '${USER_EMAIL}'`);
-    execSync(`git add ${PDF_DIR}/*.pdf`);
-    execSync(`echo $GITHUB_CONTEXT`)
-    execSync(`git commit -m "📄 PDF Update [${new Date().toISOString()}] - Successfully updated resume files"`);
-    execSync('git push');
+
+  execSync(`git config --global user.name '${USER_NAME}'`);
+  execSync(`git config --global user.email '${USER_EMAIL}'`);
+  execSync(`git add ${PDF_DIR}/*.pdf`);
+  execSync(`echo $GITHUB_CONTEXT`)
+  execSync(`git commit -m "📄 PDF Update [${new Date().toISOString()}] - Successfully updated resume files"`);
+  execSync('git push');
 };
 
 downloadAndUpdatePDFs();

@@ -20,15 +20,15 @@ if (!GH_ACCESS_TOKEN && !GITHUB_TOKEN) {
 }
 const token = GH_ACCESS_TOKEN || GITHUB_TOKEN;
 const header = {
-    rest: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-    },
-    graphql: {
-        Authorization: `Bearer ${token}`, 
-        'Content-Type': 'application/json',
-        'Accept': 'application/vnd.github.v4+json',
-    }
+  rest: {
+    Authorization: `Bearer ${token}`,
+    'Content-Type': 'application/json',
+  },
+  graphql: {
+    Authorization: `Bearer ${token}`,
+    'Content-Type': 'application/json',
+    'Accept': 'application/vnd.github.v4+json',
+  }
 };
 
 // Functions
@@ -38,8 +38,8 @@ const githubApi = async (url) => {
       headers: url.includes('graphql') ? header.graphql : header.rest,
     }
   )
-const repositories = await response.json()
-return repositories
+  const repositories = await response.json()
+  return repositories
 }
 
 const getSocialPreview = async (repo, owner) => {
@@ -75,45 +75,50 @@ const projects = [];
 const user_repositories = await githubApi(PLACEHOLDERS.USER_API_URL.replace('<user>', PLACEHOLDERS.USER));
 const public_repositories = user_repositories.filter(repo => !repo.private);
 const filtered_repos = public_repositories
-    .filter(repo => repo.homepage !== null && repo.homepage !== '') // skip repos without a demo
-    .filter(repo => !repo.name.startsWith(".")) // skip dotfiles
-    .filter(repo => !repo.name === PLACEHOLDERS.USER) // skip user's repo
+  .filter(repo => repo.name !== PLACEHOLDERS.USER) // skip this repo
+  .filter(repo => repo.private === false) // skip private repos
+  .filter(repo => repo.homepage !== null) // skip repos without a demo
+  .filter(repo => repo.homepage !== '') // skip repos without a demo
+  .filter(repo => !repo.name.startsWith(".")) // skip special repos
+
+
 
 for (const repo of filtered_repos) {
-  
+
   // skip all repos without a demo
-  if (repo.homepage !== null) {
-    projects.push({
+  projects.push({
     repo: repo.html_url,
     name: repo.name,
-    img: await getSocialPreview(repo,PLACEHOLDERS.USER),
+    img: await getSocialPreview(repo, PLACEHOLDERS.USER),
     description: repo.description,
     stack: repo.topics,
     demo: repo.homepage,
-  })  
-  }
+  })
 }
 const orgs = await githubApi(PLACEHOLDERS.USER_ORGS);
 const orgs_login = orgs.map(org => org.login)
 for (const org of orgs_login) {
-  
+
   const url = PLACEHOLDERS.ORGS_API_URL.replace('<org>', org);
   const org_repositories = await githubApi(url);
   const filtered_repos = org_repositories
-  .filter(repo => repo.homepage !== null && repo.homepage !== '')
-  .filter(repo => !repo.name.startsWith("."))
-  
+    .filter(repo => repo.name !== org) // skip this repo
+    .filter(repo => repo.private === false) // skip private repos
+    .filter(repo => repo.homepage !== null) // skip repos without a demo
+    .filter(repo => repo.homepage !== '') // skip repos without a demo
+    .filter(repo => !repo.name.startsWith(".")) // skip special repos
+
   for (const repo of filtered_repos) {
     const contributors = await githubApi(repo.contributors_url);
     if (contributors.some(contributor => contributor.login === PLACEHOLDERS.USER)) {
-    projects.push({
-    repo: repo.html_url,
-    name: repo.name,
-    img: await getSocialPreview(repo,org),
-    description: repo.description,
-    stack: repo.topics,
-    demo: repo.homepage,
-      })  
+      projects.push({
+        repo: repo.html_url,
+        name: repo.name,
+        img: await getSocialPreview(repo, org),
+        description: repo.description,
+        stack: repo.topics,
+        demo: repo.homepage,
+      })
     }
   }
 }
@@ -124,7 +129,7 @@ const projectsJson = JSON.stringify(projects, null, 2);
 // Write to projects.js
 const head = 'const projects = '
 const foot = '\nexport default projects;'
-await fs.writeFile('./src/projects.js', head + projectsJson+ foot);
+await fs.writeFile('./src/projects.js', head + projectsJson + foot);
 
 
 

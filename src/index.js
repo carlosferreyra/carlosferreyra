@@ -4,8 +4,8 @@ const projectsDiv = document.getElementById("projects-list")
 
 const loadMoreButton = document.getElementById("loadMoreProjects")
 
-let projectsToShow = projects.slice(0, 4)
-if (projectsToShow.length < 4) {
+let projectsToShow = projects.slice(0, 6)
+if (projectsToShow.length === projects.length) {
   loadMoreButton.style = "display:none"
 }
 
@@ -32,9 +32,9 @@ function loadProjects() {
                   ${stack}
                   </div>
                   <p class="project__description">${project.description.replace(
-                    /(?:\r\n|\r|\n)/g,
-                    "<br>"
-                  )}</p>
+      /(?:\r\n|\r|\n)/g,
+      "<br>"
+    )}</p>
               </div>
           </div>
           <div class="project__links">
