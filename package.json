@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "portfolio": "node src/index.js",
-    "update-pages": "node src/update-pages.js",
-    "update-resumes": "node src/update-resumes.js"
+    "update-pages": "node src/portfolio.js",
+    "update-resumes": "node src/pdfs.js"
   },
   "repository": {
     "type": "git",
