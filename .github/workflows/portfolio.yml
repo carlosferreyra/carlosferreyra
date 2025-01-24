@@ -2,7 +2,7 @@ name: Update Portfolio
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *" # Runs every half hour
+    - cron: "*/5 * * * *" # Runs 5 minutes
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -16,9 +16,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - run: Update Portfolio
-      # - run: npm run update-pages
-      - run: |
+      - name: Update Portfolio
+        run: npm run update-pages
+      - name: Commit and push changes
+        run: |
           git config user.name carlosferreyra
           git config user.email eduferreyraok@gmail.com
           git add .
