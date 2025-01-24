@@ -4,8 +4,8 @@ const {
   USER_NAME,
   USER_EMAIL
 } = process.env;
-"https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf"
-"https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf"
+//"https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf"
+//"https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf"
 const BASE_URL = "https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/";
 const pdf = "carlos-ferreyra.pdf"
 const pdf_es = "carlos-ferreyra-espanol.pdf"
