@@ -4,10 +4,11 @@ const {
   USER_NAME,
   USER_EMAIL
 } = process.env;
-
+"https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf"
+"https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf"
 const BASE_URL = "https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/";
 const pdf = "carlos-ferreyra.pdf"
-const pdf_es = "carlos-ferreyra-es.pdf"
+const pdf_es = "carlos-ferreyra-espanol.pdf"
 
 const URLS = [BASE_URL + pdf, BASE_URL + pdf_es];
 
@@ -49,7 +50,7 @@ const downloadAndUpdatePDFs = async () => {
 
   for (let i = 0; i < URLS.length; i++) {
     const url = URLS[i];
-    const filename = `${name}-${i === 0 ? 'en' : 'es'}.pdf`;
+    const filename = `${name}${i === 0 ? '' : '-es'}.pdf`;
     const filePath = `${PDF_DIR}/${filename}`;
 
     try {
