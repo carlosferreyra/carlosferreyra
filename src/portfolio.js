@@ -6,7 +6,7 @@ import { PLACEHOLDERS } from './constants.js';
 
 
 const {
-  GH_ACCESS_TOKEN,
+  GH_TOKEN,
   GITHUB_TOKEN,
 } = process.env;
 
@@ -14,11 +14,11 @@ const {
 
 
 // Constants/Variables
-if (!GH_ACCESS_TOKEN && !GITHUB_TOKEN) {
-  console.error('at least GH_ACCESS_TOKEN or GITHUB_TOKEN is required');
+if (!GH_TOKEN && !GITHUB_TOKEN) {
+  console.error('at least GH_TOKEN or GITHUB_TOKEN is required');
   process.exit(1);
 }
-const token = GH_ACCESS_TOKEN || GITHUB_TOKEN;
+const token = GH_TOKEN || GITHUB_TOKEN;
 const header = {
   rest: {
     Authorization: `Bearer ${token}`,
