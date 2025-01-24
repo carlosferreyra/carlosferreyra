@@ -1,134 +1,72 @@
-// Description: This file contains the main logic for the project.
-// Import the required modules/functions/packages
-import { promises as fs } from 'fs';
-
-import { PLACEHOLDERS } from './constants.js';
-
-
+import { execSync } from 'child_process';
+import fs from 'fs';
 const {
-  GH_ACCESS_TOKEN,
-  GITHUB_TOKEN,
+  PDF_URL_EN,
+  PDF_URL_ES,
+  USER_NAME,
+  USER_EMAIL
 } = process.env;
 
+const URLS = [PDF_URL_EN, PDF_URL_ES];
 
+import https from 'https';
 
-
-// Constants/Variables
-if (!GH_ACCESS_TOKEN && !GITHUB_TOKEN) {
-  console.error('at least GH_ACCESS_TOKEN or GITHUB_TOKEN is required');
-  process.exit(1);
+async function downloadPDF(pdfURL, outputFilename) {
+    return new Promise((resolve, reject) => {
+        https.get(pdfURL, (response) => {
+            if (response.statusCode !== 200) {
+                reject(new Error(`Failed to get '${pdfURL}' (${response.statusCode})`));
+                return;
+            }
+            const file = fs.createWriteStream(outputFilename);
+            response.pipe(file);
+            file.on('finish', () => {
+                file.close(resolve);
+                console.log("Writing downloaded PDF file to " + outputFilename + "...");
+            });
+        }).on('error', (err) => {
+          console.error('Error on PDF:', err);
+            fs.unlink(outputFilename);
+            reject(err);
+        });
+    });
 }
-const token = GH_ACCESS_TOKEN || GITHUB_TOKEN;
-const header = {
-    rest: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-    },
-    graphql: {
-        Authorization: `Bearer ${token}`, 
-        'Content-Type': 'application/json',
-        'Accept': 'application/vnd.github.v4+json',
+
+const downloadAndUpdatePDFs = async () => {
+  let PDF_DIR = './pdfs';
+  // Ensure the PDF_DIR exists
+
+  let name;
+  try {
+    const data = await fs.promises.readFile('./package.json', 'utf8');
+    name = JSON.parse(data).name;
+  } catch (err) {
+    console.error('Error reading package.json:', err);
+    process.exit(1);
+  }
+
+  for (let i = 0; i < URLS.length; i++) {
+    const url = URLS[i];
+    const filename = `${name}-${i === 0 ? 'en' : 'es'}.pdf`;
+    const filePath = `${PDF_DIR}/${filename}`;
+
+    try {
+      
+      await downloadPDF(url, filePath)
+      // Download the PD
     }
+    catch (err) {
+      console.error('Error processing PDF:', err);
+      process.exit(1);
+    }
+  }
+  
+    execSync(`git config --global user.name '${USER_NAME}'`);
+    execSync(`git config --global user.email '${USER_EMAIL}'`);
+    execSync(`git add ${PDF_DIR}/*.pdf`);
+    execSync(`echo $GITHUB_CONTEXT`)
+    execSync(`git commit -m "📄 PDF Update [${new Date().toISOString()}] - Successfully updated resume files"`);
+    execSync('git push');
 };
 
-// Functions
-const githubApi = async (url) => {
-  const response = await fetch(url,
-    {
-      headers: url.includes('graphql') ? header.graphql : header.rest,
-    }
-  )
-const repositories = await response.json()
-return repositories
-}
-
-const getSocialPreview = async (repo, owner) => {
-  const query = `query { 
-    repository(owner: "${owner}", name: "${repo.name}") { 
-      openGraphImageUrl 
-    }
-  }`;
-
-  try {
-    const graphqlResponse = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: header.graphql,
-      body: JSON.stringify({ query })
-    });
-
-    const graphqlData = await graphqlResponse.json();
-    if (graphqlData.errors) {
-      console.error(`Error fetching preview for ${owner}/${repo.name}:`, graphqlData.errors);
-      return null;
-    }
-    return graphqlData.data.repository.openGraphImageUrl;
-  } catch (error) {
-    console.error(`Failed to fetch preview for ${owner}/${repo.name}:`, error);
-    return null;
-  }
-}
-
-
-
-// Main
-const projects = [];
-const user_repositories = await githubApi(PLACEHOLDERS.USER_API_URL.replace('<user>', PLACEHOLDERS.USER));
-const public_repositories = user_repositories.filter(repo => !repo.private);
-const filtered_repos = public_repositories
-    .filter(repo => repo.homepage !== null && repo.homepage !== '') // skip repos without a demo
-    .filter(repo => !repo.name.startsWith(".")) // skip dotfiles
-    .filter(repo => !repo.name === PLACEHOLDERS.USER) // skip user's repo
-
-for (const repo of filtered_repos) {
-  
-  // skip all repos without a demo
-  if (repo.homepage !== null) {
-    projects.push({
-    repo: repo.html_url,
-    name: repo.name,
-    img: await getSocialPreview(repo,PLACEHOLDERS.USER),
-    description: repo.description,
-    stack: repo.topics,
-    demo: repo.homepage,
-  })  
-  }
-}
-const orgs = await githubApi(PLACEHOLDERS.USER_ORGS);
-const orgs_login = orgs.map(org => org.login)
-for (const org of orgs_login) {
-  
-  const url = PLACEHOLDERS.ORGS_API_URL.replace('<org>', org);
-  const org_repositories = await githubApi(url);
-  const filtered_repos = org_repositories
-  .filter(repo => repo.homepage !== null && repo.homepage !== '')
-  .filter(repo => !repo.name.startsWith("."))
-  
-  for (const repo of filtered_repos) {
-    const contributors = await githubApi(repo.contributors_url);
-    if (contributors.some(contributor => contributor.login === PLACEHOLDERS.USER)) {
-    projects.push({
-    repo: repo.html_url,
-    name: repo.name,
-    img: await getSocialPreview(repo,org),
-    description: repo.description,
-    stack: repo.topics,
-    demo: repo.homepage,
-      })  
-    }
-  }
-}
-
-// Format projects array as pretty JSON string
-const projectsJson = JSON.stringify(projects, null, 2);
-
-// Write to projects.js
-const head = 'const projects = '
-const foot = '\nexport default projects;'
-await fs.writeFile('./src/projects.js', head + projectsJson+ foot);
-
-
-
-// window.addEventListener("load", () => {
-//     loadProjects()})
-
-
+downloadAndUpdatePDFs();
