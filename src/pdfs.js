@@ -66,9 +66,9 @@ const downloadAndUpdatePDFs = async () => {
 
   execSync(`git config --global user.name '${USER_NAME}'`);
   execSync(`git config --global user.email '${USER_EMAIL}'`);
-  execSync(`git add ${PDF_DIR}/*.pdf`);
+  console.log("Committing and pushing changes to the repo...");
   execSync(`echo $GITHUB_CONTEXT`)
-  execSync(`git commit -m "📄 PDF Update [${new Date().toISOString()}] - Successfully updated resume files"`);
+  execSync(`git commit -am "📄 PDF Update [${new Date().toISOString()}] - Successfully updated resume files"`);
   execSync('git push');
 };
 
