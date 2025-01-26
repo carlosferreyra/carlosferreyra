@@ -1,6 +1,8 @@
 import projects from "./projects.js"
+import { fetchPDFs } from "./pdfs.js";
 
 const projectsDiv = document.getElementById("projects-list")
+const pdfLinksDiv = document.getElementById("pdf-links");
 
 const loadMoreButton = document.getElementById("loadMoreProjects")
 
@@ -48,7 +50,20 @@ function loadProjects() {
   projectsDiv.innerHTML = html
 }
 
+function loadPDFs() {
+  fetchPDFs().then(pdfs => {
+    let html = "";
+    pdfs.forEach(pdf => {
+      html += `<a href="${pdf.url}" target="_blank">${pdf.name}</a>`;
+    });
+    pdfLinksDiv.innerHTML = html;
+  }).catch(error => {
+    console.error("Error loading PDFs:", error);
+  });
+}
+
 loadProjects()
+loadPDFs()
 
 loadMoreButton.addEventListener("click", () => {
   projectsToShow = projects

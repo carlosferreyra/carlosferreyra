@@ -9,4 +9,6 @@ const PLACEHOLDERS = {
     PROJECTS: '%{{PROJECTS}}',
 }
 
-export { PLACEHOLDERS };
+const PDF_DIRECTORY = './pdfs';
+
+export { PLACEHOLDERS, PDF_DIRECTORY };

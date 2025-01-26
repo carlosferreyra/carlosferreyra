@@ -4,8 +4,7 @@ const {
   USER_NAME,
   USER_EMAIL
 } = process.env;
-//"https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra.pdf"
-//"https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/carlos-ferreyra-espanol.pdf"
+
 const BASE_URL = "https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/";
 const pdf = "carlos-ferreyra.pdf"
 const pdf_es = "carlos-ferreyra-espanol.pdf"
@@ -81,4 +80,11 @@ const downloadAndUpdatePDFs = async () => {
   execSync('git push');
 };
 
-downloadAndUpdatePDFs();
+async function fetchPDFs() {
+  return URLS.map((url, index) => ({
+    url,
+    name: `Resume ${index === 0 ? 'English' : 'Spanish'}`
+  }));
+}
+
+export { fetchPDFs, downloadAndUpdatePDFs };
