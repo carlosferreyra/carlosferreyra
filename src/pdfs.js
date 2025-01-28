@@ -50,7 +50,7 @@ const downloadAndUpdatePDFs = async () => {
 
   for (let i = 0; i < URLS.length; i++) {
     const url = URLS[i];
-    const filename = `${name}${i === 0 ? '' : '-es'}.pdf`;
+    const filename = `${name.replace("sf", "s-f")}${i === 0 ? '' : '-es'}.pdf`;
     const filePath = `${PDF_DIR}/${filename}`;
 
     try {
