@@ -71,11 +71,13 @@ const downloadAndUpdatePDFs = async () => {
   console.log("Committing and pushing changes to the repo...");
   execSync(`echo $GITHUB_CONTEXT`)
 
+
   const commitMessage = `📄 PDF Update [${new Date().toISOString()}] - Successfully updated resume files`;
   // Check if there are changes before committing
   const hasChanges = execSync('git status --porcelain').toString();
   if (hasChanges) {
-    execSync(`git commit -am "${commitMessage}"`);
+    execSync('git add .');
+    execSync(`git commit -m "${commitMessage}"`);
   } else {
     console.log('No changes to commit');
   }
