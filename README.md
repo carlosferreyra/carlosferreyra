@@ -41,7 +41,7 @@
 - 💻 I am a competitive programmer at [`Leetcode`](https://leetcode.com/u/Coolwinter18/).
 - ✍🏻 I love using Software as a solution for every Problem. Check my portfolio: [_`Here`_](https://carlosferreyra.me/)
 - 🤓 Always learning new things
-- 👔 📝 I’m currently open for a new **`job opportunities`**, you can checkmy resume: [English][ResumeURL]|[Español][RSpanish].
+- 👔 📝 I’m currently open for a new **`job opportunities`**, you can check my resume: [English][ResumeURL]|[Español][RSpanish].
 - 📌 You can check my other links [HERE][WebsiteURL].
 
 <br/>
