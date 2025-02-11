@@ -53,7 +53,7 @@ const downloadAndUpdatePDFs = async () => {
     const url = URLS[i];
     let fmtName = name[0].toUpperCase() + name.slice(1);
     fmtName = fmtName.replace('sf', 's-F');
-    const filename = `${fmtName}${i === 0 ? '' : '-es'}.pdf`;
+    const filename = `${fmtName}${i === 0 ? '-en' : '-es'}.pdf`;
     const filePath = `${PDF_DIR}/${filename}`;
 
     try {
