@@ -38,65 +38,72 @@ async function downloadPDF(pdfURL, outputFilename) {
 }
 
 async function setupGoogleDrive() {
-  const auth = new google.auth.GoogleAuth({
-    credentials: JSON.parse(GOOGLE_DRIVE_API_KEY),
-    scopes: ['https://www.googleapis.com/auth/drive.file']
-  });
-  return google.drive({ version: 'v3', auth });
+  try {
+    if (!GOOGLE_DRIVE_API_KEY) {
+      throw new Error('GOOGLE_DRIVE_API_KEY environment variable is not set');
+    }
+
+    const auth = new google.auth.GoogleAuth({
+      credentials: JSON.parse(GOOGLE_DRIVE_API_KEY),
+      scopes: ['https://www.googleapis.com/auth/drive.file']
+    });
+    return google.drive({ version: 'v3', auth });
+  } catch (error) {
+    console.error('Error setting up Google Drive:', error.message);
+    throw error;
+  }
 }
 
 async function uploadToDrive(drive, filePath, fileName) {
-  // Get or create Resumes folder
-  let folderId;
-  const folderResponse = await drive.files.list({
-    q: "name='Resumes' and mimeType='application/vnd.google-apps.folder' and 'root' in parents and trashed=false",
-    fields: 'files(id)'
-  });
+  try {
+    const folderId = GOOGLE_DRIVE_FOLDER_ID;
+    if (!folderId) {
+      throw new Error('GOOGLE_DRIVE_FOLDER_ID environment variable is not set');
+    }
+    
+    // Search for existing file in the specified folder
+    const response = await drive.files.list({
+      q: `name='${fileName}' and '${folderId}' in parents and trashed=false`,
+      fields: 'files(id)'
+    }).catch(err => {
+      console.error('Error listing files:', err.message);
+      throw err;
+    });
 
-  if (folderResponse.data.files.length > 0) {
-    folderId = folderResponse.data.files[0].id;
-  } else {
-    const folderMetadata = {
-      name: 'Resumes',
-      mimeType: 'application/vnd.google-apps.folder',
-      parents: ['root']
+    // Delete existing file if found
+    if (response.data.files.length > 0) {
+      await drive.files.delete({
+        fileId: response.data.files[0].id
+      }).catch(err => {
+        console.error('Error deleting existing file:', err.message);
+        throw err;
+      });
+    }
+
+    // Upload new file to the specified folder
+    const fileMetadata = {
+      name: fileName,
+      parents: [folderId]
     };
-    const folder = await drive.files.create({
-      requestBody: folderMetadata,
+    const media = {
+      mimeType: 'application/pdf',
+      body: fs.createReadStream(filePath)
+    };
+
+    const uploadResponse = await drive.files.create({
+      requestBody: fileMetadata,
+      media: media,
       fields: 'id'
+    }).catch(err => {
+      console.error('Error uploading file:', err.message);
+      throw err;
     });
-    folderId = folder.data.id;
+
+    console.log(`Successfully uploaded ${fileName} to Google Drive folder ${folderId} with file ID: ${uploadResponse.data.id}`);
+  } catch (error) {
+    console.error(`Failed to process file ${fileName}:`, error);
+    throw error;
   }
-
-  // Search for existing file in Resumes folder
-  const response = await drive.files.list({
-    q: `name='${fileName}' and '${folderId}' in parents and trashed=false`,
-    fields: 'files(id)'
-  });
-
-  // Delete existing file if found
-  if (response.data.files.length > 0) {
-    await drive.files.delete({
-      fileId: response.data.files[0].id
-    });
-  }
-
-  // Upload new file to Resumes folder
-  const fileMetadata = {
-    name: fileName,
-    parents: [folderId]
-  };
-  const media = {
-    mimeType: 'application/pdf',
-    body: fs.createReadStream(filePath)
-  };
-
-  await drive.files.create({
-    requestBody: fileMetadata,
-    media: media,
-    fields: 'id'
-  });
-  console.log(`Successfully uploaded ${fileName} to Google Drive in Resumes folder`);
 }
 
 const downloadAndUpdatePDFs = async () => {
