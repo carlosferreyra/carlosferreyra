@@ -3,8 +3,10 @@ name: Update PDFs
 env:
   USER_NAME: "github-actions[bot]"
   USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
+  GOOGLE_DRIVE_API_KEY: ${{ secrets.GOOGLE_DRIVE_API_KEY }}
+  GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
 
-  permissions:
+permissions:
   contents: write
 
 on:

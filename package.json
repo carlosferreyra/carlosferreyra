@@ -27,5 +27,8 @@
     "url": "https://github.com/carlosferreyra/carlosferreyra/issues"
   },
   "type": "module",
-  "homepage": "https://github.com/carlosferreyra/carlosferreyra#readme"
+  "homepage": "https://github.com/carlosferreyra/carlosferreyra#readme",
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
 }
