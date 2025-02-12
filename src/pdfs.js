@@ -72,12 +72,14 @@ async function uploadToDrive(drive, filePath, fileName) {
 
     // Delete existing file if found
     if (response.data.files.length > 0) {
-      await drive.files.delete({
-        fileId: response.data.files[0].id
-      }).catch(err => {
-        console.error('Error deleting existing file:', err.message);
-        throw err;
-      });
+      try {
+        await drive.files.delete({
+          fileId: response.data.files[0].id
+        });
+      } catch (deleteErr) {
+        // If deletion fails, log it but continue with upload
+        console.warn(`Warning: Could not delete existing file: ${deleteErr.message}`);
+      }
     }
 
     // Upload new file to the specified folder
@@ -105,6 +107,7 @@ async function uploadToDrive(drive, filePath, fileName) {
     throw error;
   }
 }
+
 
 const downloadAndUpdatePDFs = async () => {
   let PDF_DIR = './pdfs';
