@@ -12,7 +12,11 @@ permissions:
 on:
   workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: "0 0 * * *" # Runs daily at midnight UTC, adjust as needed - hourly might be too frequent
+    - cron: "0 */12 * * *" # Runs every 12 hours
+  push:
+    paths:
+      - 'pdfs/**' # Triggers when changes are made to pdf files
+      - 'src/**'    # Triggers when source files are changed
 
 jobs:
   upload-pdfs:
