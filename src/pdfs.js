@@ -3,18 +3,14 @@ import fs from 'fs';
 import https from 'https';
 import { google } from 'googleapis';
 
-let USER_NAME = process.env.USER_NAME;
-let USER_EMAIL = process.env.USER_EMAIL;
+// Set default user credentials for local development
+let USER_NAME = process.env.USER_NAME || 'Carlos Ferreyra';
+let USER_EMAIL = process.env.USER_EMAIL || 'eduferreyraok@gmail.com';
+
 const {
   GOOGLE_DRIVE_API_KEY,
   GOOGLE_DRIVE_FOLDER_ID
 } = process.env;
-
-// Use default values if running locally
-if (!USER_NAME || !USER_EMAIL) {
-  USER_NAME = 'Carlos Ferreyra';
-  USER_EMAIL = 'eduferreyraok@gmail.com';
-}
 
 const BASE_URL = "https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/";
 const pdf = "carlos-ferreyra.pdf";
@@ -48,77 +44,36 @@ async function downloadPDF(pdfURL, outputFilename) {
 }
 
 async function setupGoogleDrive() {
-  console.log('Setting up Google Drive API...');
-  try {
-    if (!GOOGLE_DRIVE_API_KEY) {
-      throw new Error('GOOGLE_DRIVE_API_KEY environment variable is not set. Please configure it in GitHub Secrets.');
-    }
-
-    const auth = new google.auth.GoogleAuth({
-      credentials: JSON.parse(GOOGLE_DRIVE_API_KEY),
-      scopes: ['https://www.googleapis.com/auth/drive.file']
-    });
-    const drive = google.drive({ version: 'v3', auth });
-    console.log('Google Drive API setup successfully.');
-    return drive;
-  } catch (error) {
-    console.error('Error setting up Google Drive API:', error.message);
-    throw error;
+  if (!GOOGLE_DRIVE_API_KEY) {
+    throw new Error('GOOGLE_DRIVE_API_KEY environment variable is not set');
   }
+
+  const auth = new google.auth.GoogleAuth({
+    credentials: JSON.parse(GOOGLE_DRIVE_API_KEY),
+    scopes: ['https://www.googleapis.com/auth/drive.file']
+  });
+  return google.drive({ version: 'v3', auth });
 }
 
 async function uploadToDrive(drive, filePath, fileName) {
-  console.log(`Uploading file: ${fileName} from ${filePath} to Google Drive...`);
   try {
     const folderId = GOOGLE_DRIVE_FOLDER_ID;
     if (!folderId) {
-      throw new Error('GOOGLE_DRIVE_FOLDER_ID environment variable is not set. Please configure it in GitHub Secrets.');
+      throw new Error('GOOGLE_DRIVE_FOLDER_ID environment variable is not set');
     }
 
-    // *** DEBUGGING: List files in the folder - KEEP THIS FOR DEBUGGING ***
-    console.log(`DEBUG: Listing files in Google Drive folder: ${folderId} before upload...`);
-    try {
-      const listResponse = await drive.files.list({
-        q: `'${folderId}' in parents and trashed=false`,
-        fields: 'files(id, name)'
-      });
-      console.log('DEBUG: Files in Google Drive folder:');
-      listResponse.data.files.forEach(file => {
-        console.log(`DEBUG: - ${file.name} (ID: ${file.id})`);
-      });
-    } catch (listError) {
-      console.error('DEBUG: Error listing files in Google Drive:', listError);
-      throw listError; // Stop execution if listing fails, to debug authentication/permissions
-    }
-    console.log('DEBUG: Listing files completed.');
-    // *** End Debugging List Files ***
+    // Check for and delete existing file
+    const response = await drive.files.list({
+      q: `name='${fileName}' and '${folderId}' in parents and trashed=false`,
+      fields: 'files(id)'
+    });
 
-
-    // Search for existing file in the specified folder
-    let existingFileId = null;
-    try { // Wrap the file listing and deletion in a try-catch block
-      console.log(`Searching for existing file with name '${fileName}' in Google Drive folder: ${folderId}`);
-      const response = await drive.files.list({
-        q: `name='${fileName}' and '${folderId}' in parents and trashed=false`,
-        fields: 'files(id)'
-      });
-
-
-      if (response.data.files.length > 0) {
-        existingFileId = response.data.files[0].id;
-        console.log(`Existing file found with ID: ${existingFileId}. Deleting before upload...`);
-        await drive.files.delete({ fileId: existingFileId });
-        console.log(`Successfully deleted existing file with ID: ${existingFileId}`);
-      } else {
-        console.log(`No existing file found with name '${fileName}' in Google Drive folder: ${folderId}. Proceeding with upload.`);
-      }
-    } catch (searchDeleteError) {
-      console.warn(`Warning: Error during existing file search or deletion: ${searchDeleteError.message}. Proceeding with upload.`);
-      console.warn(`Detailed error:`, searchDeleteError); // Log full error for more details
+    if (response.data.files.length > 0) {
+      const existingFileId = response.data.files[0].id;
+      await drive.files.delete({ fileId: existingFileId });
     }
 
-
-    // Upload new file to the specified folder
+    // Upload new file
     const fileMetadata = {
       name: fileName,
       parents: [folderId]
@@ -128,28 +83,18 @@ async function uploadToDrive(drive, filePath, fileName) {
       body: fs.createReadStream(filePath)
     };
 
-    console.log(`Initiating upload of new file: ${fileName} to Google Drive folder: ${folderId}`);
-    try { // Wrap the file creation in a try-catch block to capture upload errors
-      const uploadResponse = await drive.files.create({
-        resource: fileMetadata, // Changed from requestBody to resource
-        media: media,
-        fields: 'id'
-      });
+    const uploadResponse = await drive.files.create({
+      resource: fileMetadata,
+      media: media,
+      fields: 'id'
+    });
 
-      console.log(`Successfully uploaded ${fileName} to Google Drive folder ${folderId} with new file ID: ${uploadResponse.data.id}`);
-    } catch (uploadError) {
-      console.error(`Failed to upload file ${fileName} to Google Drive folder ${folderId}:`, uploadError);
-      console.error("Full upload error details:", uploadError.message); // Log full error message
-      console.error("Upload error response:", uploadError.response ? uploadError.response.data : 'No response data'); // Log response data if available
-      throw uploadError; // Re-throw the error to fail the workflow
-    }
-
+    return uploadResponse.data.id;
   } catch (error) {
-    console.error(`Failed to process file ${fileName} for Google Drive upload:`, error);
+    console.error(`Upload failed for ${fileName}:`, error.message);
     throw error;
   }
 }
-
 
 const downloadAndUpdatePDFs = async () => {
   console.log('Starting PDF download and update process...');
