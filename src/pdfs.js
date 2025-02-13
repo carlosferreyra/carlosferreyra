@@ -3,12 +3,18 @@ import fs from 'fs';
 import https from 'https';
 import { google } from 'googleapis';
 
+let USER_NAME = process.env.USER_NAME;
+let USER_EMAIL = process.env.USER_EMAIL;
 const {
-  USER_NAME,
-  USER_EMAIL,
   GOOGLE_DRIVE_API_KEY,
   GOOGLE_DRIVE_FOLDER_ID
 } = process.env;
+
+// Use default values if running locally
+if (!USER_NAME || !USER_EMAIL) {
+  USER_NAME = 'Carlos Ferreyra';
+  USER_EMAIL = 'eduferreyraok@gmail.com';
+}
 
 const BASE_URL = "https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/";
 const pdf = "carlos-ferreyra.pdf";
