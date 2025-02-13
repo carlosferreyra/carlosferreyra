@@ -1,6 +1,0 @@
-{
-    "window.zoomLevel": 1,
-    "github-actions.workflows.pinned.workflows": [
-        ".github/workflows/portfolio.yml"
-    ]
-}
