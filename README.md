@@ -26,6 +26,7 @@
 ## <img src="https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width="5%" /> About me
 
 [![GitHub followers](https://img.shields.io/github/followers/carlosferreyra?label=Follow&style=social)]([GithubProfileUrl])
+[![GitHub Follow](https://img.shields.io/badge/Follow%20Me-%23000000.svg?style=for-the-social&logo=github&logoColor=white)](https://github.com/carlosferreyra)
 
 ![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat)
 
