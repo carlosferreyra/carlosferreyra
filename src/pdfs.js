@@ -75,6 +75,25 @@ async function uploadToDrive(drive, filePath, fileName) {
       throw new Error('GOOGLE_DRIVE_FOLDER_ID environment variable is not set. Please configure it in GitHub Secrets.');
     }
 
+    // *** DEBUGGING: List files in the folder ***
+    console.log(`DEBUG: Listing files in Google Drive folder: ${folderId} before upload...`);
+    try {
+      const listResponse = await drive.files.list({
+        q: `'${folderId}' in parents and trashed=false`,
+        fields: 'files(id, name)'
+      });
+      console.log('DEBUG: Files in Google Drive folder:');
+      listResponse.data.files.forEach(file => {
+        console.log(`DEBUG: - ${file.name} (ID: ${file.id})`);
+      });
+    } catch (listError) {
+      console.error('DEBUG: Error listing files in Google Drive:', listError);
+      throw listError; // Stop execution if listing fails, to debug authentication/permissions
+    }
+    console.log('DEBUG: Listing files completed.');
+    // *** End Debugging List Files ***
+
+
     // Search for existing file in the specified folder
     console.log(`Searching for existing file with name '${fileName}' in Google Drive folder: ${folderId}`);
     const response = await drive.files.list({
@@ -106,7 +125,7 @@ async function uploadToDrive(drive, filePath, fileName) {
 
     console.log(`Initiating upload of new file: ${fileName} to Google Drive folder: ${folderId}`);
     const uploadResponse = await drive.files.create({
-      requestBody: fileMetadata,
+      resource: fileMetadata, // Changed from requestBody to resource
       media: media,
       fields: 'id'
     });
