@@ -2,7 +2,7 @@
   "name": "carlosferreyra",
   "version": "1.0.0",
   "description": "My GitHub Profile",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "update-portfolio": "node src/portfolio.js",
@@ -21,8 +21,11 @@
     "github",
     "profile"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Calos Ferreyra",
+    "email": "eduferreyraok@gmail.com"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/carlosferreyra/carlosferreyra/issues"
   },
