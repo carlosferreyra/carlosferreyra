@@ -1,12 +1,24 @@
 name: Update Portfolio
+
+env:
+  USER_NAME: "github-actions[bot]"
+  USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *" # Runs 5 minutes
-
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    - cron: "0 * * * *" # Runs every hour
+  push:
+    paths:
+      - 'src/**'    # Triggers when source files are changed
+      - 'index.html'
+      - 'styles.css'
+      - 'package.json'
 
 jobs:
   update:
@@ -18,10 +30,14 @@ jobs:
           node-version: "22"
       - name: Update Portfolio
         run: npm run update-portfolio
-      - name: Commit and push changes
+      - name: Configure Git User
         run: |
-          git config user.name carlosferreyra
-          git config user.email eduferreyraok@gmail.com
+          git config user.name "${{ env.USER_NAME }}"
+          git config user.email "${{ env.USER_EMAIL }}"
+      - name: Stage and Commit Changes
+        run: |
+          COMMIT_MESSAGE="[bot] Scheduled portfolio update - $(date +'%Y-%m-%d %H:%M:%S')"
           git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "[bot] Update repo with latest info"
-          git push origin main
+          git diff --quiet && git diff --staged --quiet || git commit -m "$COMMIT_MESSAGE"
+      - name: Push Changes
+        run: git push origin main
