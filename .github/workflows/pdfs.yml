@@ -12,28 +12,36 @@ permissions:
 on:
   workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: "0 */1 * * *" # Runs every hour
+    - cron: "0 0 * * *" # Runs daily at midnight UTC, adjust as needed - hourly might be too frequent
+
 jobs:
   upload-pdfs:
     runs-on: ubuntu-latest
-    outputs:
-      status: ${{ steps.update-pdfs.outputs.status }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }} # Use GITHUB_TOKEN for security best practices if pushing to the same repo
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "22.x"
 
       - name: Install dependencies
-        run: npm install
-      - name: Delete old PDFs
-        run: rm -rf pdfs/*.pdf
+        run: npm install googleapis # Install googleapis - ensure package.json is updated if needed or use `npm install` if you have package.json
 
-      - name: Update Resumes
-        id: update-pdfs
-        run: npm run update-resumes
+      - name: Create PDF Directory
+        run: mkdir -p pdfs # Ensure pdf directory exists
+
+      - name: Delete old PDFs
+        run: rm -f pdfs/*.pdf # Use rm -f to avoid errors if directory is empty
+
+      - name: Update Resumes and Backup to Google Drive
+        run: npm run update-pdfs # Run the script to update PDFs
+        env:
+          GOOGLE_DRIVE_API_KEY: ${{ secrets.GOOGLE_DRIVE_API_KEY }}
+          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+          USER_NAME: ${{ env.USER_NAME }} # Use workflow level env variables
+          USER_EMAIL: ${{ env.USER_EMAIL }} # Use workflow level env variables
