@@ -3,8 +3,13 @@ name: Deploy to GitHub Pages
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Run at midnight every day
-  workflow_dispatch:      # Keep manual trigger
+    - cron: "0 0 * * *" # Run at midnight every day
+    - cron: "0 4 * * *" # Run at 4 AM every day
+    - cron: "0 8 * * *" # Run at 8 AM every day
+    - cron: "0 12 * * *" # Run at noon every day
+    - cron: "0 16 * * *" # Run at 4 PM every day
+    - cron: "0 20 * * *" # Run at 8 PM every day
+  workflow_dispatch: # Keep manual trigger
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
