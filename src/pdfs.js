@@ -75,7 +75,7 @@ async function uploadToDrive(drive, filePath, fileName) {
       throw new Error('GOOGLE_DRIVE_FOLDER_ID environment variable is not set. Please configure it in GitHub Secrets.');
     }
 
-    // *** DEBUGGING: List files in the folder ***
+    // *** DEBUGGING: List files in the folder - KEEP THIS FOR DEBUGGING ***
     console.log(`DEBUG: Listing files in Google Drive folder: ${folderId} before upload...`);
     try {
       const listResponse = await drive.files.list({
@@ -95,23 +95,28 @@ async function uploadToDrive(drive, filePath, fileName) {
 
 
     // Search for existing file in the specified folder
-    console.log(`Searching for existing file with name '${fileName}' in Google Drive folder: ${folderId}`);
-    const response = await drive.files.list({
-      q: `name='${fileName}' and '${folderId}' in parents and trashed=false`,
-      fields: 'files(id)'
-    });
-
     let existingFileId = null;
-    if (response.data.files.length > 0) {
-      existingFileId = response.data.files[0].id;
-      console.log(`Existing file found with ID: ${existingFileId}. Deleting before upload...`);
-      try {
+    try { // Wrap the file listing and deletion in a try-catch block
+      console.log(`Searching for existing file with name '${fileName}' in Google Drive folder: ${folderId}`);
+      const response = await drive.files.list({
+        q: `name='${fileName}' and '${folderId}' in parents and trashed=false`,
+        fields: 'files(id)'
+      });
+
+
+      if (response.data.files.length > 0) {
+        existingFileId = response.data.files[0].id;
+        console.log(`Existing file found with ID: ${existingFileId}. Deleting before upload...`);
         await drive.files.delete({ fileId: existingFileId });
         console.log(`Successfully deleted existing file with ID: ${existingFileId}`);
-      } catch (deleteErr) {
-        console.warn(`Warning: Could not delete existing file (ID: ${existingFileId}): ${deleteErr.message}. Proceeding with upload.`);
+      } else {
+        console.log(`No existing file found with name '${fileName}' in Google Drive folder: ${folderId}. Proceeding with upload.`);
       }
+    } catch (searchDeleteError) {
+      console.warn(`Warning: Error during existing file search or deletion: ${searchDeleteError.message}. Proceeding with upload.`);
+      console.warn(`Detailed error:`, searchDeleteError); // Log full error for more details
     }
+
 
     // Upload new file to the specified folder
     const fileMetadata = {
@@ -124,13 +129,21 @@ async function uploadToDrive(drive, filePath, fileName) {
     };
 
     console.log(`Initiating upload of new file: ${fileName} to Google Drive folder: ${folderId}`);
-    const uploadResponse = await drive.files.create({
-      resource: fileMetadata, // Changed from requestBody to resource
-      media: media,
-      fields: 'id'
-    });
+    try { // Wrap the file creation in a try-catch block to capture upload errors
+      const uploadResponse = await drive.files.create({
+        resource: fileMetadata, // Changed from requestBody to resource
+        media: media,
+        fields: 'id'
+      });
 
-    console.log(`Successfully uploaded ${fileName} to Google Drive folder ${folderId} with new file ID: ${uploadResponse.data.id}`);
+      console.log(`Successfully uploaded ${fileName} to Google Drive folder ${folderId} with new file ID: ${uploadResponse.data.id}`);
+    } catch (uploadError) {
+      console.error(`Failed to upload file ${fileName} to Google Drive folder ${folderId}:`, uploadError);
+      console.error("Full upload error details:", uploadError.message); // Log full error message
+      console.error("Upload error response:", uploadError.response ? uploadError.response.data : 'No response data'); // Log response data if available
+      throw uploadError; // Re-throw the error to fail the workflow
+    }
+
   } catch (error) {
     console.error(`Failed to process file ${fileName} for Google Drive upload:`, error);
     throw error;
