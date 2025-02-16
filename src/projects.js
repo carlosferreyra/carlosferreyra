@@ -14,7 +14,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/Portfolio",
     "name": "Portfolio",
-    "img": "https://opengraph.githubassets.com/987972b388eaff303c81e11054752782c5f9d113e30bb24bb117229afd3caaec/carlosferreyra/Portfolio",
+    "img": "https://opengraph.githubassets.com/96960bd9d7909267c3547ef9db0e5885e5e58bad4ce54c6b9f0e7649ad1539c2/carlosferreyra/Portfolio",
     "description": "My Personal Portfolio",
     "stack": [
       "personal-portfolio",
