@@ -7,7 +7,7 @@
 [GithubProfileUrl]: https://github.com/carlosferreyra
 [LeetcodeProfileUrl]: https://leetcode.com/u/Coolwinter18/
 [PortfolioUrl]: https://carlosferreyra.me/
-[UtnUrl]: https://frre.utn.edu.ar/
+[UTN]: https://frre.utn.edu.ar/
 [KitsuneStudiosUrl]: https://github.com/Kitsune-Studios
 [FacultySysEngUrl]: https://www.frre.utn.edu.ar/isi
 [NationalTechUnivUrl]: https://www.utn.edu.ar/
@@ -32,7 +32,7 @@
 
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
 
-- 👨‍💻 I'm Software Developer/Engineer @[UtnUrl]. Current project: [Kitsune Studios][KitsuneStudiosUrl]
+- 👨‍💻 I'm Software Developer/Engineer @[UTN]. Current project: [Kitsune Studios][KitsuneStudiosUrl]
 - 🏫 I'm a `Senior` at [Faculty of System Engineering][FacultySysEngUrl] at [National Technological University][NationalTechUnivUrl].
 - 💻 I am a competitive programmer at [`Leetcode`][LeetcodeProfileUrl].
 - ✍🏻 I love using Software as a solution for every Problem. Check my portfolio: [_`Here`_][PortfolioUrl]
