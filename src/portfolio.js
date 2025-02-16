@@ -32,6 +32,16 @@ const header = {
 };
 
 // Functions
+const checkUrlStatus = async (url) => {
+  try {
+    const response = await fetch(url, { method: 'HEAD' });
+    return response.status === 200;
+  } catch (error) {
+    console.error(`Failed to check URL ${url}:`, error);
+    return false;
+  }
+}
+
 const githubApi = async (url) => {
   const response = await fetch(url,
     {
@@ -84,16 +94,18 @@ const filtered_repos = public_repositories
 
 
 for (const repo of filtered_repos) {
-
-  // skip all repos without a demo
-  projects.push({
-    repo: repo.html_url,
-    name: repo.name,
-    img: await getSocialPreview(repo, PLACEHOLDERS.USER),
-    description: repo.description,
-    stack: repo.topics,
-    demo: repo.homepage,
-  })
+  // Check if demo URL is available
+  const isDemoAvailable = await checkUrlStatus(repo.homepage);
+  if (isDemoAvailable) {
+    projects.push({
+      repo: repo.html_url,
+      name: repo.name,
+      img: await getSocialPreview(repo, PLACEHOLDERS.USER),
+      description: repo.description,
+      stack: repo.topics,
+      demo: repo.homepage,
+    });
+  }
 }
 const orgs = await githubApi(PLACEHOLDERS.USER_ORGS);
 const orgs_login = orgs.map(org => org.login)
@@ -111,14 +123,18 @@ for (const org of orgs_login) {
   for (const repo of filtered_repos) {
     const contributors = await githubApi(repo.contributors_url);
     if (contributors.some(contributor => contributor.login === PLACEHOLDERS.USER)) {
-      projects.push({
-        repo: repo.html_url,
-        name: repo.name,
-        img: await getSocialPreview(repo, org),
-        description: repo.description,
-        stack: repo.topics,
-        demo: repo.homepage,
-      })
+      // Check if demo URL is available
+      const isDemoAvailable = await checkUrlStatus(repo.homepage);
+      if (isDemoAvailable) {
+        projects.push({
+          repo: repo.html_url,
+          name: repo.name,
+          img: await getSocialPreview(repo, org),
+          description: repo.description,
+          stack: repo.topics,
+          demo: repo.homepage,
+        });
+      }
     }
   }
 }
