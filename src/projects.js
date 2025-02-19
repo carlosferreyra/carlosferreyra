@@ -1,3 +1,5 @@
+// IMPORTANT: This file is auto-generated. DO NOT EDIT MANUALLY.
+
 const projects = [
   {
     "repo": "https://github.com/carlosferreyra/alura-encriptador",
