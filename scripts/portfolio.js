@@ -143,13 +143,6 @@ for (const org of orgs_login) {
 const projectsJson = JSON.stringify(projects, null, 2);
 
 // Write to projects.js
-const head = 'const projects = '
+const head = '// IMPORTANT: This file is auto-generated. DO NOT EDIT MANUALLY.\n\nconst projects = '
 const foot = '\nexport default projects;'
 await fs.writeFile('./src/projects.js', head + projectsJson + foot);
-
-
-
-// window.addEventListener("load", () => {
-//     loadProjects()})
-
-

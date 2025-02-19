@@ -49,25 +49,3 @@ jobs:
           GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
           USER_NAME: ${{ env.USER_NAME }} # Use workflow level env variables
           USER_EMAIL: ${{ env.USER_EMAIL }} # Use workflow level env variables
-  update-package-json:
-    needs: upload-pdfs
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Update package.json
-        run: npm run update-package-json # Update package.json with new repo-info
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "${{ env.USER_NAME }}"
-          git config --global user.email "${{ env.USER_EMAIL }}"
-          git add .
-          if git diff --staged --quiet; then
-          echo "No changes to commit"
-          exit 0
-            else
-          git commit -m "[bot] chore: update package-json from github api"
-          git push
-            fi

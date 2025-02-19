@@ -5,33 +5,31 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update-portfolio": "node src/portfolio.js",
-    "update-pdfs": "node src/pdfs.js"
+    "update-portfolio": "node scripts/portfolio.js",
+    "update-pdfs": "node scripts/pdfs.js",
+    "update-repo-info": "node scripts/update-package-json.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carlosferreyra/carlosferreyra.git"
   },
   "keywords": [
-    "github",
-    "readme",
-    "github",
-    "readme",
     "profile",
-    "github",
-    "profile"
+    "profile-readme",
+    "resume"
   ],
   "author": {
-    "name": "Calos Ferreyra",
+    "name": "carlosferreyra",
     "email": "eduferreyraok@gmail.com"
   },
-  "license": "MIT",
+  "license": "MIT License",
   "bugs": {
     "url": "https://github.com/carlosferreyra/carlosferreyra/issues"
   },
   "type": "module",
   "homepage": "https://github.com/carlosferreyra/carlosferreyra#readme",
   "dependencies": {
+    "axios": "^1.7.9",
     "googleapis": "^144.0.0"
   }
 }
