@@ -14,15 +14,15 @@
     "url": "git+https://github.com/carlosferreyra/carlosferreyra.git"
   },
   "keywords": [
+    "github-profile",
     "profile",
     "profile-readme",
     "resume"
   ],
   "author": {
-    "name": "carlosferreyra",
-    "email": "eduferreyraok@gmail.com"
+    "name": "Carlos Eduardo Ferreyra"
   },
-  "license": "MIT License",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/carlosferreyra/carlosferreyra/issues"
   },

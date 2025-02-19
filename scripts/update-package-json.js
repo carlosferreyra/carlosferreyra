@@ -5,23 +5,30 @@ import path from 'path';
 async function updatePackageJson() {
     const packageJsonPath = path.resolve('package.json');
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
-    const repoUrl = `https://api.github.com/repos/carlosferreyra/${packageJson.name}`;
-
+    const repoUrl = `https://api.github.com/repos/${packageJson.name}/${packageJson.name}`;
     try {
         const response = await axios.get(repoUrl);
         const repoInfo = response.data;
+        const userUrl = `https://api.github.com/users/${repoInfo.owner.login}`;
+        const owner = await axios.get(userUrl);
+        const ownerInfo = owner.data;
 
         let updated = false;
 
-        console.log('Fetched license:', repoInfo.license.name);
-        if (packageJson.license !== repoInfo.license.name) {
-            packageJson.license = repoInfo.license.name;
+        console.log('Fetched license:', repoInfo.license.spdx_id);
+        if (packageJson.license !== repoInfo.license.spdx_id) {
+            packageJson.license = repoInfo.license.spdx_id;
             updated = true;
         }
 
-        console.log('Fetched author name:', repoInfo.owner.login);
-        if (packageJson.author.name !== repoInfo.owner.login) {
-            packageJson.author.name = repoInfo.owner.login;
+        console.log('Fetched author:', ownerInfo.name);
+        const authorData = {
+            name: ownerInfo.name || repoInfo.owner.login,
+            email: ownerInfo.email || undefined
+        };
+
+        if (JSON.stringify(packageJson.author) !== JSON.stringify(authorData)) {
+            packageJson.author = authorData;
             updated = true;
         }
 
