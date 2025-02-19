@@ -5,11 +5,13 @@ import path from 'path';
 async function updatePackageJson() {
     const packageJsonPath = path.resolve('package.json');
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
-    const repoUrl = `https://api.github.com/repos/${packageJson.name}/${packageJson.name}`;
+    const userHandler = 'carlosferreyra'; // Change this to your GitHub username
+    const repoHandler = packageJson.name
+    const repoUrl = `https://api.github.com/repos/${userHandler}/${repoHandler}`;
     try {
         const response = await axios.get(repoUrl);
         const repoInfo = response.data;
-        const userUrl = `https://api.github.com/users/${repoInfo.owner.login}`;
+        const userUrl = `https://api.github.com/users/${userHandler}`;
         const owner = await axios.get(userUrl);
         const ownerInfo = owner.data;
 
