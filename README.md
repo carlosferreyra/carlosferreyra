@@ -8,6 +8,7 @@
 [LeetcodeProfileUrl]: https://leetcode.com/u/Coolwinter18/
 [PortfolioUrl]: https://carlosferreyra.me/
 [KitsuneStudiosUrl]: https://github.com/Kitsune-Studios
+[APIArg]: https://github.com/apiarg
 [FacultySysEngUrl]: https://www.frre.utn.edu.ar/isi
 [NationalTechUnivUrl]: https://www.utn.edu.ar/
 <!-- [typing_svg_url]: https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3 -->
@@ -31,7 +32,7 @@
 
 <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
 
-- 👨‍💻 I'm Software Developer/Engineer. Current project: [Kitsune Studios][KitsuneStudiosUrl]
+- 👨‍💻 I'm Software Developer/Engineer. Current projects: [Kitsune Studios][KitsuneStudiosUrl] & [Argentina API][APIArg]
 - 🏫 I'm a `Senior` at [Faculty of System Engineering][FacultySysEngUrl] at [National Technological University][NationalTechUnivUrl].
 - 💻 I am a competitive programmer at [`Leetcode`][LeetcodeProfileUrl].
 - ✍🏻 I love using Software as a solution for every Problem. Check my portfolio: [_`Here`_][PortfolioUrl]
