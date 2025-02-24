@@ -11,7 +11,6 @@
 [ArgenData]: https://github.com/argendata
 [FacultySysEngUrl]: https://www.frre.utn.edu.ar/isi
 [NationalTechUnivUrl]: https://www.utn.edu.ar/
-<!-- [typing_svg_url]: https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3 -->
 
 <h1 align="center"> Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> </h1>
 
