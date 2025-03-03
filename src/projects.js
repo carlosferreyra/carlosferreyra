@@ -14,6 +14,14 @@ const projects = [
     "demo": "https://carlosferreyra.github.io/alura-encriptador/"
   },
   {
+    "repo": "https://github.com/carlosferreyra/curso-fullstack-2024",
+    "name": "curso-fullstack-2024",
+    "img": "https://opengraph.githubassets.com/1cc4910d747be8a57179a978f1ea20e5ae1351aa6224c75c50828623b92ab195/carlosferreyra/curso-fullstack-2024",
+    "description": "Curso fullstack de Node + Angular para alumnos de la UTN.",
+    "stack": [],
+    "demo": "https://carlosferreyra.github.io/curso-fullstack-2024/"
+  },
+  {
     "repo": "https://github.com/carlosferreyra/interviews",
     "name": "interviews",
     "img": "https://opengraph.githubassets.com/dc6aa554ec9de1759753892cde42f4dd3dfd32f45d859848f90ffe64119b4d11/carlosferreyra/interviews",
