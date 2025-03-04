@@ -16,7 +16,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/curso-fullstack-2024",
     "name": "curso-fullstack-2024",
-    "img": "https://opengraph.githubassets.com/81fcc21031c6c4c746bd851bcc4c5073f03a8c26b55f9083fafbf46fdfd1250b/carlosferreyra/curso-fullstack-2024",
+    "img": "https://opengraph.githubassets.com/9bb167ba3529de92b41a40e9afba099d8e484f26dd1d3c89b8273a345f40b3bc/carlosferreyra/curso-fullstack-2024",
     "description": "Curso fullstack de Node + Angular para alumnos de la UTN.",
     "stack": [
       "angular",
