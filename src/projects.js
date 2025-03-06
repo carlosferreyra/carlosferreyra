@@ -14,6 +14,14 @@ const projects = [
     "demo": "https://carlosferreyra.github.io/alura-encriptador/"
   },
   {
+    "repo": "https://github.com/carlosferreyra/arquitex",
+    "name": "arquitex",
+    "img": "https://opengraph.githubassets.com/5f0be991370aeaa6072f639d4d96539a56481cb121f1abe37ed0a87a0f7e3d55/carlosferreyra/arquitex",
+    "description": null,
+    "stack": [],
+    "demo": "https://carlosferreyra.github.io/arquitex/"
+  },
+  {
     "repo": "https://github.com/carlosferreyra/curso-fullstack-2024",
     "name": "curso-fullstack-2024",
     "img": "https://opengraph.githubassets.com/2b1e65215ca48b41feabb901237c9079dcca7a2c2d7addb4c68eef53d24a2bb2/carlosferreyra/curso-fullstack-2024",
