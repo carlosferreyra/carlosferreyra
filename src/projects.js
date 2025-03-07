@@ -16,7 +16,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/arquitex",
     "name": "arquitex",
-    "img": "https://opengraph.githubassets.com/e3077423f9833f34da3de764f5240ca664cb4f80edae3d504602d33672c46811/carlosferreyra/arquitex",
+    "img": "https://opengraph.githubassets.com/9e8a916a063958b14ee11a7db348ce4f80655dbea740f43ba5b2dc76c3402615/carlosferreyra/arquitex",
     "description": null,
     "stack": [],
     "demo": "https://carlosferreyra.github.io/arquitex/"
