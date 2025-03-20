@@ -14,6 +14,14 @@ const projects = [
     "demo": "https://carlosferreyra.github.io/alura-encriptador/"
   },
   {
+    "repo": "https://github.com/carlosferreyra/awesome-uvx",
+    "name": "awesome-uvx",
+    "img": "https://opengraph.githubassets.com/770cdefe4f7340694ce25540f044cb54ee81f67d0d2184512d4a8fb731787e91/carlosferreyra/awesome-uvx",
+    "description": "A collection of Python tools available for use with uv tools",
+    "stack": [],
+    "demo": "https://carlosferreyra.github.io/awesome-uvx/"
+  },
+  {
     "repo": "https://github.com/carlosferreyra/curso-fullstack-2024",
     "name": "curso-fullstack-2024",
     "img": "https://opengraph.githubassets.com/569a1596b59b175539a050708b403a0a7f7ada194719c556430afbe9590cb9db/carlosferreyra/curso-fullstack-2024",
