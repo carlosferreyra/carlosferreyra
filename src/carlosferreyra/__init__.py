@@ -5,6 +5,6 @@ personal portfolio and other projects.
 """
 from carlosferreyra.__main__ import main
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 __all__ = ["main", "__version__"]
