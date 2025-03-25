@@ -10,6 +10,7 @@ permissions:
 
 env:
   VERSION: ${{ github.ref_name }}
+  CLEAN_VERSION: ${{ github.ref_name != '' && github.ref_name != null ? github.ref_name : '' | replace: 'v', '' }}
 
 jobs:
   publish-pypi:
@@ -36,7 +37,7 @@ jobs:
 
       - name: Run release script
         run: |
-          python scripts/release.py ${{ env.VERSION }}
+          python scripts/release.py ${{ env.CLEAN_VERSION }}
 
       - name: Setup uv
         uses: astral-sh/setup-uv@v5
@@ -64,7 +65,7 @@ jobs:
           # Wait a few seconds for PyPI to process the upload
           sleep 10
           # Check if package is available on PyPI
-          response=$(curl -s -o /dev/null -w "%{http_code}" https://pypi.org/project/carlosferreyra/${{ env.VERSION }}/)
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://pypi.org/project/carlosferreyra/${{ env.CLEAN_VERSION }}/)
           if [ "$response" != "200" ]; then
             echo "Package not found on PyPI"
             exit 1
@@ -80,7 +81,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: softprops/action-gh-release@v2
         with:
-          name: Release v${{ env.VERSION }}
-          tag_name: v${{ env.VERSION }}
+          name: Release ${{ env.VERSION }}
+          tag_name: ${{ env.VERSION }}
           generate_release_notes: true
           make_latest: true
