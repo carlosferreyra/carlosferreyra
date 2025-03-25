@@ -3,6 +3,7 @@ import re
 import sys
 import subprocess
 from pathlib import Path
+import os
 
 def get_current_version():
     init_file = Path("src/carlosferreyra/__init__.py")
@@ -26,10 +27,16 @@ def git_commands(version):
     commands = [
         ["git", "add", "src/carlosferreyra/__init__.py"],
         ["git", "commit", "-m", f"chore: bump version to {version}"],
-        ["git", "tag", "-a", f"v{version}", "-m", f"Release version {version}"],  # Added -a and -m flags
-        ["git", "push", "origin", "main"],
-        ["git", "push", "origin", f"v{version}"],
     ]
+
+    # Only create and push tags if not running in GitHub Actions
+    if not os.getenv('GITHUB_ACTIONS'):
+        commands.extend([
+            ["git", "tag", "-a", f"v{version}", "-m", f"Release version {version}"],
+            ["git", "push", "origin", "main"],
+            ["git", "push", "origin", f"v{version}"],
+        ])
+
     for cmd in commands:
         subprocess.run(cmd, check=True)
 
