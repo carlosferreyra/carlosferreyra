@@ -1,8 +1,8 @@
 name: Update Portfolio
 
 env:
-  USER_NAME: "github-actions[bot]"
-  USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
+  USER_NAME: 'github-actions[bot]'
+  USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -12,23 +12,24 @@ permissions:
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/15 * * * *" # Runs every 15 minutes
+    - cron: '*/15 * * * *' # Runs every 15 minutes
   push:
     paths:
-      - "scripts/**" # Triggers when scripts are changed
-      - "src/**" # Triggers when source files are changed
-      - "index.html"
-      - "styles.css"
-      - "package.json"
+      - 'scripts/**' # Triggers when scripts are changed
+      - 'src/**' # Triggers when source files are changed
+      - 'index.html'
+      - 'styles.css'
+      - 'package.json'
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    if: github.ref_type == 'branch'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: '22'
       - name: Update Portfolio
         run: npm run update-portfolio
       - name: Configure Git User
