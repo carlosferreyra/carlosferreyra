@@ -1,0 +1,15 @@
+[project]
+    authors = [
+        { name = "Carlos Eduardo Ferreyra", email = "eduferreyraok@gmail.com" },
+    ]
+    dependencies = []
+    name = "carlosferreyra"
+    requires-python = ">=3.10"
+    version = "0.0.1"
+
+[project.scripts]
+    carlosferreyra = "carlosferreyra.cli:main"
+    description    = "A simple CLI view my profile from PyPI"
+[build-system]
+    build-backend = "hatchling.build"
+    requires      = ["hatchling"]
