@@ -24,10 +24,11 @@
     readme = { file = "docs/README.md", content-type = "text/markdown" }
     requires-python = ">=3.10"
 [project.urls]
-    Changelog        = "https://github.com/carlosferreyra/carlosferreyra/CHANGELOG.md"
-    Documentation    = "https://github.com/carlosferreyra/carlosferreyra/docs/"
+    Changelog        = "https://github.com/carlosferreyra/carlosferreyra/tree/main/CHANGELOG.md"
+    Documentation    = "https://github.com/carlosferreyra/carlosferreyra/tree/main/docs"
     Homepage         = "https://www.carlosferreyra.me"
     "Issue Tracker " = "https://github.com/carlosferreyra/carlosferreyra/issues"
+    "release notes"  = "https://github.com/carlosferreyra/carlosferreyra/releases"
 
 [project.scripts]
     carlosferreyra = "carlosferreyra.__main__:main"

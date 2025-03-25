@@ -51,8 +51,6 @@ def main() -> None:
             _, url = choices[choice]
             if url:
                 open_url(url)
-                typer.echo("\nPress Enter to continue...")
-                input()
         else:
             typer.secho("Invalid option!", fg=typer.colors.RED)
             typer.echo("Press Enter to continue...")
