@@ -56,17 +56,10 @@ jobs:
           verbose: true
           print-hash: true
 
-  # create-github-release:
-  #   needs: publish-pypi
-  #   runs-on: ubuntu-latest
+  create-github-release:
+    needs: publish-pypi
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Create GitHub Release
-  #       env:
-  #         GITHUB_TOKEN: $\{{ secrets.GITHUB_TOKEN }}
-  #       uses: softprops/action-gh-release@v2
-  #       with:
-  #         name: Release ${{ env.VERSION }}
-  #         tag_name: $\{{ env.VERSION }}
-  #         generate_release_notes: true
-  #         make_latest: true
+    steps:
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
