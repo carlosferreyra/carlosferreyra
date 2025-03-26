@@ -16,7 +16,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/awesome-uvx",
     "name": "awesome-uvx",
-    "img": "https://opengraph.githubassets.com/d1427ca56e9af55ffdb5de31001d8690490b274ffb377fae9f66312d9165da33/carlosferreyra/awesome-uvx",
+    "img": "https://opengraph.githubassets.com/7d45fee2f16d6d28ceacfe37b47dcef853b1b4648a1b7a6d4dd86d05f5bcc9ac/carlosferreyra/awesome-uvx",
     "description": "A collection of Python tools available for use with uv tools",
     "stack": [],
     "demo": "https://carlosferreyra.github.io/awesome-uvx/"
