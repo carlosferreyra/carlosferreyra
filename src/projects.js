@@ -36,7 +36,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/data-engineering",
     "name": "data-engineering",
-    "img": "https://opengraph.githubassets.com/cb5b6c1287608db0f0a51f51ee21e490a89fa1ef2e33dcb16a554400bd79252b/carlosferreyra/data-engineering",
+    "img": "https://opengraph.githubassets.com/c18b56eacbf81e72f31da77dc192ada1ea4b11dda6b22cc5c342f26386bf44b9/carlosferreyra/data-engineering",
     "description": "Recursos y Proyectos que uso para aprender sobre Data engineering",
     "stack": [],
     "demo": "https://carlosferreyra.github.io/data-engineering/"
