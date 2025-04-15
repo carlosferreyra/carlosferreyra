@@ -2,17 +2,18 @@
 import { promises as fs } from 'fs';
 import { PLACEHOLDERS, REPO_FILTERS, createHeaders } from './constants.js';
 
-const { GH_TOKEN, GITHUB_TOKEN } = process.env;
+const { GH_TOKEN } = process.env;
 
-if (!GH_TOKEN && !GITHUB_TOKEN) {
-	console.error('at least GH_TOKEN or GITHUB_TOKEN is required');
+if (!GH_TOKEN) {
+	console.error('GH_TOKEN (Personal Access Token) is required');
 	process.exit(1);
 }
 
-const token = GH_TOKEN || GITHUB_TOKEN;
-const header = createHeaders(token);
+const header = createHeaders(GH_TOKEN);
 
 // Helper Functions
+// IMPROVEMENT 2: Consider adding retry logic with exponential backoff
+// for better reliability when checking URL status
 const checkUrlStatus = async (url) => {
 	try {
 		const response = await fetch(url, { method: 'HEAD' });
@@ -23,13 +24,18 @@ const checkUrlStatus = async (url) => {
 	}
 };
 
+// IMPROVEMENT 3: Add rate limiting handling and pagination support
+// for better GitHub API interaction
 const githubApi = async (url) => {
 	const response = await fetch(url, {
 		headers: url.includes('graphql') ? header.graphql : header.rest,
 	});
+	// IMPROVEMENT 4: Check response status and handle rate limits
+	// if (response.status === 403) handle rate limiting
 	return response.json();
 };
 
+// IMPROVEMENT 5: Consider caching social preview URLs to reduce API calls
 const getSocialPreview = async (repo, owner) => {
 	const query = `query {
     repository(owner: "${owner}", name: "${repo.name}") {
@@ -56,6 +62,7 @@ const getSocialPreview = async (repo, owner) => {
 	}
 };
 
+// IMPROVEMENT 6: Consider adding fallback image URL when social preview is not available
 const processRepository = async (repo, owner) => {
 	const isDemoAvailable = await checkUrlStatus(repo.homepage);
 	if (isDemoAvailable) {
@@ -71,6 +78,7 @@ const processRepository = async (repo, owner) => {
 	return null;
 };
 
+// IMPROVEMENT 7: Consider making filter criteria configurable via environment variables
 const filterRepositories = (repositories, owner) => {
 	return repositories
 		.filter((repo) => REPO_FILTERS.skipOwn(repo, owner))
@@ -81,6 +89,7 @@ const filterRepositories = (repositories, owner) => {
 		.filter((repo) => REPO_FILTERS.notBlacklisted(repo, owner));
 };
 
+// IMPROVEMENT 8: Add pagination support for large organizations
 const getOrgRepositories = async (org) => {
 	const url = PLACEHOLDERS.ORGS_API_URL.replace('<org>', org);
 	const repositories = await githubApi(url);
@@ -89,6 +98,7 @@ const getOrgRepositories = async (org) => {
 
 	for (const repo of filtered) {
 		const contributors = await githubApi(repo.contributors_url);
+		// IMPROVEMENT 9: Consider caching contributor data to reduce API calls
 		if (contributors.some((contributor) => contributor.login === PLACEHOLDERS.USER)) {
 			const project = await processRepository(repo, org);
 			if (project) projects.push(project);
@@ -107,6 +117,7 @@ const main = async () => {
 	const filteredUserRepos = filterRepositories(userRepos, PLACEHOLDERS.USER);
 
 	// Process user repositories
+	// IMPROVEMENT 10: Consider implementing concurrent processing with rate limiting
 	for (const repo of filteredUserRepos) {
 		const project = await processRepository(repo, PLACEHOLDERS.USER);
 		if (project) projects.push(project);
@@ -125,6 +136,7 @@ const main = async () => {
 	await fs.writeFile('./src/projects.js', head + projectsJson + foot);
 };
 
+// IMPROVEMENT 11: Add proper error handling and recovery
 main().catch((error) => {
 	console.error('Error in main execution:', error);
 	process.exit(1);

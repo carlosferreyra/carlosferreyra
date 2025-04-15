@@ -303,3 +303,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# MCP Configuration
+.mcp-config/
+**/mcp.config.json
+.vscode/mcp-servers.json

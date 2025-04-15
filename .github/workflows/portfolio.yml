@@ -3,7 +3,6 @@ name: Update Portfolio
 env:
   USER_NAME: 'github-actions[bot]'
   USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
 permissions:
@@ -32,6 +31,8 @@ jobs:
           node-version: '22'
       - name: Update Portfolio
         run: npm run update-portfolio
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Configure Git User
         run: |
           git config user.name "${{ env.USER_NAME }}"
