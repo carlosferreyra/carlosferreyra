@@ -53,14 +53,6 @@ const projects = [
       "utn-frre"
     ],
     "demo": "https://gestiontup-1.onrender.com"
-  },
-  {
-    "repo": "https://github.com/apuntes-frre/apps",
-    "name": "apps",
-    "img": "https://opengraph.githubassets.com/c952cf7ae5ffbff77d27612cfd59082fe6183cdc7e7abc04adcdc1ea75795d9f/apuntes-frre/apps",
-    "description": "Multiples aplicaciones para usar de acuerdo a la materia",
-    "stack": [],
-    "demo": "https://apuntes-frre.github.io/apps/"
   }
 ]
 export default projects;
