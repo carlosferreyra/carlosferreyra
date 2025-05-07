@@ -34,6 +34,14 @@ const projects = [
     "demo": "https://carlosferreyra.github.io/curso-fullstack-2024/"
   },
   {
+    "repo": "https://github.com/carlosferreyra/data-engineering",
+    "name": "data-engineering",
+    "img": "https://opengraph.githubassets.com/c18b56eacbf81e72f31da77dc192ada1ea4b11dda6b22cc5c342f26386bf44b9/carlosferreyra/data-engineering",
+    "description": "Recursos y Proyectos que uso para aprender sobre Data engineering",
+    "stack": [],
+    "demo": "https://carlosferreyra.github.io/data-engineering/"
+  },
+  {
     "repo": "https://github.com/Seminario-Integrador-2024/GestionTUP",
     "name": "GestionTUP",
     "img": "https://repository-images.githubusercontent.com/839530563/77ec1cfb-4a65-4e34-8641-2fa6d5ea3f18",
