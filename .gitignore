@@ -308,3 +308,10 @@ cython_debug/
 .mcp-config/
 **/mcp.config.json
 .vscode/mcp-servers.json
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
