@@ -42,6 +42,20 @@ const projects = [
     "demo": "https://carlosferreyra.github.io/data-engineering/"
   },
   {
+    "repo": "https://github.com/carlosferreyra/informatorio",
+    "name": "informatorio",
+    "img": "https://opengraph.githubassets.com/c0af78fe57ce79101b37b041d627e4ef550d7e7aabec3d7fe4868f2497be97a7/carlosferreyra/informatorio",
+    "description": "Curso Informatorio - Edicion 2025",
+    "stack": [
+      "chaco",
+      "desarrollo-web",
+      "globant",
+      "informatorio",
+      "web"
+    ],
+    "demo": "https://carlosferreyra.github.io/informatorio/"
+  },
+  {
     "repo": "https://github.com/Seminario-Integrador-2024/GestionTUP",
     "name": "GestionTUP",
     "img": "https://repository-images.githubusercontent.com/839530563/77ec1cfb-4a65-4e34-8641-2fa6d5ea3f18",
