@@ -44,7 +44,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/informatorio",
     "name": "informatorio",
-    "img": "https://opengraph.githubassets.com/6a06a05237525c019462311075d43d276c4834e318a816371dc5e2dbff778301/carlosferreyra/informatorio",
+    "img": "https://opengraph.githubassets.com/1ed343a7fc8904241984d5f13beb539a0e89f113f86262602916cab668b3968d/carlosferreyra/informatorio",
     "description": "Curso Informatorio - Edicion 2025",
     "stack": [
       "chaco",
