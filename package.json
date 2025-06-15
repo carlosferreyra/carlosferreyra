@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "update-portfolio": "node scripts/portfolio.js",
-    "update-pdfs": "node scripts/pdfs-debug.js",
+    "update-pdfs": "node scripts/pdfs.js",
     "update-repo-info": "node scripts/update-package-json.js"
   },
   "repository": {
