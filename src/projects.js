@@ -16,7 +16,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/awesome-uvx",
     "name": "awesome-uvx",
-    "img": "https://opengraph.githubassets.com/2307e08f6e7413e213a7998601edd8944503036d45cc611d7a0428684790d26f/carlosferreyra/awesome-uvx",
+    "img": "https://opengraph.githubassets.com/58f726a71207db5f462291c13721e7d1a6d174af83cdcbc69591325f3dc5324a/carlosferreyra/awesome-uvx",
     "description": "A collection of Python tools available for use with uv tools",
     "stack": [],
     "demo": "https://carlosferreyra.github.io/awesome-uvx/"
@@ -24,7 +24,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/curso-fullstack-2024",
     "name": "curso-fullstack-2024",
-    "img": "https://opengraph.githubassets.com/569a1596b59b175539a050708b403a0a7f7ada194719c556430afbe9590cb9db/carlosferreyra/curso-fullstack-2024",
+    "img": "https://opengraph.githubassets.com/cc9073288b537ba622f72ec997b98448103c8bca5025e33cc367fce8474fdb7a/carlosferreyra/curso-fullstack-2024",
     "description": "Curso fullstack de Node + Angular para alumnos de la UTN.",
     "stack": [
       "angular",
@@ -36,7 +36,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/data-engineering",
     "name": "data-engineering",
-    "img": "https://opengraph.githubassets.com/c18b56eacbf81e72f31da77dc192ada1ea4b11dda6b22cc5c342f26386bf44b9/carlosferreyra/data-engineering",
+    "img": "https://opengraph.githubassets.com/6769556fab07f6f94803e203687b67f8cd4d1719d97401e66ae227e026c87290/carlosferreyra/data-engineering",
     "description": "Recursos y Proyectos que uso para aprender sobre Data engineering",
     "stack": [],
     "demo": "https://carlosferreyra.github.io/data-engineering/"
@@ -44,7 +44,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/informatorio",
     "name": "informatorio",
-    "img": "https://opengraph.githubassets.com/2245e1af011fd36fc02857794d6e0bb3490eb341760802b2c873f322ead7720e/carlosferreyra/informatorio",
+    "img": "https://opengraph.githubassets.com/2c2b00055e469c7fe9db7856614c9dcb54e8cbcdc2314d1589749419118be66b/carlosferreyra/informatorio",
     "description": "Curso Informatorio - Edicion 2025",
     "stack": [
       "chaco",
