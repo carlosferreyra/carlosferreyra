@@ -67,6 +67,17 @@ const projects = [
       "utn-frre"
     ],
     "demo": "https://gestiontup-1.onrender.com"
+  },
+  {
+    "repo": "https://github.com/alumnithon/skilllink-g6f",
+    "name": "skilllink-g6f",
+    "img": "https://opengraph.githubassets.com/02faff770b1ba4a0944442ddd39f6dea31b8427599f6755ed69e80698b87998c/alumnithon/skilllink-g6f",
+    "description": "Frontend Repo del grupo 6",
+    "stack": [
+      "alumnithon",
+      "alumnithon2025"
+    ],
+    "demo": "https://skilllink-alumnithon.vercel.app"
   }
 ]
 export default projects;
