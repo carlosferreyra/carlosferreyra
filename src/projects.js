@@ -56,6 +56,18 @@ const projects = [
     "demo": "https://carlosferreyra.github.io/informatorio/"
   },
   {
+    "repo": "https://github.com/carlosferreyra/marimo-notebooks",
+    "name": "marimo-notebooks",
+    "img": "https://opengraph.githubassets.com/945b03ae064b6f792f1f001441793a9836f28bdacf36f9b534102123eebd464a/carlosferreyra/marimo-notebooks",
+    "description": "Python Notebooks Portfolio",
+    "stack": [
+      "jupyter-notebooks",
+      "marimo",
+      "notebook"
+    ],
+    "demo": "https://carlosferreyra.github.io/marimo-notebooks/"
+  },
+  {
     "repo": "https://github.com/Seminario-Integrador-2024/GestionTUP",
     "name": "GestionTUP",
     "img": "https://repository-images.githubusercontent.com/839530563/77ec1cfb-4a65-4e34-8641-2fa6d5ea3f18",
