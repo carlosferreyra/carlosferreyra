@@ -1,0 +1,39 @@
+name: Sync Silver Dev CV Template
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+env:
+  PDF_NAME: carlosferreyra
+  RESUME_DIR: /resumes
+
+jobs:
+  write-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4.1.0
+
+      - name: Delete old resume if exists
+        run: |
+          if [ -f ${env.RESUME_DIR}/${env.PDF_NAME}.pdf ]; then
+            rm ${env.RESUME_DIR}/${env.PDF_NAME}.pdf
+          fi
+
+      - name: Compile CV to PDF
+        run: typst compile /scripts/ci/template/resume.typ ${env.RESUME_DIR}/${env.PDF_NAME}.pdf
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "${{ github.actor }}"
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "Resume Updated" || echo "No changes to commit"
+          git push

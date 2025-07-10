@@ -1,0 +1,170 @@
+# A descriptive name for the workflow, visible in the GitHub Actions UI.
+name: Publish Python Package to PyPI
+
+# This block defines the event that triggers the workflow.
+# 'release: created' means the workflow runs only when a new release is
+# formally created in the GitHub UI, providing an explicit, manual trigger.
+on:
+  release:
+    types: [created]
+
+# Sets default permissions for all jobs in the workflow.
+# By setting 'contents' to 'read', we adopt a principle of least privilege.
+# Jobs will only have the specific permissions they are explicitly granted.
+permissions:
+  contents: read
+
+# Defines the jobs that will run as part of the workflow.
+jobs:
+  ###################
+  # 1. TEST JOB     #
+  ###################
+  # This job runs tests across multiple Python versions and operating systems.
+  test:
+    name: Test on ${{ matrix.os }} with Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      # A matrix strategy allows running the same job with different configurations.
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # The official action to set up 'uv'. Caching is enabled by default
+      # on GitHub-hosted runners, which significantly speeds up subsequent runs.
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          # You can pin to a specific uv version or let it be inferred
+          # from your pyproject.toml.
+          uv-version: 'latest'
+
+      # Creates a virtual environment in the standard '.venv' directory.
+      - name: Create virtual environment
+        run: uv venv
+
+      # Installs dependencies from a lockfile (e.g., requirements.txt).
+      # 'uv pip sync' is extremely fast and ensures the environment exactly
+      # matches the lockfile, guaranteeing reproducibility.
+      - name: Install dependencies
+        run: uv pip sync requirements.txt
+
+      # Runs tests using pytest. 'uv run' executes the command within the
+      # context of the managed virtual environment.
+      - name: Run tests
+        run: uv run pytest
+
+      # Runs the Ruff linter to check for code style and errors.
+      - name: Lint with Ruff
+        run: uv run ruff check.
+
+      # Checks code formatting with Ruff. The '--check' flag ensures the
+      # build fails if code is not formatted correctly, without changing files.
+      - name: Check formatting with Ruff
+        run: uv run ruff format --check.
+
+  ###################
+  # 2. BUILD JOB    #
+  ###################
+  # This job builds the source distribution (sdist) and wheel after all tests pass.
+  # It runs in isolation to create a secure, trusted artifact.
+  build:
+    name: Build distribution packages
+    runs-on: ubuntu-latest
+    # The 'needs' keyword ensures this job only starts after the 'test' job
+    # has completed successfully for all matrix configurations.
+    needs: test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          uv-version: 'latest'
+
+      # 'uv pip build' creates the sdist and wheel files.
+      # The '-o dist/' flag specifies the output directory.
+      - name: Build sdist and wheel
+        run: uv pip build --sdist --wheel -o dist/.
+
+      # Uploads the built packages as an artifact. This artifact can be
+      # downloaded by subsequent jobs, forming a secure hand-off.
+      - name: Upload distribution packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+  ###################
+  # 3. PUBLISH JOB  #
+  ###################
+  # This job publishes the package to PyPI using Trusted Publishing.
+  # It has elevated permissions but is isolated from the build and test steps.
+  publish-to-pypi:
+    name: Publish package to PyPI
+    runs-on: ubuntu-latest
+    needs: build
+
+    # This block is CRITICAL for Trusted Publishing.
+    # 'environment' ties this job to the 'pypi' GitHub Environment and its
+    # protection rules (e.g., required reviewers).
+    environment:
+      name: pypi
+      url: https://pypi.org/p/YOUR_PACKAGE_NAME # Replace with your package name
+
+    # 'id-token: write' is the mandatory permission that allows the job to
+    # request an OIDC token from GitHub to authenticate with PyPI.
+    permissions:
+      id-token: write
+
+    steps:
+      # Downloads the artifact created by the 'build' job. This job does not
+      # check out the source code; it only works with the trusted artifact.
+      - name: Download distribution packages
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      # The official PyPA action for publishing. It automatically detects the
+      # 'id-token' permission and uses the OIDC flow. No secrets are needed.
+      # It also automatically generates and uploads provenance attestations.
+      - name: Publish package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+  ############################
+  # 4. GITHUB RELEASE JOB    #
+  ############################
+  # This job creates a GitHub Release and attaches the built packages as assets.
+  github-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    needs: publish-to-pypi
+
+    # This job requires 'write' permissions on 'contents' to create a release.
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download distribution packages
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      # This action creates a GitHub Release corresponding to the tag that
+      # triggered the workflow.
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          # 'generate_release_notes: true' automatically creates release notes
+          # based on merged pull requests since the last release.
+          generate_release_notes: true
+          # 'files' specifies which files to upload as release assets.
+          # The glob pattern 'dist/*' uploads both the sdist and the wheel.
+          files: dist/*

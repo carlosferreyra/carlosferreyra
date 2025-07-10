@@ -1,0 +1,98 @@
+name: Publish Packages Clients
+on:
+  release:
+    types: [created]
+
+env:
+  GIT_USERNAME: 'github-actions[bot]'
+  GIT_EMAIL: 'github-actions[bot]@users.noreply.github.com'
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  build-npm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2.0.2
+        with:
+          bun-version: 'latest'
+
+      - name: Clean installation
+        run: bun install --frozen-lockfile --cwd packages/npm-client
+
+      - name: Build package
+        run:
+          bun build --cwd packages/npm-client/src/index.ts --outfile
+          packages/npm-client/dist/index.js
+
+  publish-npm:
+    environment:
+      name: npm
+      url: https://www.npmjs.com/~eduferreyraok
+
+    needs: build-npm
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2.0.2
+        with:
+          bun-version: 'latest'
+      - name: push to npm
+        run: |
+          bun publish --cwd packages/npm-client --access public
+        env:
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-pypi:
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/carlosferreyra
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          check-latest: true
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          working-directory: '/packages/uvx-client/'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync uv
+        run: uv sync
+
+      - name: Install build dependencies
+        run: uv pip install build twine
+
+      - name: Build package
+        run: uv run python -m build
+
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@v1.12.4
+        with:
+          verify-metadata: true
+          verbose: true
+          print-hash: true
