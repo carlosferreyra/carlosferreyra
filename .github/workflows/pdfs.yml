@@ -12,9 +12,8 @@ on:
   schedule:
     - cron: '0 */12 * * *' # Runs every 12 hours
   push:
-    paths:
-      - 'pdfs/**' # Triggers when changes are made to pdf files
-      - 'src/**' # Triggers when source files are changed
+    branches:
+      - main # Adjust to your main branch if different
 
 jobs:
   upload-pdfs:
