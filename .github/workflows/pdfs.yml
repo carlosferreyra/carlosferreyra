@@ -1,10 +1,8 @@
 name: Update PDFs
 
 env:
-  USER_NAME: "github-actions[bot]"
-  USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
-  GOOGLE_DRIVE_API_KEY: ${{ secrets.GOOGLE_DRIVE_API_KEY }}
-  GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+  USER_NAME: 'github-actions[bot]'
+  USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
 
 permissions:
   contents: write
@@ -12,14 +10,15 @@ permissions:
 on:
   workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: "0 */12 * * *" # Runs every 12 hours
+    - cron: '0 */12 * * *' # Runs every 12 hours
   push:
     paths:
-      - "pdfs/**" # Triggers when changes are made to pdf files
-      - "src/**" # Triggers when source files are changed
+      - 'pdfs/**' # Triggers when changes are made to pdf files
+      - 'src/**' # Triggers when source files are changed
 
 jobs:
   upload-pdfs:
+    environment: google
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +30,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22.x"
+          node-version: '22.x'
 
       - name: Install dependencies
         run: npm install googleapis # Install googleapis - ensure package.json is updated if needed or use `npm install` if you have package.json
@@ -45,7 +44,7 @@ jobs:
       - name: Update Resumes and Backup to Google Drive
         run: npm run update-pdfs # Run the script to update PDFs
         env:
-          GOOGLE_DRIVE_API_KEY: ${{ secrets.GOOGLE_DRIVE_API_KEY }}
-          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+          GOOGLE_DRIVE_API_KEY: ${{ secrets.JSON_API_KEY }}
+          GOOGLE_DRIVE_ROOT_FOLDER_ID: ${{ secrets.DRIVE_ROOT }}
           USER_NAME: ${{ env.USER_NAME }} # Use workflow level env variables
           USER_EMAIL: ${{ env.USER_EMAIL }} # Use workflow level env variables

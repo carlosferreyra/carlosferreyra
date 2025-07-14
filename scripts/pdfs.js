@@ -8,7 +8,16 @@ import https from 'https';
 let USER_NAME = process.env.USER_NAME || 'Carlos Ferreyra';
 let USER_EMAIL = process.env.USER_EMAIL || 'eduferreyraok@gmail.com';
 
-const { GOOGLE_DRIVE_API_KEY, GOOGLE_DRIVE_FOLDER_ID } = process.env;
+const { GOOGLE_DRIVE_API_KEY, GOOGLE_DRIVE_ROOT_FOLDER_ID } = process.env;
+
+// Configuration - now path-based instead of hardcoded folder ID
+const DRIVE_CONFIG = {
+	rootFolderId: GOOGLE_DRIVE_ROOT_FOLDER_ID, // This should be your "Home" folder ID
+	targetPath: 'Resumes', // Path from root: Home/Resumes
+	// Alternative examples:
+	// targetPath: 'Documents/PDFs'  // for Home/Documents/PDFs
+	// targetPath: 'Work/Projects/Assets'  // for Home/Work/Projects/Assets
+};
 
 const BASE_URL = 'https://storage.rxresu.me/clz62ydvs5a9cvrn3hvbh93tp/resumes/';
 const pdf = 'carlos-ferreyra.pdf';
@@ -121,11 +130,12 @@ async function setupGoogleDrive() {
 		throw new Error('GOOGLE_DRIVE_API_KEY environment variable is not set');
 	}
 
-	if (!GOOGLE_DRIVE_FOLDER_ID) {
-		throw new Error('GOOGLE_DRIVE_FOLDER_ID environment variable is not set');
+	if (!GOOGLE_DRIVE_ROOT_FOLDER_ID) {
+		throw new Error('GOOGLE_DRIVE_ROOT_FOLDER_ID environment variable is not set');
 	}
 
-	console.log(`Google Drive Folder ID: ${GOOGLE_DRIVE_FOLDER_ID}`);
+	console.log(`Google Drive Root Folder ID: ${GOOGLE_DRIVE_ROOT_FOLDER_ID}`);
+	console.log(`Target Path: ${DRIVE_CONFIG.targetPath}`);
 
 	try {
 		const credentials = JSON.parse(GOOGLE_DRIVE_API_KEY);
@@ -151,6 +161,57 @@ async function setupGoogleDrive() {
 	}
 }
 
+// NEW: Path-based folder navigation
+async function findOrCreateFolderByPath(drive, baseFolderId, targetPath) {
+	console.log(`\n=== NAVIGATING TO FOLDER PATH ===`);
+	console.log(`Base Folder ID: ${baseFolderId}`);
+	console.log(`Target Path: ${targetPath}`);
+
+	const pathSegments = targetPath.split('/').filter((segment) => segment.trim() !== '');
+	let currentFolderId = baseFolderId;
+
+	console.log(`Path segments to navigate: ${JSON.stringify(pathSegments)}`);
+
+	for (let i = 0; i < pathSegments.length; i++) {
+		const folderName = pathSegments[i];
+		console.log(`\n--- Looking for folder: ${folderName} ---`);
+
+		try {
+			// Search for folder in current directory
+			const searchResponse = await drive.files.list({
+				q: `name='${folderName}' and '${currentFolderId}' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false`,
+				fields: 'files(id, name)',
+			});
+
+			if (searchResponse.data.files.length > 0) {
+				// Folder exists
+				currentFolderId = searchResponse.data.files[0].id;
+				console.log(`Found existing folder: ${folderName} (ID: ${currentFolderId})`);
+			} else {
+				// Create folder
+				console.log(`Creating new folder: ${folderName}`);
+				const createResponse = await drive.files.create({
+					resource: {
+						name: folderName,
+						mimeType: 'application/vnd.google-apps.folder',
+						parents: [currentFolderId],
+					},
+					fields: 'id, name',
+				});
+
+				currentFolderId = createResponse.data.id;
+				console.log(`Created folder: ${folderName} (ID: ${currentFolderId})`);
+			}
+		} catch (error) {
+			console.error(`Error handling folder ${folderName}:`, error);
+			throw error;
+		}
+	}
+
+	console.log(`\n✅ Successfully navigated to: ${targetPath} (Final ID: ${currentFolderId})`);
+	return currentFolderId;
+}
+
 async function uploadToDrive(drive, filePath, fileName) {
 	console.log(`\n=== UPLOADING TO GOOGLE DRIVE ===`);
 	console.log(`Local file: ${filePath}`);
@@ -158,16 +219,21 @@ async function uploadToDrive(drive, filePath, fileName) {
 	console.log(`Timestamp: ${new Date().toISOString()}`);
 
 	try {
-		const folderId = GOOGLE_DRIVE_FOLDER_ID;
+		// Get target folder ID using path navigation
+		const targetFolderId = await findOrCreateFolderByPath(
+			drive,
+			DRIVE_CONFIG.rootFolderId,
+			DRIVE_CONFIG.targetPath
+		);
 
 		// Get local file stats
 		const localStats = getFileStats(filePath);
 		console.log(`Local file stats:`, localStats);
 
 		// Check for existing files in Google Drive
-		console.log(`Searching for existing files named '${fileName}'...`);
+		console.log(`Searching for existing files named '${fileName}' in target folder...`);
 		const searchResponse = await drive.files.list({
-			q: `name='${fileName}' and '${folderId}' in parents and trashed=false`,
+			q: `name='${fileName}' and '${targetFolderId}' in parents and trashed=false`,
 			fields: 'files(id, name, size, modifiedTime, md5Checksum, version)',
 		});
 
@@ -186,10 +252,10 @@ async function uploadToDrive(drive, filePath, fileName) {
 		}
 
 		// Upload new file
-		console.log(`Uploading new file...`);
+		console.log(`Uploading new file to folder ID: ${targetFolderId}...`);
 		const fileMetadata = {
 			name: fileName,
-			parents: [folderId],
+			parents: [targetFolderId],
 		};
 		const media = {
 			mimeType: 'application/pdf',
@@ -236,9 +302,10 @@ const downloadAndUpdatePDFs = async () => {
 	// Log environment variables (safely)
 	console.log(`\n=== ENVIRONMENT CHECK ===`);
 	console.log(`GOOGLE_DRIVE_API_KEY: ${GOOGLE_DRIVE_API_KEY ? 'SET' : 'NOT SET'}`);
-	console.log(`GOOGLE_DRIVE_FOLDER_ID: ${GOOGLE_DRIVE_FOLDER_ID || 'NOT SET'}`);
+	console.log(`GOOGLE_DRIVE_ROOT_FOLDER_ID: ${GOOGLE_DRIVE_ROOT_FOLDER_ID || 'NOT SET'}`);
 	console.log(`USER_NAME: ${USER_NAME}`);
 	console.log(`USER_EMAIL: ${USER_EMAIL}`);
+	console.log(`Target Drive Path: ${DRIVE_CONFIG.rootFolderId}/${DRIVE_CONFIG.targetPath}`);
 
 	// Ensure the PDF_DIR exists
 	console.log(`\n=== DIRECTORY SETUP ===`);
