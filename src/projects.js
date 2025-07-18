@@ -42,20 +42,6 @@ const projects = [
     "demo": "https://carlosferreyra.github.io/data-engineering/"
   },
   {
-    "repo": "https://github.com/carlosferreyra/informatorio",
-    "name": "informatorio",
-    "img": "https://opengraph.githubassets.com/ae5549fddfbbf43adbe79014e1f446dabf03a46a371ae7889ba1b6041a5039aa/carlosferreyra/informatorio",
-    "description": "Curso Informatorio - Edicion 2025",
-    "stack": [
-      "chaco",
-      "desarrollo-web",
-      "globant",
-      "informatorio",
-      "web"
-    ],
-    "demo": "https://carlosferreyra.github.io/informatorio/"
-  },
-  {
     "repo": "https://github.com/carlosferreyra/marimo-notebooks",
     "name": "marimo-notebooks",
     "img": "https://opengraph.githubassets.com/945b03ae064b6f792f1f001441793a9836f28bdacf36f9b534102123eebd464a/carlosferreyra/marimo-notebooks",
@@ -90,6 +76,20 @@ const projects = [
       "alumnithon2025"
     ],
     "demo": "https://skilllink-g6.netlify.app"
+  },
+  {
+    "repo": "https://github.com/informatorioar/informatorio",
+    "name": "informatorio",
+    "img": "https://opengraph.githubassets.com/8323c45ae972e0063bdbc3831419f6cc8ef4e1fff95a4d55bdc0eedfe37a0162/informatorioar/informatorio",
+    "description": "Curso Informatorio - Edicion 2025",
+    "stack": [
+      "chaco",
+      "desarrollo-web",
+      "globant",
+      "informatorio",
+      "web"
+    ],
+    "demo": "https://informatorioar.github.io/informatorio/"
   }
 ]
 export default projects;
