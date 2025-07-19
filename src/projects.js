@@ -67,17 +67,6 @@ const projects = [
     "demo": "https://gestiontup-1.onrender.com"
   },
   {
-    "repo": "https://github.com/alumnithon/skilllink-g6f",
-    "name": "skilllink-g6f",
-    "img": "https://opengraph.githubassets.com/d7a6eb11a78cbfadf86875eaf2e49a8b5357b2e5b4b5f32da6fb2ff395b6ac78/alumnithon/skilllink-g6f",
-    "description": "Frontend Repo del grupo 6",
-    "stack": [
-      "alumnithon",
-      "alumnithon2025"
-    ],
-    "demo": "https://skilllink-g6.netlify.app"
-  },
-  {
     "repo": "https://github.com/informatorioar/informatorio",
     "name": "informatorio",
     "img": "https://opengraph.githubassets.com/8323c45ae972e0063bdbc3831419f6cc8ef4e1fff95a4d55bdc0eedfe37a0162/informatorioar/informatorio",
