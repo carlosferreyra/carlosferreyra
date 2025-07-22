@@ -80,7 +80,7 @@ const projects = [
   {
     "repo": "https://github.com/informatorioar/informatorio",
     "name": "informatorio",
-    "img": "https://opengraph.githubassets.com/95091e493ddcb26ea3b78edcc756a97a42a985a2bdd847caa477b8cceb4d9e44/informatorioar/informatorio",
+    "img": "https://opengraph.githubassets.com/752025f7a1dc7126320d3db4844c8772cf61ecc8cba1f9c947931250a8e36100/informatorioar/informatorio",
     "description": "Curso Informatorio - Edicion 2025",
     "stack": [
       "chaco",
