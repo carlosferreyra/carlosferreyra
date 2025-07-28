@@ -16,7 +16,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/awesome-uvx",
     "name": "awesome-uvx",
-    "img": null,
+    "img": "https://opengraph.githubassets.com/58f726a71207db5f462291c13721e7d1a6d174af83cdcbc69591325f3dc5324a/carlosferreyra/awesome-uvx",
     "description": "A collection of Python tools available for use with uv tools",
     "stack": [],
     "demo": "https://carlosferreyra.github.io/awesome-uvx/"
@@ -56,7 +56,7 @@ const projects = [
   {
     "repo": "https://github.com/Seminario-Integrador-2024/GestionTUP",
     "name": "GestionTUP",
-    "img": null,
+    "img": "https://repository-images.githubusercontent.com/839530563/77ec1cfb-4a65-4e34-8641-2fa6d5ea3f18",
     "description": "Repositorio Frontend del Proyecto",
     "stack": [
       "frontend",
@@ -69,7 +69,7 @@ const projects = [
   {
     "repo": "https://github.com/alumnithon/skilllink-g6f",
     "name": "skilllink-g6f",
-    "img": null,
+    "img": "https://opengraph.githubassets.com/d7a6eb11a78cbfadf86875eaf2e49a8b5357b2e5b4b5f32da6fb2ff395b6ac78/alumnithon/skilllink-g6f",
     "description": "Frontend Repo del grupo 6",
     "stack": [
       "alumnithon",
@@ -80,7 +80,7 @@ const projects = [
   {
     "repo": "https://github.com/informatorioar/informatorio",
     "name": "informatorio",
-    "img": null,
+    "img": "https://opengraph.githubassets.com/459694eea6cd130448b43df6f955615ed9de840bc04af258d95fbb61fe853c30/informatorioar/informatorio",
     "description": "Curso Informatorio - Edicion 2025",
     "stack": [
       "chaco",
