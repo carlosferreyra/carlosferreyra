@@ -4,7 +4,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/alura-encriptador",
     "name": "alura-encriptador",
-    "img": null,
+    "img": "https://repository-images.githubusercontent.com/819610263/df6a6b16-c04a-4bfd-a983-43723c86ae05",
     "description": "Challenge de la etapa \"Principiante en Programacion\" en ONE G7.",
     "stack": [
       "alura-latam",
@@ -24,7 +24,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/curso-fullstack-2024",
     "name": "curso-fullstack-2024",
-    "img": null,
+    "img": "https://opengraph.githubassets.com/cc9073288b537ba622f72ec997b98448103c8bca5025e33cc367fce8474fdb7a/carlosferreyra/curso-fullstack-2024",
     "description": "Curso fullstack de Node + Angular para alumnos de la UTN.",
     "stack": [
       "angular",
@@ -44,7 +44,7 @@ const projects = [
   {
     "repo": "https://github.com/carlosferreyra/marimo-notebooks",
     "name": "marimo-notebooks",
-    "img": null,
+    "img": "https://opengraph.githubassets.com/945b03ae064b6f792f1f001441793a9836f28bdacf36f9b534102123eebd464a/carlosferreyra/marimo-notebooks",
     "description": "Python Notebooks Portfolio",
     "stack": [
       "jupyter-notebooks",
@@ -56,7 +56,7 @@ const projects = [
   {
     "repo": "https://github.com/Seminario-Integrador-2024/GestionTUP",
     "name": "GestionTUP",
-    "img": null,
+    "img": "https://repository-images.githubusercontent.com/839530563/77ec1cfb-4a65-4e34-8641-2fa6d5ea3f18",
     "description": "Repositorio Frontend del Proyecto",
     "stack": [
       "frontend",
