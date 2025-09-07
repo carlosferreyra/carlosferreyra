@@ -1,76 +1,103 @@
-<!-- allow html in gh-pages markdown -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+# Carlos E. Ferreyra
 
-[ResumeUrl]: https://rxresu.me/carlosferreyra/carlos-ferreyra
-[ResumeSpanishUrl]: https://rxresu.me/carlosferreyra/carlos-ferreyra-espanol
-[WebsiteUrl]: https://about.me/carlosferreyra
-[LeetcodeProfileUrl]: https://leetcode.com/u/Coolwinter18/
-[PortfolioUrl]: https://carlosferreyra.me/
-[KitsuneStudiosUrl]: https://github.com/Kitsune-Studios
-[ArgenData]: https://github.com/argendata
-[FacultySysEngUrl]: https://www.frre.utn.edu.ar/isi
-[NationalTechUnivUrl]: https://www.utn.edu.ar/
+> Software Developer/Engineer | Computer Science Student
 
-<h1 align="center"> Hi There ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%" /> </h1>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/eduferreyraok)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail)](mailto:contact@carlosferreyra.me)
+[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=flat-square&logo=twitter)](https://twitter.com/eduferreyraok)
+[![GitHub followers](https://img.shields.io/github/followers/carlosferreyra?label=Follow&style=flat-square&logo=github)](https://github.com/carlosferreyra)
+![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&style=flat-square)
 
-<p align="center">
-  <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img align="left" src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=My+name+is+Carlos+E.+Ferreyra+..&hearts;++;I'm+a+Self-taught+Developer,...;and+a+Computer+Science+Student;I'm+from+Corrientes,+Argentina...;Mostly+Newbie+...;but+Active+Learner,;Love+to+learn+new+stuffs..<3" alt="Typing SVG">
-  </a>
-</p>
+## About Me
 
-<br><br><br><br><br>
+I'm a Software Developer/Engineer with a passion for solving complex problems through elegant code.
+Currently pursuing a degree in System Engineering at the National Technological University,
+Argentina.
 
-## <img src="https://i.pinimg.com/originals/3f/7e/4e/3f7e4eff7c96e9fe4b8b4b1ff3f7bdb5.gif" width="5%" /> About me
+- 🔭 Working on: [Kitsune Studios](https://github.com/Kitsune-Studios) &
+  [Datos Argentina](https://github.com/argendata)
+- 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi),
+  [National Technological University](https://www.utn.edu.ar/)
+- 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/Coolwinter18/)
+- 📄 Resume: [English](https://rxresu.me/carlosf/carlos-ferreyra) |
+  [Español](https://rxresu.me/carlosf/carlos-ferreyra-espanol)
+- 🌐 Portfolio: [carlosferreyra.me](https://carlosferreyra.me/)
+- 📍 Based in Argentina
 
-[![GitHub followers](https://img.shields.io/github/followers/carlosferreyra?label=Follow&style=social)](https://github.com/carlosferreyra)
-[![GitHub Follow](https://img.shields.io/badge/Follow%20Me-%23000000.svg?style=for-the-social&logo=github&logoColor=white)](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fcarlosferreyra)
+## Technical Skills
 
-![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&label=Profile%20views&color=0e75b6&style=flat)
+```bash
+Programming Languages:  Python, Java, JavaScript, TypeScript
+Cloud Providers:        GCP, AWS
+Databases:              MySQL, MongoDB, SQLite
+Frameworks & Tools:     Git, Django, Web APIs
+Areas of Expertise:     Backend Development, API Design, Process Automation
+                        Server Architecture, Data Engineering
+```
 
-<img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width="25%"/>
+## Professional Experience
 
-- 👨‍💻 I'm Software Developer/Engineer. Current projects: [Kitsune Studios][KitsuneStudiosUrl] &
-  [Datos Argentina][ArgenData]
-- 🏫 I'm a `Senior` at [Faculty of System Engineering][FacultySysEngUrl] at [National Technological
-  University][NationalTechUnivUrl].
-- 💻 I am a competitive programmer at [`Leetcode`][LeetcodeProfileUrl].
-- ✍🏻 I love using Software as a solution for every Problem. Check my portfolio:
-  [_`Here`_][PortfolioUrl]
-- 🤓 Always learning new things
-- 👔 📝 I'm currently open for a new **`job opportunities`**, you can check my resume:
-  [English][ResumeUrl]|[Español][ResumeSpanishUrl].
-- 📌 You can check my other links [HERE][WebsiteUrl].
+- **Software Engineer** | UTN - FRRe | March 2024 - Dec 2024
 
-<br/><br>
+  - Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize
+    processes, and maximize productivity
+  - Designed and implemented a scalable server architecture and automated workflows to support
+    hundreds of users
+  - Collaborated with the financial department to streamline operational processes, resulting in a
+    10% reduction in costs and a 50% increase in efficiency
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+- **Backend Engineer** | Devlights S.R.L | March 2021 - Sep 2021
+  - Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company
+  - Implemented a REST-API to automate data collection of the customer
+  - Gained hands-on experience with Python, Git, Django, Web API's and applied them to a web
+    application
 
-<br>
+## Education
 
-## <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFhYzJkMmQ2MWQ3ZGY3MDhjZTE3MDI2Mzk3NzE1OWQyZTRlMmYwMCZjdD1z/iY8CRBdQXODJSCERIr/giphy.gif" width="5%" valign="bottom" /> Github Stats
+- **Information System's Engineering** | Universidad Tecnologica Nacional, Argentina | 2015 - 2024
+  - Relevant coursework: Data Structures, Algorithms, Software Engineering, Databases
 
-<p align="center">
-  <p align="center">
-    <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&langs_count=8&theme=algolia" alt="Top Languages" style="width: 44%; display: inline-block;"/>
-    <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=carlosferreyra&show_icons=true&theme=algolia&include_all_commits=true&count_private=true" alt="Github Stats" style="width: 55%; display: inline-block;"/>
-  </p>
+## Projects
 
-> [!NOTE]
->
-> This stats are only a metric of the languages my public code consists of and doesn't reflect
-> experience or skill level.
+- [Personal Website](https://www.carlosferreyra.me/) - Personal Website Landing Page
+- [LeetCode Solutions](https://github.com/carlosferreyra/leetcode) - Problem Submissions from my LC
+  profile
 
-<h3>⚡ Recent GitHub Activity</h3>
+## Certifications
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=carlosferreyra&bg_color=1a1b27&color=aa82d9&line=628edb&point=64bfaf&area=true&hide_border=true">
+- [Databricks Data Engineer Associate (2025)](https://credentials.databricks.com/profile/carlosferreyra/wallet)
+- [SQL Advanced (2025)](https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql)
+- [MongoDB - Database Administration (2025)](https://learn.mongodb.com/c/OE3lXL2WRfa33hpCBtCwEQ)
+- [Oracle Next Education Program (2025)](https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51)
+- [Amazon Cloud Practitioner Essentials (2024)](https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view)
+- [Google Associate Cloud Engineer (2024)](https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile)
 
-<h3> <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="5%" /> Git profile Trophies </h3>
+## GitHub Stats
 
-<p align="center"> <img align="center" src="https://github-profile-trophy.vercel.app/?username=carlosferreyra&theme=juicyfresh&no-bg=true&column=-1" alt="Trophies" /></a> </p>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&theme=dark&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=carlosferreyra&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" />
+</div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=carlosferreyra&bg_color=151515&color=ffffff&line=4c8eda&point=1f6feb&area=true&hide_border=true" alt="Activity Graph" width="98%" />
+</div>
 
-<p>
-  <img alt="Quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&animation=grow_out_in&quoteCategory=programming?" height="auto" width="auto" />
-</p>
+## Let's Connect
+
+I'm currently open to new opportunities! Feel free to reach out to discuss potential collaborations
+or just to connect.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/eduferreyraok)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail)](mailto:contact@carlosferreyra.me)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me)](https://carlosferreyra.me)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/carlosferreyra)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/Coolwinter18/)
+[![Credly](https://img.shields.io/badge/Credly-FF6B00?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/eduferreyraok)
+[![Google Dev](https://img.shields.io/badge/Google_Dev-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://www.cloudskillsboost.google/public_profiles/326c1a3d-6ac7-4036-b07f-c29bd0be6132)
+
+---
+
+<div align="center">
+  <sub><sup>© 2025 Carlos E. Ferreyra - MIT License</sup></sub>
+</div>
