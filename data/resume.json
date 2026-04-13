@@ -8,7 +8,8 @@
   },
   "summaries": {
     "devops": "Platform and DevOps engineer experienced in cloud infrastructure, CI/CD pipelines, and automation at scale. Proficient with GCP, AWS, and container orchestration.",
-    "backend": "Backend engineer focused on API design, scalable architectures, and data engineering. Experienced with Python, Django, and relational/non-relational databases."
+    "backend": "Backend engineer focused on API design, scalable architectures, and data engineering. Experienced with Python, Django, and relational/non-relational databases.",
+    "fullstack": "Full-stack engineer comfortable across the entire web stack — from REST APIs and databases to JavaScript frontends. Experienced building and shipping end-to-end web applications."
   },
   "githubUsername": "carlosferreyra",
   "links": [
@@ -47,7 +48,7 @@
     {
       "category": "Languages",
       "items": ["Python", "Java", "JavaScript", "TypeScript", "Rust"],
-      "tags": ["all", "backend", "devops"]
+      "tags": ["all", "backend", "devops", "fullstack"]
     },
     {
       "category": "Cloud",
@@ -57,7 +58,7 @@
     {
       "category": "Databases",
       "items": ["MySQL", "MongoDB", "SQLite"],
-      "tags": ["all", "backend"]
+      "tags": ["all", "backend", "fullstack"]
     },
     {
       "category": "DevOps & Infra",
@@ -66,8 +67,8 @@
     },
     {
       "category": "Frameworks",
-      "items": ["Django", "Web APIs"],
-      "tags": ["all", "backend"]
+      "items": ["Django", "Web APIs", "REST"],
+      "tags": ["all", "backend", "fullstack"]
     }
   ],
   "experience": [
@@ -75,7 +76,7 @@
       "title": "Software Engineer",
       "company": "UTN - FRRe",
       "period": "March 2024 - Dec 2024",
-      "tags": ["all", "backend", "devops"],
+      "tags": ["all", "backend", "devops", "fullstack"],
       "highlights": [
         "Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity",
         "Designed and implemented a scalable server architecture and automated workflows to support hundreds of users",
@@ -86,7 +87,7 @@
       "title": "Backend Engineer",
       "company": "Devlights S.R.L",
       "period": "March 2021 - Sep 2021",
-      "tags": ["all", "backend"],
+      "tags": ["all", "backend", "fullstack"],
       "highlights": [
         "Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company",
         "Implemented a REST-API to automate data collection of the customer",
@@ -148,7 +149,7 @@
       "name": "Personal Website",
       "description": "Personal Website Landing Page",
       "url": "https://www.carlosferreyra.com.ar/",
-      "tags": ["all", "backend"]
+      "tags": ["all", "backend", "fullstack"]
     },
     {
       "name": "LeetCode Solutions",
@@ -207,6 +208,19 @@
         "projects": true,
         "education": true,
         "certifications": true
+      }
+    },
+    {
+      "name": "fullstack",
+      "label": "Full-Stack Engineer",
+      "contacts": ["portfolio", "github", "linkedin", "email"],
+      "sections": {
+        "about": true,
+        "experience": true,
+        "skills": true,
+        "projects": true,
+        "education": true,
+        "certifications": false
       }
     }
   ]
