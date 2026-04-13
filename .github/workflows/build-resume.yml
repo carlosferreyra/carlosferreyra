@@ -41,12 +41,8 @@ jobs:
           path: resume/*.pdf
           retention-days: 90
 
-      - name: Stage README (force — gitignored by design)
-        run: git add --force README.md
-
       - name: Commit generated files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           file_pattern: resume/*.pdf README.md
-          add_options: '--force'
           commit_message: 'chore: rebuild resume and README [skip ci]'
