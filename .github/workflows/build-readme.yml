@@ -1,0 +1,36 @@
+name: Build README
+
+on:
+  workflow_run:
+    workflows: [Build Resume PDFs]
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - 'README.md.j2'
+      - 'scripts/build_readme.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - uses: astral-sh/setup-uv@v8.0.0
+
+      - name: Build README
+        run: uv run scripts/build_readme.py
+
+      - name: Commit README
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: README.md
+          commit_message: 'docs: rebuild README [skip ci]'

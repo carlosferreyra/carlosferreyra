@@ -7,8 +7,7 @@ on:
       - 'data/resume.json'
       - 'silver-dev-cv/cv.typ.j2'
       - 'scripts/build_variants.py'
-      - 'scripts/build_readme.py'
-      - 'README.md.j2'
+      - 'scripts/build_template.py'
   workflow_dispatch:
 
 permissions:
@@ -28,9 +27,6 @@ jobs:
           typst-version: ^0.14.0
           cache-local-packages: true
 
-      - name: Build README
-        run: uv run scripts/build_readme.py
-
       - name: Build variant PDFs
         run: uv run scripts/build_variants.py
 
@@ -41,8 +37,8 @@ jobs:
           path: resume/*.pdf
           retention-days: 90
 
-      - name: Commit generated files
+      - name: Commit PDFs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: resume/*.pdf README.md
-          commit_message: 'chore: rebuild resume and README [skip ci]'
+          file_pattern: resume/*.pdf
+          commit_message: 'chore: rebuild resume PDFs [skip ci]'
