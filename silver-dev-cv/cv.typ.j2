@@ -102,7 +102,7 @@
 // ── Education ────────────────────────────────────────────────────────────────
 {% if sections.education %}
 #section("Education")
-#for edu in r.education {
+#for edu in r.education.filter(include-item) {
   education(
     institution: [#edu.institution],
     major: [#edu.degree],
