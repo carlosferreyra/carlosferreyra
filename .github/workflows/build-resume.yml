@@ -1,0 +1,48 @@
+name: Build Resume PDFs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/resume.json'
+      - 'silver-dev-cv/cv.typ.j2'
+      - 'scripts/build_variants.py'
+      - 'scripts/build_readme.py'
+      - 'README.md.j2'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v8.0.0
+
+      - uses: typst-community/setup-typst@v5.1.0
+        with:
+          typst-version: ^0.14.0
+          cache-local-packages: true
+
+      - name: Build README
+        run: uv run scripts/build_readme.py
+
+      - name: Build variant PDFs
+        run: uv run scripts/build_variants.py
+
+      - name: Upload PDFs as artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: resume-pdfs
+          path: resume/*.pdf
+          retention-days: 90
+
+      - name: Commit PDFs to repository
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: resume/*.pdf README.md
+          commit_message: 'chore: rebuild resume and README [skip ci]'

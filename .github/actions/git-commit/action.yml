@@ -1,0 +1,44 @@
+name: Git Commit and Push
+description: Stages files, commits if there are changes, and optionally pushes.
+
+inputs:
+  path:
+    description: Path(s) to stage (passed to git add)
+    required: true
+  message:
+    description: Commit message
+    required: true
+  push:
+    description: Push after committing
+    required: false
+    default: 'true'
+  author-name:
+    description: Git author name
+    required: false
+    default: 'github-actions[bot]'
+  author-email:
+    description: Git author email
+    required: false
+    default: 'github-actions[bot]@users.noreply.github.com'
+
+runs:
+  using: composite
+  steps:
+    - name: Configure git identity
+      shell: bash
+      run: |
+        git config user.name "${{ inputs.author-name }}"
+        git config user.email "${{ inputs.author-email }}"
+
+    - name: Stage files
+      shell: bash
+      run: git add ${{ inputs.path }}
+
+    - name: Commit if there are changes
+      shell: bash
+      run: git diff --cached --quiet || git commit -m "${{ inputs.message }}"
+
+    - name: Push
+      if: inputs.push == 'true'
+      shell: bash
+      run: git push
