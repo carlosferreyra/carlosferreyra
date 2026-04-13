@@ -1,0 +1,128 @@
+#import "@preview/silver-dev-cv:{{ version }}": *
+
+// ── Single Source of Truth ──────────────────────────────────────────────────
+#let r = json("../data/resume.json")
+#let info = r.personalInfo
+#let links = r.links
+
+// ── Variant filter (pass --input variant=devops at compile time) ─────────────
+#let variant = sys.inputs.at("variant", default: "all")
+
+// Returns true if an item should be included for the current variant.
+// Items with no "tags" field are always included.
+#let include-item(item) = {
+  if "tags" not in item { return true }
+  if variant == "all" { return true }
+  item.tags.contains(variant)
+}
+
+// ── Contacts header ──────────────────────────────────────────────────────────
+#let find-link(id) = links.find(l => l.id == id)
+
+// ── Per-variant summary override ─────────────────────────────────────────────
+#let summary = {
+  if "summaries" in r and variant in r.summaries {
+    r.summaries.at(variant)
+  } else {
+    info.summary
+  }
+}
+
+#show: cv.with(
+  font-type: "PT Serif",
+  continue-header: "false",
+  name: info.name,
+  address: info.location,
+  lastupdated: "true",
+  pagecount: "true",
+  date: datetime.today().display("[year]-[month]-[day]"),
+  contacts: (
+    {% for id in contacts %}
+    (text: find-link("{{ id }}").label, link: find-link("{{ id }}").url),
+    {% endfor %}
+  ),
+)
+
+// ── About ────────────────────────────────────────────────────────────────────
+{% if sections.about %}
+#section[About Me]
+#descript[#summary]
+
+#sectionsep
+{% endif %}
+
+// ── Experience ───────────────────────────────────────────────────────────────
+{% if sections.experience %}
+#section("Experience")
+#for exp in r.experience.filter(include-item) {
+  job(
+    position: exp.title,
+    institution: [#exp.company],
+    location: "Argentina",
+    date: exp.period,
+    description: [
+      #for h in exp.highlights [
+        - #h
+      ]
+    ],
+  )
+}
+
+#sectionsep
+{% endif %}
+
+// ── Skills ───────────────────────────────────────────────────────────────────
+{% if sections.skills %}
+#section("Skills")
+#let skill-groups = r.skills.filter(include-item)
+#for group in skill-groups {
+  oneline-title-item(
+    title: group.category,
+    content: [#group.items.join(", ")],
+  )
+}
+
+#sectionsep
+{% endif %}
+
+// ── Projects ─────────────────────────────────────────────────────────────────
+{% if sections.projects %}
+#section("Projects")
+#for proj in r.projects.filter(include-item) {
+  project(
+    title: [#link(proj.url)[#proj.name]],
+    date: [],
+    description: [#proj.description],
+  )
+}
+
+#sectionsep
+{% endif %}
+
+// ── Education ────────────────────────────────────────────────────────────────
+{% if sections.education %}
+#section("Education")
+#for edu in r.education {
+  education(
+    institution: [#edu.institution],
+    major: [#edu.degree],
+    date: edu.period,
+    location: edu.location,
+  )
+}
+
+#sectionsep
+{% endif %}
+
+// ── Certifications ───────────────────────────────────────────────────────────
+{% if sections.certifications %}
+#section("Certifications")
+#for cert in r.certifications.filter(include-item) {
+  [#oneline-title-item(
+    title: str(cert.year),
+    content: [#link(cert.url)[#cert.name]],
+  )]
+}
+{% endif %}
+
+#set document(author: info.name, title: info.name + " - Resume")
