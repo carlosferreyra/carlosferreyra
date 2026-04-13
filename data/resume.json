@@ -1,0 +1,213 @@
+{
+  "personalInfo": {
+    "name": "Carlos Ferreyra",
+    "title": "Software Engineer & Developer",
+    "email": "eduferreyraok@gmail.com",
+    "location": "Argentina",
+    "summary": "Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering."
+  },
+  "summaries": {
+    "devops": "Platform and DevOps engineer experienced in cloud infrastructure, CI/CD pipelines, and automation at scale. Proficient with GCP, AWS, and container orchestration.",
+    "backend": "Backend engineer focused on API design, scalable architectures, and data engineering. Experienced with Python, Django, and relational/non-relational databases."
+  },
+  "githubUsername": "carlosferreyra",
+  "links": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/carlosferreyra"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/eduferreyraok"
+    },
+    {
+      "id": "twitter",
+      "label": "Twitter",
+      "url": "https://twitter.com/eduferreyraok"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio",
+      "url": "https://carlosferreyra.com.ar"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "url": "mailto:eduferreyraok@gmail.com"
+    },
+    {
+      "id": "leetcode",
+      "label": "LeetCode",
+      "url": "https://leetcode.com/u/Coolwinter18/"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": ["Python", "Java", "JavaScript", "TypeScript", "Rust"],
+      "tags": ["all", "backend", "devops"]
+    },
+    {
+      "category": "Cloud",
+      "items": ["GCP", "AWS"],
+      "tags": ["all", "devops", "backend"]
+    },
+    {
+      "category": "Databases",
+      "items": ["MySQL", "MongoDB", "SQLite"],
+      "tags": ["all", "backend"]
+    },
+    {
+      "category": "DevOps & Infra",
+      "items": ["Docker", "CI/CD", "Git", "Linux"],
+      "tags": ["all", "devops"]
+    },
+    {
+      "category": "Frameworks",
+      "items": ["Django", "Web APIs"],
+      "tags": ["all", "backend"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "UTN - FRRe",
+      "period": "March 2024 - Dec 2024",
+      "tags": ["all", "backend", "devops"],
+      "highlights": [
+        "Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity",
+        "Designed and implemented a scalable server architecture and automated workflows to support hundreds of users",
+        "Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency"
+      ]
+    },
+    {
+      "title": "Backend Engineer",
+      "company": "Devlights S.R.L",
+      "period": "March 2021 - Sep 2021",
+      "tags": ["all", "backend"],
+      "highlights": [
+        "Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company",
+        "Implemented a REST-API to automate data collection of the customer",
+        "Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web application"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Information System's Engineering",
+      "institution": "Universidad Tecnologica Nacional",
+      "location": "Argentina",
+      "period": "2015 - 2024",
+      "highlights": [
+        "Relevant coursework: Data Structures, Algorithms, Software Engineering, Databases"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Databricks Data Engineer Associate",
+      "year": 2025,
+      "url": "https://credentials.databricks.com/profile/carlosferreyra/wallet",
+      "tags": ["all", "devops", "backend"]
+    },
+    {
+      "name": "SQL Advanced",
+      "year": 2025,
+      "url": "https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql",
+      "tags": ["all", "backend"]
+    },
+    {
+      "name": "MongoDB - Database Administration",
+      "year": 2025,
+      "url": "https://learn.mongodb.com/c/OE3lXL2WRfa33hpCBtCwEQ",
+      "tags": ["all", "backend"]
+    },
+    {
+      "name": "Oracle Next Education Program",
+      "year": 2025,
+      "url": "https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51",
+      "tags": ["all", "backend"]
+    },
+    {
+      "name": "Amazon Cloud Practitioner Essentials",
+      "year": 2024,
+      "url": "https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view",
+      "tags": ["all", "devops"]
+    },
+    {
+      "name": "Google Associate Cloud Engineer",
+      "year": 2024,
+      "url": "https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile",
+      "tags": ["all", "devops"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Personal Website",
+      "description": "Personal Website Landing Page",
+      "url": "https://www.carlosferreyra.com.ar/",
+      "tags": ["all", "backend"]
+    },
+    {
+      "name": "LeetCode Solutions",
+      "description": "Problem submissions from my LeetCode profile",
+      "url": "https://github.com/carlosferreyra/leetcode",
+      "tags": ["all", "backend"]
+    },
+    {
+      "name": "Kitsune Studios",
+      "description": "Open source projects and experiments",
+      "url": "https://github.com/Kitsune-Studios",
+      "tags": ["all"]
+    },
+    {
+      "name": "Datos Argentina",
+      "description": "Data engineering projects for Argentine public data",
+      "url": "https://github.com/argendata",
+      "tags": ["all", "devops", "backend"]
+    }
+  ],
+  "variants": [
+    {
+      "name": "all",
+      "label": "Full Resume",
+      "contacts": ["portfolio", "github", "linkedin", "email"],
+      "sections": {
+        "about": true,
+        "experience": true,
+        "skills": true,
+        "projects": true,
+        "education": true,
+        "certifications": true
+      }
+    },
+    {
+      "name": "devops",
+      "label": "DevOps Engineer",
+      "contacts": ["github", "linkedin", "email"],
+      "sections": {
+        "about": true,
+        "experience": true,
+        "skills": true,
+        "projects": false,
+        "education": true,
+        "certifications": true
+      }
+    },
+    {
+      "name": "backend",
+      "label": "Backend Engineer",
+      "contacts": ["portfolio", "github", "linkedin", "email"],
+      "sections": {
+        "about": true,
+        "experience": true,
+        "skills": true,
+        "projects": true,
+        "education": true,
+        "certifications": true
+      }
+    }
+  ]
+}
