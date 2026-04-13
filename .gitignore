@@ -234,7 +234,7 @@ cython_debug/
 # Generated artifacts (sources of truth are the .j2 templates)
 silver-dev-cv/cv.typ
 silver-dev-cv/template/
-README.md
+/README.md
 
 # PyPI configuration file
 .pypirc
