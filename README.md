@@ -91,5 +91,5 @@ or just to connect.
 ---
 
 <div align="center">
-  <sub><sup>© 2025 Carlos Ferreyra - MIT License</sup></sub>
+  <sub><sup>© 2026 Carlos Ferreyra - <a href="LICENSE">MIT</a> License</sup></sub>
 </div>
