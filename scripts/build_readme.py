@@ -19,6 +19,7 @@ Usage:
 import argparse
 import json
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
@@ -34,8 +35,12 @@ def build_links(raw: list[dict]) -> dict:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Render README.md from README.md.j2 + resume.json.")
-    parser.add_argument("--out", default="README.md", help="Output path (relative to repo root)")
+    parser = argparse.ArgumentParser(
+        description="Render README.md from README.md.j2 + resume.json."
+    )
+    parser.add_argument(
+        "--out", default="README.md", help="Output path (relative to repo root)"
+    )
     args = parser.parse_args()
 
     repo_root = Path(__file__).parent.parent
@@ -61,8 +66,7 @@ def main() -> None:
 
     # Pre-render skills block with aligned columns
     skills_block = "\n".join(
-        f"{(g['category'] + ':'):<24} {', '.join(g['items'])}"
-        for g in resume["skills"]
+        f"{(g['category'] + ':'):<24} {', '.join(g['items'])}" for g in resume["skills"]
     )
 
     template = env.get_template("README.md.j2")
@@ -76,6 +80,7 @@ def main() -> None:
         education=resume["education"],
         certifications=resume["certifications"],
         projects=resume["projects"],
+        last_update=datetime.now(timezone.utc).strftime("%Y"),
     )
 
     out_path.write_text(output)
