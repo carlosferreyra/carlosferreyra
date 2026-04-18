@@ -86,7 +86,7 @@
 {% endif %}
 
 // ── Projects ─────────────────────────────────────────────────────────────────
-{% if sections.projects %}
+{% if sections.projects -%}
 #section("Projects")
 #for proj in r.projects.filter(include-item) {
   project(
@@ -94,10 +94,12 @@
     date: [],
     description: [#proj.description],
   )
+  // This adds a small vertical space after each project
+  v(0.5em)
 }
 
 #sectionsep
-{% endif %}
+{%- endif %}
 
 // ── Education ────────────────────────────────────────────────────────────────
 {% if sections.education %}
