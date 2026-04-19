@@ -16,7 +16,7 @@ Software Developer/Engineer with a passion for solving complex problems through 
   [Datos Argentina](https://github.com/argendata)
 - 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi),
   [National Technological University](https://www.utn.edu.ar/)
-- 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/Coolwinter18/)
+- 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/carlosferreyra/)
 - 📄 Resume: [PDF](resume/carlos-ferreyra.pdf)
 - 🌐 Portfolio: [carlosferreyra.com.ar](https://carlosferreyra.com.ar)
 - 📍 Based in Argentina
@@ -84,7 +84,7 @@ or just to connect.
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail)](mailto:eduferreyraok@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me)](https://carlosferreyra.com.ar)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/carlosferreyra)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/Coolwinter18/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/carlosferreyra/)
 [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/eduferreyraok)
 [![Google Dev](https://img.shields.io/badge/Google_Dev-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://www.cloudskillsboost.google/public_profiles/326c1a3d-6ac7-4036-b07f-c29bd0be6132)
 
