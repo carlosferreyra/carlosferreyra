@@ -1,0 +1,47 @@
+---
+type Variant = 'primary' | 'ghost' | 'outline';
+
+interface Props {
+	href?: string;
+	variant?: Variant;
+	target?: string;
+	rel?: string;
+	class?: string;
+	ariaLabel?: string;
+}
+
+const {
+	href,
+	variant = 'primary',
+	target,
+	rel,
+	class: className = '',
+	ariaLabel,
+} = Astro.props;
+
+const base =
+	'inline-flex items-center gap-2 px-4 py-2 text-sm font-mono border transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)]';
+
+const variants: Record<Variant, string> = {
+	primary:
+		'bg-accent text-[color:var(--color-bg)] border-accent hover:bg-[color:var(--color-accent-hover)] hover:border-[color:var(--color-accent-hover)]',
+	outline:
+		'bg-transparent text-fg border-border hover:border-accent hover:text-accent',
+	ghost:
+		'bg-transparent text-fg-muted border-transparent hover:text-accent',
+};
+
+const classes = `${base} ${variants[variant]} ${className}`;
+
+const Tag = href ? 'a' : 'button';
+---
+
+<Tag
+	class={classes}
+	href={href}
+	target={target}
+	rel={rel ?? (target === '_blank' ? 'noopener noreferrer' : undefined)}
+	aria-label={ariaLabel}
+>
+	<slot />
+</Tag>

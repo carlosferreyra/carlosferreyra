@@ -1,0 +1,35 @@
+---
+import { t, type Locale } from '~/i18n';
+import { resume } from '~/lib/resume';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-border-muted mt-16">
+	<div class="max-w-4xl mx-auto px-6 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+		<div class="font-mono text-xs text-fg-subtle">
+			<p>© {year} {resume.personalInfo.name}</p>
+			<p>{dict.footer.builtWith}</p>
+		</div>
+		<ul class="flex flex-wrap gap-4 font-mono text-xs">
+			{resume.links.map((link) => (
+				<li>
+					<a
+						href={link.url}
+						target={link.url.startsWith('mailto:') ? undefined : '_blank'}
+						rel="noopener noreferrer"
+						class="text-fg-muted hover:text-accent transition-colors"
+					>
+						{link.label}
+					</a>
+				</li>
+			))}
+		</ul>
+	</div>
+</footer>

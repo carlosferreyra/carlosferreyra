@@ -1,0 +1,14 @@
+{
+	"extends": "astro/tsconfigs/strict",
+	"include": [".astro/types.d.ts", "**/*", "../data/resume.json"],
+	"exclude": ["dist"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["src/*"],
+			"@data/*": ["../data/*"]
+		},
+		"resolveJsonModule": true,
+		"allowImportingTsExtensions": false
+	}
+}

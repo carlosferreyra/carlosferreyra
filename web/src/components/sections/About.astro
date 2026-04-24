@@ -1,0 +1,46 @@
+---
+import Section from '~/components/Section.astro';
+import { t, type Locale } from '~/i18n';
+import { resume } from '~/lib/resume';
+
+interface Props {
+	locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale);
+
+const education = resume.education[0];
+---
+
+<Section id="about" eyebrow="01" title={dict.sections.about}>
+	<div class="grid md:grid-cols-2 gap-8">
+		<p class="text-fg-muted leading-relaxed">
+			{resume.personalInfo.summary}
+		</p>
+		<dl class="font-mono text-sm space-y-2">
+			<div class="flex gap-4">
+				<dt class="text-fg-subtle w-24 shrink-0">location</dt>
+				<dd class="text-fg">{resume.personalInfo.location}</dd>
+			</div>
+			<div class="flex gap-4">
+				<dt class="text-fg-subtle w-24 shrink-0">email</dt>
+				<dd class="text-fg break-all">
+					<a href={`mailto:${resume.personalInfo.email}`} class="hover:text-accent">
+						{resume.personalInfo.email}
+					</a>
+				</dd>
+			</div>
+			{education && (
+				<div class="flex gap-4">
+					<dt class="text-fg-subtle w-24 shrink-0">education</dt>
+					<dd class="text-fg">
+						{education.degree}
+						<span class="block text-fg-subtle text-xs">
+							{education.institution} · {education.period}
+						</span>
+					</dd>
+				</div>
+			)}
+		</dl>
+	</div>
+</Section>

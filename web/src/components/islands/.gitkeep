@@ -1,0 +1,4 @@
+# Islands
+
+Reserved for interactive components (React/Vue/Solid/Svelte/Angular-via-Analog).
+See `web/docs/adding-angular.md` for the Angular integration path.

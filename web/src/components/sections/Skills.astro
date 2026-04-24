@@ -1,0 +1,30 @@
+---
+import Section from '~/components/Section.astro';
+import { t, type Locale } from '~/i18n';
+import { resume } from '~/lib/resume';
+
+interface Props {
+	locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale);
+---
+
+<Section id="skills" eyebrow="02" title={dict.sections.skills}>
+	<ul class="grid md:grid-cols-2 gap-4">
+		{resume.skills.map((group) => (
+			<li class="border border-border-muted bg-elev p-5 hover:border-accent transition-colors">
+				<p class="font-mono text-xs text-fg-subtle uppercase tracking-widest mb-3">
+					{group.category}
+				</p>
+				<ul class="flex flex-wrap gap-2">
+					{group.items.map((item) => (
+						<li class="font-mono text-xs text-fg px-2 py-1 bg-bg border border-border-muted">
+							{item}
+						</li>
+					))}
+				</ul>
+			</li>
+		))}
+	</ul>
+</Section>

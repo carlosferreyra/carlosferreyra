@@ -1,0 +1,112 @@
+---
+import { localePath, t, type Locale } from '~/i18n';
+import { resume } from '~/lib/resume';
+import LanguageToggle from './LanguageToggle.astro';
+import ThemeToggle from './ThemeToggle.astro';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = t(locale);
+
+const navItems = [
+	{ id: 'about', label: dict.nav.about },
+	{ id: 'skills', label: dict.nav.skills },
+	{ id: 'experience', label: dict.nav.experience },
+	{ id: 'projects', label: dict.nav.projects },
+	{ id: 'certifications', label: dict.nav.certifications },
+	{ id: 'contact', label: dict.nav.contact },
+] as const;
+
+const home = localePath(locale);
+---
+
+<header class="sticky top-0 z-40 bg-bg/80 backdrop-blur border-b border-border-muted">
+	<div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between gap-4">
+		<a
+			href={home}
+			class="font-mono text-sm text-fg hover:text-accent transition-colors flex items-center gap-2"
+		>
+			<span class="text-accent">$</span>
+			<span>{resume.personalInfo.name.toLowerCase().replace(/\s+/g, '.')}</span>
+			<span class="animate-pulse text-accent" aria-hidden="true">_</span>
+		</a>
+
+		<nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+			{navItems.map((item) => (
+				<a
+					href={`${home === '/' ? '' : home}#${item.id}`}
+					class="font-mono text-xs text-fg-muted hover:text-accent transition-colors"
+				>
+					{item.label}
+				</a>
+			))}
+		</nav>
+
+		<div class="flex items-center gap-2">
+			<LanguageToggle locale={locale} />
+			<ThemeToggle title={dict.meta.themeToggleTitle} />
+			<button
+				type="button"
+				id="mobile-nav-toggle"
+				class="md:hidden inline-flex items-center justify-center w-9 h-9 border border-border text-fg-muted"
+				aria-label="Open menu"
+				aria-expanded="false"
+				aria-controls="mobile-nav"
+			>
+				<svg
+					class="w-4 h-4"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					aria-hidden="true"
+				>
+					<line x1="3" y1="6" x2="21" y2="6"></line>
+					<line x1="3" y1="12" x2="21" y2="12"></line>
+					<line x1="3" y1="18" x2="21" y2="18"></line>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<nav
+		id="mobile-nav"
+		class="md:hidden hidden border-t border-border-muted"
+		aria-label="Mobile"
+	>
+		<ul class="px-6 py-4 flex flex-col gap-3">
+			{navItems.map((item) => (
+				<li>
+					<a
+						href={`${home === '/' ? '' : home}#${item.id}`}
+						class="block font-mono text-sm text-fg-muted hover:text-accent"
+						data-mobile-link
+					>
+						{item.label}
+					</a>
+				</li>
+			))}
+		</ul>
+	</nav>
+</header>
+
+<script>
+	const toggle = document.getElementById('mobile-nav-toggle');
+	const nav = document.getElementById('mobile-nav');
+	toggle?.addEventListener('click', () => {
+		const open = nav?.classList.toggle('hidden') === false;
+		toggle.setAttribute('aria-expanded', String(open));
+	});
+	document.querySelectorAll<HTMLAnchorElement>('[data-mobile-link]').forEach((link) => {
+		link.addEventListener('click', () => {
+			nav?.classList.add('hidden');
+			toggle?.setAttribute('aria-expanded', 'false');
+		});
+	});
+</script>
