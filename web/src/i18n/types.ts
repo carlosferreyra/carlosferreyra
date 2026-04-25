@@ -37,6 +37,11 @@ export type Dictionary = {
 	meta: {
 		langLabel: string;
 		langSwitchTitle: string;
-		themeToggleTitle: string;
+		theme: {
+			label: string;
+			light: string;
+			system: string;
+			dark: string;
+		};
 	};
 };

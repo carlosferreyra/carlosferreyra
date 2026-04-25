@@ -2,7 +2,7 @@
 import { localePath, t, type Locale } from '~/i18n';
 import { resume } from '~/lib/resume';
 import LanguageToggle from './LanguageToggle.astro';
-import ThemeToggle from './ThemeToggle.astro';
+import ThemePicker from './ThemePicker.astro';
 
 interface Props {
 	locale: Locale;
@@ -47,7 +47,7 @@ const home = localePath(locale);
 
 		<div class="flex items-center gap-2">
 			<LanguageToggle locale={locale} />
-			<ThemeToggle title={dict.meta.themeToggleTitle} />
+			<ThemePicker locale={locale} />
 			<button
 				type="button"
 				id="mobile-nav-toggle"

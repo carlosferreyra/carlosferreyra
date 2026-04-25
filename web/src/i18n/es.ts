@@ -41,6 +41,11 @@ export const es: Dictionary = {
 	meta: {
 		langLabel: 'EN',
 		langSwitchTitle: 'Switch to English',
-		themeToggleTitle: 'Cambiar tema',
+		theme: {
+			label: 'Tema',
+			light: 'Claro',
+			system: 'Sistema',
+			dark: 'Oscuro',
+		},
 	},
 };
