@@ -35,6 +35,9 @@ the shared CV data layer used across projects.
 ## Phase 2 — Portfolio Site
 
 **Stack:** [Astro](https://astro.build/) 5 + Tailwind CSS 4 + TypeScript, static output.
+**Runtime / PM:** [Bun](https://bun.sh) ≥ 1.2 (committed `bun.lock`, `packageManager`
+pinned in `web/package.json`). npm is supported as a fallback but `package-lock.json`
+is intentionally not committed.
 **Location:** `web/` (monorepo-style, co-lives with profile README + `data/resume.json`).
 **Deploy target:** Cloudflare Pages (primary) — enables future Workers/KV/R2/cache extensions.
 GitHub Pages workflow is shipped disabled as a fallback.
@@ -50,7 +53,8 @@ GitHub Pages workflow is shipped disabled as a fallback.
 
 ### MVP scaffold (shipped in this phase)
 
-- [x] Scaffold Astro + Tailwind + TS in `web/`
+- [x] Scaffold Astro + Tailwind + TS in `web/`, **Bun-first** (committed `bun.lock`,
+      `packageManager: bun@…`, `engines.bun ≥ 1.2`)
 - [x] Design system tokens (GitHub-dark bg `#0d1117`, cold-cyan accent `#00b4d8`,
       JetBrains Mono + Inter) via Tailwind theme + CSS custom properties
 - [x] Light/dark theme toggle with OS preference + localStorage persistence

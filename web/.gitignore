@@ -5,6 +5,12 @@ dist/
 # dependencies
 node_modules/
 
+# bun is the canonical package manager — keep bun.lock, ignore other locks
+# so an accidental `npm install` / `pnpm install` / `yarn install` does not drift.
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
 # logs
 npm-debug.log*
 yarn-debug.log*

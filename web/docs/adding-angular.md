@@ -11,7 +11,7 @@ Islands hydrate on demand, so the rest of the page stays static.
 From `web/`:
 
 ```bash
-npx astro add @analogjs/astro-angular
+bunx astro add @analogjs/astro-angular
 ```
 
 The integration writes `tsconfig.app.json` and updates `astro.config.mjs` to
@@ -20,7 +20,7 @@ include the Angular Vite plugin. Accept the prompts.
 If you prefer a manual install:
 
 ```bash
-npm install -D @analogjs/astro-angular @angular/common @angular/compiler @angular/core @angular/platform-browser @angular-devkit/build-angular
+bun add -d @analogjs/astro-angular @angular/common @angular/compiler @angular/core @angular/platform-browser @angular-devkit/build-angular
 ```
 
 Then register the integration in `astro.config.mjs`:
@@ -102,5 +102,5 @@ stays in Astro. Move to Angular only when you need:
 - Angular's zone.js can conflict with Astro's islands on older versions;
   `@analogjs/astro-angular` 1.x targets Angular 18+ with zoneless signals —
   stay on that track.
-- The Cloudflare Pages workflow already runs `npm run build`, which invokes
+- The Cloudflare Pages workflow already runs `bun run build`, which invokes
   `astro build` — no extra Angular-specific step is required.

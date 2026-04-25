@@ -28,19 +28,19 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v5
+      # Bun is the default runtime / package manager for web/.
+      # See web/README.md for the npm fallback if ever needed.
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: web/package-lock.json
+          bun-version-file: web/package.json
 
       - name: Install dependencies
         working-directory: web
-        run: npm ci || npm install
+        run: bun install --frozen-lockfile
 
       - name: Build
         working-directory: web
-        run: npm run build
+        run: bun run build
 
       # Requires repo secrets:
       #   CLOUDFLARE_API_TOKEN  (scope: Account > Cloudflare Pages:Edit)
