@@ -18,76 +18,69 @@ the shared CV data layer used across projects.
 
 **Goal:** Clean & minimal profile that lets backend/data/devops work speak for itself.
 
-- [ ] Promote `docs/README.md` to root `README.md`
+- [x] Promote `docs/README.md` to root `README.md`
   - GitHub renders root `README.md` as the public profile page
   - Structure: brief intro → skills table → pinned projects → stats → contact
   - Keep prose minimal — let badges, stats, and pinned repos carry the weight
-- [ ] Add GitHub Stats widgets (top-right or bottom section)
+- [x] Add GitHub Stats widgets (top-right or bottom section)
   - [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) — general stats card
-  - Streak stats — contribution streak
-  - GitHub trophies — optional, only if they don't clutter
-  - Use `&theme=` to match a clean dark or monochrome palette
-- [ ] Verify profile view counter badge is active (komainu)
-- [ ] Pin 4–6 repos that best represent backend, data, and devops work
-- [ ] Keep `CNAME` pointing to `carlosferreyra.com.ar`
+  - Activity graph — contribution history
+  - Use `&theme=dark` with `hide_border=true` for a clean monochrome palette
+- [x] Verify profile view counter badge is active (komarev)
+- [ ] Pin 4–6 repos that best represent backend, data, and devops work _(account-level setting, not tracked in repo)_
+- [x] Keep `CNAME` pointing to `carlosferreyra.com.ar`
 
 ---
 
-## Phase 2 — GitHub Pages Portfolio
+## Phase 2 — Portfolio Site
 
-**Stack recommendation:** [Astro](https://astro.build/) with Tailwind CSS
+**Stack:** [Astro](https://astro.build/) 5 + Tailwind CSS 4 + TypeScript, static output.
+**Runtime / PM:** [Bun](https://bun.sh) ≥ 1.2 (committed `bun.lock`, `packageManager`
+pinned in `web/package.json`). npm is supported as a fallback but `package-lock.json`
+is intentionally not committed.
+**Location:** `web/` (monorepo-style, co-lives with profile README + `data/resume.json`).
+**Deploy target:** Cloudflare Pages (primary) — enables future Workers/KV/R2/cache extensions.
+GitHub Pages workflow is shipped disabled as a fallback.
 
 **Why Astro over Angular for a portfolio:**
 
 - Ships zero JS by default — fast, SEO-friendly, ideal for static portfolio content
-- Component islands allow interactive sections (e.g. contact form, filters) without a full SPA
+- Component islands allow interactive sections without a full SPA
 - Native Markdown/MDX support — easy to add case studies or blog posts later
-- Angular is better suited for app-like projects; for a content-first portfolio, Astro wins
 
-**If you later want Angular components** (e.g. a live dashboard or interactive project demo), embed
-them as Astro islands using `@analogjs/astro-angular`.
+**Angular-ready:** when an interactive demo is needed, drop `@analogjs/astro-angular` per
+`web/docs/adding-angular.md`. Islands live under `src/components/islands/`.
 
-- [ ] Scaffold Astro project
+### MVP scaffold (shipped in this phase)
 
-  ```bash
-  npm create astro@latest -- --template minimal
-  npx astro add tailwind
-  ```
+- [x] Scaffold Astro + Tailwind + TS in `web/`, **Bun-first** (committed `bun.lock`,
+      `packageManager: bun@…`, `engines.bun ≥ 1.2`)
+- [x] Design system tokens (GitHub-dark bg `#0d1117`, cold-cyan accent `#00b4d8`,
+      JetBrains Mono + Inter) via Tailwind theme + CSS custom properties
+- [x] Light/dark theme toggle with OS preference + localStorage persistence
+- [x] i18n: English default at `/`, Spanish at `/es/`, shared dictionary in `src/i18n/`
+- [x] Layout primitives: `Header` (logo, nav, theme toggle, lang toggle), `Footer`,
+      `Button`, `Section`, `SkillGroup`, `ExperienceItem`, `ProjectCard`, `CertificationItem`
+- [x] Sections wired to `data/resume.json`: Hero, About, Skills, Experience, Projects,
+      Certifications, Contact
+- [x] `ProjectCard` renders optional `thumbnail` / `demo` (schema extension — see below);
+      falls back to monospace card when absent
+- [x] `data/resume.schema.json` — JSON Schema documenting required fields + the new
+      optional `projects[].thumbnail` and `projects[].demo` (non-breaking)
+- [x] Cloudflare Pages workflow (`.github/workflows/deploy-cloudflare.yml`)
+- [x] GitHub Pages workflow shipped disabled
+      (`.github/workflows/deploy-pages.yml.disabled`)
+- [x] `web/README.md` — dev, build, deploy instructions
+- [x] `web/docs/adding-angular.md` — Analog.js migration path
 
-- [ ] Build portfolio sections (all data-driven from `resume.json`):
-  - Hero — name, title, one-line positioning (backend / data / devops)
-  - About — short bio, no fluff
-  - Skills — grouped by domain (Backend, Data, DevOps/Cloud, Languages)
-  - Experience — timeline, fetched from `resume.json`
-  - Projects — filterable by tag (backend / data / devops / OSS)
-  - Certifications — from `resume.json`
-  - Contact — links from `resume.json`
-- [ ] At build time, fetch `resume.json` from raw GitHub URL and inject into Astro content layer
+### Post-MVP (follow-ups)
 
-  ```ts
-  // astro.config.mjs or a content loader
-  const resume = await fetch(
-  	'https://raw.githubusercontent.com/carlosferreyra/carlosferreyra/main/resume.json'
-  ).then((r) => r.json());
-  ```
-
-- [ ] Implement design system — "devops professional" aesthetic:
-  - **Theme:** Dark background (`#0d1117` GitHub-dark or similar), not pure black
-  - **Accent:** Single color — cold cyan (`#00b4d8`) or terminal green (`#39ff14`), used sparingly
-  - **Typography:** Monospace for labels, code snippets, and section headers (e.g. `JetBrains Mono`,
-    `IBM Plex Mono`); clean sans-serif for body (e.g. `Inter`, `DM Sans`)
-  - **Motion:** Subtle only — fade-in on scroll, no parallax, no flashy transitions
-  - **UI motifs:** Terminal-style command prompt for the hero tagline, pipeline/flow diagrams for
-    the skills section, grid layout for projects (not cards with heavy shadows)
-  - **No:** gradients, illustrations, stock icons, purple anything
-- [ ] Configure custom domain via existing `CNAME` (`carlosferreyra.com.ar`)
-- [ ] Set up GitHub Actions for auto-deploy on push to `main`
-
-  ```yaml
-  # .github/workflows/deploy.yml
-  uses: withastro/action@v2
-  # then: actions/deploy-pages
-  ```
+- [ ] Populate `projects[].thumbnail` / `projects[].demo` for existing entries
+- [ ] Switch data source to raw GitHub URL once Phase 3 publishes canonical `resume.json`
+- [ ] Configure `carlosferreyra.com.ar` DNS → Cloudflare Pages project
+- [ ] Add contact form as an island (Turnstile + Cloudflare Worker or Formspree)
+- [ ] Add tag filter on projects (backend / devops / fullstack / cli)
+- [ ] Blog/case-studies (MDX under `src/content/blog/`)
 
 ---
 

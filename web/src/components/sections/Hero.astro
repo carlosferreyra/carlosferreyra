@@ -1,0 +1,51 @@
+---
+import Button from '~/components/Button.astro';
+import { localePath, t, type Locale } from '~/i18n';
+import { linkById, resume } from '~/lib/resume';
+
+interface Props {
+	locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale);
+const home = localePath(locale);
+
+const github = linkById('github');
+---
+
+<section class="pt-20 pb-12">
+	<div class="max-w-4xl mx-auto px-6">
+		<div class="font-mono text-xs text-fg-subtle mb-4">
+			<span class="text-accent">~</span>
+			<span> /{resume.githubUsername} </span>
+			<span class="text-fg-subtle">$</span>
+			<span class="text-fg"> {dict.hero.prompt}</span>
+		</div>
+
+		<h1 class="font-mono text-3xl md:text-5xl text-fg leading-tight mb-4">
+			{resume.personalInfo.name}
+		</h1>
+
+		<p class="font-mono text-sm md:text-base text-accent mb-6">
+			{resume.personalInfo.title} <span class="text-fg-subtle">// {dict.hero.tagline}</span>
+		</p>
+
+		<p class="text-fg-muted max-w-2xl mb-8 leading-relaxed">
+			{resume.personalInfo.summary}
+		</p>
+
+		<div class="flex flex-wrap gap-3">
+			<Button href={`${home === '/' ? '' : home}#projects`} variant="primary">
+				<span>→</span> {dict.hero.cta.projects}
+			</Button>
+			<Button href={`${home === '/' ? '' : home}#contact`} variant="outline">
+				{dict.hero.cta.contact}
+			</Button>
+			{github && (
+				<Button href={github.url} target="_blank" variant="ghost">
+					{github.label} ↗
+				</Button>
+			)}
+		</div>
+	</div>
+</section>

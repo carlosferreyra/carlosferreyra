@@ -1,0 +1,79 @@
+---
+import { t, type Locale } from '~/i18n';
+import type { Project } from '~/lib/resume';
+
+interface Props {
+	project: Project;
+	locale: Locale;
+}
+
+const { project, locale } = Astro.props;
+const dict = t(locale);
+---
+
+<article class="group border border-border-muted bg-elev hover:border-accent transition-colors flex flex-col overflow-hidden">
+	{project.thumbnail ? (
+		<a
+			href={project.demo ?? project.url ?? '#'}
+			target={project.demo || project.url ? '_blank' : undefined}
+			rel="noopener noreferrer"
+			class="block aspect-video bg-inset border-b border-border-muted overflow-hidden"
+			aria-label={project.name}
+		>
+			<img
+				src={project.thumbnail}
+				alt={`${project.name} preview`}
+				loading="lazy"
+				decoding="async"
+				class="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
+			/>
+		</a>
+	) : (
+		<div
+			class="aspect-video bg-inset border-b border-border-muted flex items-center justify-center font-mono text-xs text-fg-subtle"
+			aria-hidden="true"
+		>
+			<span class="text-accent mr-2">$</span> cat {project.name.toLowerCase().replace(/\s+/g, '-')}.md
+		</div>
+	)}
+
+	<div class="p-5 flex flex-col flex-1">
+		<h3 class="font-mono text-fg text-base mb-2">{project.name}</h3>
+		<p class="text-fg-muted text-sm leading-relaxed mb-4 flex-1">{project.description}</p>
+
+		{project.tags && project.tags.length > 0 && (
+			<ul class="flex flex-wrap gap-1.5 mb-4">
+				{project.tags
+					.filter((tag) => tag !== 'all')
+					.map((tag) => (
+						<li class="font-mono text-[10px] uppercase tracking-wider text-fg-subtle px-1.5 py-0.5 border border-border-muted">
+							{tag}
+						</li>
+					))}
+			</ul>
+		)}
+
+		<div class="flex gap-3 font-mono text-xs">
+			{project.url && (
+				<a
+					href={project.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-fg-muted hover:text-accent transition-colors"
+				>
+					{dict.projects.viewCode} ↗
+				</a>
+			)}
+			{project.demo && (
+				<a
+					href={project.demo}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-accent hover:text-[color:var(--color-accent-hover)] transition-colors"
+				>
+					{dict.projects.viewDemo} ↗
+				</a>
+			)}
+		</div>
+	</div>
+</article>

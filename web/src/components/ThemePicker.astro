@@ -1,0 +1,153 @@
+---
+import { t, type Locale } from '~/i18n';
+
+interface Props {
+	locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale).meta.theme;
+
+// Default SSR state assumes 'system' — the inline pre-paint script in
+// BaseLayout overwrites data-theme-pref before the user can see anything,
+// and the picker's <script> syncs aria-checked on mount.
+---
+
+<div
+	class="inline-flex items-center border border-border h-9 p-0.5 gap-0.5"
+	role="radiogroup"
+	aria-label={dict.label}
+	data-theme-picker
+>
+	<button
+		type="button"
+		role="radio"
+		aria-checked="false"
+		data-pref="light"
+		class="theme-pref-btn"
+		aria-label={dict.light}
+		title={dict.light}
+	>
+		<svg
+			class="w-3.5 h-3.5"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			aria-hidden="true"
+		>
+			<circle cx="12" cy="12" r="4"></circle>
+			<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+		</svg>
+	</button>
+
+	<button
+		type="button"
+		role="radio"
+		aria-checked="true"
+		data-pref="system"
+		class="theme-pref-btn"
+		aria-label={dict.system}
+		title={dict.system}
+	>
+		<svg
+			class="w-3.5 h-3.5"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			aria-hidden="true"
+		>
+			<rect x="2" y="3" width="20" height="14" rx="2"></rect>
+			<line x1="8" y1="21" x2="16" y2="21"></line>
+			<line x1="12" y1="17" x2="12" y2="21"></line>
+		</svg>
+	</button>
+
+	<button
+		type="button"
+		role="radio"
+		aria-checked="false"
+		data-pref="dark"
+		class="theme-pref-btn"
+		aria-label={dict.dark}
+		title={dict.dark}
+	>
+		<svg
+			class="w-3.5 h-3.5"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			aria-hidden="true"
+		>
+			<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+		</svg>
+	</button>
+</div>
+
+<style>
+	.theme-pref-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.75rem;
+		height: 1.75rem;
+		color: var(--color-fg-subtle);
+		background-color: transparent;
+		transition: background-color 150ms, color 150ms;
+		cursor: pointer;
+	}
+	.theme-pref-btn:hover {
+		color: var(--color-accent);
+	}
+	.theme-pref-btn:focus-visible {
+		outline: 2px solid var(--color-accent);
+		outline-offset: 1px;
+	}
+
+	/* Active segment matches current preference (set on <html> by theme-init). */
+	:root[data-theme-pref='light'] .theme-pref-btn[data-pref='light'],
+	:root[data-theme-pref='system'] .theme-pref-btn[data-pref='system'],
+	:root[data-theme-pref='dark'] .theme-pref-btn[data-pref='dark'] {
+		background-color: var(--color-accent-muted);
+		color: var(--color-accent);
+	}
+</style>
+
+<script>
+	import { apply, getPref, watchStorage, watchSystem } from '~/scripts/theme';
+	import type { ThemePref } from '~/scripts/theme';
+
+	const buttons = document.querySelectorAll<HTMLButtonElement>(
+		'[data-theme-picker] [data-pref]',
+	);
+
+	function syncAria() {
+		const pref = getPref();
+		buttons.forEach((btn) => {
+			btn.setAttribute('aria-checked', String(btn.dataset.pref === pref));
+		});
+	}
+
+	syncAria();
+
+	buttons.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			const pref = btn.dataset.pref as ThemePref;
+			apply(pref);
+			syncAria();
+		});
+	});
+
+	watchSystem();
+	watchStorage();
+</script>

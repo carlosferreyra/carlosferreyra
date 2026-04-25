@@ -1,0 +1,180 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://carlosferreyra.com.ar/schemas/resume.schema.json",
+	"title": "Carlos Ferreyra — Resume",
+	"description": "Canonical schema for data/resume.json. Consumer projects (profile README builder, Typst CV, portfolio site) all validate against this contract.",
+	"type": "object",
+	"additionalProperties": false,
+	"required": ["personalInfo", "githubUsername", "links", "skills", "experience", "education", "certifications", "projects"],
+	"properties": {
+		"personalInfo": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["name", "title", "email", "location", "summary"],
+			"properties": {
+				"name": { "type": "string" },
+				"title": { "type": "string" },
+				"email": { "type": "string", "format": "email" },
+				"location": { "type": "string" },
+				"summary": { "type": "string" }
+			}
+		},
+		"summaries": {
+			"type": "object",
+			"description": "Optional per-variant summary overrides, keyed by variant name.",
+			"additionalProperties": { "type": "string" }
+		},
+		"githubUsername": { "type": "string" },
+		"links": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/link" }
+		},
+		"skills": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/skillGroup" }
+		},
+		"experience": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/experience" }
+		},
+		"education": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/education" }
+		},
+		"certifications": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/certification" }
+		},
+		"projects": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/project" }
+		},
+		"variants": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/variant" }
+		}
+	},
+	"$defs": {
+		"link": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["id", "label", "url"],
+			"properties": {
+				"id": { "type": "string" },
+				"label": { "type": "string" },
+				"url": { "type": "string" }
+			}
+		},
+		"skillGroup": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["category", "items"],
+			"properties": {
+				"category": { "type": "string" },
+				"items": {
+					"type": "array",
+					"items": { "type": "string" }
+				},
+				"tags": {
+					"type": "array",
+					"items": { "type": "string" }
+				}
+			}
+		},
+		"experience": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["title", "company", "period", "highlights"],
+			"properties": {
+				"title": { "type": "string" },
+				"company": { "type": "string" },
+				"period": { "type": "string" },
+				"highlights": {
+					"type": "array",
+					"items": { "type": "string" }
+				},
+				"tags": {
+					"type": "array",
+					"items": { "type": "string" }
+				}
+			}
+		},
+		"education": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["degree", "institution", "period"],
+			"properties": {
+				"degree": { "type": "string" },
+				"institution": { "type": "string" },
+				"location": { "type": "string" },
+				"period": { "type": "string" },
+				"highlights": {
+					"type": "array",
+					"items": { "type": "string" }
+				},
+				"tags": {
+					"type": "array",
+					"items": { "type": "string" }
+				}
+			}
+		},
+		"certification": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["name", "year"],
+			"properties": {
+				"name": { "type": "string" },
+				"year": { "type": "integer", "minimum": 1970 },
+				"url": { "type": "string" },
+				"tags": {
+					"type": "array",
+					"items": { "type": "string" }
+				}
+			}
+		},
+		"project": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["name", "description"],
+			"properties": {
+				"name": { "type": "string" },
+				"description": { "type": "string" },
+				"url": {
+					"type": "string",
+					"description": "Primary URL — typically the source repo."
+				},
+				"tags": {
+					"type": "array",
+					"items": { "type": "string" }
+				},
+				"thumbnail": {
+					"type": "string",
+					"description": "Optional preview image for the portfolio project card. Relative path under web/public/ or an absolute URL. Added by the portfolio site (Phase 2); does not affect the profile README or Typst CV builders.",
+					"examples": ["/projects/leetcode.png", "https://example.com/preview.webp"]
+				},
+				"demo": {
+					"type": "string",
+					"description": "Optional live-demo URL (distinct from `url`, which points at source). Added by the portfolio site (Phase 2); ignored by other consumers.",
+					"examples": ["https://demo.example.com"]
+				}
+			}
+		},
+		"variant": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["name", "label", "contacts", "sections"],
+			"properties": {
+				"name": { "type": "string" },
+				"label": { "type": "string" },
+				"contacts": {
+					"type": "array",
+					"items": { "type": "string" }
+				},
+				"sections": {
+					"type": "object",
+					"additionalProperties": { "type": "boolean" }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+name: Deploy Portfolio (Cloudflare Pages)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'data/resume.json'
+      - 'data/resume.schema.json'
+      - '.github/workflows/deploy-cloudflare.yml'
+  workflow_dispatch:
+
+# Concurrency: newer runs on the same ref cancel older in-flight ones.
+concurrency:
+  group: deploy-cloudflare-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: cloudflare-pages
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      # Bun is the default runtime / package manager for web/.
+      # See web/README.md for the npm fallback if ever needed.
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: web/package.json
+
+      - name: Install dependencies
+        working-directory: web
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        working-directory: web
+        run: bun run build
+
+      # Requires repo secrets:
+      #   CLOUDFLARE_API_TOKEN  (scope: Account > Cloudflare Pages:Edit)
+      #   CLOUDFLARE_ACCOUNT_ID
+      # And a Pages project named `carlosferreyra` (or edit projectName below).
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy web/dist --project-name=carlosferreyra --branch=main

@@ -1,0 +1,62 @@
+# GitHub Pages fallback deploy workflow — shipped DISABLED.
+#
+# Cloudflare Pages is the primary deploy target (see deploy-cloudflare.yml).
+# To switch to GitHub Pages:
+#   1. Rename this file to `deploy-pages.yml` (drop the `.disabled` suffix).
+#   2. Disable or delete `deploy-cloudflare.yml` so both don't race.
+#   3. In repo Settings → Pages, set Source = "GitHub Actions".
+#   4. Point the CNAME record to `<user>.github.io` (or remove custom domain).
+
+name: Deploy Portfolio (GitHub Pages)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'data/resume.json'
+      - 'data/resume.schema.json'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      # Bun is the default runtime / package manager for web/.
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: web/package.json
+
+      - name: Install dependencies
+        working-directory: web
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        working-directory: web
+        run: bun run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
