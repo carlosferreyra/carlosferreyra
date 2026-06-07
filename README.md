@@ -1,6 +1,6 @@
 # Carlos E. Ferreyra
 
-> Software Engineer & Developer
+> Software Engineer
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/eduferreyraok)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail)](mailto:eduferreyraok@gmail.com)
@@ -10,7 +10,8 @@
 
 ## About Me
 
-Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering.
+Software Developer/Engineer with a passion for solving complex problems through elegant code.
+Experienced in backend development, API design, process automation, and data engineering.
 
 - 🔭 Working on: [Kitsune Studios](https://github.com/Kitsune-Studios) &
   [Datos Argentina](https://github.com/argendata)
@@ -25,23 +26,26 @@ Software Developer/Engineer with a passion for solving complex problems through 
 
 ```bash
 Languages:               Python, Java, JavaScript, TypeScript, Rust
-Cloud:                   GCP, AWS
 Databases:               MySQL, MongoDB, SQLite
-DevOps & Infra:          Docker, CI/CD, Git, Linux
 Frameworks:              Django, Web APIs, REST
+Cloud:                   GCP, AWS
 ```
 
 ## Professional Experience
 
 - **Software Engineer** | UTN - FRRe | March 2024 - Dec 2024
-  - Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity
-  - Designed and implemented a scalable server architecture and automated workflows to support hundreds of users
-  - Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency
+  - Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize
+    processes, and maximize productivity
+  - Designed and implemented a scalable server architecture and automated workflows to support
+    hundreds of users
+  - Collaborated with the financial department to streamline operational processes, resulting in a
+    10% reduction in costs and a 50% increase in efficiency
 
 - **Backend Engineer** | Devlights S.R.L | March 2021 - Sep 2021
   - Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company
   - Implemented a REST-API to automate data collection of the customer
-  - Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web application
+  - Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web
+    application
 
 ## Education
 
@@ -51,9 +55,10 @@ Frameworks:              Django, Web APIs, REST
 ## Projects
 
 - [Personal Website](https://www.carlosferreyra.com.ar/) - Personal Website Landing Page
-- [LeetCode Solutions](https://github.com/carlosferreyra/leetcode) - Problem submissions from my LeetCode profile
-- [Kitsune Studios](https://github.com/Kitsune-Studios) - Open source projects and experiments
-- [Datos Argentina](https://github.com/argendata) - Data engineering projects for Argentine public data
+- [LeetCode Solutions](https://github.com/carlosferreyra/leetcode) - Problem submissions from my
+  LeetCode profile
+- [Datos Argentina](https://github.com/argendata) - Data engineering projects for Argentine public
+  data
 
 ## Certifications
 
@@ -61,8 +66,6 @@ Frameworks:              Django, Web APIs, REST
 - [SQL Advanced (2025)](https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql)
 - [MongoDB - Database Administration (2025)](https://learn.mongodb.com/c/OE3lXL2WRfa33hpCBtCwEQ)
 - [Oracle Next Education Program (2025)](https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51)
-- [Amazon Cloud Practitioner Essentials (2024)](https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view)
-- [Google Associate Cloud Engineer (2024)](https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile)
 
 ## GitHub Stats
 

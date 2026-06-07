@@ -1,4 +1,13 @@
-import resumeData from '@data/resume.json';
+import resumesData from '@data/resumes.json';
+
+// The public site renders the `carlos-ferreyra` combo (see data/dev.json) —
+// resolved by scripts/resume_build.py into data/resumes.json. Selecting it here
+// keeps git as the single source of truth (no hand-edited data/resume.json).
+const PUBLIC_SLUG = 'carlos-ferreyra';
+const resumeData = resumesData.resumes.find((r) => r.slug === PUBLIC_SLUG);
+if (!resumeData) {
+	throw new Error(`resumes.json missing required resume slug "${PUBLIC_SLUG}"`);
+}
 
 export type Link = {
 	id: string;
@@ -45,7 +54,7 @@ export type SkillGroup = {
 	tags?: string[];
 };
 
-export type Resume = typeof resumeData;
+export type Resume = NonNullable<typeof resumeData>;
 
 export const resume = resumeData as unknown as {
 	personalInfo: {

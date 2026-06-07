@@ -92,7 +92,7 @@ def main() -> int:
     combos = {
         p.stem: load(p)
         for p in sorted(DATA.glob("*.json"))
-        if p.stem not in {"baseline", "resumes", "resume", "resume.schema"}
+        if p.stem not in {"baseline", "resumes", "resume"}
         and "extends" in load(p)
     }
 
