@@ -1,0 +1,49 @@
+name: Build Resume (rxresu.me + PDF)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/baseline.json'
+      - 'data/stacks/**'
+      - 'data/*.json'
+      - 'silver-dev-cv/cv.typ.j2'
+      - 'scripts/resume_build.py'
+      - 'scripts/resume_push.py'
+      - 'scripts/resume_pdf.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v8.0.0
+
+      - uses: typst-community/setup-typst@v5.1.0
+        with:
+          typst-version: ^0.14.0
+          cache-local-packages: true
+
+      - name: Resolve baseline + stacks + combos -> data/resumes.json
+        run: uv run scripts/resume_build.py
+
+      - name: Build PDF resumes (Typst + silver-dev-cv)
+        run: uv run scripts/resume_pdf.py
+
+      - name: Push resolved resumes to rxresu.me
+        env:
+          RXRESUME_BASE_URL: https://rxresu.me/api/openapi
+          RXRESUME_TOKEN: ${{ secrets.RXRESUME_TOKEN }}
+        run: uv run scripts/resume_push.py --apply
+
+      - name: Commit generated resumes.json + PDFs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: data/resumes.json resume/*.pdf
+          commit_message: 'chore: rebuild resume data, PDFs & push to rxresu.me [skip ci]'

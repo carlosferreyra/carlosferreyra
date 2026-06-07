@@ -1,0 +1,27 @@
+{
+  "personalInfo": { "title": "DevOps Engineer" },
+  "summary": "Platform and DevOps engineer experienced in cloud infrastructure, CI/CD pipelines, and automation at scale. Proficient with GCP, AWS, and container orchestration.",
+  "skills": [
+    { "category": "Languages", "items": ["Python", "Java", "JavaScript", "TypeScript", "Rust"] },
+    { "category": "Cloud", "items": ["GCP", "AWS"] },
+    { "category": "DevOps & Infra", "items": ["Docker", "CI/CD", "Git", "Linux"] }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "UTN - FRRe",
+      "period": "March 2024 - Dec 2024",
+      "highlights": [
+        "Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity",
+        "Designed and implemented a scalable server architecture and automated workflows to support hundreds of users",
+        "Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency"
+      ]
+    }
+  ],
+  "certifications": [
+    { "name": "Databricks Data Engineer Associate", "year": 2025, "url": "https://credentials.databricks.com/profile/carlosferreyra/wallet" },
+    { "name": "Amazon Cloud Practitioner Essentials", "year": 2024, "url": "https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view" },
+    { "name": "Google Associate Cloud Engineer", "year": 2024, "url": "https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile" }
+  ],
+  "projects": null
+}
