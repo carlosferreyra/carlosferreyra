@@ -1,0 +1,124 @@
+{
+  "default": {
+    "metadata": {
+      "template": "kakuna",
+      "layout": {
+        "sidebarWidth": 35,
+        "pages": [
+          {
+            "fullWidth": false,
+            "main": [
+              "summary",
+              "experience",
+              "skills",
+              "projects",
+              "certifications",
+              "education",
+              "profiles"
+            ],
+            "sidebar": []
+          }
+        ]
+      },
+      "page": {
+        "gapX": 2,
+        "gapY": 6,
+        "marginX": 20,
+        "marginY": 14,
+        "format": "a4",
+        "locale": "en-US",
+        "hideLinkUnderline": false,
+        "hideIcons": false,
+        "hideSectionIcons": true
+      },
+      "design": {
+        "level": {
+          "icon": "star",
+          "type": "circle"
+        },
+        "colors": {
+          "primary": "rgba(0, 0, 0, 1)",
+          "text": "rgba(0, 0, 0, 1)",
+          "background": "rgba(255, 255, 255, 1)"
+        }
+      },
+      "typography": {
+        "body": {
+          "fontFamily": "Open Sans",
+          "fontWeights": [
+            "400",
+            "800"
+          ],
+          "fontSize": 9,
+          "lineHeight": 1.25
+        },
+        "heading": {
+          "fontFamily": "Open Sans",
+          "fontWeights": [
+            "800"
+          ],
+          "fontSize": 12,
+          "lineHeight": 1.25
+        }
+      },
+      "notes": "",
+      "styleRules": []
+    },
+    "sectionMeta": {
+      "summary": {
+        "title": "Summary",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "experience": {
+        "title": "Work Experience",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "skills": {
+        "title": "Skills",
+        "icon": "",
+        "columns": 2,
+        "hidden": false
+      },
+      "projects": {
+        "title": "Projects",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "certifications": {
+        "title": "Certifications",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "education": {
+        "title": "Education",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "profiles": {
+        "title": "Profiles",
+        "icon": "",
+        "columns": 1,
+        "hidden": true
+      }
+    },
+    "picture": {
+      "hidden": true,
+      "url": "https://avatars.githubusercontent.com/u/48495214?v=4",
+      "size": 93,
+      "rotation": 0,
+      "aspectRatio": 1,
+      "borderRadius": 100,
+      "borderColor": "rgba(0, 0, 0, 0.5)",
+      "borderWidth": 1,
+      "shadowColor": "rgba(0, 0, 0, 0.5)",
+      "shadowWidth": 0
+    }
+  }
+}

@@ -1,240 +1,121 @@
 # Roadmap — carlosferreyra/carlosferreyra
 
-This document tracks the setup and evolution of my GitHub profile repo, GitHub Pages portfolio, and
-the shared CV data layer used across projects.
+This repo is the single source of truth for my professional data. From one hand-edited data layer it
+generates: the GitHub profile README, a portfolio site, PDF resumes, and hosted resumes on
+[rxresu.me](https://rxresu.me).
+
+For the concrete open task list, see [BACKLOG.md](BACKLOG.md). This document describes the
+**architecture** and its **maintenance principles**.
 
 ---
 
-## Priority Order
+## Architecture
 
-1. **Phase 1** — GitHub Profile README (ship first)
-2. **Phase 3** — `resume.json` schema + CV PDF generation
-3. **Phase 2** — Portfolio site
-4. **Phase 4** — Ongoing maintenance
+```text
+data/baseline.json          common core (hand-edited)
+data/stacks/<stack>.json    per-stack deltas: backend, cli, devops, fullstack
+data/<combo>.json           combos: { extends: [stacks], slug, ...overrides }
+        │
+        │  scripts/resume_build.py  (resolve + merge)
+        ▼
+data/resumes.json           generated — DO NOT EDIT; the stable contract
+        │
+        ├─ scripts/resume_pdf.py   ─▶ resume/*.pdf            (Typst + silver-dev-cv)
+        ├─ scripts/resume_push.py  ─▶ rxresu.me/<user>/<slug> (hosted renderer)
+        ├─ scripts/build_readme.py ─▶ README.md               (from README.md.j2)
+        └─ web/ (Astro)            ─▶ portfolio site           (imports resumes.json)
+```
+
+### Merge semantics (`resume_build.py`)
+
+Stack deltas override `baseline.json`:
+
+- scalar / list → **replace**
+- dict → **deep-merge**
+- `null` → **hide** that section
+- absent → **inherit** from baseline
+
+Combos (`extends: [...]`) **union** list sections (deduped) across the extended stacks, then apply
+scalar overrides on top.
+
+### The contract
+
+`data/resumes.json` is the only thing consumers read. PDF, rxresu.me, README, and the Astro site
+never touch `baseline`/stacks directly. Lock its shape and a new output is just a new consumer of
+the same JSON — no change to the data layer.
+
+> JSON (not YAML/TOML) keeps compatibility with Typst, rxresu.me, raw fetch, and any future
+> consumer. The shape mirrors [JSON Resume](https://jsonresume.org/schema) where practical.
 
 ---
 
-## Phase 1 — GitHub Profile README
+## Current variants (slugs)
 
-**Goal:** Clean & minimal profile that lets backend/data/devops work speak for itself.
+| Slug              | Source                                       | Output                                 |
+| ----------------- | -------------------------------------------- | -------------------------------------- |
+| `carlos-ferreyra` | `data/dev.json` (combo: fullstack + backend) | `resume/carlos-ferreyra.pdf`           |
+| `backend`         | `data/stacks/backend.json`                   | `resume/carlos-ferreyra-backend.pdf`   |
+| `fullstack`       | `data/stacks/fullstack.json`                 | `resume/carlos-ferreyra-fullstack.pdf` |
+| `devops`          | `data/stacks/devops.json`                    | `resume/carlos-ferreyra-devops.pdf`    |
+| `cli`             | `data/stacks/cli.json`                       | `resume/carlos-ferreyra-cli.pdf`       |
 
-- [x] Promote `docs/README.md` to root `README.md`
-  - GitHub renders root `README.md` as the public profile page
-  - Structure: brief intro → skills table → pinned projects → stats → contact
-  - Keep prose minimal — let badges, stats, and pinned repos carry the weight
-- [x] Add GitHub Stats widgets (top-right or bottom section)
-  - [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) — general stats card
-  - Activity graph — contribution history
-  - Use `&theme=dark` with `hide_border=true` for a clean monochrome palette
-- [x] Verify profile view counter badge is active (komarev)
-- [ ] Pin 4–6 repos that best represent backend, data, and devops work _(account-level setting, not tracked in repo)_
-- [x] Keep `CNAME` pointing to `carlosferreyra.com.ar`
+See [data/README.md](data/README.md) for the field-level reference and how to add a stack or combo.
 
 ---
 
-## Phase 2 — Portfolio Site
+## CI / CD
 
-**Stack:** [Astro](https://astro.build/) 5 + Tailwind CSS 4 + TypeScript, static output.
-**Runtime / PM:** [Bun](https://bun.sh) ≥ 1.2 (committed `bun.lock`, `packageManager`
-pinned in `web/package.json`). npm is supported as a fallback but `package-lock.json`
-is intentionally not committed.
-**Location:** `web/` (monorepo-style, co-lives with profile README + `data/resume.json`).
-**Deploy target:** Cloudflare Pages (primary) — enables future Workers/KV/R2/cache extensions.
-GitHub Pages workflow is shipped disabled as a fallback.
+| Workflow                    | Trigger                                              | Does                                                              |
+| --------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------- |
+| `resume-data.yml`           | push to `main` touching `data/**`, scripts, template | build `resumes.json` → PDFs → push to rxresu.me, commit artifacts |
+| `build-readme.yml`          | data change                                          | regenerate `README.md` from `README.md.j2`                        |
+| `deploy-cloudflare.yml`     | push to `main` touching `web/**` or `resumes.json`   | deploy portfolio to Cloudflare Pages                              |
+| `deploy-pages.yml.disabled` | —                                                    | GitHub Pages fallback (off)                                       |
 
-**Why Astro over Angular for a portfolio:**
-
-- Ships zero JS by default — fast, SEO-friendly, ideal for static portfolio content
-- Component islands allow interactive sections without a full SPA
-- Native Markdown/MDX support — easy to add case studies or blog posts later
-
-**Angular-ready:** when an interactive demo is needed, drop `@analogjs/astro-angular` per
-`web/docs/adding-angular.md`. Islands live under `src/components/islands/`.
-
-### MVP scaffold (shipped in this phase)
-
-- [x] Scaffold Astro + Tailwind + TS in `web/`, **Bun-first** (committed `bun.lock`,
-      `packageManager: bun@…`, `engines.bun ≥ 1.2`)
-- [x] Design system tokens (GitHub-dark bg `#0d1117`, cold-cyan accent `#00b4d8`,
-      JetBrains Mono + Inter) via Tailwind theme + CSS custom properties
-- [x] Light/dark theme toggle with OS preference + localStorage persistence
-- [x] i18n: English default at `/`, Spanish at `/es/`, shared dictionary in `src/i18n/`
-- [x] Layout primitives: `Header` (logo, nav, theme toggle, lang toggle), `Footer`,
-      `Button`, `Section`, `SkillGroup`, `ExperienceItem`, `ProjectCard`, `CertificationItem`
-- [x] Sections wired to `data/resume.json`: Hero, About, Skills, Experience, Projects,
-      Certifications, Contact
-- [x] `ProjectCard` renders optional `thumbnail` / `demo` (schema extension — see below);
-      falls back to monospace card when absent
-- [x] `data/resume.schema.json` — JSON Schema documenting required fields + the new
-      optional `projects[].thumbnail` and `projects[].demo` (non-breaking)
-- [x] Cloudflare Pages workflow (`.github/workflows/deploy-cloudflare.yml`)
-- [x] GitHub Pages workflow shipped disabled
-      (`.github/workflows/deploy-pages.yml.disabled`)
-- [x] `web/README.md` — dev, build, deploy instructions
-- [x] `web/docs/adding-angular.md` — Analog.js migration path
-
-### Post-MVP (follow-ups)
-
-- [ ] Populate `projects[].thumbnail` / `projects[].demo` for existing entries
-- [ ] Switch data source to raw GitHub URL once Phase 3 publishes canonical `resume.json`
-- [ ] Configure `carlosferreyra.com.ar` DNS → Cloudflare Pages project
-- [ ] Add contact form as an island (Turnstile + Cloudflare Worker or Formspree)
-- [ ] Add tag filter on projects (backend / devops / fullstack / cli)
-- [ ] Blog/case-studies (MDX under `src/content/blog/`)
+**Secrets required:** `RXRESUME_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`. Local
+credentials live in `.env` (gitignored).
 
 ---
 
-## Phase 3 — `resume.json` as Single Source of Truth + PDF Generation
-
-The file `resume.json` is the **canonical source** for all personal/professional data. Consumer
-projects sync from it — nothing maintains its own copy.
-
-### `resume.json` location
-
-```
-carlosferreyra/carlosferreyra/resume.json
-```
-
-### Schema (document in `resume.schema.json`)
-
-```jsonc
-{
-  "basics": { "name", "title", "email", "location", "links" },
-  "skills": [{ "domain", "items": [] }],
-  "experience": [{ "company", "role", "start", "end", "highlights": [] }],
-  "education": [{ "institution", "degree", "year" }],
-  "certifications": [{ "name", "issuer", "year", "url" }],
-  "projects": [{ "name", "description", "tags": [], "url" }]
-}
-```
-
-> Keeping JSON (not YAML/TOML) ensures compatibility with Typst, rxresume, raw fetch, and any future
-> consumer. The schema intentionally mirrors the [JSON Resume](https://jsonresume.org/schema)
-> standard for maximum interoperability.
-
-### Sync strategy
-
-| Consumer project  | Strategy                     | Trigger                                   |
-| ----------------- | ---------------------------- | ----------------------------------------- |
-| `business-card`   | Raw URL fetch at build time  | `repository_dispatch` from this repo's CI |
-| Portfolio (Astro) | Raw URL fetch at build time  | `repository_dispatch` from this repo's CI |
-| CV PDF (Typst)    | Local copy + CI regeneration | Push to `resume.json` in this repo        |
-| rxresume          | Manual import or API push    | JSON maps directly to rxresume schema     |
-
-### Downstream propagation via `repository_dispatch`
-
-When `resume.json` changes, this repo's CI fires a `repository_dispatch` event to trigger rebuilds
-in downstream repos automatically — no manual intervention needed.
-
-```yaml
-# .github/workflows/notify-consumers.yml
-on:
-  push:
-    paths:
-      - resume.json
-
-jobs:
-  dispatch:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        repo: [business-card, carlosferreyra.github.io] # add consumers here
-    steps:
-      - name: Trigger downstream rebuild
-        run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.DISPATCH_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/carlosferreyra/${{ matrix.repo }}/dispatches \
-            -d '{"event_type":"resume-updated"}'
-```
-
-Each consumer repo listens with:
-
-```yaml
-on:
-  repository_dispatch:
-    types: [resume-updated]
-```
-
-> **Required:** Create a `DISPATCH_TOKEN` secret (PAT with `repo` scope) in
-> `carlosferreyra/carlosferreyra` settings.
-
-### CV PDF Generation (Typst + rxresume)
-
-**Typst** is the primary PDF engine — fast, version-controllable, scriptable. **rxresume** is a
-secondary option for visual editing and hosted export.
-
-#### Local workflow (manual trigger)
+## Local commands
 
 ```bash
-# scripts/generate-cv.sh
-curl -s https://raw.githubusercontent.com/carlosferreyra/carlosferreyra/main/resume.json \
-  -o cv/resume.json
-typst compile cv/template.typ cv/carlosferreyra-cv.pdf
+uv run scripts/resume_build.py        # resolve baseline + stacks + combos -> resumes.json
+uv run scripts/resume_pdf.py          # render all PDFs (Typst)
+uv run scripts/resume_pdf.py --slug backend
+uv run scripts/resume_push.py         # dry-run push to rxresu.me
+uv run scripts/resume_push.py --apply
+uv run scripts/build_readme.py        # regenerate README.md
+uv run scripts/fetch_template.py      # refresh silver-dev-cv Typst template (rare)
+
+cd web && bun install && bun dev      # portfolio dev server
 ```
-
-#### CI workflow (GitHub Actions, triggers on push to `main` when `resume.json` changes)
-
-```yaml
-# .github/workflows/cv.yml
-on:
-  push:
-    paths:
-      - resume.json
-
-jobs:
-  generate-cv:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Typst
-        run: curl -fsSL https://typst.app/install.sh | sh
-      - name: Compile CV
-        run: typst compile cv/template.typ cv/carlosferreyra-cv.pdf
-      - name: Commit PDF artifact
-        run: |
-          git config user.name github-actions
-          git add cv/carlosferreyra-cv.pdf
-          git commit -m "chore: regenerate CV [skip ci]" || echo "No changes"
-          git push
-```
-
-### Steps
-
-- [ ] Define and commit `resume.json` with full schema
-- [ ] Commit `resume.schema.json` for validation
-- [ ] Write `cv/template.typ` — Typst template consuming `resume.json`
-- [ ] Write `scripts/generate-cv.sh` for local generation
-- [ ] Add `.github/workflows/cv.yml` — CI PDF generation on `resume.json` change
-- [ ] Add `.github/workflows/notify-consumers.yml` — `repository_dispatch` to downstream repos
-- [ ] Add `DISPATCH_TOKEN` secret (PAT, `repo` scope) to this repo's settings
-- [ ] Update `business-card` to fetch from raw GitHub URL and listen for `repository_dispatch`
-- [ ] Evaluate rxresume JSON mapping — document any field translation needed
-- [ ] For each new consumer project: add a fetch/sync step + `repository_dispatch` listener
 
 ---
 
-## Phase 4 — Ongoing Maintenance
+## Maintenance principles
 
-- [ ] Keep `resume.json` up to date when experience, skills, or certifications change
-- [ ] GitHub Action to validate `resume.json` against `resume.schema.json` on every push
-  - Use `ajv-cli` or a simple Node script
-- [ ] Pin profile README stats widget URLs with `&cache_seconds=` to avoid stale cache
-- [ ] Periodically review and archive old projects from the portfolio
-- [ ] Tag `resume.json` versions (e.g. `cv-2025-q2`) before major changes
+- **Edit data, never generated files.** Touch `baseline.json` / a stack / a combo; `resumes.json`,
+  the PDFs, and the README are outputs.
+- **rxresu.me is a renderer, not a source.** Edits made in its UI are overwritten on the next push.
+  Change the repo instead.
+- **Keep it boring.** New needs are a new stack, a new combo, or a new consumer of `resumes.json` —
+  not a new data format or abstraction layer.
+- **Pin upstream.** The `silver-dev-cv` Typst version is pinned via the template import so an
+  upstream change can't silently alter every PDF.
+- **Validate before publish.** A malformed delta should fail CI, not produce a silently-wrong resume
+  (see BACKLOG §5 — schema + validation).
 
 ---
 
 ## Reference
 
-| Resource              | URL                                                  |
-| --------------------- | ---------------------------------------------------- |
-| This repo             | <https://github.com/carlosferreyra/carlosferreyra>   |
-| Portfolio             | <https://carlosferreyra.com.ar>                      |
-| business-card project | `~/Development/carlosferreyra/business-card`         |
-| LinkedIn              | <https://linkedin.com/in/eduferreyraok>              |
-| Astro docs            | <https://docs.astro.build>                           |
-| Typst docs            | <https://typst.app/docs>                             |
-| rxresume              | <https://rxresu.me>                                  |
-| github-readme-stats   | <https://github.com/anuraghazra/github-readme-stats> |
+| Resource      | URL                                                |
+| ------------- | -------------------------------------------------- |
+| This repo     | <https://github.com/carlosferreyra/carlosferreyra> |
+| Portfolio     | <https://carlosferreyra.com.ar>                    |
+| rxresu.me     | <https://rxresu.me/carlosferreyra/carlos-ferreyra> |
+| LinkedIn      | <https://linkedin.com/in/eduferreyraok>            |
+| Astro docs    | <https://docs.astro.build>                         |
+| Typst docs    | <https://typst.app/docs>                           |
+| silver-dev-cv | <https://typst.app/universe/package/silver-dev-cv> |

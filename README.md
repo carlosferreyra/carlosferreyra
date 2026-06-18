@@ -10,8 +10,7 @@
 
 ## About Me
 
-Software Developer/Engineer with a passion for solving complex problems through elegant code.
-Experienced in backend development, API design, process automation, and data engineering.
+Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering.
 
 - 🔭 Working on: [Kitsune Studios](https://github.com/Kitsune-Studios) &
   [Datos Argentina](https://github.com/argendata)
@@ -34,18 +33,14 @@ Cloud:                   GCP, AWS
 ## Professional Experience
 
 - **Software Engineer** | UTN - FRRe | March 2024 - Dec 2024
-  - Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize
-    processes, and maximize productivity
-  - Designed and implemented a scalable server architecture and automated workflows to support
-    hundreds of users
-  - Collaborated with the financial department to streamline operational processes, resulting in a
-    10% reduction in costs and a 50% increase in efficiency
+  - Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity
+  - Designed and implemented a scalable server architecture and automated workflows to support hundreds of users
+  - Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency
 
 - **Backend Engineer** | Devlights S.R.L | March 2021 - Sep 2021
   - Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company
   - Implemented a REST-API to automate data collection of the customer
-  - Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web
-    application
+  - Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web application
 
 ## Education
 
@@ -55,10 +50,8 @@ Cloud:                   GCP, AWS
 ## Projects
 
 - [Personal Website](https://www.carlosferreyra.com.ar/) - Personal Website Landing Page
-- [LeetCode Solutions](https://github.com/carlosferreyra/leetcode) - Problem submissions from my
-  LeetCode profile
-- [Datos Argentina](https://github.com/argendata) - Data engineering projects for Argentine public
-  data
+- [LeetCode Solutions](https://github.com/carlosferreyra/leetcode) - Problem submissions from my LeetCode profile
+- [Datos Argentina](https://github.com/argendata) - Data engineering projects for Argentine public data
 
 ## Certifications
 

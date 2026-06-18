@@ -21,8 +21,10 @@ Run: uv run scripts/resume_build.py
 
 from __future__ import annotations
 
+import argparse
 import copy
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -86,7 +88,7 @@ def resolve_combo(baseline: dict, stacks: dict[str, dict], combo: dict) -> dict:
     return deep_override(out, combo)
 
 
-def main() -> int:
+def resolve_resumes() -> list[dict]:
     baseline = load(DATA / "baseline.json")
     stacks = {p.stem: load(p) for p in sorted(STACKS_DIR.glob("*.json"))}
     combos = {
@@ -102,6 +104,32 @@ def main() -> int:
     for name, combo in combos.items():
         resolved = resolve_combo(baseline, stacks, combo)
         resumes.append({"slug": combo.get("slug", name), "kind": "combo", **resolved})
+
+    return resumes
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Resolve resume sources into resumes.json.")
+    parser.add_argument(
+        "--list",
+        action="store_true",
+        help="List resolved slugs and destinations without writing resumes.json.",
+    )
+    args = parser.parse_args()
+
+    resumes = resolve_resumes()
+    if args.list:
+        for resume in resumes:
+            slug = resume["slug"]
+            person = re.sub(
+                r"[^a-z0-9]+", "-", resume["personalInfo"]["name"].lower()
+            ).strip("-")
+            pdf = f"{person}.pdf" if slug == person else f"{person}-{slug}.pdf"
+            print(
+                f"{slug:18} kind={resume['kind']:5} "
+                f"pdf=resume/{pdf} rxresume=/<username>/{slug}"
+            )
+        return 0
 
     payload = {
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),

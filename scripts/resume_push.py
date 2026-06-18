@@ -11,12 +11,13 @@ structural template (theme, layout, typography).
 
 Dry-run by default. Pass --apply to write.
 
-Env: RXRESUME_BASE_URL, RXRESUME_TOKEN
-Run: uv run scripts/resume_push.py [--apply]
+Env: RXRESUME_BASE_URL, RXRESUME_TOKEN, RXRESUME_USERNAME
+Run: uv run scripts/resume_push.py [--slug backend] [--apply]
 """
 
 from __future__ import annotations
 
+import argparse
 import copy
 import json
 import os
@@ -28,6 +29,7 @@ import httpx
 
 ROOT = Path(__file__).resolve().parent.parent
 RESUMES = ROOT / "data" / "resumes.json"
+THEMES = ROOT / "data" / "themes.json"
 TEMPLATE_SLUG = "carlos-ferreyra"
 MANAGED = {"profiles", "experience", "education", "skills", "projects", "certifications"}
 
@@ -111,15 +113,43 @@ def build_data(template: dict, r: dict) -> dict:
     return data
 
 
+def apply_theme(data: dict, theme: dict) -> dict:
+    """Overlay a repo-owned theme: metadata (layout/colors/typography/page),
+    avatar, and per-section chrome (title/icon/columns/hidden). The repo owns
+    presentation — rxresu.me is a pure render target."""
+    data["metadata"] = copy.deepcopy(theme["metadata"])
+    data["picture"] = copy.deepcopy(theme["picture"])
+    for key, meta in theme.get("sectionMeta", {}).items():
+        if key in data["sections"]:
+            data["sections"][key].update(meta)
+    return data
+
+
 def main() -> int:
-    apply = "--apply" in sys.argv
+    parser = argparse.ArgumentParser(description="Publish resolved resumes to RxResume.")
+    parser.add_argument("--slug", help="Publish only this resume slug (default: all)")
+    parser.add_argument(
+        "--apply",
+        action="store_true",
+        help="Write changes. Without this flag the command is a dry-run.",
+    )
+    args = parser.parse_args()
+
     base = os.environ.get("RXRESUME_BASE_URL", "").rstrip("/")
     token = os.environ.get("RXRESUME_TOKEN", "")
+    username = os.environ.get("RXRESUME_USERNAME", "<username>")
     if not base or not token:
         print("error: RXRESUME_BASE_URL and RXRESUME_TOKEN must be set", file=sys.stderr)
         return 1
 
     resumes = json.loads(RESUMES.read_text())["resumes"]
+    if args.slug:
+        resumes = [resume for resume in resumes if resume["slug"] == args.slug]
+        if not resumes:
+            print(f"error: slug '{args.slug}' not found in resumes.json", file=sys.stderr)
+            return 1
+
+    themes = json.loads(THEMES.read_text())
     headers = {"x-api-key": token}
 
     with httpx.Client(base_url=base, headers=headers, timeout=30) as client:
@@ -130,11 +160,14 @@ def main() -> int:
         for r in resumes:
             slug = r["slug"]
             data = build_data(template, r)
+            theme = themes[r.get("theme", "default")]
+            data = apply_theme(data, theme)
             exists = slug in by_slug
             verb = "UPDATE" if exists else "CREATE"
             counts = {k: len(data["sections"][k]["items"]) for k in MANAGED}
             print(f"[{verb}] slug={slug:18} title='{r['personalInfo']['title']}' {counts}")
-            if not apply:
+            print(f"         -> https://rxresu.me/{username}/{slug}")
+            if not args.apply:
                 continue
             if exists:
                 rid = by_slug[slug]["id"]
@@ -150,7 +183,7 @@ def main() -> int:
             resp.raise_for_status()
             print(f"         -> {verb.lower()}d id={rid}")
 
-    if not apply:
+    if not args.apply:
         print("\ndry-run only. re-run with --apply to write to rxresu.me")
     return 0
 

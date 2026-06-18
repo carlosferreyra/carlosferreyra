@@ -14,9 +14,8 @@ on:
     branches: [main]
     paths:
       - 'web/**'
-      - 'data/resume.json'
-      - 'data/resume.schema.json'
-      - '.github/workflows/deploy-pages.yml'
+      - 'data/resumes.json'
+      - '.github/workflows/deploy-pages.yml.disabled'
   workflow_dispatch:
 
 concurrency:

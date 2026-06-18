@@ -2,7 +2,7 @@ import resumesData from '@data/resumes.json';
 
 // The public site renders the `carlos-ferreyra` combo (see data/dev.json) —
 // resolved by scripts/resume_build.py into data/resumes.json. Selecting it here
-// keeps git as the single source of truth (no hand-edited data/resume.json).
+// keeps git as the single source of truth (no hand-edited generated contract).
 const PUBLIC_SLUG = 'carlos-ferreyra';
 const resumeData = resumesData.resumes.find((r) => r.slug === PUBLIC_SLUG);
 if (!resumeData) {

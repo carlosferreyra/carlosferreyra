@@ -38,7 +38,7 @@ def build_links(raw: list[dict]) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Render README.md from README.md.j2 + resume.json."
+        description="Render README.md from README.md.j2 + data/resumes.json."
     )
     parser.add_argument(
         "--out", default="README.md", help="Output path (relative to repo root)"
