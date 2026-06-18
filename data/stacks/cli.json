@@ -1,0 +1,14 @@
+{
+  "personalInfo": { "title": "Software Engineer" },
+  "summary": "Software Engineer focused on backend development, API design, and automation.",
+  "skills": null,
+  "experience": null,
+  "education": null,
+  "certifications": null,
+  "projects": [
+    { "name": "Personal Website", "description": "Personal Website Landing Page", "url": "https://www.carlosferreyra.com.ar/" },
+    { "name": "LeetCode Solutions", "description": "Problem submissions from my LeetCode profile", "url": "https://github.com/carlosferreyra/leetcode" },
+    { "name": "Kitsune Studios", "description": "Open source projects and experiments", "url": "https://github.com/Kitsune-Studios" },
+    { "name": "Datos Argentina", "description": "Data engineering projects for Argentine public data", "url": "https://github.com/argendata" }
+  ]
+}

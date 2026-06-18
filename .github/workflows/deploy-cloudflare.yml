@@ -5,8 +5,7 @@ on:
     branches: [main]
     paths:
       - 'web/**'
-      - 'data/resume.json'
-      - 'data/resume.schema.json'
+      - 'data/resumes.json'
       - '.github/workflows/deploy-cloudflare.yml'
   workflow_dispatch:
 
