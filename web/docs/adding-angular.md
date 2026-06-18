@@ -102,5 +102,5 @@ stays in Astro. Move to Angular only when you need:
 - Angular's zone.js can conflict with Astro's islands on older versions;
   `@analogjs/astro-angular` 1.x targets Angular 18+ with zoneless signals —
   stay on that track.
-- The Cloudflare Pages workflow already runs `bun run build`, which invokes
+- The GitHub Pages workflow already runs `bun run build`, which invokes
   `astro build` — no extra Angular-specific step is required.

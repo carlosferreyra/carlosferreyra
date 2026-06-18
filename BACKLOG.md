@@ -28,8 +28,7 @@ web/ (Astro) imports data/resumes.json via web/src/lib/resume.ts
 CI:
 - `.github/workflows/resume-data.yml` — build resumes.json, PDFs, push to rxresu.me on data change
 - `.github/workflows/build-readme.yml` — regenerate README
-- `.github/workflows/deploy-cloudflare.yml` — deploy `web/` to Cloudflare Pages
-- `.github/workflows/deploy-pages.yml.disabled` — GitHub Pages fallback (off)
+- `.github/workflows/deploy-pages.yml` — build Astro and deploy through GitHub Pages
 
 Slugs currently produced: `backend`, `cli`, `devops`, `fullstack`, `carlos-ferreyra` (combo).
 
@@ -37,21 +36,14 @@ Slugs currently produced: `backend`, `cli`, `devops`, `fullstack`, `carlos-ferre
 
 ## 1. Deploy the portfolio website
 
-- [ ] Finish and merge the `migrate-to-rxresume` branch into `main` (the deploy
-      workflow only triggers on `main`).
-- [ ] Confirm Cloudflare Pages project exists and required secrets are set
-      (`CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`) in repo settings →
-      verify `deploy-cloudflare.yml` runs green end-to-end.
-- [ ] Point `carlosferreyra.com.ar` DNS at the Cloudflare Pages project
-      (ROADMAP Phase 2 "Configure DNS" item, still open).
-- [ ] Verify `CNAME` (`carlosferreyra.com.ar`) is consistent with the chosen host —
-      `CNAME` is a GitHub Pages artifact; if Cloudflare is primary, decide whether
-      it's still needed or should move under `web/public/`.
+- [x] Merge the resume pipeline into `main`.
+- [x] Use GitHub Actions + GitHub Pages as the portfolio build/deploy path.
+- [ ] Point `carlosferreyra.com.ar` and `www.carlosferreyra.com.ar` at GitHub Pages through
+      Cloudflare DNS and verify HTTPS.
 - [ ] Smoke-test the deployed site: EN at `/`, ES at `/es/`, theme picker, and that
       every section renders from `resumes.json` (Hero, About, Skills, Experience,
       Projects, Certifications, Contact).
-- [ ] Decide: keep GitHub Pages workflow as a real fallback (and test enabling it)
-      or delete `deploy-pages.yml.disabled` to remove dead config.
+- [x] Remove the duplicate Cloudflare Pages deployment path.
 
 **Verify:** pushing to `main` deploys; `https://carlosferreyra.com.ar` serves the
 current portfolio with live data.

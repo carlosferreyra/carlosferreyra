@@ -69,11 +69,10 @@ See [data/README.md](data/README.md) for the field-level reference and how to ad
 | --------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------- |
 | `resume-data.yml`           | push to `main` touching `data/**`, scripts, template | build `resumes.json` → PDFs → push to rxresu.me, commit artifacts |
 | `build-readme.yml`          | data change                                          | regenerate `README.md` from `README.md.j2`                        |
-| `deploy-cloudflare.yml`     | push to `main` touching `web/**` or `resumes.json`   | deploy portfolio to Cloudflare Pages                              |
-| `deploy-pages.yml.disabled` | —                                                    | GitHub Pages fallback (off)                                       |
+| `deploy-pages.yml`          | push to `main` touching `web/**` or `resumes.json`   | build Astro and deploy the portfolio through GitHub Pages         |
 
-**Secrets required:** `RXRESUME_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`. Local
-credentials live in `.env` (gitignored).
+**Secret required:** `RXRESUME_TOKEN`. GitHub Pages deploys with GitHub OIDC; Cloudflare remains
+the DNS provider and requires no deployment secret. Local RxResume credentials live in `.env`.
 
 ---
 

@@ -16,7 +16,7 @@ default runtime / package manager**. Content is sourced from the generated
 | Styles      | [Tailwind CSS 4](https://tailwindcss.com/) via `@tailwindcss/vite`  |
 | Language    | TypeScript (strict)                                                 |
 | i18n        | Astro's built-in i18n routing (`en` default, `/es/` Spanish)        |
-| Deploy      | Cloudflare Pages (primary) — GitHub Pages fallback shipped disabled |
+| Deploy      | GitHub Pages through a custom GitHub Actions workflow               |
 
 ## Prerequisites
 
@@ -129,26 +129,16 @@ or a combo instead of editing the generated file.
 
 ## Deploy
 
-### Cloudflare Pages (primary)
+### GitHub Pages
 
-Workflow: [`.github/workflows/deploy-cloudflare.yml`](../.github/workflows/deploy-cloudflare.yml)
+Workflow: [`.github/workflows/deploy-pages.yml`](../.github/workflows/deploy-pages.yml)
 
-Required repo secrets:
+The workflow builds `web/dist`, uploads it as a Pages artifact, and deploys it with GitHub OIDC.
+No deployment secrets are required. Cloudflare provides DNS for the apex and `www` custom domains,
+but does not host or build the site.
 
-- `CLOUDFLARE_API_TOKEN` — token with `Account > Cloudflare Pages:Edit`
-- `CLOUDFLARE_ACCOUNT_ID`
-
-Required Cloudflare setup:
-
-1. Create a Pages project named `carlosferreyra` (or edit the workflow).
-2. Point `carlosferreyra.com.ar` at the Pages project under *Custom domains*.
-
-Triggers on pushes to `main` that touch `web/**` or `data/resumes.json`.
-
-### GitHub Pages (fallback)
-
-Rename `.github/workflows/deploy-pages.yml.disabled` → `deploy-pages.yml`
-and disable the Cloudflare workflow. Instructions at the top of that file.
+It triggers on pushes to `main` that touch `web/**` or `data/resumes.json` and can also be run
+manually from the GitHub Actions page.
 
 ## Quality
 
