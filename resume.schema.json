@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/carlosferreyra/carlosferreyra/main/resume.schema.json",
+  "title": "Labeled resume catalog",
+  "type": "object",
+  "required": ["profiles", "personalInfo", "links", "skills", "experience", "education", "certifications", "projects"],
+  "properties": {
+    "profiles": {
+      "type": "object",
+      "required": ["default"],
+      "additionalProperties": { "$ref": "#/$defs/profile" }
+    },
+    "personalInfo": {
+      "type": "object",
+      "required": ["name", "email", "location"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "email": { "type": "string", "minLength": 1 },
+        "location": { "type": "string", "minLength": 1 }
+      }
+    },
+    "githubUsername": { "type": "string" },
+    "links": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },
+    "skills": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },
+    "experience": { "type": "array", "items": { "$ref": "#/$defs/nestedLabeled" } },
+    "education": { "type": "array", "items": { "$ref": "#/$defs/nestedLabeled" } },
+    "certifications": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },
+    "projects": { "type": "array", "items": { "$ref": "#/$defs/labeled" } }
+  },
+  "$defs": {
+    "profile": {
+      "type": "object",
+      "required": ["slug", "title", "summary", "targets"],
+      "properties": {
+        "slug": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string" },
+        "theme": { "type": "string" },
+        "targets": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "enum": ["website", "readme", "pdf", "rxresume", "business-card"] }
+        }
+      },
+      "additionalProperties": false
+    },
+    "labels": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "labeled": {
+      "type": "object",
+      "required": ["labels"],
+      "properties": { "labels": { "$ref": "#/$defs/labels" } }
+    },
+    "highlight": {
+      "type": "object",
+      "required": ["text", "labels"],
+      "properties": {
+        "text": { "type": "string" },
+        "labels": { "$ref": "#/$defs/labels" }
+      },
+      "additionalProperties": false
+    },
+    "nestedLabeled": {
+      "type": "object",
+      "required": ["labels", "highlights"],
+      "properties": {
+        "labels": { "$ref": "#/$defs/labels" },
+        "highlights": { "type": "array", "items": { "$ref": "#/$defs/highlight" } }
+      }
+    }
+  }
+}

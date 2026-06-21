@@ -2,18 +2,7 @@
 # requires-python = ">=3.11"
 # dependencies = []
 # ///
-"""Generate PDF resumes from data/resumes.json via Typst + silver-dev-cv.
-
-Repo is the source of truth: scripts/resume_build.py resolves baseline + stacks
-+ combos into data/resumes.json; this script renders one PDF per resume so a
-committed PDF lives in resume/ alongside the live rxresu.me versions.
-
-Output naming (matches the existing files):
-  combo slug == person slug  -> resume/<person>.pdf
-  otherwise                  -> resume/<person>-<slug>.pdf
-
-Run: uv run scripts/resume_pdf.py [--slug backend]
-"""
+"""Generate configured PDF profiles from the canonical resume.json."""
 
 from __future__ import annotations
 
@@ -23,11 +12,12 @@ import json
 import re
 import subprocess
 import sys
+import tempfile
 import tomllib
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-RESUMES = ROOT / "data" / "resumes.json"
+from resume_core import ROOT, load_catalog, profiles_for_target, resolve_profile
+
 TEMPLATE = ROOT / "silver-dev-cv" / "cv.typ.j2"
 CV_TYP = ROOT / "silver-dev-cv" / "cv.typ"
 
@@ -53,48 +43,47 @@ def pdf_name(person: str, slug: str) -> str:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Render resume PDFs from resumes.json.")
-    parser.add_argument("--slug", help="Render only this resume slug (default: all)")
+    parser = argparse.ArgumentParser(description="Render PDF profiles from resume.json.")
+    parser.add_argument("--profile", help="Render only this profile (default: PDF targets)")
+    parser.add_argument("--out-dir", default="resume", help="Output directory relative to repo root")
     args = parser.parse_args()
-
-    if not RESUMES.exists():
-        print("error: data/resumes.json missing — run scripts/resume_build.py first", file=sys.stderr)
+    catalog = load_catalog()
+    if args.profile and "pdf" not in catalog["profiles"].get(args.profile, {}).get("targets", []):
+        print(f"error: profile '{args.profile}' does not target pdf", file=sys.stderr)
         return 1
-
-    resumes = json.loads(RESUMES.read_text())["resumes"]
-    if args.slug:
-        resumes = [r for r in resumes if r["slug"] == args.slug]
-        if not resumes:
-            print(f"error: slug '{args.slug}' not found in resumes.json", file=sys.stderr)
-            return 1
+    labels = [args.profile] if args.profile else profiles_for_target(catalog, "pdf")
+    resumes = [resolve_profile(catalog, label) for label in labels]
 
     # render cv.typ once (only the version import is templated; slug is a runtime input)
     CV_TYP.write_text(TEMPLATE.read_text().replace("{{ version }}", silver_dev_version()))
 
     person = slugify(resumes[0]["personalInfo"]["name"])
-    out_dir = ROOT / "resume"
-    out_dir.mkdir(exist_ok=True)
+    out_dir = ROOT / args.out_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     failed = []
-    for r in resumes:
-        out = out_dir / pdf_name(person, r["slug"])
-        cmd = [
-            "typst", "compile", "--root", str(ROOT),
-            "--input", f"slug={r['slug']}", str(CV_TYP), str(out),
-        ]
-        print(f"  [{r['slug']:18}] -> resume/{out.name} ...", end=" ", flush=True)
-        res = subprocess.run(cmd, capture_output=True, text=True)
-        if res.returncode == 0:
-            print(f"OK ({out.stat().st_size // 1024}KB)")
-        else:
-            print("FAILED")
-            print(res.stderr.strip(), file=sys.stderr)
-            failed.append(r["slug"])
+    with tempfile.TemporaryDirectory(dir=ROOT) as temp_dir:
+        for r in resumes:
+            data = Path(temp_dir) / f"{r['slug']}.json"
+            data.write_text(json.dumps(r, ensure_ascii=False))
+            out = out_dir / pdf_name(person, r["slug"])
+            cmd = [
+                "typst", "compile", "--root", str(ROOT),
+                "--input", f"data={data.relative_to(ROOT)}", str(CV_TYP), str(out),
+            ]
+            print(f"  [{r['profile']:18}] -> {out.relative_to(ROOT)} ...", end=" ", flush=True)
+            res = subprocess.run(cmd, capture_output=True, text=True)
+            if res.returncode == 0:
+                print(f"OK ({out.stat().st_size // 1024}KB)")
+            else:
+                print("FAILED")
+                print(res.stderr.strip(), file=sys.stderr)
+                failed.append(r["profile"])
 
     if failed:
         print(f"\nfailed: {', '.join(failed)}", file=sys.stderr)
         return 1
-    print(f"\nbuilt {len(resumes)} PDF(s) in resume/")
+    print(f"\nbuilt {len(resumes)} PDF(s) in {out_dir.relative_to(ROOT)}/")
     return 0
 
 

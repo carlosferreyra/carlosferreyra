@@ -9,6 +9,8 @@ on:
     paths:
       - 'README.md.j2'
       - 'scripts/build_readme.py'
+      - 'scripts/resume_core.py'
+      - 'resume.json'
   workflow_dispatch:
 
 permissions:
@@ -27,7 +29,7 @@ jobs:
       - uses: astral-sh/setup-uv@v8.0.0
 
       - name: Build README
-        run: uv run scripts/build_readme.py
+        run: uv run scripts/resume.py readme
 
       - name: Commit README
         uses: stefanzweifel/git-auto-commit-action@v5

@@ -1,6 +1,6 @@
 {
 	"extends": "astro/tsconfigs/strict",
-	"include": [".astro/types.d.ts", "**/*", "../data/resumes.json"],
+	"include": [".astro/types.d.ts", "**/*", "../resume.json"],
 	"exclude": ["dist"],
 	"compilerOptions": {
 		"baseUrl": ".",

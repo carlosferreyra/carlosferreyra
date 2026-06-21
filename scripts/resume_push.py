@@ -2,17 +2,17 @@
 # requires-python = ">=3.11"
 # dependencies = ["httpx>=0.27"]
 # ///
-"""Push resolved resumes (data/resumes.json) to Reactive Resume by slug.
+"""Push labeled profiles from resume.json to Reactive Resume by slug.
 
-Repo is the source of truth; RxResume is a renderer. Each resume in
-data/resumes.json is created (if its slug is new) or updated (if it exists) so
+Repo is the source of truth; RxResume is a renderer. Each targeted profile is
+created (if its slug is new) or updated (if it exists) so
 it lives at rxresu.me/<username>/<slug>. An existing resume supplies the
 structural template (theme, layout, typography).
 
 Dry-run by default. Pass --apply to write.
 
 Env: RXRESUME_BASE_URL, RXRESUME_TOKEN, RXRESUME_USERNAME
-Run: uv run scripts/resume_push.py [--slug backend] [--apply]
+Run: uv run scripts/resume_push.py [--profile backend] [--apply]
 """
 
 from __future__ import annotations
@@ -27,8 +27,8 @@ from pathlib import Path
 
 import httpx
 
-ROOT = Path(__file__).resolve().parent.parent
-RESUMES = ROOT / "data" / "resumes.json"
+from resume_core import ROOT, load_catalog, profiles_for_target, resolve_profile
+
 THEMES = ROOT / "data" / "themes.json"
 TEMPLATE_SLUG = "carlos-ferreyra"
 MANAGED = {"profiles", "experience", "education", "skills", "projects", "certifications"}
@@ -127,7 +127,7 @@ def apply_theme(data: dict, theme: dict) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Publish resolved resumes to RxResume.")
-    parser.add_argument("--slug", help="Publish only this resume slug (default: all)")
+    parser.add_argument("--profile", help="Publish only this profile (default: RxResume targets)")
     parser.add_argument(
         "--apply",
         action="store_true",
@@ -142,12 +142,12 @@ def main() -> int:
         print("error: RXRESUME_BASE_URL and RXRESUME_TOKEN must be set", file=sys.stderr)
         return 1
 
-    resumes = json.loads(RESUMES.read_text())["resumes"]
-    if args.slug:
-        resumes = [resume for resume in resumes if resume["slug"] == args.slug]
-        if not resumes:
-            print(f"error: slug '{args.slug}' not found in resumes.json", file=sys.stderr)
-            return 1
+    catalog = load_catalog()
+    if args.profile and "rxresume" not in catalog["profiles"].get(args.profile, {}).get("targets", []):
+        print(f"error: profile '{args.profile}' does not target rxresume", file=sys.stderr)
+        return 1
+    labels = [args.profile] if args.profile else profiles_for_target(catalog, "rxresume")
+    resumes = [resolve_profile(catalog, label) for label in labels]
 
     themes = json.loads(THEMES.read_text())
     headers = {"x-api-key": token}
@@ -175,7 +175,7 @@ def main() -> int:
             else:
                 created = client.post(
                     "/resumes",
-                    json={"name": r["personalInfo"]["title"], "slug": slug, "tags": [r["kind"]]},
+                    json={"name": r["personalInfo"]["title"], "slug": slug, "tags": [r["profile"]]},
                 )
                 created.raise_for_status()
                 rid = created.json()

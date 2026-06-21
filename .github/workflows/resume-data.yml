@@ -4,11 +4,13 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/baseline.json'
-      - 'data/stacks/**'
-      - 'data/*.json'
+      - 'resume.json'
+      - 'resume.schema.json'
+      - 'data/themes.json'
       - 'silver-dev-cv/cv.typ.j2'
-      - 'scripts/resume_build.py'
+      - 'scripts/resume.py'
+      - 'scripts/resume_core.py'
+      - 'scripts/build_readme.py'
       - 'scripts/resume_push.py'
       - 'scripts/resume_pdf.py'
   workflow_dispatch:
@@ -30,20 +32,21 @@ jobs:
           typst-version: ^0.14.0
           cache-local-packages: true
 
-      - name: Resolve baseline + stacks + combos -> data/resumes.json
-        run: uv run scripts/resume_build.py
+      - name: Test labeled resume resolution
+        run: uv run python -m unittest discover -s tests -v
 
-      - name: Build PDF resumes (Typst + silver-dev-cv)
-        run: uv run scripts/resume_pdf.py
+      - name: Validate and build resume outputs
+        run: uv run scripts/resume.py build
 
       - name: Push resolved resumes to rxresu.me
         env:
           RXRESUME_BASE_URL: https://rxresu.me/api/openapi
           RXRESUME_TOKEN: ${{ secrets.RXRESUME_TOKEN }}
-        run: uv run scripts/resume_push.py --apply
+          RXRESUME_USERNAME: ${{ vars.RXRESUME_USERNAME }}
+        run: uv run scripts/resume.py rxresume --apply
 
-      - name: Commit generated resumes.json + PDFs
+      - name: Commit generated README + PDFs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: data/resumes.json resume/*.pdf
-          commit_message: 'chore: rebuild resume data, PDFs & push to rxresu.me [skip ci]'
+          file_pattern: README.md resume/*.pdf
+          commit_message: 'chore: rebuild README and PDFs & push to rxresu.me [skip ci]'

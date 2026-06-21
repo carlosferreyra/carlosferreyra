@@ -1,68 +1,60 @@
-# Resume Pipeline Plan
+# Unified Labeled Resume
 
-## Goal
+`resume.json` is the single hand-edited source for every resume surface. It contains shared
+identity data, named profiles, and explicitly labeled content. Profiles use exact matching:
+`default` does not implicitly flow into `backend`, `devops`, or any other profile.
 
-Keep the current multi-file resume model simple, documented, and reproducible:
+## Data contract
+
+- `profiles` declares each label's slug, headline, summary, and output targets.
+- Every link, skill group, job, education entry, certification, and project has `labels`.
+- Experience and education highlights have their own labels for fine-grained tailoring.
+- Shared records list every profile that should receive them.
+- `resume.schema.json` documents the public shape; `scripts/resume_core.py` enforces cross-field
+  rules such as declared labels and unique slugs.
+- `data/themes.json` remains separate because it is RxResume presentation configuration.
+
+The external contract for the business card is:
 
 ```text
-data/baseline.json
-data/stacks/*.json
-data/dev.json
-        |
-        | scripts/resume_build.py
-        v
-data/resumes.json
-        |
-        +-- scripts/resume_pdf.py   -> resume/*.pdf
-        +-- scripts/resume_push.py  -> rxresu.me
-        +-- scripts/build_readme.py -> README.md
-        +-- web/src/lib/resume.ts   -> Astro portfolio
+https://raw.githubusercontent.com/carlosferreyra/carlosferreyra/main/resume.json
 ```
 
-`data/resumes.json` is the generated contract shared by every renderer. It is committed for
-downstream consumers, but it must not be edited by hand.
+The business-card consumer should resolve the exact `business-card` label and must not assume that
+`default` content is inherited.
 
-## Current Sources
-
-- `data/baseline.json`: shared identity, contact, and professional data.
-- `data/stacks/*.json`: stack-specific overrides for `backend`, `cli`, `devops`, and `fullstack`.
-- `data/dev.json`: combo extending backend and fullstack; publishes as `carlos-ferreyra`.
-- `data/themes.json`: RxResume presentation settings.
-
-## Supported Commands
+## Commands
 
 ```bash
-uv run scripts/resume_build.py
-uv run scripts/resume_build.py --list
-uv run scripts/build_readme.py
-uv run scripts/resume_pdf.py
-uv run scripts/resume_pdf.py --slug backend
-uv run scripts/resume_push.py
-uv run scripts/resume_push.py --slug backend
-uv run scripts/resume_push.py --apply
-cd web && bun run build
+uv run scripts/resume.py validate
+uv run scripts/resume.py list
+uv run scripts/resume.py resolve --profile backend
+uv run scripts/resume.py readme
+uv run scripts/resume.py pdf [--profile backend]
+uv run scripts/resume.py rxresume [--profile backend] [--apply]
+uv run scripts/resume.py build
+uv run scripts/resume.py check
 ```
 
-RxResume is dry-run by default. `--apply` is the only command that changes remote resumes.
+Resolved profiles and RxResume request bodies are ephemeral. Only `README.md` and profiles targeting
+`pdf` are generated and committed. RxResume is dry-run by default; `--apply` is required to mutate
+remote resumes.
 
-## Completion Criteria
+## Consumer mapping
 
-- [x] Five resolved slugs are generated: `backend`, `cli`, `devops`, `fullstack`, and
-      `carlos-ferreyra`.
-- [x] README, PDF, RxResume, and Astro consumers read `data/resumes.json`.
-- [x] RxResume presentation is owned by `data/themes.json`.
-- [x] Local commands support listing and targeted PDF/RxResume operations.
-- [x] Workflow names and triggers match the current pipeline.
-- [x] Documentation describes the multi-file source model.
-- [ ] Add schemas and validation for source files and `data/resumes.json`.
-- [ ] Add regression tests for stack override, combo union, and deduplication behavior.
-- [ ] Decide whether deleting a local slug should prune its remote RxResume entry.
-- [ ] Add a single command that runs build, README, PDF, and web verification.
+| Consumer | Selection |
+| --- | --- |
+| Website | `default` |
+| README | `default` |
+| Typst | Every profile targeting `pdf`, or explicit `--profile` |
+| RxResume | Every profile targeting `rxresume`, or explicit `--profile` |
+| Business card | `business-card` from the public raw JSON |
 
-## Operating Rules
+## Completion checklist
 
-- Edit source files, never `data/resumes.json`, generated PDFs, or `README.md`.
-- Run `resume_build.py` before every renderer.
-- Treat RxResume as a renderer; UI edits are overwritten by the next `--apply`.
-- Add new variants as a stack or combo without introducing another data format.
-- Keep credentials in `.env` locally and GitHub Actions secrets in CI.
+- [x] One canonical, labeled `resume.json` replaces baseline, stacks, combos, and `resumes.json`.
+- [x] Shared validation and resolution power local commands and GitHub Actions.
+- [x] README, Typst, RxResume, and Astro consume resolved canonical profiles.
+- [x] Consumer-specific JSON files are not generated or committed.
+- [x] CI validates before rendering and uses the same orchestration command as local builds.
+- [ ] Refactor `carlosferreyra/business-card` to fetch the public contract and select its label.

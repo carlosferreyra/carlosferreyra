@@ -1,0 +1,112 @@
+{
+  "$schema": "./resume.schema.json",
+  "profiles": {
+    "default": {
+      "slug": "carlos-ferreyra",
+      "title": "Software Engineer",
+      "summary": "Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering.",
+      "targets": ["website", "readme", "pdf", "rxresume"]
+    },
+    "backend": {
+      "slug": "backend",
+      "title": "Backend Engineer",
+      "summary": "Backend engineer focused on API design, scalable architectures, and data engineering. Experienced with Python, Django, and relational/non-relational databases.",
+      "targets": ["pdf", "rxresume"]
+    },
+    "cli": {
+      "slug": "cli",
+      "title": "Software Engineer",
+      "summary": "Software Engineer focused on backend development, API design, and automation.",
+      "targets": ["pdf", "rxresume"]
+    },
+    "devops": {
+      "slug": "devops",
+      "title": "DevOps Engineer",
+      "summary": "Platform and DevOps engineer experienced in cloud infrastructure, CI/CD pipelines, and automation at scale. Proficient with GCP, AWS, and container orchestration.",
+      "targets": ["pdf", "rxresume"]
+    },
+    "fullstack": {
+      "slug": "fullstack",
+      "title": "Full-Stack Engineer",
+      "summary": "Full-stack engineer comfortable across the entire web stack — from REST APIs and databases to JavaScript frontends. Experienced building and shipping end-to-end web applications.",
+      "targets": ["pdf", "rxresume"]
+    },
+    "business-card": {
+      "slug": "business-card",
+      "title": "Software Engineer",
+      "summary": "Software Developer/Engineer focused on backend development, automation, and elegant solutions to complex problems.",
+      "targets": ["business-card"]
+    }
+  },
+  "personalInfo": {
+    "name": "Carlos Ferreyra",
+    "email": "eduferreyraok@gmail.com",
+    "location": "Argentina"
+  },
+  "githubUsername": "carlosferreyra",
+  "links": [
+    { "id": "github", "label": "GitHub", "url": "https://github.com/carlosferreyra", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
+    { "id": "linkedin", "label": "LinkedIn", "url": "https://linkedin.com/in/eduferreyraok", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
+    { "id": "twitter", "label": "Twitter", "url": "https://twitter.com/eduferreyraok", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
+    { "id": "portfolio", "label": "Portfolio", "url": "https://carlosferreyra.com.ar", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
+    { "id": "email", "label": "Email", "url": "mailto:eduferreyraok@gmail.com", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
+    { "id": "leetcode", "label": "LeetCode", "url": "https://leetcode.com/u/carlosferreyra/", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] }
+  ],
+  "skills": [
+    { "category": "Languages", "items": ["Python", "Java", "JavaScript", "TypeScript", "Rust"], "labels": ["default", "backend", "devops", "fullstack", "business-card"] },
+    { "category": "Cloud", "items": ["GCP", "AWS"], "labels": ["default", "backend", "devops", "business-card"] },
+    { "category": "Databases", "items": ["MySQL", "MongoDB", "SQLite"], "labels": ["default", "backend", "fullstack", "business-card"] },
+    { "category": "DevOps & Infra", "items": ["Docker", "CI/CD", "Git", "Linux"], "labels": ["default", "devops", "business-card"] },
+    { "category": "Frameworks", "items": ["Django", "Web APIs", "REST"], "labels": ["default", "backend", "fullstack", "business-card"] }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "UTN - FRRe",
+      "period": "March 2024 - Dec 2024",
+      "labels": ["default", "backend", "devops", "fullstack", "business-card"],
+      "highlights": [
+        { "text": "Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity", "labels": ["default", "backend", "devops", "fullstack", "business-card"] },
+        { "text": "Designed and implemented a scalable server architecture and automated workflows to support hundreds of users", "labels": ["default", "backend", "devops", "fullstack", "business-card"] },
+        { "text": "Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency", "labels": ["default", "backend", "devops", "fullstack", "business-card"] }
+      ]
+    },
+    {
+      "title": "Backend Engineer",
+      "company": "Devlights S.R.L",
+      "period": "March 2021 - Sep 2021",
+      "labels": ["default", "backend", "fullstack", "business-card"],
+      "highlights": [
+        { "text": "Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company", "labels": ["default", "backend", "fullstack", "business-card"] },
+        { "text": "Implemented a REST-API to automate data collection of the customer", "labels": ["default", "backend", "fullstack", "business-card"] },
+        { "text": "Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web application", "labels": ["default", "backend", "fullstack", "business-card"] }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Information System's Engineering",
+      "institution": "Universidad Tecnologica Nacional",
+      "location": "Argentina",
+      "period": "2015 - 2024",
+      "labels": ["default", "backend", "devops", "fullstack", "business-card"],
+      "highlights": [
+        { "text": "Relevant coursework: Data Structures, Algorithms, Software Engineering, Databases", "labels": ["default", "backend", "devops", "fullstack", "business-card"] }
+      ]
+    }
+  ],
+  "certifications": [
+    { "name": "Databricks Data Engineer Associate", "year": 2025, "url": "https://credentials.databricks.com/profile/carlosferreyra/wallet", "labels": ["default", "backend", "devops", "business-card"] },
+    { "name": "SQL Advanced", "year": 2025, "url": "https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql", "labels": ["default", "backend", "business-card"] },
+    { "name": "MongoDB - Database Administration", "year": 2025, "url": "https://learn.mongodb.com/c/OE3lXL2WRfa33hpCBtCwEQ", "labels": ["default", "backend", "business-card"] },
+    { "name": "Oracle Next Education Program", "year": 2025, "url": "https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51", "labels": ["default", "backend", "business-card"] },
+    { "name": "Amazon Cloud Practitioner Essentials", "year": 2024, "url": "https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view", "labels": ["devops"] },
+    { "name": "Google Associate Cloud Engineer", "year": 2024, "url": "https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile", "labels": ["devops"] }
+  ],
+  "projects": [
+    { "name": "Personal Website", "description": "Personal Website Landing Page", "url": "https://www.carlosferreyra.com.ar/", "labels": ["default", "backend", "cli", "fullstack", "business-card"] },
+    { "name": "LeetCode Solutions", "description": "Problem submissions from my LeetCode profile", "url": "https://github.com/carlosferreyra/leetcode", "labels": ["default", "backend", "cli", "business-card"] },
+    { "name": "Kitsune Studios", "description": "Open source projects and experiments", "url": "https://github.com/Kitsune-Studios", "labels": ["default", "cli", "business-card"] },
+    { "name": "Datos Argentina", "description": "Data engineering projects for Argentine public data", "url": "https://github.com/argendata", "labels": ["default", "backend", "cli", "business-card"] }
+  ]
+}

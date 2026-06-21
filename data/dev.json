@@ -1,6 +1,0 @@
-{
-  "extends": ["fullstack", "backend"],
-  "slug": "carlos-ferreyra",
-  "personalInfo": { "title": "Software Engineer" },
-  "summary": "Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering."
-}

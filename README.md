@@ -25,9 +25,10 @@ Software Developer/Engineer with a passion for solving complex problems through 
 
 ```bash
 Languages:               Python, Java, JavaScript, TypeScript, Rust
-Databases:               MySQL, MongoDB, SQLite
-Frameworks:              Django, Web APIs, REST
 Cloud:                   GCP, AWS
+Databases:               MySQL, MongoDB, SQLite
+DevOps & Infra:          Docker, CI/CD, Git, Linux
+Frameworks:              Django, Web APIs, REST
 ```
 
 ## Professional Experience
@@ -51,6 +52,7 @@ Cloud:                   GCP, AWS
 
 - [Personal Website](https://www.carlosferreyra.com.ar/) - Personal Website Landing Page
 - [LeetCode Solutions](https://github.com/carlosferreyra/leetcode) - Problem submissions from my LeetCode profile
+- [Kitsune Studios](https://github.com/Kitsune-Studios) - Open source projects and experiments
 - [Datos Argentina](https://github.com/argendata) - Data engineering projects for Argentine public data
 
 ## Certifications
