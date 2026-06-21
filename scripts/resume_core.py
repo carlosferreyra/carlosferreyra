@@ -97,6 +97,7 @@ def resolve_profile(catalog: dict, label: str = "default") -> dict:
         "targets": copy.deepcopy(profile["targets"]),
         "personalInfo": {
             **copy.deepcopy(catalog["personalInfo"]),
+            **copy.deepcopy(profile.get("personalInfo", {})),
             "title": profile["title"],
             "summary": profile["summary"],
         },

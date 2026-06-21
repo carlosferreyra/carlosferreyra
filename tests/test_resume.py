@@ -72,6 +72,11 @@ class ResumeCatalogTests(unittest.TestCase):
         self.assertNotIn("business-card", profiles_for_target(self.catalog, "pdf"))
         self.assertEqual(profiles_for_target(self.catalog, "business-card"), ["business-card"])
 
+    def test_profile_personal_info_overrides_shared_identity(self) -> None:
+        hospitality = resolve_profile(self.catalog, "hospitality")
+        self.assertEqual(hospitality["personalInfo"]["location"], "USA")
+        self.assertEqual(hospitality["personalInfo"]["phone"], "+1 (970) 710 1675")
+
 
 if __name__ == "__main__":
     unittest.main()

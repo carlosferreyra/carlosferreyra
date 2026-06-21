@@ -71,7 +71,11 @@ def main() -> int:
                 "typst", "compile", "--root", str(ROOT),
                 "--input", f"data={data.relative_to(ROOT)}", str(CV_TYP), str(out),
             ]
-            print(f"  [{r['profile']:18}] -> {out.relative_to(ROOT)} ...", end=" ", flush=True)
+            try:
+                display_out = out.relative_to(ROOT)
+            except ValueError:
+                display_out = out
+            print(f"  [{r['profile']:18}] -> {display_out} ...", end=" ", flush=True)
             res = subprocess.run(cmd, capture_output=True, text=True)
             if res.returncode == 0:
                 print(f"OK ({out.stat().st_size // 1024}KB)")
@@ -83,7 +87,11 @@ def main() -> int:
     if failed:
         print(f"\nfailed: {', '.join(failed)}", file=sys.stderr)
         return 1
-    print(f"\nbuilt {len(resumes)} PDF(s) in {out_dir.relative_to(ROOT)}/")
+    try:
+        display_dir = out_dir.relative_to(ROOT)
+    except ValueError:
+        display_dir = out_dir
+    print(f"\nbuilt {len(resumes)} PDF(s) in {display_dir}/")
     return 0
 
 

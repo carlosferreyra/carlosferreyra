@@ -59,6 +59,8 @@ def build_data(template: dict, r: dict) -> dict:
     data["basics"].update(
         name=pi["name"], headline=pi.get("title", ""), email=pi["email"], location=pi["location"]
     )
+    if pi.get("phone"):
+        data["basics"]["phone"] = pi["phone"]
     data["summary"]["content"] = p(r.get("summary") or pi.get("summary", ""))
     sec = data["sections"]
 

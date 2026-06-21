@@ -36,6 +36,17 @@
       "title": "Software Engineer",
       "summary": "Software Developer/Engineer focused on backend development, automation, and elegant solutions to complex problems.",
       "targets": ["business-card"]
+    },
+    "hospitality": {
+      "slug": "hospitality",
+      "title": "Hospitality Professional",
+      "summary": "Proactive hospitality professional with extensive experience in diverse F&B roles, including Server, Barista, and Banquet support. Known for strong problem-solving and multitasking abilities. Fluent in English and Spanish.",
+      "personalInfo": {
+        "name": "Carlos Ferreyra",
+        "location": "USA",
+        "phone": "+1 (970) 710 1675"
+      },
+      "targets": ["pdf", "rxresume"]
     }
   },
   "personalInfo": {
@@ -46,18 +57,23 @@
   "githubUsername": "carlosferreyra",
   "links": [
     { "id": "github", "label": "GitHub", "url": "https://github.com/carlosferreyra", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
-    { "id": "linkedin", "label": "LinkedIn", "url": "https://linkedin.com/in/eduferreyraok", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
+    { "id": "linkedin", "label": "LinkedIn", "url": "https://linkedin.com/in/eduferreyraok", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card", "hospitality"] },
     { "id": "twitter", "label": "Twitter", "url": "https://twitter.com/eduferreyraok", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
     { "id": "portfolio", "label": "Portfolio", "url": "https://carlosferreyra.com.ar", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
-    { "id": "email", "label": "Email", "url": "mailto:eduferreyraok@gmail.com", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
-    { "id": "leetcode", "label": "LeetCode", "url": "https://leetcode.com/u/carlosferreyra/", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] }
+    { "id": "email", "label": "Email", "url": "mailto:eduferreyraok@gmail.com", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card", "hospitality"] },
+    { "id": "leetcode", "label": "LeetCode", "url": "https://leetcode.com/u/carlosferreyra/", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
+    { "id": "credly", "label": "Credly", "url": "https://www.credly.com/users/eduferreyraok", "labels": ["hospitality"] },
+    { "id": "about-me", "label": "My other socials", "url": "https://about.me/carlosferreyra", "labels": ["hospitality"] }
   ],
   "skills": [
     { "category": "Languages", "items": ["Python", "Java", "JavaScript", "TypeScript", "Rust"], "labels": ["default", "backend", "devops", "fullstack", "business-card"] },
     { "category": "Cloud", "items": ["GCP", "AWS"], "labels": ["default", "backend", "devops", "business-card"] },
     { "category": "Databases", "items": ["MySQL", "MongoDB", "SQLite"], "labels": ["default", "backend", "fullstack", "business-card"] },
     { "category": "DevOps & Infra", "items": ["Docker", "CI/CD", "Git", "Linux"], "labels": ["default", "devops", "business-card"] },
-    { "category": "Frameworks", "items": ["Django", "Web APIs", "REST"], "labels": ["default", "backend", "fullstack", "business-card"] }
+    { "category": "Frameworks", "items": ["Django", "Web APIs", "REST"], "labels": ["default", "backend", "fullstack", "business-card"] },
+    { "category": "Individual Strengths", "items": ["Honesty", "Proactivity", "Responsibility", "Accountability", "Respect", "Problem-solving", "Multitasking"], "labels": ["hospitality"] },
+    { "category": "Team Strengths", "items": ["Empathy", "Listening", "Assertive communication", "Team synergy"], "labels": ["hospitality"] },
+    { "category": "Languages", "items": ["Spanish — Native", "English — Fluent", "Portuguese — Basic"], "labels": ["hospitality"] }
   ],
   "experience": [
     {
@@ -81,6 +97,95 @@
         { "text": "Implemented a REST-API to automate data collection of the customer", "labels": ["default", "backend", "fullstack", "business-card"] },
         { "text": "Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web application", "labels": ["default", "backend", "fullstack", "business-card"] }
       ]
+    },
+    {
+      "title": "Server | Private Dining",
+      "company": "St. Regis - Marriott",
+      "location": "Aspen",
+      "period": "2025-2026",
+      "labels": ["hospitality"],
+      "highlights": [
+        { "text": "Operated the overnight In-Room Dining shift independently, taking orders and delivering room service to white-glove luxury standards, coordinating with the kitchen for food and the bar for cocktails until midnight, then personally managing sparkling and wine service through 2am.", "labels": ["hospitality"] },
+        { "text": "Bridged the PM-to-AM transition by running breakfast Private Dining as order taker, managing the complimentary coffee station, and completing sidework to ensure a seamless handoff to the morning team.", "labels": ["hospitality"] },
+        { "text": "Delivered personalized VIP service to high-profile guests, accommodating off-menu items and stepping into other departments to cover outside service offerings when overnight staffing was limited, in English and Spanish.", "labels": ["hospitality"] }
+      ]
+    },
+    {
+      "title": "Server | In Room Dining (IRD) | Busser | Food Runner",
+      "company": "El Toro - Viceroy Snowmass",
+      "location": "Snowmass Village",
+      "period": "2022-2023",
+      "labels": ["hospitality"],
+      "highlights": [
+        { "text": "Managed dedicated sections during PM shifts by handling opening and closing duties and coordinating with back-servers and bartenders with precision.", "labels": ["hospitality"] },
+        { "text": "Delivered IRD service efficiently while maintaining high-touch, fine-dining standards during PM dinner service.", "labels": ["hospitality"] }
+      ]
+    },
+    {
+      "title": "Server | Banquets Captain Support",
+      "company": "Nest | Banquets - Viceroy Snowmass",
+      "location": "Snowmass Village",
+      "period": "2022-2023",
+      "labels": ["hospitality"],
+      "highlights": [
+        { "text": "Ensured attentive service to guests in a ski-in/ski-out mountain setting and upsold alcohol and seasonal promotions to increase check averages.", "labels": ["hospitality"] },
+        { "text": "Served with high-end standards in Banquets, supporting the captain across a variety of events and ensuring seamless setup, service, and breakdown.", "labels": ["hospitality"] }
+      ]
+    },
+    {
+      "title": "Barista",
+      "company": "Cafe V - Viceroy Snowmass",
+      "location": "Snowmass Village",
+      "period": "2021-2022",
+      "labels": ["hospitality"],
+      "highlights": [
+        { "text": "Oversaw daily café operations with full key-holder responsibility and coordinated with the purchasing office to manage inventory.", "labels": ["hospitality"] },
+        { "text": "Cultivated guest loyalty by memorizing regulars' custom orders and enhanced service by communicating in multiple languages.", "labels": ["hospitality"] }
+      ]
+    },
+    {
+      "title": "Barista | Breakfast Attendant",
+      "company": "Dancing Bear Residences Owners Association, Inc",
+      "location": "Aspen",
+      "period": "2021-2022",
+      "labels": ["hospitality"],
+      "highlights": [
+        { "text": "Ensured seamless daily operations and a pristine environment by managing supply checklists, restocking stations, and executing meticulous opening and closing procedures.", "labels": ["hospitality"] },
+        { "text": "Enhanced the guest experience through pleasant conversation and demonstrated commitment by volunteering to serve beverages during a New Year's Eve event.", "labels": ["hospitality"] }
+      ]
+    },
+    {
+      "title": "Busser | Food Runner | Expo",
+      "company": "Black Saddle - Snowmass Club",
+      "location": "Snowmass Village",
+      "period": "2019 - 2020",
+      "labels": ["hospitality"],
+      "highlights": [
+        { "text": "Maximized dining room efficiency by orchestrating seamless food distribution and accelerating table turnover through an efficient process for clearing, sanitizing, and resetting tables.", "labels": ["hospitality"] },
+        { "text": "Elevated the fine-dining experience by providing detailed, high-end presentations of each dish to guests, contributing to greater satisfaction and a more memorable meal.", "labels": ["hospitality"] }
+      ]
+    },
+    {
+      "title": "Busser | Food Runner | Barback",
+      "company": "Club Dining Restaurant - Snowmass Club",
+      "location": "Snowmass Village",
+      "period": "2019 - 2020",
+      "labels": ["hospitality"],
+      "highlights": [
+        { "text": "Streamlined beverage service by efficiently delivering cocktails and drinks to tables and explaining their preparation, allowing servers to focus on wine service and enhancing overall speed of service.", "labels": ["hospitality"] },
+        { "text": "Guaranteed food quality by serving as the critical communication link between the hot station and servers, preventing dishes from getting cold and ensuring correct order delivery.", "labels": ["hospitality"] }
+      ]
+    },
+    {
+      "title": "Busser | Food Runner | Expo",
+      "company": "El Toro - Viceroy Snowmass",
+      "location": "Snowmass Village",
+      "period": "2019-2020",
+      "labels": ["hospitality"],
+      "highlights": [
+        { "text": "Maximized food service efficiency by acting as the central point of communication between the kitchen and servers, ensuring timely and accurate delivery of dishes to the correct seats and sections.", "labels": ["hospitality"] },
+        { "text": "Maintained high standards of food quality by providing constant feedback to the kitchen on pacing, resulting in consistently hot and fresh meal presentations.", "labels": ["hospitality"] }
+      ]
     }
   ],
   "education": [
@@ -89,7 +194,7 @@
       "institution": "Universidad Tecnologica Nacional",
       "location": "Argentina",
       "period": "2015 - 2024",
-      "labels": ["default", "backend", "devops", "fullstack", "business-card"],
+      "labels": ["default", "backend", "devops", "fullstack", "business-card", "hospitality"],
       "highlights": [
         { "text": "Relevant coursework: Data Structures, Algorithms, Software Engineering, Databases", "labels": ["default", "backend", "devops", "fullstack", "business-card"] }
       ]

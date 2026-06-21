@@ -36,6 +36,16 @@
         "title": { "type": "string", "minLength": 1 },
         "summary": { "type": "string" },
         "theme": { "type": "string" },
+        "personalInfo": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string", "minLength": 1 },
+            "email": { "type": "string", "minLength": 1 },
+            "location": { "type": "string", "minLength": 1 },
+            "phone": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
         "targets": {
           "type": "array",
           "uniqueItems": true,
