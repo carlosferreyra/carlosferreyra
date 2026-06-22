@@ -8,6 +8,9 @@ on:
       - 'resume.json'
       - 'web/src/lib/resume.ts'
       - '.github/workflows/deploy-pages.yml'
+  schedule:
+    - cron: '0 4 * * *'
+      timezone: 'America/Denver'
   workflow_dispatch:
 
 concurrency:
@@ -38,6 +41,8 @@ jobs:
 
       - name: Build
         working-directory: web
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bun run build
 
       - name: Upload GitHub Pages artifact

@@ -1,4 +1,5 @@
 import catalog from '../../../resume.json';
+import { githubMetadata } from './github';
 
 const PROFILE = 'default';
 const profile = catalog.profiles[PROFILE];
@@ -31,6 +32,25 @@ const nested = <T extends Labeled & { highlights: Array<Labeled & { text: string
 			.map((highlight) => highlight.text),
 	}));
 
+const projects = await Promise.all(
+	(select(catalog.projects) as Project[]).map(async (project) => {
+		if (!project.url) return project;
+		try {
+			const metadata = await githubMetadata(project.url);
+			return {
+				...project,
+				url: metadata?.url ?? project.url,
+				demo: project.demo ?? metadata?.demo,
+				thumbnail: project.thumbnail ?? metadata?.thumbnail,
+				tags: project.tags ?? metadata?.tags,
+			};
+		} catch (error) {
+			console.warn(`Could not load GitHub metadata for ${project.url}:`, error);
+			return project;
+		}
+	}),
+);
+
 export const resume = {
 	personalInfo: { ...catalog.personalInfo, title: profile.title, summary: profile.summary },
 	githubUsername: catalog.githubUsername,
@@ -39,7 +59,7 @@ export const resume = {
 	experience: nested(catalog.experience) as Experience[],
 	education: nested(catalog.education) as Education[],
 	certifications: select(catalog.certifications) as Certification[],
-	projects: select(catalog.projects) as Project[],
+	projects: projects as Project[],
 };
 
 export type Resume = typeof resume;

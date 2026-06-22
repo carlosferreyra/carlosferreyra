@@ -209,9 +209,9 @@
     { "name": "Google Associate Cloud Engineer", "year": 2024, "url": "https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile", "labels": ["devops"] }
   ],
   "projects": [
-    { "name": "Personal Website", "description": "Personal Website Landing Page", "url": "https://www.carlosferreyra.com.ar/", "labels": ["default", "backend", "cli", "fullstack", "business-card"] },
+    { "name": "Personal Website", "description": "Personal Website Landing Page", "url": "https://github.com/carlosferreyra/carlosferreyra", "labels": ["default", "backend", "cli", "fullstack", "business-card"] },
     { "name": "LeetCode Solutions", "description": "Problem submissions from my LeetCode profile", "url": "https://github.com/carlosferreyra/leetcode", "labels": ["default", "backend", "cli", "business-card"] },
-    { "name": "Kitsune Studios", "description": "Open source projects and experiments", "url": "https://github.com/Kitsune-Studios", "labels": ["default", "cli", "business-card"] },
-    { "name": "Datos Argentina", "description": "Data engineering projects for Argentine public data", "url": "https://github.com/argendata", "labels": ["default", "backend", "cli", "business-card"] }
+    { "name": "Kitsune Studios", "description": "Open source projects and experiments", "url": "https://github.com/Kitsune-Studios/.github", "labels": ["default", "cli", "business-card"] },
+    { "name": "Datos Argentina", "description": "Data engineering projects for Argentine public data", "url": "https://github.com/argendata/.github", "labels": ["default", "backend", "cli", "business-card"] }
   ]
 }
