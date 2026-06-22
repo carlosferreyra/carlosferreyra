@@ -50,10 +50,10 @@ Frameworks:              Django, Web APIs, REST
 
 ## Projects
 
-- [Personal Website](https://www.carlosferreyra.com.ar/) - Personal Website Landing Page
+- [Personal Website](https://github.com/carlosferreyra/carlosferreyra) - Personal Website Landing Page
 - [LeetCode Solutions](https://github.com/carlosferreyra/leetcode) - Problem submissions from my LeetCode profile
-- [Kitsune Studios](https://github.com/Kitsune-Studios) - Open source projects and experiments
-- [Datos Argentina](https://github.com/argendata) - Data engineering projects for Argentine public data
+- [Kitsune Studios](https://github.com/Kitsune-Studios/.github) - Open source projects and experiments
+- [Datos Argentina](https://github.com/argendata/.github) - Data engineering projects for Argentine public data
 
 ## Certifications
 
