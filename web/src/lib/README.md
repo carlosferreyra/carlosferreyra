@@ -4,4 +4,4 @@
 time. It mirrors the Python resolver rules: records must explicitly include `default`, and nested
 experience or education highlights are filtered independently.
 
-Edit `resume.json`, then run `uv run scripts/resume.py check` from the repository root.
+Edit `resume.json`, then run `uv run scripts/resume check` from the repository root.

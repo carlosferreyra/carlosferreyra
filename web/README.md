@@ -122,7 +122,7 @@ import catalog from '../../../resume.json';
 const skills = catalog.skills.filter((item) => item.labels.includes('default'));
 ```
 
-Edit `resume.json` directly and run `uv run scripts/resume.py check` before committing.
+Edit `resume.json` directly and run `uv run scripts/resume check` before committing.
 
 ## Deploy
 

@@ -10,7 +10,7 @@ identity data, named profiles, and explicitly labeled content. Profiles use exac
 - Every link, skill group, job, education entry, certification, and project has `labels`.
 - Experience and education highlights have their own labels for fine-grained tailoring.
 - Shared records list every profile that should receive them.
-- `resume.schema.json` documents the public shape; `scripts/resume_core.py` enforces cross-field
+- `resume.schema.json` documents the public shape; `scripts/resume/core.py` enforces cross-field
   rules such as declared labels and unique slugs.
 - `data/themes.json` remains separate because it is RxResume presentation configuration.
 
@@ -26,14 +26,14 @@ The business-card consumer should resolve the exact `business-card` label and mu
 ## Commands
 
 ```bash
-uv run scripts/resume.py validate
-uv run scripts/resume.py list
-uv run scripts/resume.py resolve --profile backend
-uv run scripts/resume.py readme
-uv run scripts/resume.py pdf [--profile backend]
-uv run scripts/resume.py rxresume [--profile backend] [--apply]
-uv run scripts/resume.py build
-uv run scripts/resume.py check
+uv run scripts/resume validate
+uv run scripts/resume list
+uv run scripts/resume resolve --profile backend
+uv run scripts/resume readme
+uv run scripts/resume pdf [--profile backend]
+uv run scripts/resume rxresume [--profile backend] [--apply]
+uv run scripts/resume build
+uv run scripts/resume check
 ```
 
 Resolved profiles and RxResume request bodies are ephemeral. Only `README.md` and profiles targeting

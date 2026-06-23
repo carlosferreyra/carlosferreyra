@@ -1,7 +1,3 @@
-# /// script
-# requires-python = ">=3.11"
-# dependencies = ["httpx>=0.27"]
-# ///
 """Push labeled profiles from resume.json to Reactive Resume by slug.
 
 Repo is the source of truth; RxResume is a renderer. Each targeted profile is
@@ -12,12 +8,11 @@ structural template (theme, layout, typography).
 Dry-run by default. Pass --apply to write.
 
 Env: RXRESUME_BASE_URL, RXRESUME_TOKEN, RXRESUME_USERNAME
-Run: uv run scripts/resume_push.py [--profile backend] [--apply]
+Run: uv run scripts/resume rxresume [--profile backend] [--apply]
 """
 
 from __future__ import annotations
 
-import argparse
 import copy
 import json
 import os
@@ -27,7 +22,7 @@ from pathlib import Path
 
 import httpx
 
-from resume_core import ROOT, load_catalog, profiles_for_target, resolve_profile
+from .core import ROOT, load_catalog, profiles_for_target, resolve_profile
 
 THEMES = ROOT / "data" / "themes.json"
 TEMPLATE_SLUG = "carlos-ferreyra"
@@ -127,16 +122,7 @@ def apply_theme(data: dict, theme: dict) -> dict:
     return data
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description="Publish resolved resumes to RxResume.")
-    parser.add_argument("--profile", help="Publish only this profile (default: RxResume targets)")
-    parser.add_argument(
-        "--apply",
-        action="store_true",
-        help="Write changes. Without this flag the command is a dry-run.",
-    )
-    args = parser.parse_args()
-
+def publish_rxresume(profile: str | None = None, apply: bool = False) -> int:
     base = os.environ.get("RXRESUME_BASE_URL", "").rstrip("/")
     token = os.environ.get("RXRESUME_TOKEN", "")
     username = os.environ.get("RXRESUME_USERNAME", "<username>")
@@ -145,10 +131,10 @@ def main() -> int:
         return 1
 
     catalog = load_catalog()
-    if args.profile and "rxresume" not in catalog["profiles"].get(args.profile, {}).get("targets", []):
-        print(f"error: profile '{args.profile}' does not target rxresume", file=sys.stderr)
+    if profile and "rxresume" not in catalog["profiles"].get(profile, {}).get("targets", []):
+        print(f"error: profile '{profile}' does not target rxresume", file=sys.stderr)
         return 1
-    labels = [args.profile] if args.profile else profiles_for_target(catalog, "rxresume")
+    labels = [profile] if profile else profiles_for_target(catalog, "rxresume")
     resumes = [resolve_profile(catalog, label) for label in labels]
 
     themes = json.loads(THEMES.read_text())
@@ -169,7 +155,7 @@ def main() -> int:
             counts = {k: len(data["sections"][k]["items"]) for k in MANAGED}
             print(f"[{verb}] slug={slug:18} title='{r['personalInfo']['title']}' {counts}")
             print(f"         -> https://rxresu.me/{username}/{slug}")
-            if not args.apply:
+            if not apply:
                 continue
             if exists:
                 rid = by_slug[slug]["id"]
@@ -185,10 +171,6 @@ def main() -> int:
             resp.raise_for_status()
             print(f"         -> {verb.lower()}d id={rid}")
 
-    if not args.apply:
+    if not apply:
         print("\ndry-run only. re-run with --apply to write to rxresu.me")
     return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())

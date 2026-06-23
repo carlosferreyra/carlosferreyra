@@ -1,6 +1,6 @@
 #import "@preview/silver-dev-cv:{{ version }}": *
 
-// scripts/resume_pdf.py resolves one labeled profile to an ephemeral JSON file.
+// scripts/resume/pdf.py resolves one labeled profile to an ephemeral JSON file.
 #let r = json("../" + sys.inputs.at("data"))
 #let info = r.personalInfo
 #let summary = r.at("summary", default: info.summary)

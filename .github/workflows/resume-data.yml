@@ -8,11 +8,7 @@ on:
       - 'resume.schema.json'
       - 'data/themes.json'
       - 'silver-dev-cv/cv.typ.j2'
-      - 'scripts/resume.py'
-      - 'scripts/resume_core.py'
-      - 'scripts/build_readme.py'
-      - 'scripts/resume_push.py'
-      - 'scripts/resume_pdf.py'
+      - 'scripts/resume/**'
   workflow_dispatch:
 
 permissions:
@@ -36,14 +32,14 @@ jobs:
         run: uv run python -m unittest discover -s tests -v
 
       - name: Validate and build resume outputs
-        run: uv run scripts/resume.py build
+        run: uv run scripts/resume build
 
       - name: Push resolved resumes to rxresu.me
         env:
           RXRESUME_BASE_URL: https://rxresu.me/api/openapi
           RXRESUME_TOKEN: ${{ secrets.RXRESUME_TOKEN }}
           RXRESUME_USERNAME: ${{ vars.RXRESUME_USERNAME }}
-        run: uv run scripts/resume.py rxresume --apply
+        run: uv run scripts/resume rxresume --apply
 
       - name: Commit generated README + PDFs
         uses: stefanzweifel/git-auto-commit-action@v5

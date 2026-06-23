@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from resume_core import ResumeValidationError, load_catalog, profiles_for_target, resolve_profile, validate
+from resume.core import ResumeValidationError, load_catalog, profiles_for_target, resolve_profile, validate
 
 
 class ResumeCatalogTests(unittest.TestCase):

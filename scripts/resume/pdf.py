@@ -1,12 +1,7 @@
-# /// script
-# requires-python = ">=3.11"
-# dependencies = []
-# ///
 """Generate configured PDF profiles from the canonical resume.json."""
 
 from __future__ import annotations
 
-import argparse
 import glob
 import json
 import re
@@ -16,7 +11,7 @@ import tempfile
 import tomllib
 from pathlib import Path
 
-from resume_core import ROOT, load_catalog, profiles_for_target, resolve_profile
+from .core import ROOT, load_catalog, profiles_for_target, resolve_profile
 
 TEMPLATE = ROOT / "silver-dev-cv" / "cv.typ.j2"
 CV_TYP = ROOT / "silver-dev-cv" / "cv.typ"
@@ -42,23 +37,19 @@ def pdf_name(person: str, slug: str) -> str:
     return f"{person}.pdf" if slug == person else f"{person}-{slug}.pdf"
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description="Render PDF profiles from resume.json.")
-    parser.add_argument("--profile", help="Render only this profile (default: PDF targets)")
-    parser.add_argument("--out-dir", default="resume", help="Output directory relative to repo root")
-    args = parser.parse_args()
+def render_pdfs(profile: str | None = None, out_dir_name: str = "resume") -> int:
     catalog = load_catalog()
-    if args.profile and "pdf" not in catalog["profiles"].get(args.profile, {}).get("targets", []):
-        print(f"error: profile '{args.profile}' does not target pdf", file=sys.stderr)
+    if profile and "pdf" not in catalog["profiles"].get(profile, {}).get("targets", []):
+        print(f"error: profile '{profile}' does not target pdf", file=sys.stderr)
         return 1
-    labels = [args.profile] if args.profile else profiles_for_target(catalog, "pdf")
+    labels = [profile] if profile else profiles_for_target(catalog, "pdf")
     resumes = [resolve_profile(catalog, label) for label in labels]
 
     # render cv.typ once (only the version import is templated; slug is a runtime input)
     CV_TYP.write_text(TEMPLATE.read_text().replace("{{ version }}", silver_dev_version()))
 
     person = slugify(resumes[0]["personalInfo"]["name"])
-    out_dir = ROOT / args.out_dir
+    out_dir = ROOT / out_dir_name
     out_dir.mkdir(parents=True, exist_ok=True)
 
     failed = []
@@ -93,7 +84,3 @@ def main() -> int:
         display_dir = out_dir
     print(f"\nbuilt {len(resumes)} PDF(s) in {display_dir}/")
     return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())

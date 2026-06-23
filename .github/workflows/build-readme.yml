@@ -8,8 +8,7 @@ on:
     branches: [main]
     paths:
       - 'README.md.j2'
-      - 'scripts/build_readme.py'
-      - 'scripts/resume_core.py'
+      - 'scripts/resume/**'
       - 'resume.json'
   workflow_dispatch:
 
@@ -29,7 +28,7 @@ jobs:
       - uses: astral-sh/setup-uv@v8.0.0
 
       - name: Build README
-        run: uv run scripts/resume.py readme
+        run: uv run scripts/resume readme
 
       - name: Commit README
         uses: stefanzweifel/git-auto-commit-action@v5
