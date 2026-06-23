@@ -35,9 +35,9 @@ IT Operations:           Process automation, Workflow mapping, DBA fundamentals,
 
 - **Software Engineer** | UTN - FRRe | March 2024 - Dec 2024
   - Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity
+  - Mapped manual processes with non-technical stakeholders, documented constraints, and helped reduce costs 10% while increasing efficiency 50%.
   - Designed and implemented a scalable server architecture and automated workflows to support hundreds of users
   - Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency
-  - Reverse engineered manual business processes and translated operational constraints into maintainable software workflows
 
 - **Backend Engineer** | Devlights S.R.L | March 2021 - Sep 2021
   - Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company
