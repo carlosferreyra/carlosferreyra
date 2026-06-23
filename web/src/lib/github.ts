@@ -30,8 +30,8 @@ export async function githubMetadata(url: string): Promise<GitHubMetadata | unde
 	const response = await fetch('https://api.github.com/graphql', {
 		method: 'POST',
 		headers: {
-			accept: 'application/vnd.github+json',
-			authorization: `Bearer ${token}`,
+			'accept': 'application/vnd.github+json',
+			'authorization': `Bearer ${token}`,
 			'content-type': 'application/json',
 			'user-agent': 'carlosferreyra-portfolio',
 		},
