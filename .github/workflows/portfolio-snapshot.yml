@@ -1,0 +1,32 @@
+name: Update Portfolio Snapshot
+
+on:
+  schedule:
+    - cron: '15 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v8.0.0
+
+      - name: Fetch GitHub portfolio snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run scripts/resume portfolio
+
+      - name: Build README
+        run: uv run scripts/resume readme
+
+      - name: Commit portfolio snapshot and README
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: data/github-portfolio.json README.md
+          commit_message: 'docs: update portfolio snapshot'

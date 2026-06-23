@@ -12,8 +12,7 @@
 
 Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering.
 
-- 🔭 Working on: [Kitsune Studios](https://github.com/Kitsune-Studios) &
-  [Datos Argentina](https://github.com/argendata)
+- 🔭 Working on: [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) & [business-card](https://github.com/carlosferreyra/business-card)
 - 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi),
   [National Technological University](https://www.utn.edu.ar/)
 - 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/carlosferreyra/)
@@ -52,10 +51,9 @@ IT Operations:           Process automation, Workflow mapping, DBA fundamentals,
 
 ## Projects
 
-- [Personal Website](https://github.com/carlosferreyra/carlosferreyra) - Personal Website Landing Page
-- [LeetCode Solutions](https://github.com/carlosferreyra/leetcode) - Problem submissions from my LeetCode profile
-- [Kitsune Studios](https://github.com/Kitsune-Studios/.github) - Open source projects and experiments
-- [Datos Argentina](https://github.com/argendata/.github) - Data engineering projects for Argentine public data
+- [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) - A collection of Python tools available for use with uv tools · ⭐ 6
+- [informatorio](https://github.com/informatorioar/informatorio) - Curso Informatorio - Edicion 2025 · ⭐ 6
+- [business-card](https://github.com/carlosferreyra/business-card) - Interactive CLI business card available in both Python and TypeScript - run with uvx or npx · ⭐ 0
 
 ## Certifications
 

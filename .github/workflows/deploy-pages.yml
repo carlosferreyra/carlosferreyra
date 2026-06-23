@@ -6,6 +6,7 @@ on:
     paths:
       - 'web/**'
       - 'resume.json'
+      - 'data/github-portfolio.json'
       - 'web/src/lib/resume.ts'
       - '.github/workflows/deploy-pages.yml'
   schedule:

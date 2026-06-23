@@ -25,6 +25,7 @@ from resume.core import (
     validate,
 )
 from resume.pdf import render_pdfs
+from resume.portfolio import write_snapshot
 from resume.readme import render_readme
 from resume.rxresume import publish_rxresume
 
@@ -83,6 +84,17 @@ def readme_command(
     """Render README.md from a resolved profile."""
     validated_catalog()
     typer.echo(f"README written to {render_readme(profile, ROOT / out)}")
+
+
+@app.command("portfolio")
+def portfolio_command(
+    out: Annotated[
+        str,
+        typer.Option(help="Output path relative to the repo root."),
+    ] = "data/github-portfolio.json",
+) -> None:
+    """Fetch GitHub topic-tagged portfolio repos into a generated snapshot."""
+    typer.echo(f"portfolio snapshot written to {write_snapshot(ROOT / out)}")
 
 
 @app.command()

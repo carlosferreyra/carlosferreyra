@@ -1,5 +1,5 @@
 import catalog from '../../../resume.json';
-import { githubMetadata } from './github';
+import portfolio from '@data/github-portfolio.json';
 
 const PROFILE = 'default';
 const profile = catalog.profiles[PROFILE];
@@ -13,11 +13,17 @@ const select = <T extends Labeled>(items: T[]): Omit<T, 'labels'>[] =>
 export type Link = { id: string; label: string; url: string };
 export type Project = {
 	name: string;
+	nameWithOwner?: string;
+	owner?: string;
 	description: string;
 	url?: string;
 	demo?: string;
 	thumbnail?: string;
 	tags?: string[];
+	stars?: number;
+	pushedAt?: string;
+	updatedAt?: string;
+	primaryLanguage?: string;
 };
 export type Experience = { title: string; company: string; period: string; highlights: string[] };
 export type Education = { degree: string; institution: string; location: string; period: string; highlights: string[] };
@@ -32,25 +38,6 @@ const nested = <T extends Labeled & { highlights: Array<Labeled & { text: string
 			.map((highlight) => highlight.text),
 	}));
 
-const projects = await Promise.all(
-	(select(catalog.projects) as Project[]).map(async (project) => {
-		if (!project.url) return project;
-		try {
-			const metadata = await githubMetadata(project.url);
-			return {
-				...project,
-				url: metadata?.url ?? project.url,
-				demo: project.demo ?? metadata?.demo,
-				thumbnail: project.thumbnail ?? metadata?.thumbnail,
-				tags: project.tags ?? metadata?.tags,
-			};
-		} catch (error) {
-			console.warn(`Could not load GitHub metadata for ${project.url}:`, error);
-			return project;
-		}
-	}),
-);
-
 export const resume = {
 	personalInfo: { ...catalog.personalInfo, title: profile.title, summary: profile.summary },
 	githubUsername: catalog.githubUsername,
@@ -59,7 +46,7 @@ export const resume = {
 	experience: nested(catalog.experience) as Experience[],
 	education: nested(catalog.education) as Education[],
 	certifications: select(catalog.certifications) as Certification[],
-	projects: projects as Project[],
+	projects: portfolio.projects as Project[],
 };
 
 export type Resume = typeof resume;

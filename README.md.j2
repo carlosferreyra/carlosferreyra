@@ -12,8 +12,8 @@
 
 {{ info.summary }}
 
-- 🔭 Working on: [Kitsune Studios](https://github.com/Kitsune-Studios) &
-  [Datos Argentina](https://github.com/argendata)
+{% if working_on_markdown %}{{ working_on_markdown }}
+{% endif %}
 - 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi),
   [National Technological University](https://www.utn.edu.ar/)
 - 👨‍💻 Competitive programmer on [LeetCode]({{ links.leetcode }})
@@ -47,9 +47,7 @@
 
 ## Projects
 
-{% for proj in projects %}
-- [{{ proj.name }}]({{ proj.url }}) - {{ proj.description }}
-{% endfor %}
+{{ projects_markdown }}
 
 ## Certifications
 

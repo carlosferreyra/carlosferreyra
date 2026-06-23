@@ -1,0 +1,109 @@
+{
+  "generatedAt": "2026-06-23T18:17:54Z",
+  "projects": [
+    {
+      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
+      "description": "A collection of Python tools available for use with uv tools",
+      "name": "awesome-uvx",
+      "nameWithOwner": "carlosferreyra/awesome-uvx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-06-23T03:56:20Z",
+      "stars": 6,
+      "tags": [
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-readme",
+        "portfolio"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
+      "updatedAt": "2026-06-23T18:17:09Z",
+      "url": "https://github.com/carlosferreyra/awesome-uvx"
+    },
+    {
+      "demo": "https://informatorioar.github.io/informatorio/",
+      "description": "Curso Informatorio - Edicion 2025",
+      "name": "informatorio",
+      "nameWithOwner": "informatorioar/informatorio",
+      "owner": "informatorioar",
+      "primaryLanguage": "Python",
+      "pushedAt": "2025-07-22T17:44:33Z",
+      "stars": 6,
+      "tags": [
+        "chaco",
+        "desarrollo-web",
+        "globant",
+        "informatorio",
+        "portfolio",
+        "web"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/informatorioar/informatorio",
+      "updatedAt": "2026-06-23T18:13:49Z",
+      "url": "https://github.com/informatorioar/informatorio"
+    },
+    {
+      "demo": "",
+      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
+      "name": "business-card",
+      "nameWithOwner": "carlosferreyra/business-card",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-04-20T00:21:25Z",
+      "stars": 0,
+      "tags": [
+        "business-card",
+        "card",
+        "portfolio",
+        "profile",
+        "resume"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
+      "updatedAt": "2026-04-20T00:21:28Z",
+      "url": "https://github.com/carlosferreyra/business-card"
+    }
+  ],
+  "topic": "portfolio",
+  "workingOn": [
+    {
+      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
+      "description": "A collection of Python tools available for use with uv tools",
+      "name": "awesome-uvx",
+      "nameWithOwner": "carlosferreyra/awesome-uvx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-06-23T03:56:20Z",
+      "stars": 6,
+      "tags": [
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-readme",
+        "portfolio"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
+      "updatedAt": "2026-06-23T18:17:09Z",
+      "url": "https://github.com/carlosferreyra/awesome-uvx"
+    },
+    {
+      "demo": "",
+      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
+      "name": "business-card",
+      "nameWithOwner": "carlosferreyra/business-card",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-04-20T00:21:25Z",
+      "stars": 0,
+      "tags": [
+        "business-card",
+        "card",
+        "portfolio",
+        "profile",
+        "resume"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
+      "updatedAt": "2026-04-20T00:21:28Z",
+      "url": "https://github.com/carlosferreyra/business-card"
+    }
+  ]
+}
