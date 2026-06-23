@@ -25,7 +25,9 @@
     "experience": { "type": "array", "items": { "$ref": "#/$defs/nestedLabeled" } },
     "education": { "type": "array", "items": { "$ref": "#/$defs/nestedLabeled" } },
     "certifications": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },
-    "projects": { "type": "array", "items": { "$ref": "#/$defs/labeled" } }
+    "projects": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },
+    "languages": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },
+    "interests": { "type": "array", "items": { "$ref": "#/$defs/labeled" } }
   },
   "$defs": {
     "profile": {

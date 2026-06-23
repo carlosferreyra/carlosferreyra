@@ -45,6 +45,22 @@
   sectionsep
 }
 
+#if has("languages") {
+  section("Languages")
+  for lang in r.languages {
+    oneline-title-item(title: lang.language, content: [#lang.fluency])
+  }
+  sectionsep
+}
+
+#if has("interests") {
+  section("Interests")
+  for interest in r.interests {
+    oneline-title-item(title: interest.name, content: [#interest.items.join(", ")])
+  }
+  sectionsep
+}
+
 #if has("projects") {
   section("Projects")
   for proj in r.projects {

@@ -111,10 +111,14 @@ def rxresume(
         bool,
         typer.Option("--apply", help="Write changes. Without this flag the command is a dry-run."),
     ] = False,
+    theme: Annotated[
+        str | None,
+        typer.Option(help="Override the profile theme from data/themes.json."),
+    ] = None,
 ) -> None:
     """Publish resolved profiles to RxResume."""
     validated_catalog()
-    exit_if_failed(publish_rxresume(profile, apply))
+    exit_if_failed(publish_rxresume(profile, apply, theme))
 
 
 @app.command()

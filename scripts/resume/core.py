@@ -8,7 +8,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 RESUME = ROOT / "resume.json"
-SECTIONS = ("links", "skills", "experience", "education", "certifications", "projects")
+SECTIONS = (
+    "links",
+    "skills",
+    "experience",
+    "education",
+    "certifications",
+    "projects",
+    "languages",
+    "interests",
+)
 NESTED = ("experience", "education")
 TARGETS = {"website", "readme", "pdf", "rxresume", "business-card"}
 

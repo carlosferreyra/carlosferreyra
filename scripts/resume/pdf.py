@@ -34,7 +34,7 @@ def silver_dev_version(package: str = "silver-dev-cv") -> str:
 
 
 def pdf_name(person: str, slug: str) -> str:
-    return f"{person}.pdf" if slug == person else f"{person}-{slug}.pdf"
+    return f"{slug}.pdf" if slug == person or slug.startswith(f"{person}-") else f"{person}-{slug}.pdf"
 
 
 def render_pdfs(profile: str | None = None, out_dir_name: str = "resume") -> int:

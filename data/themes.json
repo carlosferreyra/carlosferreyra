@@ -120,5 +120,146 @@
       "shadowColor": "rgba(0, 0, 0, 0.5)",
       "shadowWidth": 0
     }
+  },
+  "espanol": {
+    "metadata": {
+      "template": "glalie",
+      "layout": {
+        "sidebarWidth": 35,
+        "pages": [
+          {
+            "fullWidth": false,
+            "main": [
+              "summary",
+              "experience",
+              "certifications",
+              "projects",
+              "volunteer",
+              "skills",
+              "interests",
+              "languages",
+              "references",
+              "awards",
+              "publications"
+            ],
+            "sidebar": [
+              "profiles",
+              "education"
+            ]
+          }
+        ]
+      },
+      "page": {
+        "gapX": 4,
+        "gapY": 6,
+        "marginX": 26,
+        "marginY": 26,
+        "format": "letter",
+        "locale": "es-AR",
+        "hideLinkUnderline": false,
+        "hideIcons": false,
+        "hideSectionIcons": true
+      },
+      "design": {
+        "level": {
+          "icon": "star",
+          "type": "circle"
+        },
+        "colors": {
+          "primary": "rgba(0, 0, 0, 1)",
+          "text": "rgba(0, 0, 0, 1)",
+          "background": "rgba(255, 255, 255, 1)"
+        }
+      },
+      "typography": {
+        "body": {
+          "fontFamily": "Open Sans",
+          "fontWeights": [
+            "400",
+            "800"
+          ],
+          "fontSize": 9,
+          "lineHeight": 1.5
+        },
+        "heading": {
+          "fontFamily": "Open Sans",
+          "fontWeights": [
+            "800"
+          ],
+          "fontSize": 12,
+          "lineHeight": 1.5
+        }
+      },
+      "notes": "",
+      "styleRules": []
+    },
+    "sectionMeta": {
+      "summary": {
+        "title": "Sobre mi",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "experience": {
+        "title": "Experiencia Profesional",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "skills": {
+        "title": "Skills",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "projects": {
+        "title": "Proyectos",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "certifications": {
+        "title": "Certificaciones",
+        "icon": "",
+        "columns": 2,
+        "hidden": false
+      },
+      "education": {
+        "title": "Educacion",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "profiles": {
+        "title": "Perfiles",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      },
+      "languages": {
+        "title": "Idiomas",
+        "icon": "",
+        "columns": 5,
+        "hidden": false
+      },
+      "interests": {
+        "title": "Intereses",
+        "icon": "",
+        "columns": 1,
+        "hidden": false
+      }
+    },
+    "picture": {
+      "hidden": false,
+      "url": "https://avatars.githubusercontent.com/u/48495214?v=4",
+      "size": 128,
+      "rotation": 0,
+      "aspectRatio": 1,
+      "borderRadius": 100,
+      "borderColor": "rgba(0, 0, 0, 0.5)",
+      "borderWidth": 1,
+      "shadowColor": "rgba(0, 0, 0, 0.5)",
+      "shadowWidth": 0
+    }
   }
 }

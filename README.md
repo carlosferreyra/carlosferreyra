@@ -27,8 +27,9 @@ Software Developer/Engineer with a passion for solving complex problems through 
 Languages:               Python, Java, JavaScript, TypeScript, Rust
 Cloud:                   GCP, AWS
 Databases:               MySQL, MongoDB, SQLite
-DevOps & Infra:          Docker, CI/CD, Git, Linux
-Frameworks:              Django, Web APIs, REST
+DevOps & Infra:          Docker, CI/CD, GitHub Actions, Git, Linux
+Frameworks:              Django+DRF, Angular, Spring, FastAPI
+IT Operations:           Process automation, Workflow mapping, DBA fundamentals, CI/CD pipelines, Data processing, Data lakehouse
 ```
 
 ## Professional Experience
@@ -37,6 +38,7 @@ Frameworks:              Django, Web APIs, REST
   - Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity
   - Designed and implemented a scalable server architecture and automated workflows to support hundreds of users
   - Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency
+  - Reverse engineered manual business processes and translated operational constraints into maintainable software workflows
 
 - **Backend Engineer** | Devlights S.R.L | March 2021 - Sep 2021
   - Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company
@@ -61,6 +63,8 @@ Frameworks:              Django, Web APIs, REST
 - [SQL Advanced (2025)](https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql)
 - [MongoDB - Database Administration (2025)](https://learn.mongodb.com/c/OE3lXL2WRfa33hpCBtCwEQ)
 - [Oracle Next Education Program (2025)](https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51)
+- [Amazon Cloud Practitioner Essentials (2024)](https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view)
+- [Google Associate Cloud Engineer (2024)](https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile)
 
 ## GitHub Stats
 

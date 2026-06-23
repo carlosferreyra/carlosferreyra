@@ -26,7 +26,16 @@ from .core import ROOT, load_catalog, profiles_for_target, resolve_profile
 
 THEMES = ROOT / "data" / "themes.json"
 TEMPLATE_SLUG = "carlos-ferreyra"
-MANAGED = {"profiles", "experience", "education", "skills", "projects", "certifications"}
+MANAGED = {
+    "profiles",
+    "experience",
+    "education",
+    "skills",
+    "projects",
+    "certifications",
+    "languages",
+    "interests",
+}
 
 # link id -> simple-icons network slug RxResume uses to render brand icons
 NETWORK = {"github": "github", "linkedin": "linkedin", "twitter": "x", "leetcode": "leetcode"}
@@ -44,8 +53,8 @@ def p(text: str) -> str:
     return f"<p>{text}</p>" if text else ""
 
 
-def link(url: str, label: str = "") -> dict:
-    return {"url": url, "label": label, "inlineLink": False}
+def link(url: str, label: str | None = None) -> dict:
+    return {"url": url, "label": label if label is not None else ("[url]" if url else ""), "inlineLink": False}
 
 
 def build_data(template: dict, r: dict) -> dict:
@@ -104,6 +113,17 @@ def build_data(template: dict, r: dict) -> dict:
         }
         for c in r.get("certifications", [])
     ]
+    sec["languages"]["items"] = [
+        {"id": cuid(), "hidden": False, "language": l["language"], "fluency": l["fluency"], "level": 0}
+        for l in r.get("languages", [])
+    ]
+    sec["interests"]["items"] = [
+        {
+            "id": cuid(), "hidden": False, "icon": "", "iconColor": "",
+            "name": i["name"], "keywords": i["items"],
+        }
+        for i in r.get("interests", [])
+    ]
     for name, s in sec.items():
         if name not in MANAGED:
             s["items"] = []
@@ -122,7 +142,9 @@ def apply_theme(data: dict, theme: dict) -> dict:
     return data
 
 
-def publish_rxresume(profile: str | None = None, apply: bool = False) -> int:
+def publish_rxresume(
+    profile: str | None = None, apply: bool = False, theme: str | None = None
+) -> int:
     base = os.environ.get("RXRESUME_BASE_URL", "").rstrip("/")
     token = os.environ.get("RXRESUME_TOKEN", "")
     username = os.environ.get("RXRESUME_USERNAME", "<username>")
@@ -148,8 +170,8 @@ def publish_rxresume(profile: str | None = None, apply: bool = False) -> int:
         for r in resumes:
             slug = r["slug"]
             data = build_data(template, r)
-            theme = themes[r.get("theme", "default")]
-            data = apply_theme(data, theme)
+            theme_name = theme or r.get("theme", "default")
+            data = apply_theme(data, themes[theme_name])
             exists = slug in by_slug
             verb = "UPDATE" if exists else "CREATE"
             counts = {k: len(data["sections"][k]["items"]) for k in MANAGED}
