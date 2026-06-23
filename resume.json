@@ -34,10 +34,10 @@
     },
     "marriot": {
       "slug": "marriot",
-      "title": "IT Software Engineer",
-      "summary": "IT-focused software engineer experienced in backend systems, API design, process automation, cloud infrastructure, and hospitality operations. Strong at translating manual workflows into reliable systems that improve service quality and cross-team coordination.",
+      "title": "IT Support Specialist",
+      "summary": "Hospitality-facing IT support candidate with Marriott luxury operations experience and an engineering background. Brings user empathy, troubleshooting discipline, and cloud/automation fundamentals while strengthening Active Directory, networking, vSphere, and CompTIA A+ concepts.",
       "personalInfo": {
-        "location": "USA",
+        "location": "USA / Aspen area",
         "phone": "+1 (970) 710 1675"
       },
       "targets": ["pdf", "rxresume"]
@@ -79,23 +79,29 @@
   },
   "githubUsername": "carlosferreyra",
   "links": [
-    { "id": "github", "label": "GitHub", "url": "https://github.com/carlosferreyra", "labels": ["default", "espanol", "backend", "cli", "devops", "marriot", "fullstack", "business-card"] },
+    { "id": "phone", "label": "+1 (970) 710 1675", "url": "tel:+19707101675", "labels": ["marriot"] },
+    { "id": "github", "label": "GitHub", "url": "https://github.com/carlosferreyra", "labels": ["default", "espanol", "backend", "cli", "devops", "fullstack", "business-card"] },
     { "id": "linkedin", "label": "LinkedIn", "url": "https://linkedin.com/in/eduferreyraok", "labels": ["default", "espanol", "backend", "cli", "devops", "marriot", "fullstack", "business-card", "hospitality"] },
     { "id": "twitter", "label": "Twitter", "url": "https://twitter.com/eduferreyraok", "labels": ["default", "backend", "cli", "devops", "fullstack", "business-card"] },
     { "id": "portfolio", "label": "Portfolio", "url": "https://carlosferreyra.com.ar", "labels": ["default", "espanol", "backend", "cli", "devops", "marriot", "fullstack", "business-card"] },
     { "id": "email", "label": "Email", "url": "mailto:eduferreyraok@gmail.com", "labels": ["default", "espanol", "backend", "cli", "devops", "marriot", "fullstack", "business-card", "hospitality"] },
-    { "id": "leetcode", "label": "LeetCode", "url": "https://leetcode.com/u/carlosferreyra/", "labels": ["default", "espanol", "backend", "cli", "devops", "marriot", "fullstack", "business-card"] },
+    { "id": "leetcode", "label": "LeetCode", "url": "https://leetcode.com/u/carlosferreyra/", "labels": ["default", "espanol", "backend", "cli", "devops", "fullstack", "business-card"] },
     { "id": "gcp-skillboost", "label": "Google Cloud", "url": "https://www.cloudskillsboost.google/public_profiles/326c1a3d-6ac7-4036-b07f-c29bd0be6132", "labels": ["espanol"] },
     { "id": "credly", "label": "Credly", "url": "https://www.credly.com/users/eduferreyraok", "labels": ["espanol", "hospitality"] },
     { "id": "about-me", "label": "Otros", "url": "https://about.me/carlosferreyra", "labels": ["espanol", "hospitality"] }
   ],
   "skills": [
-    { "category": "Languages", "items": ["Python", "Java", "JavaScript", "TypeScript", "Rust"], "labels": ["default", "backend", "devops", "marriot", "fullstack", "business-card"] },
-    { "category": "Cloud", "items": ["GCP", "AWS"], "labels": ["default", "backend", "devops", "marriot", "business-card"] },
-    { "category": "Databases", "items": ["MySQL", "MongoDB", "SQLite"], "labels": ["default", "backend", "marriot", "fullstack", "business-card"] },
-    { "category": "DevOps & Infra", "items": ["Docker", "CI/CD", "GitHub Actions", "Git", "Linux"], "labels": ["default", "devops", "marriot", "business-card"] },
-    { "category": "Frameworks", "items": ["Django+DRF", "Angular", "Spring", "FastAPI"], "labels": ["default", "backend", "marriot", "fullstack", "business-card"] },
-    { "category": "IT Operations", "items": ["Process automation", "Workflow mapping", "DBA fundamentals", "CI/CD pipelines", "Data processing", "Data lakehouse"], "labels": ["default", "marriot"] },
+    { "category": "Languages", "items": ["Python", "Java", "JavaScript", "TypeScript", "Rust"], "labels": ["default", "backend", "devops", "fullstack", "business-card"] },
+    { "category": "Cloud", "items": ["GCP", "AWS"], "labels": ["default", "backend", "devops", "business-card"] },
+    { "category": "Databases", "items": ["MySQL", "MongoDB", "SQLite"], "labels": ["default", "backend", "fullstack", "business-card"] },
+    { "category": "DevOps & Infra", "items": ["Docker", "CI/CD", "GitHub Actions", "Git", "Linux"], "labels": ["default", "devops", "business-card"] },
+    { "category": "Frameworks", "items": ["Django+DRF", "Angular", "Spring", "FastAPI"], "labels": ["default", "backend", "fullstack", "business-card"] },
+    { "category": "IT Operations", "items": ["Process automation", "Workflow mapping", "DBA fundamentals", "CI/CD pipelines", "Data processing", "Data lakehouse"], "labels": ["default"] },
+    { "category": "IT Support", "items": ["Endpoint troubleshooting", "Windows/Linux basics", "Hardware diagnostics", "Documentation", "User support"], "labels": ["marriot"] },
+    { "category": "Networking", "items": ["TCP/IP", "DNS", "DHCP", "Wi-Fi/router troubleshooting", "Configuration fundamentals"], "labels": ["marriot"] },
+    { "category": "Systems Studying", "items": ["Active Directory", "VMware vSphere", "CompTIA A+ concepts"], "labels": ["marriot"] },
+    { "category": "Cloud & Automation", "items": ["Google Cloud ACE", "Python", "Scripting", "APIs", "SQL"], "labels": ["marriot"] },
+    { "category": "Hospitality Systems", "items": ["POS/Micros workflows", "Service operations", "Cross-team escalation"], "labels": ["marriot"] },
     { "category": "Backend", "items": ["Python", "Django REST Framework", "FastAPI", "Java", "Spring"], "labels": ["espanol"] },
     { "category": "Datos", "items": ["MySQL", "PostgreSQL", "MongoDB", "DBA fundamentals", "Data lakehouse"], "labels": ["espanol"] },
     { "category": "Cloud & DevOps", "items": ["GCP", "AWS", "GitHub Actions", "CI/CD", "Terraform/Pulumi"], "labels": ["espanol"] },
@@ -105,6 +111,20 @@
   ],
   "experience": [
     {
+      "title": "Server | Private Dining",
+      "company": "St. Regis - Marriott",
+      "location": "Aspen",
+      "period": "2025-2026",
+      "labels": ["marriot", "hospitality"],
+      "highlights": [
+        { "text": "Supported Marriott luxury operations across kitchen, bar, private dining, and overnight service teams in a high-expectation guest environment.", "labels": ["marriot"] },
+        { "text": "Worked daily with POS/service systems and understands the impact of downtime, access issues, hardware failures, and delayed IT escalation on guest-facing teams.", "labels": ["marriot"] },
+        { "text": "Operated the overnight In-Room Dining shift independently, taking orders and delivering room service to white-glove luxury standards, coordinating with the kitchen for food and the bar for cocktails until midnight, then personally managing sparkling and wine service through 2am.", "labels": ["hospitality"] },
+        { "text": "Bridged the PM-to-AM transition by running breakfast Private Dining as order taker, managing the complimentary coffee station, and completing sidework to ensure a seamless handoff to the morning team.", "labels": ["hospitality"] },
+        { "text": "Delivered personalized VIP service to high-profile guests, accommodating off-menu items and stepping into other departments to cover outside service offerings when overnight staffing was limited, in English and Spanish.", "labels": ["hospitality"] }
+      ]
+    },
+    {
       "title": "Software Engineer",
       "company": "UTN - FRRe",
       "location": "Argentina",
@@ -112,9 +132,10 @@
       "labels": ["default", "backend", "devops", "marriot", "fullstack", "business-card"],
       "highlights": [
         { "text": "Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity", "labels": ["default", "backend", "devops", "fullstack", "business-card"] },
-        { "text": "Designed and implemented a scalable server architecture and automated workflows to support hundreds of users", "labels": ["default", "backend", "devops", "marriot", "fullstack", "business-card"] },
-        { "text": "Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency", "labels": ["default", "backend", "devops", "marriot", "fullstack", "business-card"] },
-        { "text": "Reverse engineered manual business processes and translated operational constraints into maintainable software workflows", "labels": ["default", "marriot"] }
+        { "text": "Improved server architecture, automated workflows, and reliability for an internal operations platform supporting hundreds of users.", "labels": ["marriot"] },
+        { "text": "Mapped manual processes with non-technical stakeholders, documented constraints, and helped reduce costs 10% while increasing efficiency 50%.", "labels": ["default", "marriot"] },
+        { "text": "Designed and implemented a scalable server architecture and automated workflows to support hundreds of users", "labels": ["default", "backend", "devops", "fullstack", "business-card"] },
+        { "text": "Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency", "labels": ["default", "backend", "devops", "fullstack", "business-card"] }
       ]
     },
     {
@@ -125,8 +146,9 @@
       "labels": ["default", "backend", "marriot", "fullstack", "business-card"],
       "highlights": [
         { "text": "Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company", "labels": ["default", "backend", "fullstack", "business-card"] },
-        { "text": "Implemented a REST-API to automate data collection of the customer", "labels": ["default", "backend", "marriot", "fullstack", "business-card"] },
-        { "text": "Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web application", "labels": ["default", "backend", "marriot", "fullstack", "business-card"] }
+        { "text": "Troubleshot and implemented REST API workflows for customer data collection using Python, Django, Git, and web APIs.", "labels": ["marriot"] },
+        { "text": "Implemented a REST-API to automate data collection of the customer", "labels": ["default", "backend", "fullstack", "business-card"] },
+        { "text": "Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web application", "labels": ["default", "backend", "fullstack", "business-card"] }
       ]
     },
     {
@@ -150,20 +172,6 @@
       "highlights": [
         { "text": "Implemente una API REST para automatizar la recopilacion de datos del cliente.", "labels": ["espanol"] },
         { "text": "Adquiri experiencia practica con Python, Git, Django y APIs web, aplicandolos a una aplicacion web.", "labels": ["espanol"] }
-      ]
-    },
-    {
-      "title": "Server | Private Dining",
-      "company": "St. Regis - Marriott",
-      "location": "Aspen",
-      "period": "2025-2026",
-      "labels": ["marriot", "hospitality"],
-      "highlights": [
-        { "text": "Supported luxury hospitality operations at a Marriott property, coordinating across kitchen, bar, private dining, and overnight service teams in a high-expectation guest environment.", "labels": ["marriot"] },
-        { "text": "Used firsthand operational context to identify process gaps, handoff needs, and service reliability requirements that IT systems must support in hotel environments.", "labels": ["marriot"] },
-        { "text": "Operated the overnight In-Room Dining shift independently, taking orders and delivering room service to white-glove luxury standards, coordinating with the kitchen for food and the bar for cocktails until midnight, then personally managing sparkling and wine service through 2am.", "labels": ["hospitality"] },
-        { "text": "Bridged the PM-to-AM transition by running breakfast Private Dining as order taker, managing the complimentary coffee station, and completing sidework to ensure a seamless handoff to the morning team.", "labels": ["hospitality"] },
-        { "text": "Delivered personalized VIP service to high-profile guests, accommodating off-menu items and stepping into other departments to cover outside service offerings when overnight staffing was limited, in English and Spanish.", "labels": ["hospitality"] }
       ]
     },
     {
@@ -265,10 +273,11 @@
     }
   ],
   "certifications": [
+    { "name": "CompTIA A+ fundamentals - studying", "year": 2026, "url": "https://www.comptia.org/certifications/a", "labels": ["marriot"] },
     { "name": "Databricks Data Engineer Associate", "year": 2025, "url": "https://credentials.databricks.com/profile/carlosferreyra/wallet", "labels": ["default", "backend", "devops", "marriot", "fullstack", "business-card"] },
     { "name": "SQL Advanced", "year": 2025, "url": "https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql", "labels": ["default", "backend", "marriot", "fullstack", "business-card"] },
     { "name": "MongoDB - Database Administration", "year": 2025, "url": "https://learn.mongodb.com/c/OE3lXL2WRfa33hpCBtCwEQ", "labels": ["default", "backend", "marriot", "fullstack", "business-card"] },
-    { "name": "Oracle Next Education Program", "year": 2025, "url": "https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51", "labels": ["default", "backend", "marriot", "fullstack", "business-card"] },
+    { "name": "Oracle Next Education Program", "year": 2025, "url": "https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51", "labels": ["default", "backend", "fullstack", "business-card"] },
     { "name": "Amazon Cloud Practitioner Essentials", "year": 2024, "url": "https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view", "labels": ["default", "devops"] },
     { "name": "Google Associate Cloud Engineer", "year": 2024, "url": "https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile", "labels": ["default", "backend", "devops", "marriot", "fullstack"] },
     { "name": "Advanced SQL", "year": 2025, "url": "https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql", "labels": ["archive"] },
