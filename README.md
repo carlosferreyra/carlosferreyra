@@ -17,7 +17,7 @@ Software Developer/Engineer with a passion for solving complex problems through 
   [National Technological University](https://www.utn.edu.ar/)
 - 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/carlosferreyra/)
 - 📄 Resume: [PDF-English](resume/carlos-ferreyra.pdf) | [PDF-Spanish](resume/carlos-ferreyra-espanol.pdf)
-- 🌐 Portfolio: [carlosferreyra.com.ar](https://carlosferreyra.com.ar)
+- 🌐 Portfolio: [https://www.carlosferreyra.com.ar](https://carlosferreyra.com.ar)
 - 📍 Based in Argentina
 
 ## Technical Skills
