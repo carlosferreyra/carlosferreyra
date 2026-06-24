@@ -13,7 +13,7 @@
 Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering.
 
 - 🔭 Working on: [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) & [business-card](https://github.com/carlosferreyra/business-card)
-- 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi),
+- 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/carreras/Carreras_de_Grado/ISI/),
   [National Technological University](https://www.utn.edu.ar/)
 - 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/carlosferreyra/)
 - 📄 Resume: [PDF-English](resume/carlos-ferreyra.pdf) | [PDF-Spanish](resume/carlos-ferreyra-espanol.pdf)
