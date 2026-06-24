@@ -3,7 +3,7 @@
   "certifications": [
     {
       "labels": [
-        "marriot"
+        "marriott"
       ],
       "name": "CompTIA A+ fundamentals - studying",
       "url": "https://www.comptia.org/certifications/a",
@@ -14,7 +14,7 @@
         "default",
         "backend",
         "devops",
-        "marriot",
+        "marriott",
         "fullstack",
         "business-card"
       ],
@@ -26,7 +26,7 @@
       "labels": [
         "default",
         "backend",
-        "marriot",
+        "marriott",
         "fullstack",
         "business-card"
       ],
@@ -38,7 +38,7 @@
       "labels": [
         "default",
         "backend",
-        "marriot",
+        "marriott",
         "fullstack",
         "business-card"
       ],
@@ -71,7 +71,7 @@
         "default",
         "backend",
         "devops",
-        "marriot",
+        "marriott",
         "fullstack"
       ],
       "name": "Google Associate Cloud Engineer",
@@ -136,7 +136,7 @@
             "default",
             "backend",
             "devops",
-            "marriot",
+            "marriott",
             "fullstack",
             "business-card"
           ],
@@ -148,7 +148,7 @@
         "default",
         "backend",
         "devops",
-        "marriot",
+        "marriott",
         "fullstack",
         "business-card",
         "hospitality"
@@ -173,13 +173,13 @@
       "highlights": [
         {
           "labels": [
-            "marriot"
+            "marriott"
           ],
           "text": "Supported Marriott luxury operations across kitchen, bar, private dining, and overnight service teams in a high-expectation guest environment."
         },
         {
           "labels": [
-            "marriot"
+            "marriott"
           ],
           "text": "Worked daily with POS/service systems and understands the impact of downtime, access issues, hardware failures, and delayed IT escalation on guest-facing teams."
         },
@@ -203,7 +203,7 @@
         }
       ],
       "labels": [
-        "marriot",
+        "marriott",
         "hospitality"
       ],
       "location": "Aspen",
@@ -225,14 +225,14 @@
         },
         {
           "labels": [
-            "marriot"
+            "marriott"
           ],
           "text": "Improved server architecture, automated workflows, and reliability for an internal operations platform supporting hundreds of users."
         },
         {
           "labels": [
             "default",
-            "marriot"
+            "marriott"
           ],
           "text": "Mapped manual processes with non-technical stakeholders, documented constraints, and helped reduce costs 10% while increasing efficiency 50%."
         },
@@ -261,7 +261,7 @@
         "default",
         "backend",
         "devops",
-        "marriot",
+        "marriott",
         "fullstack",
         "business-card"
       ],
@@ -283,7 +283,7 @@
         },
         {
           "labels": [
-            "marriot"
+            "marriott"
           ],
           "text": "Troubleshot and implemented REST API workflows for customer data collection using Python, Django, Git, and web APIs."
         },
@@ -309,7 +309,7 @@
       "labels": [
         "default",
         "backend",
-        "marriot",
+        "marriott",
         "fullstack",
         "business-card"
       ],
@@ -575,7 +575,7 @@
       "id": "phone",
       "label": "+1 (970) 710 1675",
       "labels": [
-        "marriot"
+        "marriott"
       ],
       "url": "tel:+19707101675"
     },
@@ -602,7 +602,7 @@
         "backend",
         "cli",
         "devops",
-        "marriot",
+        "marriott",
         "fullstack",
         "business-card",
         "hospitality"
@@ -631,7 +631,7 @@
         "backend",
         "cli",
         "devops",
-        "marriot",
+        "marriott",
         "fullstack",
         "business-card"
       ],
@@ -646,7 +646,7 @@
         "backend",
         "cli",
         "devops",
-        "marriot",
+        "marriott",
         "fullstack",
         "business-card",
         "hospitality"
@@ -785,12 +785,12 @@
       ],
       "title": "Hospitality Professional"
     },
-    "marriot": {
+    "marriott": {
       "personalInfo": {
         "location": "USA / Aspen area",
         "phone": "+1 (970) 710 1675"
       },
-      "slug": "marriot",
+      "slug": "marriott",
       "summary": "Hospitality-facing IT support candidate with Marriott luxury operations experience and an engineering background. Brings user empathy, troubleshooting discipline, and cloud/automation fundamentals while strengthening Active Directory, networking, vSphere, and CompTIA A+ concepts.",
       "targets": [
         "pdf",
@@ -960,7 +960,7 @@
         "User support"
       ],
       "labels": [
-        "marriot"
+        "marriott"
       ]
     },
     {
@@ -973,7 +973,7 @@
         "Configuration fundamentals"
       ],
       "labels": [
-        "marriot"
+        "marriott"
       ]
     },
     {
@@ -984,7 +984,7 @@
         "CompTIA A+ concepts"
       ],
       "labels": [
-        "marriot"
+        "marriott"
       ]
     },
     {
@@ -997,7 +997,7 @@
         "SQL"
       ],
       "labels": [
-        "marriot"
+        "marriott"
       ]
     },
     {
@@ -1008,7 +1008,7 @@
         "Cross-team escalation"
       ],
       "labels": [
-        "marriot"
+        "marriott"
       ]
     },
     {
