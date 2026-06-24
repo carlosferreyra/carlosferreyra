@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T18:17:54Z",
+  "generatedAt": "2026-06-24T01:51:29Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-06-23T03:56:20Z",
+      "pushedAt": "2026-06-23T23:43:22Z",
       "stars": 6,
       "tags": [
         "awesome",
@@ -18,7 +18,7 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-06-23T18:17:09Z",
+      "updatedAt": "2026-06-23T23:42:42Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
     },
     {
@@ -49,7 +49,7 @@
       "nameWithOwner": "carlosferreyra/business-card",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-04-20T00:21:25Z",
+      "pushedAt": "2026-06-23T23:32:40Z",
       "stars": 0,
       "tags": [
         "business-card",
@@ -59,8 +59,24 @@
         "resume"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
-      "updatedAt": "2026-04-20T00:21:28Z",
+      "updatedAt": "2026-06-23T23:32:44Z",
       "url": "https://github.com/carlosferreyra/business-card"
+    },
+    {
+      "demo": "",
+      "description": "living brainstorm database of project ideas ranked by career impact.",
+      "name": "project-ideas",
+      "nameWithOwner": "carlosferreyra/project-ideas",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-05-19T20:34:45Z",
+      "stars": 0,
+      "tags": [
+        "portfolio"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/project-ideas",
+      "updatedAt": "2026-06-23T18:22:26Z",
+      "url": "https://github.com/carlosferreyra/project-ideas"
     }
   ],
   "topic": "portfolio",
@@ -72,7 +88,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-06-23T03:56:20Z",
+      "pushedAt": "2026-06-23T23:43:22Z",
       "stars": 6,
       "tags": [
         "awesome",
@@ -82,7 +98,7 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-06-23T18:17:09Z",
+      "updatedAt": "2026-06-23T23:42:42Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
     },
     {
@@ -92,7 +108,7 @@
       "nameWithOwner": "carlosferreyra/business-card",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-04-20T00:21:25Z",
+      "pushedAt": "2026-06-23T23:32:40Z",
       "stars": 0,
       "tags": [
         "business-card",
@@ -102,7 +118,7 @@
         "resume"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
-      "updatedAt": "2026-04-20T00:21:28Z",
+      "updatedAt": "2026-06-23T23:32:44Z",
       "url": "https://github.com/carlosferreyra/business-card"
     }
   ]

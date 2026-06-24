@@ -54,6 +54,7 @@ IT Operations:           Process automation, Workflow mapping, DBA fundamentals,
 - [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) - A collection of Python tools available for use with uv tools · ⭐ 6
 - [informatorio](https://github.com/informatorioar/informatorio) - Curso Informatorio - Edicion 2025 · ⭐ 6
 - [business-card](https://github.com/carlosferreyra/business-card) - Interactive CLI business card available in both Python and TypeScript - run with uvx or npx · ⭐ 0
+- [project-ideas](https://github.com/carlosferreyra/project-ideas) - living brainstorm database of project ideas ranked by career impact. · ⭐ 0
 
 ## Certifications
 
