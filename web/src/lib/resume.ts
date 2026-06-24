@@ -1,14 +1,12 @@
-import catalog from '../../../resume.json';
 import portfolio from '@data/github-portfolio.json';
+import catalog from '../../../resume.json';
 
 const PROFILE = 'default';
 const profile = catalog.profiles[PROFILE];
 
 type Labeled = { labels: string[] };
 const select = <T extends Labeled>(items: T[]): Omit<T, 'labels'>[] =>
-	items
-		.filter((item) => item.labels.includes(PROFILE))
-		.map(({ labels: _labels, ...item }) => item);
+	items.filter((item) => item.labels.includes(PROFILE)).map(({ labels: _labels, ...item }) => item);
 
 export type Link = { id: string; label: string; url: string };
 export type Project = {
@@ -26,11 +24,19 @@ export type Project = {
 	primaryLanguage?: string;
 };
 export type Experience = { title: string; company: string; period: string; highlights: string[] };
-export type Education = { degree: string; institution: string; location: string; period: string; highlights: string[] };
+export type Education = {
+	degree: string;
+	institution: string;
+	location: string;
+	period: string;
+	highlights: string[];
+};
 export type Certification = { name: string; year: number; url: string };
 export type SkillGroup = { category: string; items: string[] };
 
-const nested = <T extends Labeled & { highlights: Array<Labeled & { text: string }> }>(items: T[]) =>
+const nested = <T extends Labeled & { highlights: Array<Labeled & { text: string }> }>(
+	items: T[]
+) =>
 	select(items).map((item) => ({
 		...item,
 		highlights: item.highlights
