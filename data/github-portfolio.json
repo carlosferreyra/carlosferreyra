@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T05:41:20Z",
+  "generatedAt": "2026-07-01T05:51:30Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -49,7 +49,7 @@
       "nameWithOwner": "carlosferreyra/business-card",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-06-23T23:32:40Z",
+      "pushedAt": "2026-06-30T18:54:16Z",
       "stars": 0,
       "tags": [
         "business-card",
@@ -82,6 +82,26 @@
   "topic": "portfolio",
   "workingOn": [
     {
+      "demo": "",
+      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
+      "name": "business-card",
+      "nameWithOwner": "carlosferreyra/business-card",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-06-30T18:54:16Z",
+      "stars": 0,
+      "tags": [
+        "business-card",
+        "card",
+        "portfolio",
+        "profile",
+        "resume"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
+      "updatedAt": "2026-06-23T23:32:44Z",
+      "url": "https://github.com/carlosferreyra/business-card"
+    },
+    {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
       "description": "A collection of Python tools available for use with uv tools",
       "name": "awesome-uvx",
@@ -100,26 +120,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
       "updatedAt": "2026-06-23T23:42:42Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
-    },
-    {
-      "demo": "",
-      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
-      "name": "business-card",
-      "nameWithOwner": "carlosferreyra/business-card",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-06-23T23:32:40Z",
-      "stars": 0,
-      "tags": [
-        "business-card",
-        "card",
-        "portfolio",
-        "profile",
-        "resume"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
-      "updatedAt": "2026-06-23T23:32:44Z",
-      "url": "https://github.com/carlosferreyra/business-card"
     }
   ]
 }
