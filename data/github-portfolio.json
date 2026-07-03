@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T05:51:30Z",
+  "generatedAt": "2026-07-03T07:37:00Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-06-29T08:01:44Z",
+      "pushedAt": "2026-07-02T23:38:08Z",
       "stars": 6,
       "tags": [
         "awesome",
@@ -18,7 +18,7 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-06-23T23:42:42Z",
+      "updatedAt": "2026-07-02T23:37:44Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
     },
     {
@@ -82,6 +82,26 @@
   "topic": "portfolio",
   "workingOn": [
     {
+      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
+      "description": "A collection of Python tools available for use with uv tools",
+      "name": "awesome-uvx",
+      "nameWithOwner": "carlosferreyra/awesome-uvx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-07-02T23:38:08Z",
+      "stars": 6,
+      "tags": [
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-readme",
+        "portfolio"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
+      "updatedAt": "2026-07-02T23:37:44Z",
+      "url": "https://github.com/carlosferreyra/awesome-uvx"
+    },
+    {
       "demo": "",
       "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
       "name": "business-card",
@@ -100,26 +120,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
       "updatedAt": "2026-06-23T23:32:44Z",
       "url": "https://github.com/carlosferreyra/business-card"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
-      "description": "A collection of Python tools available for use with uv tools",
-      "name": "awesome-uvx",
-      "nameWithOwner": "carlosferreyra/awesome-uvx",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Python",
-      "pushedAt": "2026-06-29T08:01:44Z",
-      "stars": 6,
-      "tags": [
-        "awesome",
-        "awesome-list",
-        "awesome-lists",
-        "awesome-readme",
-        "portfolio"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-06-23T23:42:42Z",
-      "url": "https://github.com/carlosferreyra/awesome-uvx"
     }
   ]
 }
