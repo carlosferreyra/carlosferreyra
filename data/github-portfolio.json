@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T07:37:00Z",
+  "generatedAt": "2026-07-06T02:37:53Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -63,6 +63,57 @@
       "url": "https://github.com/carlosferreyra/business-card"
     },
     {
+      "demo": "https://carlosferreyra.github.io/awesome-bunx/",
+      "description": "A collection of JS|TS tools available for use with Bun",
+      "name": "awesome-bunx",
+      "nameWithOwner": "carlosferreyra/awesome-bunx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "TypeScript",
+      "pushedAt": "2026-06-29T07:50:29Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-bunx",
+      "updatedAt": "2026-07-06T02:36:25Z",
+      "url": "https://github.com/carlosferreyra/awesome-bunx"
+    },
+    {
+      "demo": "",
+      "description": "",
+      "name": "awesome-cargo-install",
+      "nameWithOwner": "carlosferreyra/awesome-cargo-install",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-06-29T07:44:34Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-cargo-install",
+      "updatedAt": "2026-07-06T02:36:40Z",
+      "url": "https://github.com/carlosferreyra/awesome-cargo-install"
+    },
+    {
+      "demo": "https://carlosferreyra.github.io/codetwin/",
+      "description": "A code to diagram/documentation generator.",
+      "name": "codetwin",
+      "nameWithOwner": "carlosferreyra/codetwin",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-06-26T23:28:47Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
+      "updatedAt": "2026-07-06T02:36:29Z",
+      "url": "https://github.com/carlosferreyra/codetwin"
+    },
+    {
       "demo": "",
       "description": "living brainstorm database of project ideas ranked by career impact.",
       "name": "project-ideas",
@@ -72,11 +123,46 @@
       "pushedAt": "2026-05-19T20:34:45Z",
       "stars": 0,
       "tags": [
-        "portfolio"
+        "portfolio",
+        "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/project-ideas",
-      "updatedAt": "2026-06-23T18:22:26Z",
+      "updatedAt": "2026-07-06T02:36:59Z",
       "url": "https://github.com/carlosferreyra/project-ideas"
+    },
+    {
+      "demo": "",
+      "description": "Idiomatic language bindings generated from annotated Rust code",
+      "name": "korvex",
+      "nameWithOwner": "carlosferreyra/korvex",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-05-13T16:01:59Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/korvex",
+      "updatedAt": "2026-07-06T02:36:55Z",
+      "url": "https://github.com/carlosferreyra/korvex"
+    },
+    {
+      "demo": "https://carlosferreyra.github.io/profilectl/",
+      "description": "Cross-platform dotfiles automation with Rust",
+      "name": "profilectl",
+      "nameWithOwner": "carlosferreyra/profilectl",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-05-07T07:32:17Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/profilectl",
+      "updatedAt": "2026-07-06T02:36:32Z",
+      "url": "https://github.com/carlosferreyra/profilectl"
     }
   ],
   "topic": "portfolio",
