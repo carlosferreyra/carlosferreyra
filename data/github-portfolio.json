@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T02:37:53Z",
+  "generatedAt": "2026-07-06T08:41:07Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-07-02T23:38:08Z",
+      "pushedAt": "2026-07-06T07:46:49Z",
       "stars": 6,
       "tags": [
         "awesome",
@@ -43,6 +43,40 @@
       "url": "https://github.com/informatorioar/informatorio"
     },
     {
+      "demo": "https://carlosferreyra.github.io/awesome-bunx/",
+      "description": "A collection of JS|TS tools available for use with Bun",
+      "name": "awesome-bunx",
+      "nameWithOwner": "carlosferreyra/awesome-bunx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "TypeScript",
+      "pushedAt": "2026-07-06T07:38:26Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-bunx",
+      "updatedAt": "2026-07-06T07:38:29Z",
+      "url": "https://github.com/carlosferreyra/awesome-bunx"
+    },
+    {
+      "demo": "",
+      "description": "",
+      "name": "awesome-cargo-install",
+      "nameWithOwner": "carlosferreyra/awesome-cargo-install",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-07-06T07:34:27Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-cargo-install",
+      "updatedAt": "2026-07-06T07:34:30Z",
+      "url": "https://github.com/carlosferreyra/awesome-cargo-install"
+    },
+    {
       "demo": "",
       "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
       "name": "business-card",
@@ -61,40 +95,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
       "updatedAt": "2026-06-23T23:32:44Z",
       "url": "https://github.com/carlosferreyra/business-card"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/awesome-bunx/",
-      "description": "A collection of JS|TS tools available for use with Bun",
-      "name": "awesome-bunx",
-      "nameWithOwner": "carlosferreyra/awesome-bunx",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "TypeScript",
-      "pushedAt": "2026-06-29T07:50:29Z",
-      "stars": 0,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-bunx",
-      "updatedAt": "2026-07-06T02:36:25Z",
-      "url": "https://github.com/carlosferreyra/awesome-bunx"
-    },
-    {
-      "demo": "",
-      "description": "",
-      "name": "awesome-cargo-install",
-      "nameWithOwner": "carlosferreyra/awesome-cargo-install",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-06-29T07:44:34Z",
-      "stars": 0,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-cargo-install",
-      "updatedAt": "2026-07-06T02:36:40Z",
-      "url": "https://github.com/carlosferreyra/awesome-cargo-install"
     },
     {
       "demo": "https://carlosferreyra.github.io/codetwin/",
@@ -174,7 +174,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-07-02T23:38:08Z",
+      "pushedAt": "2026-07-06T07:46:49Z",
       "stars": 6,
       "tags": [
         "awesome",
@@ -188,24 +188,21 @@
       "url": "https://github.com/carlosferreyra/awesome-uvx"
     },
     {
-      "demo": "",
-      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
-      "name": "business-card",
-      "nameWithOwner": "carlosferreyra/business-card",
+      "demo": "https://carlosferreyra.github.io/awesome-bunx/",
+      "description": "A collection of JS|TS tools available for use with Bun",
+      "name": "awesome-bunx",
+      "nameWithOwner": "carlosferreyra/awesome-bunx",
       "owner": "carlosferreyra",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-06-30T18:54:16Z",
+      "primaryLanguage": "TypeScript",
+      "pushedAt": "2026-07-06T07:38:26Z",
       "stars": 0,
       "tags": [
-        "business-card",
-        "card",
         "portfolio",
-        "profile",
-        "resume"
+        "wip"
       ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
-      "updatedAt": "2026-06-23T23:32:44Z",
-      "url": "https://github.com/carlosferreyra/business-card"
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-bunx",
+      "updatedAt": "2026-07-06T07:38:29Z",
+      "url": "https://github.com/carlosferreyra/awesome-bunx"
     }
   ]
 }
