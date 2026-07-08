@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T08:41:07Z",
+  "generatedAt": "2026-07-08T06:38:57Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-07-06T07:46:49Z",
+      "pushedAt": "2026-07-08T02:26:56Z",
       "stars": 6,
       "tags": [
         "awesome",
@@ -43,38 +43,21 @@
       "url": "https://github.com/informatorioar/informatorio"
     },
     {
-      "demo": "https://carlosferreyra.github.io/awesome-bunx/",
-      "description": "A collection of JS|TS tools available for use with Bun",
-      "name": "awesome-bunx",
-      "nameWithOwner": "carlosferreyra/awesome-bunx",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "TypeScript",
-      "pushedAt": "2026-07-06T07:38:26Z",
-      "stars": 0,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-bunx",
-      "updatedAt": "2026-07-06T07:38:29Z",
-      "url": "https://github.com/carlosferreyra/awesome-bunx"
-    },
-    {
-      "demo": "",
-      "description": "",
-      "name": "awesome-cargo-install",
-      "nameWithOwner": "carlosferreyra/awesome-cargo-install",
+      "demo": "https://carlosferreyra.github.io/profilectl/",
+      "description": "Cross-platform dotfiles automation with Rust",
+      "name": "profilectl",
+      "nameWithOwner": "carlosferreyra/profilectl",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-07-06T07:34:27Z",
+      "pushedAt": "2026-07-08T02:28:32Z",
       "stars": 0,
       "tags": [
         "portfolio",
         "wip"
       ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-cargo-install",
-      "updatedAt": "2026-07-06T07:34:30Z",
-      "url": "https://github.com/carlosferreyra/awesome-cargo-install"
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/profilectl",
+      "updatedAt": "2026-07-08T02:27:39Z",
+      "url": "https://github.com/carlosferreyra/profilectl"
     },
     {
       "demo": "",
@@ -83,7 +66,7 @@
       "nameWithOwner": "carlosferreyra/business-card",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-06-30T18:54:16Z",
+      "pushedAt": "2026-07-08T02:21:34Z",
       "stars": 0,
       "tags": [
         "business-card",
@@ -93,7 +76,7 @@
         "resume"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
-      "updatedAt": "2026-06-23T23:32:44Z",
+      "updatedAt": "2026-07-08T02:21:36Z",
       "url": "https://github.com/carlosferreyra/business-card"
     },
     {
@@ -103,32 +86,15 @@
       "nameWithOwner": "carlosferreyra/codetwin",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-06-26T23:28:47Z",
+      "pushedAt": "2026-07-08T02:20:31Z",
       "stars": 0,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
-      "updatedAt": "2026-07-06T02:36:29Z",
+      "updatedAt": "2026-07-08T02:20:34Z",
       "url": "https://github.com/carlosferreyra/codetwin"
-    },
-    {
-      "demo": "",
-      "description": "living brainstorm database of project ideas ranked by career impact.",
-      "name": "project-ideas",
-      "nameWithOwner": "carlosferreyra/project-ideas",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Python",
-      "pushedAt": "2026-05-19T20:34:45Z",
-      "stars": 0,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/project-ideas",
-      "updatedAt": "2026-07-06T02:36:59Z",
-      "url": "https://github.com/carlosferreyra/project-ideas"
     },
     {
       "demo": "",
@@ -137,16 +103,70 @@
       "nameWithOwner": "carlosferreyra/korvex",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-05-13T16:01:59Z",
+      "pushedAt": "2026-07-08T02:20:27Z",
       "stars": 0,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/korvex",
-      "updatedAt": "2026-07-06T02:36:55Z",
+      "updatedAt": "2026-07-08T02:20:30Z",
       "url": "https://github.com/carlosferreyra/korvex"
     },
+    {
+      "demo": "",
+      "description": "living brainstorm database of project ideas ranked by career impact.",
+      "name": "project-ideas",
+      "nameWithOwner": "carlosferreyra/project-ideas",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-07-08T02:19:40Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/project-ideas",
+      "updatedAt": "2026-07-08T02:19:44Z",
+      "url": "https://github.com/carlosferreyra/project-ideas"
+    },
+    {
+      "demo": "https://carlosferreyra.github.io/awesome-bunx/",
+      "description": "A collection of JS|TS tools available for use with Bun",
+      "name": "awesome-bunx",
+      "nameWithOwner": "carlosferreyra/awesome-bunx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "TypeScript",
+      "pushedAt": "2026-07-08T02:19:37Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-bunx",
+      "updatedAt": "2026-07-08T02:19:51Z",
+      "url": "https://github.com/carlosferreyra/awesome-bunx"
+    },
+    {
+      "demo": "",
+      "description": "",
+      "name": "awesome-cargo-install",
+      "nameWithOwner": "carlosferreyra/awesome-cargo-install",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-07-08T02:19:32Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-cargo-install",
+      "updatedAt": "2026-07-08T02:19:36Z",
+      "url": "https://github.com/carlosferreyra/awesome-cargo-install"
+    }
+  ],
+  "topic": "portfolio",
+  "workingOn": [
     {
       "demo": "https://carlosferreyra.github.io/profilectl/",
       "description": "Cross-platform dotfiles automation with Rust",
@@ -154,19 +174,16 @@
       "nameWithOwner": "carlosferreyra/profilectl",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-05-07T07:32:17Z",
+      "pushedAt": "2026-07-08T02:28:32Z",
       "stars": 0,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/profilectl",
-      "updatedAt": "2026-07-06T02:36:32Z",
+      "updatedAt": "2026-07-08T02:27:39Z",
       "url": "https://github.com/carlosferreyra/profilectl"
-    }
-  ],
-  "topic": "portfolio",
-  "workingOn": [
+    },
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
       "description": "A collection of Python tools available for use with uv tools",
@@ -174,7 +191,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-07-06T07:46:49Z",
+      "pushedAt": "2026-07-08T02:26:56Z",
       "stars": 6,
       "tags": [
         "awesome",
@@ -186,23 +203,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
       "updatedAt": "2026-07-02T23:37:44Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/awesome-bunx/",
-      "description": "A collection of JS|TS tools available for use with Bun",
-      "name": "awesome-bunx",
-      "nameWithOwner": "carlosferreyra/awesome-bunx",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "TypeScript",
-      "pushedAt": "2026-07-06T07:38:26Z",
-      "stars": 0,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-bunx",
-      "updatedAt": "2026-07-06T07:38:29Z",
-      "url": "https://github.com/carlosferreyra/awesome-bunx"
     }
   ]
 }
