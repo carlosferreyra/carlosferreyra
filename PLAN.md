@@ -58,3 +58,10 @@ remote resumes.
 - [x] Consumer-specific JSON files are not generated or committed.
 - [x] CI validates before rendering and uses the same orchestration command as local builds.
 - [ ] Refactor `carlosferreyra/business-card` to fetch the public contract and select its label.
+
+## Website backlog
+
+- [ ] Add an optional Calendly scheduling button to the website contact section. Keep email as the
+  primary contact action, label the secondary action clearly (for example, “Book a 20-minute
+  intro”), provide localized English and Spanish copy, and link to a scheduling page that creates a
+  unique video-call URL rather than publishing a permanent meeting-room URL.
