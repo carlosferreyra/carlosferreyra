@@ -11,13 +11,11 @@ export function t(locale: Locale): Dictionary {
 }
 
 /**
- * Return the root path for a given locale — `/` for the default, `/<locale>/` for others.
- * Keeps URL composition consistent across components.
+ * Return a locale-prefixed path.
  */
 export function localePath(locale: Locale, path = ''): string {
 	const suffix = path.startsWith('/') ? path : `/${path}`;
-	const trimmed = suffix === '/' ? '' : suffix;
-	return locale === DEFAULT_LOCALE ? `${trimmed || '/'}` : `/${locale}${trimmed}`;
+	return `/${locale}${suffix}`;
 }
 
 /**
@@ -25,8 +23,7 @@ export function localePath(locale: Locale, path = ''): string {
  */
 export function alternateLocaleHref(current: Locale, pathname: string): string {
 	const other: Locale = current === 'en' ? 'es' : 'en';
-	// Strip any existing /es prefix, keep only the trailing section (home has none).
-	const clean = pathname.replace(/^\/es\/?/, '/').replace(/\/+$/, '') || '/';
+	const clean = pathname.replace(/^\/(?:en|es)(?=\/|$)/, '') || '/';
 	return localePath(other, clean);
 }
 

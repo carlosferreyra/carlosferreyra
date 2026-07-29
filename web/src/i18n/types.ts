@@ -38,10 +38,10 @@ export type Dictionary = {
 		langLabel: string;
 		langSwitchTitle: string;
 		theme: {
-			label: string;
 			light: string;
 			system: string;
 			dark: string;
+			switchLabel: string;
 		};
 	};
 };

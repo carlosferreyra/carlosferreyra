@@ -1,22 +1,54 @@
 ---
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import About from '~/components/sections/About.astro';
-import Certifications from '~/components/sections/Certifications.astro';
-import Contact from '~/components/sections/Contact.astro';
-import Experience from '~/components/sections/Experience.astro';
-import Hero from '~/components/sections/Hero.astro';
-import Projects from '~/components/sections/Projects.astro';
-import Skills from '~/components/sections/Skills.astro';
+import '~/styles/global.css';
 
-const locale = 'en' as const;
+const site = Astro.site ?? new URL('https://carlosferreyra.com.ar');
+const englishHref = new URL('/en/', site);
+const spanishHref = new URL('/es/', site);
+const defaultHref = new URL('/', site);
 ---
 
-<BaseLayout locale={locale}>
-	<Hero locale={locale} />
-	<About locale={locale} />
-	<Skills locale={locale} />
-	<Experience locale={locale} />
-	<Projects locale={locale} />
-	<Certifications locale={locale} />
-	<Contact locale={locale} />
-</BaseLayout>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex,follow" />
+		<title>Choose your language — Carlos Ferreyra</title>
+		<link rel="canonical" href={defaultHref.toString()} />
+		<link rel="alternate" hreflang="en" href={englishHref.toString()} />
+		<link rel="alternate" hreflang="es" href={spanishHref.toString()} />
+		<link rel="alternate" hreflang="x-default" href={defaultHref.toString()} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+	<body class="font-sans">
+		<main class="min-h-dvh flex items-center justify-center px-6">
+			<div class="max-w-md text-center">
+				<h1 class="font-mono text-xl text-fg">Choose your language</h1>
+				<p class="mt-3 text-fg-muted">Elegí tu idioma</p>
+				<nav class="mt-6 flex justify-center gap-3" aria-label="Language">
+					<a
+						href="/en/"
+						class="inline-flex items-center justify-center px-4 h-10 border border-border text-fg hover:text-accent hover:border-accent transition-colors"
+					>
+						English
+					</a>
+					<a
+						href="/es/"
+						class="inline-flex items-center justify-center px-4 h-10 border border-border text-fg hover:text-accent hover:border-accent transition-colors"
+					>
+						Español
+					</a>
+				</nav>
+			</div>
+		</main>
+
+		<script>
+			import { getSavedLocale, selectLocale } from '~/scripts/locale';
+
+			const languages =
+				navigator.languages.length > 0 ? navigator.languages : [navigator.language];
+			const locale = selectLocale(getSavedLocale(), languages);
+			window.location.replace(`/${locale}/${window.location.search}${window.location.hash}`);
+		</script>
+	</body>
+</html>

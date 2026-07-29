@@ -7,6 +7,7 @@ interface Props {
 const { locale } = Astro.props;
 const dict = t(locale);
 const href = alternateLocaleHref(locale, Astro.url.pathname);
+const targetLocale: Locale = locale === 'en' ? 'es' : 'en';
 ---
 
 <a
@@ -14,6 +15,21 @@ const href = alternateLocaleHref(locale, Astro.url.pathname);
 	class="inline-flex items-center justify-center px-3 h-9 border border-border text-fg-muted hover:text-accent hover:border-accent font-mono text-xs transition-colors"
 	title={dict.meta.langSwitchTitle}
 	aria-label={dict.meta.langSwitchTitle}
+	data-language-toggle
+	data-target-locale={targetLocale}
 >
 	{dict.meta.langLabel}
 </a>
+
+<script>
+	import { saveLocale } from '~/scripts/locale';
+	import type { Locale } from '~/i18n';
+
+	const link = document.querySelector<HTMLAnchorElement>('[data-language-toggle]');
+
+	link?.addEventListener('click', () => {
+		const targetLocale = link.dataset.targetLocale as Locale;
+		saveLocale(targetLocale);
+		link.hash = window.location.hash;
+	});
+</script>

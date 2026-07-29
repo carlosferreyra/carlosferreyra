@@ -12,6 +12,7 @@ export type ThemePref = 'light' | 'dark' | 'system';
 export type ResolvedTheme = 'light' | 'dark';
 
 const STORAGE_KEY = 'theme';
+const THEME_SEQUENCE: readonly ThemePref[] = ['system', 'light', 'dark'];
 
 function systemMql(): MediaQueryList | null {
 	if (typeof window === 'undefined' || !window.matchMedia) return null;
@@ -30,6 +31,11 @@ export function getPref(): ThemePref {
 export function resolve(pref: ThemePref): ResolvedTheme {
 	if (pref !== 'system') return pref;
 	return systemMql()?.matches ? 'dark' : 'light';
+}
+
+export function nextThemePref(pref: ThemePref): ThemePref {
+	const currentIndex = THEME_SEQUENCE.indexOf(pref);
+	return THEME_SEQUENCE[(currentIndex + 1) % THEME_SEQUENCE.length];
 }
 
 export function apply(pref: ThemePref): void {
@@ -63,9 +69,13 @@ export function watchSystem(): () => void {
  * Sync across tabs: if another tab changes localStorage, mirror it here.
  * Returns an unsubscribe fn.
  */
-export function watchStorage(): () => void {
+export function watchStorage(onChange?: (pref: ThemePref) => void): () => void {
 	const onStorage = (e: StorageEvent) => {
-		if (e.key === STORAGE_KEY || e.key === null) apply(getPref());
+		if (e.key === STORAGE_KEY || e.key === null) {
+			const pref = getPref();
+			apply(pref);
+			onChange?.(pref);
+		}
 	};
 	window.addEventListener('storage', onStorage);
 	return () => window.removeEventListener('storage', onStorage);

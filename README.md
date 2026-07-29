@@ -3,7 +3,7 @@
 > Software Engineer
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/eduferreyraok)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail)](mailto:eduferreyraok@gmail.com)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail)](mailto:contact@carlosferreyra.com.ar)
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=flat-square&logo=twitter)](https://twitter.com/eduferreyraok)
 [![GitHub followers](https://img.shields.io/github/followers/carlosferreyra?label=Follow&style=flat-square&logo=github)](https://github.com/carlosferreyra)
 ![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&style=flat-square)
@@ -87,7 +87,7 @@ I'm currently open to new opportunities! Feel free to reach out to discuss poten
 or just to connect.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/eduferreyraok)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail)](mailto:eduferreyraok@gmail.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail)](mailto:contact@carlosferreyra.com.ar)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me)](https://carlosferreyra.com.ar)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/carlosferreyra)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/carlosferreyra/)
