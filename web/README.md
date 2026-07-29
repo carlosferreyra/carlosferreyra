@@ -71,7 +71,7 @@ web/
 │   ├── i18n/            Shared dictionary (en, es) + helpers
 │   ├── layouts/         BaseLayout wraps every page
 │   ├── lib/resume.ts    Typed resolver for ../resume.json
-│   ├── pages/           Route files (/, /es/)
+│   ├── pages/           Route files (detector at /, content at /en/ and /es/)
 │   ├── scripts/         Inline browser scripts (theme bootstrap, …)
 │   └── styles/          Tailwind entry + design tokens
 └── tsconfig.json
@@ -89,9 +89,9 @@ Dark-first palette inspired by GitHub dark, with a single cold-cyan accent.
 | `--color-fg-muted` | `#9198a1` | `#59636e` |
 | `--color-accent`   | `#00b4d8` | `#0969da` |
 
-Theme toggle persists to `localStorage` under `theme`; initial value respects
-`prefers-color-scheme`. An inline script in `<head>` applies it before paint
-to avoid FOUC.
+The single theme button cycles system → light → dark. It persists pinned values
+to `localStorage` under `theme`; system mode respects `prefers-color-scheme`.
+An inline script in `<head>` applies the preference before paint to avoid FOUC.
 
 Typography: `JetBrains Mono` for labels/headings, `Inter` for body — loaded
 once from Google Fonts with `preconnect`.
@@ -100,8 +100,11 @@ once from Google Fonts with `preconnect`.
 
 Routes are generated from a single dictionary:
 
-- `src/i18n/en.ts` — English (default, served at `/`)
+- `src/i18n/en.ts` — English (served at `/en/`)
 - `src/i18n/es.ts` — Spanish (served at `/es/`)
+
+The root route checks an explicit choice saved under `locale`, then the browser's
+preferred languages, and finally falls back to English.
 
 Each page imports the dictionary via `t(locale)`. The language toggle in the
 header uses `alternateLocaleHref(...)` to stay on the current section when

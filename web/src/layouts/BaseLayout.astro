@@ -2,7 +2,7 @@
 import '~/styles/global.css';
 import Footer from '~/components/Footer.astro';
 import Header from '~/components/Header.astro';
-import { alternateLocaleHref, type Locale } from '~/i18n';
+import { localePath, type Locale } from '~/i18n';
 import { themeInit } from '~/scripts/theme-init';
 import { resume } from '~/lib/resume';
 
@@ -16,8 +16,10 @@ const { locale, title, description } = Astro.props;
 
 const siteTitle = title ?? `${resume.personalInfo.name} — ${resume.personalInfo.title}`;
 const siteDescription = description ?? resume.personalInfo.summary;
-const alternateHref = alternateLocaleHref(locale, Astro.url.pathname);
 const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://carlosferreyra.com.ar');
+const englishHref = new URL(localePath('en'), canonical);
+const spanishHref = new URL(localePath('es'), canonical);
+const defaultHref = new URL('/', canonical);
 ---
 
 <!doctype html>
@@ -29,7 +31,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://carlosferre
 		<title>{siteTitle}</title>
 		<meta name="description" content={siteDescription} />
 		<link rel="canonical" href={canonical.toString()} />
-		<link rel="alternate" hreflang={locale === 'en' ? 'es' : 'en'} href={alternateHref} />
+		<link rel="alternate" hreflang="en" href={englishHref.toString()} />
+		<link rel="alternate" hreflang="es" href={spanishHref.toString()} />
+		<link rel="alternate" hreflang="x-default" href={defaultHref.toString()} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={siteTitle} />

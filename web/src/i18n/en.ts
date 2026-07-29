@@ -42,10 +42,10 @@ export const en: Dictionary = {
 		langLabel: 'ES',
 		langSwitchTitle: 'Cambiar a Español',
 		theme: {
-			label: 'Theme',
 			light: 'Light',
 			system: 'System',
 			dark: 'Dark',
+			switchLabel: 'Current theme: {current}. Switch to {next}',
 		},
 	},
 };
