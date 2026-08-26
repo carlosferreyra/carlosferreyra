@@ -129,7 +129,7 @@
   ],
   "education": [
     {
-      "degree": "Information System's Engineering",
+      "degree": "Information Systems Engineering",
       "highlights": [
         {
           "labels": [
@@ -187,19 +187,13 @@
           "labels": [
             "hospitality"
           ],
-          "text": "Operated the overnight In-Room Dining shift independently, taking orders and delivering room service to white-glove luxury standards, coordinating with the kitchen for food and the bar for cocktails until midnight, then personally managing sparkling and wine service through 2am."
+          "text": "Delivered personalized bilingual overnight service to hotel guests, resolving special requests and coordinating with other departments."
         },
         {
           "labels": [
             "hospitality"
           ],
-          "text": "Bridged the PM-to-AM transition by running breakfast Private Dining as order taker, managing the complimentary coffee station, and completing sidework to ensure a seamless handoff to the morning team."
-        },
-        {
-          "labels": [
-            "hospitality"
-          ],
-          "text": "Delivered personalized VIP service to high-profile guests, accommodating off-menu items and stepping into other departments to cover outside service offerings when overnight staffing was limited, in English and Spanish."
+          "text": "Managed overnight In-Room Dining operations independently, including guest communication, order accuracy, service coordination, and follow-through."
         }
       ],
       "labels": [
@@ -376,13 +370,13 @@
           "labels": [
             "hospitality"
           ],
-          "text": "Managed dedicated sections during PM shifts by handling opening and closing duties and coordinating with back-servers and bartenders with precision."
+          "text": "Managed a dedicated guest-service section while coordinating closely with servers, bartenders, and support staff in a fast-paced luxury resort environment."
         },
         {
           "labels": [
             "hospitality"
           ],
-          "text": "Delivered IRD service efficiently while maintaining high-touch, fine-dining standards during PM dinner service."
+          "text": "Responded to guest requests and delivered In-Room Dining service with accuracy, professionalism, and high-touch hospitality standards."
         }
       ],
       "labels": [
@@ -399,13 +393,7 @@
           "labels": [
             "hospitality"
           ],
-          "text": "Ensured attentive service to guests in a ski-in/ski-out mountain setting and upsold alcohol and seasonal promotions to increase check averages."
-        },
-        {
-          "labels": [
-            "hospitality"
-          ],
-          "text": "Served with high-end standards in Banquets, supporting the captain across a variety of events and ensuring seamless setup, service, and breakdown."
+          "text": "Supported the banquet captain with event setup, attentive guest service, upselling, and breakdown in a luxury resort setting."
         }
       ],
       "labels": [
@@ -422,13 +410,13 @@
           "labels": [
             "hospitality"
           ],
-          "text": "Oversaw daily café operations with full key-holder responsibility and coordinated with the purchasing office to manage inventory."
+          "text": "Managed daily café operations with key-holder responsibility, including opening and closing procedures, inventory coordination, and maintaining a clean, welcoming guest area."
         },
         {
           "labels": [
             "hospitality"
           ],
-          "text": "Cultivated guest loyalty by memorizing regulars' custom orders and enhanced service by communicating in multiple languages."
+          "text": "Built relationships with returning guests by remembering preferences, providing personalized service, and communicating across multiple languages."
         }
       ],
       "labels": [
@@ -445,13 +433,7 @@
           "labels": [
             "hospitality"
           ],
-          "text": "Ensured seamless daily operations and a pristine environment by managing supply checklists, restocking stations, and executing meticulous opening and closing procedures."
-        },
-        {
-          "labels": [
-            "hospitality"
-          ],
-          "text": "Enhanced the guest experience through pleasant conversation and demonstrated commitment by volunteering to serve beverages during a New Year's Eve event."
+          "text": "Maintained a welcoming guest environment by managing supply checklists, restocking stations, and completing detailed opening and closing procedures."
         }
       ],
       "labels": [
@@ -638,6 +620,14 @@
       "url": "https://carlosferreyra.com.ar"
     },
     {
+      "id": "phone",
+      "label": "+1 (970) 710-1675",
+      "labels": [
+        "hospitality"
+      ],
+      "url": "tel:+19707101675"
+    },
+    {
       "id": "email",
       "label": "Email",
       "labels": [
@@ -648,10 +638,17 @@
         "devops",
         "marriott",
         "fullstack",
-        "business-card",
-        "hospitality"
+        "business-card"
       ],
       "url": "mailto:contact@carlosferreyra.com.ar"
+    },
+    {
+      "id": "email",
+      "label": "eduferreyraok@gmail.com",
+      "labels": [
+        "hospitality"
+      ],
+      "url": "mailto:eduferreyraok@gmail.com"
     },
     {
       "id": "leetcode",
@@ -679,19 +676,18 @@
       "id": "credly",
       "label": "Credly",
       "labels": [
-        "espanol",
-        "hospitality"
+        "espanol"
       ],
       "url": "https://www.credly.com/users/eduferreyraok"
     },
     {
       "id": "about-me",
-      "label": "Otros",
+      "label": "Website",
       "labels": [
         "espanol",
         "hospitality"
       ],
-      "url": "https://about.me/carlosferreyra"
+      "url": "https://carlosferreyra.com.ar"
     }
   ],
   "personalInfo": {
@@ -773,17 +769,18 @@
     },
     "hospitality": {
       "personalInfo": {
+        "email": "eduferreyraok@gmail.com",
         "location": "USA",
         "name": "Carlos Ferreyra",
         "phone": "+1 (970) 710 1675"
       },
       "slug": "hospitality",
-      "summary": "Proactive hospitality professional with extensive experience in diverse F&B roles, including Server, Barista, and Banquet support. Known for strong problem-solving and multitasking abilities. Fluent in English and Spanish.",
+      "summary": "Guest-focused hospitality professional with luxury resort experience at St. Regis and Viceroy properties in Aspen and Snowmass Village. Experienced in personalized service, special-request handling, cross-department coordination, and independent overnight operations. Fluent in English and Spanish, with strong computer skills and a solutions-oriented approach.",
       "targets": [
         "pdf",
         "rxresume"
       ],
-      "title": "Hospitality Professional"
+      "title": "Guest Services & Hospitality Professional"
     },
     "marriott": {
       "personalInfo": {
@@ -1051,29 +1048,39 @@
       ]
     },
     {
-      "category": "Hospitality Service",
+      "category": "Guest Services",
       "items": [
-        "Fine dining",
-        "Private dining",
-        "In-room dining",
-        "Banquets",
         "Guest relations",
         "VIP service",
-        "Upselling"
+        "Special-request handling",
+        "Bilingual communication",
+        "Personalized service",
+        "In-room dining"
       ],
       "labels": [
         "hospitality"
       ]
     },
     {
-      "category": "Operations",
+      "category": "Front Office & Operations",
       "items": [
+        "Cross-department coordination",
+        "Guest communication",
+        "Shift handoffs",
         "Opening/closing duties",
-        "Sidework",
-        "Order taking",
-        "Table service",
         "Inventory support",
-        "Cross-team coordination"
+        "Guest-area upkeep"
+      ],
+      "labels": [
+        "hospitality"
+      ]
+    },
+    {
+      "category": "Computer & Systems",
+      "items": [
+        "Point-of-sale systems",
+        "Web-based systems",
+        "General troubleshooting"
       ],
       "labels": [
         "hospitality"
