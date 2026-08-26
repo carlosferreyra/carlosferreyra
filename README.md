@@ -46,7 +46,7 @@ IT Operations:           Process automation, Workflow mapping, DBA fundamentals,
 
 ## Education
 
-- **Information System's Engineering** | Universidad Tecnologica Nacional, Argentina | 2015 - 2024
+- **Information Systems Engineering** | Universidad Tecnologica Nacional, Argentina | 2015 - 2024
   - Relevant coursework: Data Structures, Algorithms, Software Engineering, Databases
 
 ## Projects
