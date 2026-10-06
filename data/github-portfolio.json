@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T11:29:43Z",
+  "generatedAt": "2026-10-06T11:16:45Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-10-03T08:41:11Z",
+      "pushedAt": "2026-10-05T14:15:53Z",
       "stars": 8,
       "tags": [
         "awesome",
@@ -117,6 +117,26 @@
   "topic": "portfolio",
   "workingOn": [
     {
+      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
+      "description": "A collection of Python tools available for use with uv tools",
+      "name": "awesome-uvx",
+      "nameWithOwner": "carlosferreyra/awesome-uvx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-10-05T14:15:53Z",
+      "stars": 8,
+      "tags": [
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-readme",
+        "portfolio"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
+      "updatedAt": "2026-10-03T12:14:43Z",
+      "url": "https://github.com/carlosferreyra/awesome-uvx"
+    },
+    {
       "demo": "",
       "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
       "name": "business-card",
@@ -135,26 +155,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
       "updatedAt": "2026-10-04T20:01:56Z",
       "url": "https://github.com/carlosferreyra/business-card"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
-      "description": "A collection of Python tools available for use with uv tools",
-      "name": "awesome-uvx",
-      "nameWithOwner": "carlosferreyra/awesome-uvx",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Python",
-      "pushedAt": "2026-10-03T08:41:11Z",
-      "stars": 8,
-      "tags": [
-        "awesome",
-        "awesome-list",
-        "awesome-lists",
-        "awesome-readme",
-        "portfolio"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-10-03T12:14:43Z",
-      "url": "https://github.com/carlosferreyra/awesome-uvx"
     }
   ]
 }
