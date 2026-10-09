@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T11:22:18Z",
+  "generatedAt": "2026-10-09T11:19:50Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-10-05T14:15:53Z",
+      "pushedAt": "2026-10-08T20:31:40Z",
       "stars": 8,
       "tags": [
         "awesome",
@@ -18,7 +18,7 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-10-03T12:14:43Z",
+      "updatedAt": "2026-10-08T20:31:15Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
     },
     {
@@ -28,14 +28,14 @@
       "nameWithOwner": "ectorial/wsr",
       "owner": "ectorial",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-07T20:19:50Z",
+      "pushedAt": "2026-10-08T21:09:40Z",
       "stars": 6,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-10-08T09:47:31Z",
+      "updatedAt": "2026-10-08T21:09:44Z",
       "url": "https://github.com/ectorial/wsr"
     },
     {
@@ -123,35 +123,35 @@
       "nameWithOwner": "ectorial/wsr",
       "owner": "ectorial",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-07T20:19:50Z",
+      "pushedAt": "2026-10-08T21:09:40Z",
       "stars": 6,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-10-08T09:47:31Z",
+      "updatedAt": "2026-10-08T21:09:44Z",
       "url": "https://github.com/ectorial/wsr"
     },
     {
-      "demo": "",
-      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
-      "name": "business-card",
-      "nameWithOwner": "carlosferreyra/business-card",
+      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
+      "description": "A collection of Python tools available for use with uv tools",
+      "name": "awesome-uvx",
+      "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-06T18:54:12Z",
-      "stars": 0,
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-10-08T20:31:40Z",
+      "stars": 8,
       "tags": [
-        "business-card",
-        "card",
-        "portfolio",
-        "profile",
-        "resume"
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-readme",
+        "portfolio"
       ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
-      "updatedAt": "2026-10-04T20:01:56Z",
-      "url": "https://github.com/carlosferreyra/business-card"
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
+      "updatedAt": "2026-10-08T20:31:15Z",
+      "url": "https://github.com/carlosferreyra/awesome-uvx"
     }
   ]
 }
