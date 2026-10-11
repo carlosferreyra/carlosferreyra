@@ -12,7 +12,7 @@
 
 Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering.
 
-- 🔭 Working on: [wsr](https://github.com/ectorial/wsr) & [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx)
+- 🔭 Working on: [codetwin](https://github.com/carlosferreyra/codetwin) & [wsr](https://github.com/ectorial/wsr)
 - 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/carreras/Carreras_de_Grado/ISI/),
   [National Technological University](https://www.utn.edu.ar/)
 - 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/carlosferreyra/)
@@ -54,9 +54,9 @@ IT Operations:           Process automation, Workflow mapping, DBA fundamentals,
 - [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) - A collection of Python tools available for use with uv tools · ⭐ 8
 - [wsr](https://github.com/ectorial/wsr) - A local, Wasm-sandboxed CI runner for git hooks · ⭐ 6
 - [informatorio](https://github.com/informatorioar/informatorio) - Curso Informatorio - Edicion 2025 · ⭐ 6
+- [codetwin](https://github.com/carlosferreyra/codetwin) - A code to diagram/documentation generator. · ⭐ 0
 - [business-card](https://github.com/carlosferreyra/business-card) - Interactive CLI business card available in both Python and TypeScript - run with uvx or npx · ⭐ 0
 - [profilectl](https://github.com/carlosferreyra/profilectl) - Cross-platform dotfiles automation with Rust · ⭐ 0
-- [codetwin](https://github.com/carlosferreyra/codetwin) - A code to diagram/documentation generator. · ⭐ 0
 
 ## Certifications
 

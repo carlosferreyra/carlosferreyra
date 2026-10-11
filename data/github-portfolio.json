@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T10:36:54Z",
+  "generatedAt": "2026-10-11T10:49:29Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -60,6 +60,23 @@
       "url": "https://github.com/informatorioar/informatorio"
     },
     {
+      "demo": "https://carlosferreyra.github.io/codetwin/",
+      "description": "A code to diagram/documentation generator.",
+      "name": "codetwin",
+      "nameWithOwner": "carlosferreyra/codetwin",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-10-11T02:37:43Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
+      "updatedAt": "2026-10-11T02:37:46Z",
+      "url": "https://github.com/carlosferreyra/codetwin"
+    },
+    {
       "demo": "",
       "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
       "name": "business-card",
@@ -95,7 +112,10 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/profilectl",
       "updatedAt": "2026-07-08T02:27:39Z",
       "url": "https://github.com/carlosferreyra/profilectl"
-    },
+    }
+  ],
+  "topic": "portfolio",
+  "workingOn": [
     {
       "demo": "https://carlosferreyra.github.io/codetwin/",
       "description": "A code to diagram/documentation generator.",
@@ -103,19 +123,16 @@
       "nameWithOwner": "carlosferreyra/codetwin",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-07-08T02:20:31Z",
+      "pushedAt": "2026-10-11T02:37:43Z",
       "stars": 0,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
-      "updatedAt": "2026-07-08T02:20:34Z",
+      "updatedAt": "2026-10-11T02:37:46Z",
       "url": "https://github.com/carlosferreyra/codetwin"
-    }
-  ],
-  "topic": "portfolio",
-  "workingOn": [
+    },
     {
       "demo": "https://ectorial.github.io/wsr/",
       "description": "A local, Wasm-sandboxed CI runner for git hooks",
@@ -132,26 +149,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
       "updatedAt": "2026-10-10T07:08:08Z",
       "url": "https://github.com/ectorial/wsr"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
-      "description": "A collection of Python tools available for use with uv tools",
-      "name": "awesome-uvx",
-      "nameWithOwner": "carlosferreyra/awesome-uvx",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Python",
-      "pushedAt": "2026-10-08T20:31:40Z",
-      "stars": 8,
-      "tags": [
-        "awesome",
-        "awesome-list",
-        "awesome-lists",
-        "awesome-readme",
-        "portfolio"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-10-08T20:31:15Z",
-      "url": "https://github.com/carlosferreyra/awesome-uvx"
     }
   ]
 }
