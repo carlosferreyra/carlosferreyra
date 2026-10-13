@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T10:49:29Z",
+  "generatedAt": "2026-10-13T11:48:53Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-10-08T20:31:40Z",
+      "pushedAt": "2026-10-12T15:03:54Z",
       "stars": 8,
       "tags": [
         "awesome",
@@ -117,6 +117,26 @@
   "topic": "portfolio",
   "workingOn": [
     {
+      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
+      "description": "A collection of Python tools available for use with uv tools",
+      "name": "awesome-uvx",
+      "nameWithOwner": "carlosferreyra/awesome-uvx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-10-12T15:03:54Z",
+      "stars": 8,
+      "tags": [
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-readme",
+        "portfolio"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
+      "updatedAt": "2026-10-08T20:31:15Z",
+      "url": "https://github.com/carlosferreyra/awesome-uvx"
+    },
+    {
       "demo": "https://carlosferreyra.github.io/codetwin/",
       "description": "A code to diagram/documentation generator.",
       "name": "codetwin",
@@ -132,23 +152,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
       "updatedAt": "2026-10-11T02:37:46Z",
       "url": "https://github.com/carlosferreyra/codetwin"
-    },
-    {
-      "demo": "https://ectorial.github.io/wsr/",
-      "description": "A local, Wasm-sandboxed CI runner for git hooks",
-      "name": "wsr",
-      "nameWithOwner": "ectorial/wsr",
-      "owner": "ectorial",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-10T07:09:21Z",
-      "stars": 6,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-10-10T07:08:08Z",
-      "url": "https://github.com/ectorial/wsr"
     }
   ]
 }

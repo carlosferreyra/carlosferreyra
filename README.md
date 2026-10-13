@@ -12,7 +12,7 @@
 
 Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering.
 
-- 🔭 Working on: [codetwin](https://github.com/carlosferreyra/codetwin) & [wsr](https://github.com/ectorial/wsr)
+- 🔭 Working on: [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) & [codetwin](https://github.com/carlosferreyra/codetwin)
 - 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/carreras/Carreras_de_Grado/ISI/),
   [National Technological University](https://www.utn.edu.ar/)
 - 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/carlosferreyra/)
