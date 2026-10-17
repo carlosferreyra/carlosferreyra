@@ -19,6 +19,31 @@
         "location": { "type": "string", "minLength": 1 }
       }
     },
+    "readme": {
+      "type": "object",
+      "required": ["tagline", "summary", "availability", "contactLabel", "resumeProfiles", "featuredProjectLimit", "experienceHighlightLimit"],
+      "properties": {
+        "tagline": { "$ref": "#/$defs/stringItems" },
+        "summary": { "$ref": "#/$defs/nonEmptyString" },
+        "availability": { "$ref": "#/$defs/nonEmptyString" },
+        "contactLabel": { "$ref": "#/$defs/nonEmptyString" },
+        "resumeProfiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["profile", "label"],
+            "properties": {
+              "profile": { "$ref": "#/$defs/nonEmptyString" },
+              "label": { "$ref": "#/$defs/nonEmptyString" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "featuredProjectLimit": { "type": "integer", "minimum": 1 },
+        "experienceHighlightLimit": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
     "githubUsername": { "type": "string" },
     "links": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },
     "skills": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },

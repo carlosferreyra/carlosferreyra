@@ -2,11 +2,12 @@
 
 # {{ info.name }}
 
-**{{ info.title }} · Backend services · Developer tools · Automation**
+**{{ info.title }} · {{ readme.tagline | join(' · ') }}**
 
-I build APIs, automate workflows, and work with data using Python and Rust.
+{{ readme.summary }}
 
-[Portfolio]({{ links.portfolio }}) · [LinkedIn]({{ links.linkedin }}) · [Email]({{ links.email }}) · [Résumé · EN](resume/{{ info.name | slugify }}.pdf) / [ES](resume/{{ info.name | slugify }}-espanol.pdf)
+[Portfolio]({{ links.portfolio }}) · [LinkedIn]({{ links.linkedin }}) · [Email]({{ links.email }}) · {% for link in resume_links %}[{{ link.label }}]({{ link.path }}){% if not loop.last %} / {% endif %}{% endfor %}
+
 
 </div>
 
@@ -14,7 +15,7 @@ I build APIs, automate workflows, and work with data using Python and Rust.
 
 ## Selected projects
 
-{% for project in projects[:4] %}
+{% for project in projects[:readme.featuredProjectLimit] %}
 ### [{{ project.name }}]({{ project.url }})
 
 {{ project.description }}
@@ -22,11 +23,11 @@ I build APIs, automate workflows, and work with data using Python and Rust.
 {% if project.primaryLanguage %}`{{ project.primaryLanguage }}` · {% endif %}[Source]({{ project.url }}){% if project.demo %} · [Website]({{ project.demo }}){% endif %}
 
 {% endfor %}
-{% if projects | length > 4 %}
+{% if projects | length > readme.featuredProjectLimit %}
 <details>
 <summary>More projects</summary>
 
-{% for project in projects[4:] %}
+{% for project in projects[readme.featuredProjectLimit:] %}
 - [**{{ project.name }}**]({{ project.url }}) — {{ project.description }}
 {% endfor %}
 
@@ -50,7 +51,7 @@ I build APIs, automate workflows, and work with data using Python and Rust.
 **{{ job.title }} · {{ job.company }}**<br>
 {{ job.period }}
 
-{% for highlight in job.highlights[:2] %}
+{% for highlight in job.highlights[:readme.experienceHighlightLimit] %}
 - {{ highlight }}
 {% endfor %}
 
@@ -95,4 +96,4 @@ I build APIs, automate workflows, and work with data using Python and Rust.
 
 ---
 
-Open to opportunities in backend development, developer tooling, and automation. [Let's talk.]({{ links.email }})
+{{ readme.availability }} [{{ readme.contactLabel }}]({{ links.email }})
