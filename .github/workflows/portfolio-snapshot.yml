@@ -1,8 +1,8 @@
-name: Update Portfolio Snapshot
+name: Update Profile Snapshot
 
 on:
   schedule:
-    - cron: '15 4 * * *'
+    - cron: '17 */6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -22,11 +22,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: uv run scripts/resume portfolio
 
+      - name: Fetch GitHub profile stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run scripts/resume github-stats
+
       - name: Build README
         run: uv run scripts/resume readme
 
-      - name: Commit portfolio snapshot and README
+      - name: Commit profile snapshots and README
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: data/github-portfolio.json README.md
-          commit_message: 'docs: update portfolio snapshot'
+          file_pattern: data/github-portfolio.json data/github-stats.json assets/*.svg README.md
+          commit_message: 'docs: update profile snapshots'

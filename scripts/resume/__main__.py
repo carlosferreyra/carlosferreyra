@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.11"
-# dependencies = ["httpx>=0.27", "jinja2", "pypdf>=5", "typer>=0.12"]
+# dependencies = ["httpx>=0.27", "jinja2", "jsonschema>=4.23", "pypdf>=5", "typer>=0.12"]
 # ///
 """CLI for building and publishing labeled resume profiles."""
 
@@ -24,6 +24,7 @@ from resume.core import (
     resolve_profile,
     validate,
 )
+from resume.github_stats import write_stats
 from resume.pdf import render_pdfs
 from resume.portfolio import write_snapshot
 from resume.readme import render_readme
@@ -95,6 +96,13 @@ def portfolio_command(
 ) -> None:
     """Fetch GitHub topic-tagged portfolio repos into a generated snapshot."""
     typer.echo(f"portfolio snapshot written to {write_snapshot(ROOT / out)}")
+
+
+@app.command("github-stats")
+def github_stats_command() -> None:
+    """Fetch GitHub profile data and render static README statistics cards."""
+    paths = write_stats()
+    typer.echo("GitHub stats written to " + ", ".join(str(path) for path in paths))
 
 
 @app.command()
