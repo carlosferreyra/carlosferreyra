@@ -75,7 +75,7 @@ def render_readme(profile: str = "default", out_path: Path | None = None) -> Pat
         projects=portfolio["projects"],
         readme=readme, resume_links=resume_links,
         github_stats=github_stats,
-        last_update=datetime.now(timezone.utc).strftime("%Y"),
+        last_updated=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
     )
     out_path.write_text(output)
     return out_path
