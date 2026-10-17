@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-14T09:30:45Z",
+  "generatedAt": "2026-10-17T15:38:33Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
-      "description": "A collection of Python tools available for use with uv tools",
+      "description": "A curated collection of Python CLI tools available via uvx or pipx.",
       "name": "awesome-uvx",
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
@@ -18,7 +18,7 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-10-13T22:37:56Z",
+      "updatedAt": "2026-10-17T08:03:05Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
     },
     {
@@ -28,14 +28,14 @@
       "nameWithOwner": "ectorial/wsr",
       "owner": "ectorial",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-10T07:09:21Z",
+      "pushedAt": "2026-10-17T10:27:09Z",
       "stars": 6,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-10-10T07:08:08Z",
+      "updatedAt": "2026-10-17T10:27:13Z",
       "url": "https://github.com/ectorial/wsr"
     },
     {
@@ -117,8 +117,25 @@
   "topic": "portfolio",
   "workingOn": [
     {
+      "demo": "https://ectorial.github.io/wsr/",
+      "description": "A local, Wasm-sandboxed CI runner for git hooks",
+      "name": "wsr",
+      "nameWithOwner": "ectorial/wsr",
+      "owner": "ectorial",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-10-17T10:27:09Z",
+      "stars": 6,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
+      "updatedAt": "2026-10-17T10:27:13Z",
+      "url": "https://github.com/ectorial/wsr"
+    },
+    {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
-      "description": "A collection of Python tools available for use with uv tools",
+      "description": "A curated collection of Python CLI tools available via uvx or pipx.",
       "name": "awesome-uvx",
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
@@ -133,25 +150,8 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-10-13T22:37:56Z",
+      "updatedAt": "2026-10-17T08:03:05Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/codetwin/",
-      "description": "A code to diagram/documentation generator.",
-      "name": "codetwin",
-      "nameWithOwner": "carlosferreyra/codetwin",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-11T02:37:43Z",
-      "stars": 0,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
-      "updatedAt": "2026-10-11T02:37:46Z",
-      "url": "https://github.com/carlosferreyra/codetwin"
     }
   ]
 }

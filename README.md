@@ -16,7 +16,7 @@ I build APIs, automate workflows, and work with data using Python and Rust.
 
 ### [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx)
 
-A collection of Python tools available for use with uv tools
+A curated collection of Python CLI tools available via uvx or pipx.
 
 `Python` · [Source](https://github.com/carlosferreyra/awesome-uvx) · [Website](https://carlosferreyra.github.io/awesome-uvx/)
 ### [wsr](https://github.com/ectorial/wsr)
@@ -44,7 +44,7 @@ A code to diagram/documentation generator.
 
 ## Currently building
 
-- 🔭 Working on: [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) & [codetwin](https://github.com/carlosferreyra/codetwin)
+- 🔭 Working on: [wsr](https://github.com/ectorial/wsr) & [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx)
 
 ## Toolkit
 
@@ -108,4 +108,4 @@ March 2021 - Sep 2021
 
 Open to opportunities in backend development, developer tooling, and automation. [Let's talk.](mailto:contact@carlosferreyra.com.ar)
 
-<sub>Last synced: 2026-10-17 07:56 UTC</sub>
+<sub>Last synced: 2026-10-17 15:38 UTC</sub>
