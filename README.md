@@ -1,98 +1,109 @@
-# Carlos E. Ferreyra
-
-> Software Engineer
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/eduferreyraok)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail)](mailto:contact@carlosferreyra.com.ar)
-[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=flat-square&logo=twitter)](https://twitter.com/eduferreyraok)
-[![GitHub followers](https://img.shields.io/github/followers/carlosferreyra?label=Follow&style=flat-square&logo=github)](https://github.com/carlosferreyra)
-![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&style=flat-square)
-
-## About Me
-
-Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering.
-
-- 🔭 Working on: [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) & [codetwin](https://github.com/carlosferreyra/codetwin)
-- 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/carreras/Carreras_de_Grado/ISI/),
-  [National Technological University](https://www.utn.edu.ar/)
-- 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/carlosferreyra/)
-- 📄 Resume: [PDF-English](resume/carlos-ferreyra.pdf) | [PDF-Spanish](resume/carlos-ferreyra-espanol.pdf)
-- 🌐 Portfolio: [https://www.carlosferreyra.com.ar](https://carlosferreyra.com.ar)
-- 📍 Based in Argentina
-
-## Technical Skills
-
-```bash
-Languages:               Python, Java, JavaScript, TypeScript, Rust
-Cloud:                   GCP, AWS
-Databases:               MySQL, MongoDB, SQLite
-DevOps & Infra:          Docker, CI/CD, GitHub Actions, Git, Linux
-Frameworks:              Django+DRF, Angular, Spring, FastAPI
-IT Operations:           Process automation, Workflow mapping, DBA fundamentals, CI/CD pipelines, Data processing, Data lakehouse
-```
-
-## Professional Experience
-
-- **Software Engineer** | UTN - FRRe | March 2024 - Dec 2024
-  - Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity
-  - Mapped manual processes with non-technical stakeholders, documented constraints, and helped reduce costs 10% while increasing efficiency 50%.
-  - Designed and implemented a scalable server architecture and automated workflows to support hundreds of users
-  - Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency
-
-- **Backend Engineer** | Devlights S.R.L | March 2021 - Sep 2021
-  - Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company
-  - Implemented a REST-API to automate data collection of the customer
-  - Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web application
-
-## Education
-
-- **Information Systems Engineering** | Universidad Tecnologica Nacional, Argentina | 2015 - 2024
-  - Relevant coursework: Data Structures, Algorithms, Software Engineering, Databases
-
-## Projects
-
-- [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) - A collection of Python tools available for use with uv tools · ⭐ 8
-- [wsr](https://github.com/ectorial/wsr) - A local, Wasm-sandboxed CI runner for git hooks · ⭐ 6
-- [informatorio](https://github.com/informatorioar/informatorio) - Curso Informatorio - Edicion 2025 · ⭐ 6
-- [codetwin](https://github.com/carlosferreyra/codetwin) - A code to diagram/documentation generator. · ⭐ 0
-- [business-card](https://github.com/carlosferreyra/business-card) - Interactive CLI business card available in both Python and TypeScript - run with uvx or npx · ⭐ 0
-- [profilectl](https://github.com/carlosferreyra/profilectl) - Cross-platform dotfiles automation with Rust · ⭐ 0
-
-## Certifications
-
-- [Databricks Data Engineer Associate (2025)](https://credentials.databricks.com/profile/carlosferreyra/wallet)
-- [SQL Advanced (2025)](https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql)
-- [MongoDB - Database Administration (2025)](https://learn.mongodb.com/c/OE3lXL2WRfa33hpCBtCwEQ)
-- [Oracle Next Education Program (2025)](https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51)
-- [Amazon Cloud Practitioner Essentials (2024)](https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view)
-- [Google Associate Cloud Engineer (2024)](https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile)
-
-## GitHub Stats
-
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&theme=dark&hide_border=true" alt="Top Languages" />
-  <img src="https://github-readme-stats.vercel.app/api?username=carlosferreyra&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" />
+
+# Carlos Ferreyra
+
+**Software Engineer · Backend services · Developer tools · Automation**
+
+I build APIs, automate workflows, and work with data using Python and Rust.
+
+[Portfolio](https://carlosferreyra.com.ar) · [LinkedIn](https://linkedin.com/in/eduferreyraok) · [Email](mailto:contact@carlosferreyra.com.ar) · [Résumé · EN](resume/carlos-ferreyra.pdf) / [ES](resume/carlos-ferreyra-espanol.pdf)
+
 </div>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=carlosferreyra&bg_color=151515&color=ffffff&line=4c8eda&point=1f6feb&area=true&hide_border=true" alt="Activity Graph" width="98%" />
-</div>
-
-## Let's Connect
-
-I'm currently open to new opportunities! Feel free to reach out to discuss potential collaborations
-or just to connect.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/eduferreyraok)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail)](mailto:contact@carlosferreyra.com.ar)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me)](https://carlosferreyra.com.ar)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/carlosferreyra)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/carlosferreyra/)
-[![Credly](https://img.shields.io/badge/Credly-FF6B00?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/eduferreyraok)
-[![Google Dev](https://img.shields.io/badge/Google_Dev-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://www.cloudskillsboost.google/public_profiles/326c1a3d-6ac7-4036-b07f-c29bd0be6132)
 
 ---
 
-<div align="center">
-  <sub><sup>© 2026 Carlos Ferreyra - <a href="LICENSE">MIT</a> License</sup></sub>
-</div>
+## Selected projects
+
+### [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx)
+
+A collection of Python tools available for use with uv tools
+
+`Python` · [Source](https://github.com/carlosferreyra/awesome-uvx) · [Website](https://carlosferreyra.github.io/awesome-uvx/)
+### [wsr](https://github.com/ectorial/wsr)
+
+A local, Wasm-sandboxed CI runner for git hooks
+
+`Rust` · [Source](https://github.com/ectorial/wsr) · [Website](https://ectorial.github.io/wsr/)
+### [informatorio](https://github.com/informatorioar/informatorio)
+
+Curso Informatorio - Edicion 2025
+
+`Python` · [Source](https://github.com/informatorioar/informatorio) · [Website](https://informatorioar.github.io/informatorio/)
+### [codetwin](https://github.com/carlosferreyra/codetwin)
+
+A code to diagram/documentation generator.
+
+`Rust` · [Source](https://github.com/carlosferreyra/codetwin) · [Website](https://carlosferreyra.github.io/codetwin/)
+<details>
+<summary>More projects</summary>
+
+- [**business-card**](https://github.com/carlosferreyra/business-card) — Interactive CLI business card available in both Python and TypeScript - run with uvx or npx
+- [**profilectl**](https://github.com/carlosferreyra/profilectl) — Cross-platform dotfiles automation with Rust
+
+</details>
+
+## Currently building
+
+- 🔭 Working on: [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) & [codetwin](https://github.com/carlosferreyra/codetwin)
+
+## Toolkit
+
+- **Languages:** Python · Java · JavaScript · TypeScript · Rust
+- **Cloud:** GCP · AWS
+- **Databases:** MySQL · MongoDB · SQLite
+- **DevOps & Infra:** Docker · CI/CD · GitHub Actions · Git · Linux
+- **Frameworks:** Django+DRF · Angular · Spring · FastAPI
+- **IT Operations:** Process automation · Workflow mapping · DBA fundamentals · CI/CD pipelines · Data processing · Data lakehouse
+
+## Experience highlights
+
+**Software Engineer · UTN - FRRe**<br>
+March 2024 - Dec 2024
+
+- Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity
+- Mapped manual processes with non-technical stakeholders, documented constraints, and helped reduce costs 10% while increasing efficiency 50%.
+
+**Backend Engineer · Devlights S.R.L**<br>
+March 2021 - Sep 2021
+
+- Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company
+- Implemented a REST-API to automate data collection of the customer
+
+<details>
+<summary>Education & certifications</summary>
+
+### Education
+
+**Information Systems Engineering** · Universidad Tecnologica Nacional, Argentina<br>
+2015 - 2024
+
+- Relevant coursework: Data Structures, Algorithms, Software Engineering, Databases
+
+### Certifications
+
+- [Databricks Data Engineer Associate · 2025](https://credentials.databricks.com/profile/carlosferreyra/wallet)
+- [SQL Advanced · 2025](https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql)
+- [MongoDB - Database Administration · 2025](https://learn.mongodb.com/c/OE3lXL2WRfa33hpCBtCwEQ)
+- [Oracle Next Education Program · 2025](https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51)
+- [Amazon Cloud Practitioner Essentials · 2024](https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view)
+- [Google Associate Cloud Engineer · 2024](https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile)
+
+</details>
+
+<details>
+<summary>GitHub activity & languages</summary>
+
+<p align="center">
+  <img src="assets/github-stats.svg" alt="carlosferreyra GitHub stats" width="49%" />
+  <img src="assets/github-languages.svg" alt="carlosferreyra top languages" width="49%" />
+</p>
+
+<p align="center">
+  <img src="assets/github-activity.svg" alt="carlosferreyra contribution activity" width="98%" />
+</p>
+
+</details>
+
+---
+
+Open to opportunities in backend development, developer tooling, and automation. [Let's talk.](mailto:contact@carlosferreyra.com.ar)

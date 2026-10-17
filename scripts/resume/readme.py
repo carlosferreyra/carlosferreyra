@@ -10,6 +10,8 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 from .core import ROOT, load_catalog, resolve_profile
+from .github_stats import load_stats
+from .pdf import pdf_name
 
 PORTFOLIO = ROOT / "data" / "github-portfolio.json"
 
@@ -40,8 +42,18 @@ def projects_markdown(projects: list[dict]) -> str:
 
 
 def render_readme(profile: str = "default", out_path: Path | None = None) -> Path:
-    resume = resolve_profile(load_catalog(), profile)
+    catalog = load_catalog()
+    resume = resolve_profile(catalog, profile)
+    readme = catalog["readme"]
+    resume_links = [
+        {"label": item["label"], "path": "resume/" + pdf_name(
+            slugify(resume["personalInfo"]["name"]),
+            resolve_profile(catalog, item["profile"])["slug"],
+        )}
+        for item in readme["resumeProfiles"]
+    ]
     portfolio = load_portfolio()
+    github_stats = load_stats()
     out_path = out_path or ROOT / "README.md"
     env = Environment(
         loader=FileSystemLoader(str(ROOT)), undefined=StrictUndefined,
@@ -60,6 +72,9 @@ def render_readme(profile: str = "default", out_path: Path | None = None) -> Pat
         certifications=resume["certifications"],
         projects_markdown=projects_markdown(portfolio["projects"]),
         working_on_markdown=working_on_markdown(portfolio["workingOn"]),
+        projects=portfolio["projects"],
+        readme=readme, resume_links=resume_links,
+        github_stats=github_stats,
         last_update=datetime.now(timezone.utc).strftime("%Y"),
     )
     out_path.write_text(output)

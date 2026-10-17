@@ -1097,5 +1097,27 @@
         "hospitality"
       ]
     }
-  ]
+  ],
+  "readme": {
+    "tagline": [
+      "Backend services",
+      "Developer tools",
+      "Automation"
+    ],
+    "summary": "I build APIs, automate workflows, and work with data using Python and Rust.",
+    "availability": "Open to opportunities in backend development, developer tooling, and automation.",
+    "contactLabel": "Let's talk.",
+    "resumeProfiles": [
+      {
+        "profile": "default",
+        "label": "Résumé · EN"
+      },
+      {
+        "profile": "espanol",
+        "label": "ES"
+      }
+    ],
+    "featuredProjectLimit": 4,
+    "experienceHighlightLimit": 2
+  }
 }

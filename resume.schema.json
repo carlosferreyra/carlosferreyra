@@ -19,6 +19,31 @@
         "location": { "type": "string", "minLength": 1 }
       }
     },
+    "readme": {
+      "type": "object",
+      "required": ["tagline", "summary", "availability", "contactLabel", "resumeProfiles", "featuredProjectLimit", "experienceHighlightLimit"],
+      "properties": {
+        "tagline": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "summary": { "type": "string", "minLength": 1 },
+        "availability": { "type": "string", "minLength": 1 },
+        "contactLabel": { "type": "string", "minLength": 1 },
+        "resumeProfiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["profile", "label"],
+            "properties": {
+              "profile": { "type": "string", "minLength": 1 },
+              "label": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "featuredProjectLimit": { "type": "integer", "minimum": 1 },
+        "experienceHighlightLimit": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
     "githubUsername": { "type": "string" },
     "links": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },
     "skills": { "type": "array", "items": { "$ref": "#/$defs/labeled" } },
