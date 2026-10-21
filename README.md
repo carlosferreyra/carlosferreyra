@@ -44,7 +44,7 @@ A code to diagram/documentation generator.
 
 ## Currently building
 
-- 🔭 Working on: [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx) & [wsr](https://github.com/ectorial/wsr)
+- 🔭 Working on: [wsr](https://github.com/ectorial/wsr) & [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx)
 
 ## Toolkit
 
@@ -108,4 +108,4 @@ March 2021 - Sep 2021
 
 Open to opportunities in backend development, developer tooling, and automation. [Let's talk.](mailto:contact@carlosferreyra.com.ar)
 
-<sub>Last synced: 2026-10-21 04:53 UTC</sub>
+<sub>Last synced: 2026-10-21 11:54 UTC</sub>
