@@ -108,4 +108,4 @@ March 2021 - Sep 2021
 
 Open to opportunities in backend development, developer tooling, and automation. [Let's talk.](mailto:contact@carlosferreyra.com.ar)
 
-<sub>Last synced: 2026-10-21 21:45 UTC</sub>
+<sub>Last synced: 2026-10-22 04:53 UTC</sub>
