@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T11:54:36Z",
+  "generatedAt": "2026-10-23T11:43:44Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -23,19 +23,19 @@
     },
     {
       "demo": "https://ectorial.github.io/wsr/",
-      "description": "A local, Wasm-sandboxed CI runner for git hooks",
+      "description": "A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned",
       "name": "wsr",
       "nameWithOwner": "ectorial/wsr",
       "owner": "ectorial",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-21T09:18:32Z",
-      "stars": 6,
+      "pushedAt": "2026-10-23T06:15:58Z",
+      "stars": 7,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-10-21T09:18:34Z",
+      "updatedAt": "2026-10-23T06:16:03Z",
       "url": "https://github.com/ectorial/wsr"
     },
     {
@@ -118,19 +118,19 @@
   "workingOn": [
     {
       "demo": "https://ectorial.github.io/wsr/",
-      "description": "A local, Wasm-sandboxed CI runner for git hooks",
+      "description": "A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned",
       "name": "wsr",
       "nameWithOwner": "ectorial/wsr",
       "owner": "ectorial",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-21T09:18:32Z",
-      "stars": 6,
+      "pushedAt": "2026-10-23T06:15:58Z",
+      "stars": 7,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-10-21T09:18:34Z",
+      "updatedAt": "2026-10-23T06:16:03Z",
       "url": "https://github.com/ectorial/wsr"
     },
     {

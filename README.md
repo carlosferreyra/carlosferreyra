@@ -21,7 +21,7 @@ A curated collection of Python CLI tools available via uvx or pipx.
 `Python` · [Source](https://github.com/carlosferreyra/awesome-uvx) · [Website](https://carlosferreyra.github.io/awesome-uvx/)
 ### [wsr](https://github.com/ectorial/wsr)
 
-A local, Wasm-sandboxed CI runner for git hooks
+A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned
 
 `Rust` · [Source](https://github.com/ectorial/wsr) · [Website](https://ectorial.github.io/wsr/)
 ### [informatorio](https://github.com/informatorioar/informatorio)
@@ -108,4 +108,4 @@ March 2021 - Sep 2021
 
 Open to opportunities in backend development, developer tooling, and automation. [Let's talk.](mailto:contact@carlosferreyra.com.ar)
 
-<sub>Last synced: 2026-10-23 04:55 UTC</sub>
+<sub>Last synced: 2026-10-23 11:43 UTC</sub>
