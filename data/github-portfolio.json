@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T04:51:49Z",
+  "generatedAt": "2026-10-26T13:10:00Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-10-20T11:56:08Z",
+      "pushedAt": "2026-10-26T12:40:11Z",
       "stars": 8,
       "tags": [
         "awesome",
@@ -28,14 +28,14 @@
       "nameWithOwner": "ectorial/wsr",
       "owner": "ectorial",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-26T02:59:11Z",
+      "pushedAt": "2026-10-26T07:12:01Z",
       "stars": 7,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-10-26T02:59:15Z",
+      "updatedAt": "2026-10-26T07:12:05Z",
       "url": "https://github.com/ectorial/wsr"
     },
     {
@@ -117,30 +117,13 @@
   "topic": "portfolio",
   "workingOn": [
     {
-      "demo": "https://ectorial.github.io/wsr/",
-      "description": "A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned",
-      "name": "wsr",
-      "nameWithOwner": "ectorial/wsr",
-      "owner": "ectorial",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-26T02:59:11Z",
-      "stars": 7,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-10-26T02:59:15Z",
-      "url": "https://github.com/ectorial/wsr"
-    },
-    {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
       "description": "A curated collection of Python CLI tools available via uvx or pipx.",
       "name": "awesome-uvx",
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-10-20T11:56:08Z",
+      "pushedAt": "2026-10-26T12:40:11Z",
       "stars": 8,
       "tags": [
         "awesome",
@@ -152,6 +135,23 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
       "updatedAt": "2026-10-20T07:01:48Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
+    },
+    {
+      "demo": "https://ectorial.github.io/wsr/",
+      "description": "A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned",
+      "name": "wsr",
+      "nameWithOwner": "ectorial/wsr",
+      "owner": "ectorial",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-10-26T07:12:01Z",
+      "stars": 7,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
+      "updatedAt": "2026-10-26T07:12:05Z",
+      "url": "https://github.com/ectorial/wsr"
     }
   ]
 }
