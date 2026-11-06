@@ -29,22 +29,22 @@ A pre-alpha local CI runner scaffold; workflow execution and sandboxing are plan
 Curso Informatorio - Edicion 2025
 
 `Python` · [Source](https://github.com/informatorioar/informatorio) · [Website](https://informatorioar.github.io/informatorio/)
-### [codetwin](https://github.com/carlosferreyra/codetwin)
+### [business-card](https://github.com/carlosferreyra/business-card)
 
-A code to diagram/documentation generator.
+Interactive CLI business card available in both Python and TypeScript - run with uvx or npx
 
-`Rust` · [Source](https://github.com/carlosferreyra/codetwin) · [Website](https://carlosferreyra.github.io/codetwin/)
+`Rust` · [Source](https://github.com/carlosferreyra/business-card)
 <details>
 <summary>More projects</summary>
 
-- [**business-card**](https://github.com/carlosferreyra/business-card) — Interactive CLI business card available in both Python and TypeScript - run with uvx or npx
+- [**codetwin**](https://github.com/carlosferreyra/codetwin) — A code to diagram/documentation generator.
 - [**profilectl**](https://github.com/carlosferreyra/profilectl) — Cross-platform dotfiles automation with Rust
 
 </details>
 
 ## Currently building
 
-- 🔭 Working on: [wsr](https://github.com/ectorial/wsr) & [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx)
+- 🔭 Working on: [business-card](https://github.com/carlosferreyra/business-card) & [wsr](https://github.com/ectorial/wsr)
 
 ## Toolkit
 
@@ -108,4 +108,4 @@ March 2021 - Sep 2021
 
 Open to opportunities in backend development, developer tooling, and automation. [Let's talk.](mailto:contact@carlosferreyra.com.ar)
 
-<sub>Last synced: 2026-11-05 19:59 UTC</sub>
+<sub>Last synced: 2026-11-06 06:52 UTC</sub>

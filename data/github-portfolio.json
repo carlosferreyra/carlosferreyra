@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T19:59:25Z",
+  "generatedAt": "2026-11-06T06:52:30Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -60,6 +60,26 @@
       "url": "https://github.com/informatorioar/informatorio"
     },
     {
+      "demo": "",
+      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
+      "name": "business-card",
+      "nameWithOwner": "carlosferreyra/business-card",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-11-06T02:58:00Z",
+      "stars": 0,
+      "tags": [
+        "business-card",
+        "card",
+        "portfolio",
+        "profile",
+        "resume"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
+      "updatedAt": "2026-11-06T02:58:03Z",
+      "url": "https://github.com/carlosferreyra/business-card"
+    },
+    {
       "demo": "https://carlosferreyra.github.io/codetwin/",
       "description": "A code to diagram/documentation generator.",
       "name": "codetwin",
@@ -75,26 +95,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
       "updatedAt": "2026-10-11T02:37:46Z",
       "url": "https://github.com/carlosferreyra/codetwin"
-    },
-    {
-      "demo": "",
-      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
-      "name": "business-card",
-      "nameWithOwner": "carlosferreyra/business-card",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-10-06T18:54:12Z",
-      "stars": 0,
-      "tags": [
-        "business-card",
-        "card",
-        "portfolio",
-        "profile",
-        "resume"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
-      "updatedAt": "2026-10-04T20:01:56Z",
-      "url": "https://github.com/carlosferreyra/business-card"
     },
     {
       "demo": "https://carlosferreyra.github.io/profilectl/",
@@ -117,6 +117,26 @@
   "topic": "portfolio",
   "workingOn": [
     {
+      "demo": "",
+      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
+      "name": "business-card",
+      "nameWithOwner": "carlosferreyra/business-card",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-11-06T02:58:00Z",
+      "stars": 0,
+      "tags": [
+        "business-card",
+        "card",
+        "portfolio",
+        "profile",
+        "resume"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
+      "updatedAt": "2026-11-06T02:58:03Z",
+      "url": "https://github.com/carlosferreyra/business-card"
+    },
+    {
       "demo": "https://ectorial.github.io/wsr/",
       "description": "A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned",
       "name": "wsr",
@@ -132,26 +152,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
       "updatedAt": "2026-11-05T08:35:01Z",
       "url": "https://github.com/ectorial/wsr"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
-      "description": "A curated collection of Python CLI tools available via uvx or pipx.",
-      "name": "awesome-uvx",
-      "nameWithOwner": "carlosferreyra/awesome-uvx",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Python",
-      "pushedAt": "2026-11-03T04:09:56Z",
-      "stars": 8,
-      "tags": [
-        "awesome",
-        "awesome-list",
-        "awesome-lists",
-        "awesome-readme",
-        "portfolio"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-11-03T04:10:01Z",
-      "url": "https://github.com/carlosferreyra/awesome-uvx"
     }
   ]
 }
