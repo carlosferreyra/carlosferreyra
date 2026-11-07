@@ -44,7 +44,7 @@ A code to diagram/documentation generator.
 
 ## Currently building
 
-- 🔭 Working on: [codetwin](https://github.com/carlosferreyra/codetwin) & [wsr](https://github.com/ectorial/wsr)
+- 🔭 Working on: [wsr](https://github.com/ectorial/wsr) & [codetwin](https://github.com/carlosferreyra/codetwin)
 
 ## Toolkit
 
@@ -108,4 +108,4 @@ March 2021 - Sep 2021
 
 Open to opportunities in backend development, developer tooling, and automation. [Let's talk.](mailto:contact@carlosferreyra.com.ar)
 
-<sub>Last synced: 2026-11-06 19:27 UTC</sub>
+<sub>Last synced: 2026-11-07 06:02 UTC</sub>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T19:26:54Z",
+  "generatedAt": "2026-11-07T06:02:34Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -28,14 +28,14 @@
       "nameWithOwner": "ectorial/wsr",
       "owner": "ectorial",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-11-06T09:14:52Z",
+      "pushedAt": "2026-11-07T05:37:08Z",
       "stars": 7,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-11-06T07:37:40Z",
+      "updatedAt": "2026-11-07T05:37:12Z",
       "url": "https://github.com/ectorial/wsr"
     },
     {
@@ -117,6 +117,23 @@
   "topic": "portfolio",
   "workingOn": [
     {
+      "demo": "https://ectorial.github.io/wsr/",
+      "description": "A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned",
+      "name": "wsr",
+      "nameWithOwner": "ectorial/wsr",
+      "owner": "ectorial",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-11-07T05:37:08Z",
+      "stars": 7,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
+      "updatedAt": "2026-11-07T05:37:12Z",
+      "url": "https://github.com/ectorial/wsr"
+    },
+    {
       "demo": "https://carlosferreyra.github.io/codetwin/",
       "description": "A code to diagram/documentation generator.",
       "name": "codetwin",
@@ -132,23 +149,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
       "updatedAt": "2026-11-06T09:20:47Z",
       "url": "https://github.com/carlosferreyra/codetwin"
-    },
-    {
-      "demo": "https://ectorial.github.io/wsr/",
-      "description": "A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned",
-      "name": "wsr",
-      "nameWithOwner": "ectorial/wsr",
-      "owner": "ectorial",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-11-06T09:14:52Z",
-      "stars": 7,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
-      "updatedAt": "2026-11-06T07:37:40Z",
-      "url": "https://github.com/ectorial/wsr"
     }
   ]
 }
