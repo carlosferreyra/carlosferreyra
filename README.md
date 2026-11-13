@@ -44,7 +44,7 @@ Interactive CLI business card available in both Python and TypeScript - run with
 
 ## Currently building
 
-- 🔭 Working on: [business-card](https://github.com/carlosferreyra/business-card) & [awesome-uvx](https://github.com/carlosferreyra/awesome-uvx)
+- 🔭 Working on: [wsr](https://github.com/ectorial/wsr) & [business-card](https://github.com/carlosferreyra/business-card)
 
 ## Toolkit
 
@@ -108,4 +108,4 @@ March 2021 - Sep 2021
 
 Open to opportunities in backend development, developer tooling, and automation. [Let's talk.](mailto:contact@carlosferreyra.com.ar)
 
-<sub>Last synced: 2026-11-12 19:58 UTC</sub>
+<sub>Last synced: 2026-11-13 06:49 UTC</sub>
