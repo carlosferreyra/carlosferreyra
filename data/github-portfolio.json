@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T06:29:49Z",
+  "generatedAt": "2026-11-14T18:08:17Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -28,7 +28,7 @@
       "nameWithOwner": "ectorial/wsr",
       "owner": "ectorial",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-11-14T03:53:20Z",
+      "pushedAt": "2026-11-14T13:25:06Z",
       "stars": 7,
       "tags": [
         "portfolio",
@@ -60,6 +60,23 @@
       "url": "https://github.com/informatorioar/informatorio"
     },
     {
+      "demo": "https://carlosferreyra.github.io/codetwin/",
+      "description": "A code to diagram/documentation generator.",
+      "name": "codetwin",
+      "nameWithOwner": "carlosferreyra/codetwin",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-11-14T09:22:28Z",
+      "stars": 0,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
+      "updatedAt": "2026-11-06T09:20:47Z",
+      "url": "https://github.com/carlosferreyra/codetwin"
+    },
+    {
       "demo": "",
       "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
       "name": "business-card",
@@ -78,23 +95,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
       "updatedAt": "2026-11-06T02:58:03Z",
       "url": "https://github.com/carlosferreyra/business-card"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/codetwin/",
-      "description": "A code to diagram/documentation generator.",
-      "name": "codetwin",
-      "nameWithOwner": "carlosferreyra/codetwin",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-11-06T09:20:43Z",
-      "stars": 0,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
-      "updatedAt": "2026-11-06T09:20:47Z",
-      "url": "https://github.com/carlosferreyra/codetwin"
     },
     {
       "demo": "https://carlosferreyra.github.io/profilectl/",
@@ -123,7 +123,7 @@
       "nameWithOwner": "ectorial/wsr",
       "owner": "ectorial",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-11-14T03:53:20Z",
+      "pushedAt": "2026-11-14T13:25:06Z",
       "stars": 7,
       "tags": [
         "portfolio",
@@ -134,24 +134,21 @@
       "url": "https://github.com/ectorial/wsr"
     },
     {
-      "demo": "",
-      "description": "Interactive CLI business card available in both Python and TypeScript - run with uvx or npx",
-      "name": "business-card",
-      "nameWithOwner": "carlosferreyra/business-card",
+      "demo": "https://carlosferreyra.github.io/codetwin/",
+      "description": "A code to diagram/documentation generator.",
+      "name": "codetwin",
+      "nameWithOwner": "carlosferreyra/codetwin",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-11-10T18:54:01Z",
+      "pushedAt": "2026-11-14T09:22:28Z",
       "stars": 0,
       "tags": [
-        "business-card",
-        "card",
         "portfolio",
-        "profile",
-        "resume"
+        "wip"
       ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/business-card",
-      "updatedAt": "2026-11-06T02:58:03Z",
-      "url": "https://github.com/carlosferreyra/business-card"
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
+      "updatedAt": "2026-11-06T09:20:47Z",
+      "url": "https://github.com/carlosferreyra/codetwin"
     }
   ]
 }
