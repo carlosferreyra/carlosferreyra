@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T18:08:17Z",
+  "generatedAt": "2026-11-16T22:08:39Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-11-10T01:42:08Z",
+      "pushedAt": "2026-11-16T15:26:31Z",
       "stars": 8,
       "tags": [
         "awesome",
@@ -117,6 +117,26 @@
   "topic": "portfolio",
   "workingOn": [
     {
+      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
+      "description": "A curated collection of Python CLI tools available via uvx or pipx.",
+      "name": "awesome-uvx",
+      "nameWithOwner": "carlosferreyra/awesome-uvx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-11-16T15:26:31Z",
+      "stars": 8,
+      "tags": [
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-readme",
+        "portfolio"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
+      "updatedAt": "2026-11-10T01:42:13Z",
+      "url": "https://github.com/carlosferreyra/awesome-uvx"
+    },
+    {
       "demo": "https://ectorial.github.io/wsr/",
       "description": "A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned",
       "name": "wsr",
@@ -132,23 +152,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
       "updatedAt": "2026-11-07T21:51:17Z",
       "url": "https://github.com/ectorial/wsr"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/codetwin/",
-      "description": "A code to diagram/documentation generator.",
-      "name": "codetwin",
-      "nameWithOwner": "carlosferreyra/codetwin",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-11-14T09:22:28Z",
-      "stars": 0,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
-      "updatedAt": "2026-11-06T09:20:47Z",
-      "url": "https://github.com/carlosferreyra/codetwin"
     }
   ]
 }
