@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T20:35:47Z",
+  "generatedAt": "2026-11-19T20:40:58Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,8 +8,8 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-11-16T15:26:31Z",
-      "stars": 8,
+      "pushedAt": "2026-11-19T08:43:16Z",
+      "stars": 9,
       "tags": [
         "awesome",
         "awesome-list",
@@ -18,7 +18,7 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-11-10T01:42:13Z",
+      "updatedAt": "2026-11-19T14:25:59Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
     },
     {
@@ -66,14 +66,14 @@
       "nameWithOwner": "carlosferreyra/codetwin",
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
-      "pushedAt": "2026-11-18T16:00:49Z",
-      "stars": 0,
+      "pushedAt": "2026-11-19T08:42:56Z",
+      "stars": 1,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
-      "updatedAt": "2026-11-06T09:20:47Z",
+      "updatedAt": "2026-11-19T14:26:01Z",
       "url": "https://github.com/carlosferreyra/codetwin"
     },
     {
@@ -117,31 +117,14 @@
   "topic": "portfolio",
   "workingOn": [
     {
-      "demo": "https://carlosferreyra.github.io/codetwin/",
-      "description": "A code to diagram/documentation generator.",
-      "name": "codetwin",
-      "nameWithOwner": "carlosferreyra/codetwin",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Rust",
-      "pushedAt": "2026-11-18T16:00:49Z",
-      "stars": 0,
-      "tags": [
-        "portfolio",
-        "wip"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
-      "updatedAt": "2026-11-06T09:20:47Z",
-      "url": "https://github.com/carlosferreyra/codetwin"
-    },
-    {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
       "description": "A curated collection of Python CLI tools available via uvx or pipx.",
       "name": "awesome-uvx",
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-11-16T15:26:31Z",
-      "stars": 8,
+      "pushedAt": "2026-11-19T08:43:16Z",
+      "stars": 9,
       "tags": [
         "awesome",
         "awesome-list",
@@ -150,8 +133,25 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-11-10T01:42:13Z",
+      "updatedAt": "2026-11-19T14:25:59Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
+    },
+    {
+      "demo": "https://carlosferreyra.github.io/codetwin/",
+      "description": "A code to diagram/documentation generator.",
+      "name": "codetwin",
+      "nameWithOwner": "carlosferreyra/codetwin",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Rust",
+      "pushedAt": "2026-11-19T08:42:56Z",
+      "stars": 1,
+      "tags": [
+        "portfolio",
+        "wip"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
+      "updatedAt": "2026-11-19T14:26:01Z",
+      "url": "https://github.com/carlosferreyra/codetwin"
     }
   ]
 }
