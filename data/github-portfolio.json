@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T07:13:48Z",
+  "generatedAt": "2026-11-23T23:56:48Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -8,7 +8,7 @@
       "nameWithOwner": "carlosferreyra/awesome-uvx",
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
-      "pushedAt": "2026-11-19T08:43:16Z",
+      "pushedAt": "2026-11-23T18:04:11Z",
       "stars": 9,
       "tags": [
         "awesome",
@@ -117,6 +117,26 @@
   "topic": "portfolio",
   "workingOn": [
     {
+      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
+      "description": "A curated collection of Python CLI tools available via uvx or pipx.",
+      "name": "awesome-uvx",
+      "nameWithOwner": "carlosferreyra/awesome-uvx",
+      "owner": "carlosferreyra",
+      "primaryLanguage": "Python",
+      "pushedAt": "2026-11-23T18:04:11Z",
+      "stars": 9,
+      "tags": [
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-readme",
+        "portfolio"
+      ],
+      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
+      "updatedAt": "2026-11-19T14:25:59Z",
+      "url": "https://github.com/carlosferreyra/awesome-uvx"
+    },
+    {
       "demo": "https://ectorial.github.io/wsr/",
       "description": "A pre-alpha local CI runner scaffold; workflow execution and sandboxing are planned",
       "name": "wsr",
@@ -132,26 +152,6 @@
       "thumbnail": "https://opengraph.githubassets.com/portfolio/ectorial/wsr",
       "updatedAt": "2026-11-07T21:51:17Z",
       "url": "https://github.com/ectorial/wsr"
-    },
-    {
-      "demo": "https://carlosferreyra.github.io/awesome-uvx/",
-      "description": "A curated collection of Python CLI tools available via uvx or pipx.",
-      "name": "awesome-uvx",
-      "nameWithOwner": "carlosferreyra/awesome-uvx",
-      "owner": "carlosferreyra",
-      "primaryLanguage": "Python",
-      "pushedAt": "2026-11-19T08:43:16Z",
-      "stars": 9,
-      "tags": [
-        "awesome",
-        "awesome-list",
-        "awesome-lists",
-        "awesome-readme",
-        "portfolio"
-      ],
-      "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-11-19T14:25:59Z",
-      "url": "https://github.com/carlosferreyra/awesome-uvx"
     }
   ]
 }
