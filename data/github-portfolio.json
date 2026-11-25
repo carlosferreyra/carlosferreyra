@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T23:56:48Z",
+  "generatedAt": "2026-11-25T21:45:01Z",
   "projects": [
     {
       "demo": "https://carlosferreyra.github.io/awesome-uvx/",
@@ -9,7 +9,7 @@
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
       "pushedAt": "2026-11-23T18:04:11Z",
-      "stars": 9,
+      "stars": 8,
       "tags": [
         "awesome",
         "awesome-list",
@@ -18,7 +18,7 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-11-19T14:25:59Z",
+      "updatedAt": "2026-11-25T09:19:03Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
     },
     {
@@ -67,13 +67,13 @@
       "owner": "carlosferreyra",
       "primaryLanguage": "Rust",
       "pushedAt": "2026-11-19T08:42:56Z",
-      "stars": 1,
+      "stars": 0,
       "tags": [
         "portfolio",
         "wip"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/codetwin",
-      "updatedAt": "2026-11-19T14:26:01Z",
+      "updatedAt": "2026-11-25T09:26:42Z",
       "url": "https://github.com/carlosferreyra/codetwin"
     },
     {
@@ -124,7 +124,7 @@
       "owner": "carlosferreyra",
       "primaryLanguage": "Python",
       "pushedAt": "2026-11-23T18:04:11Z",
-      "stars": 9,
+      "stars": 8,
       "tags": [
         "awesome",
         "awesome-list",
@@ -133,7 +133,7 @@
         "portfolio"
       ],
       "thumbnail": "https://opengraph.githubassets.com/portfolio/carlosferreyra/awesome-uvx",
-      "updatedAt": "2026-11-19T14:25:59Z",
+      "updatedAt": "2026-11-25T09:19:03Z",
       "url": "https://github.com/carlosferreyra/awesome-uvx"
     },
     {
